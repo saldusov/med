@@ -3,18 +3,7 @@ let app = module.exports = express();
 
 let PersonModel = require('../persons/Person.model');
 let parseData = require("./middleware").parseData;
-
-/*const multer  = require('multer');
-let storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, '/tmp/my-uploads')
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now())
-  }
-});
-
-let upload = multer({ storage: storage }).single("picture");*/
+let crud = require("./crud");
 
 /* GET patiens list. */
 app.get('/', function(req, res, next) {
@@ -31,54 +20,39 @@ app.get('/:id', function(req, res, next) {
 
 app.post('/', parseData, function(req, res, next){
 	
-	var personItem = req.body;
-
-	//personItem.birthdate = new Date(req.body.birthdate);
-	
-	var person = new PersonModel(personItem);
-
-	person.save(function(err, savedObject){
-		if (err) {
-			res.status(500).send(err);
-		}
-		else res.status(200).json(savedObject);
-	});
+	crud
+		.create(req.body)
+		.then((person) => res.status(200).json(person))
+		.catch((errors) => res.status(400).json({errors}));
 
 });
 
 app.put('/:id', parseData, function(req, res, next){
-
-	var serviceItem = req.body;
-
-	PersonModel.findOne({_id: req.params.id}, function(err, foundObject){
-		if(err) {
-			res.status(500).json({err});
-		} else {
-			if(!foundObject) {
-				res.status(404).json({err});
+	
+	crud
+		.read(req.params.id)
+		.then((person) => {
+			if(!person) {
+				res.status(404).json({errros: ["Персональная информация не существует"]})
 			} else {
-				PersonModel.update({_id: foundObject._id}, {$set: serviceItem}, function(err, updatedObject){
-					if(err) {
-						res.status(500).json({err});
-					} else {
-						res.status(200).json(updatedObject);
-					}
-				});
+				return crud.update(req.params.id, req.body);
 			}
-		}
-	});
+		})
+		.then((modifyInfo) => crud.read(req.params.id))
+		.then((person) => res.status(200).json(person))
+		.catch((errors) => res.status(400).json({errors}));
 });
 
 app.delete('/:id', function(req, res, next) {
-	PersonModel.remove({ _id: req.params.id }, function(err, result) {
-    	if (err) {
-			res.status(500).json({err});
-    	} else {
-    		if(result.result.n > 0) {
-    			res.status(200).json({status: "ok"});
-    		} else {
-    			res.status(404).json({errors: ["Персональная информация не существует"]});
-    		}
-    	}
-	});
+	
+	crud
+		.delete(req.params.id)
+		.then((result) => {
+			if(!result) {
+				res.status(404).json({errors: ["Персональная информация не существует"]});
+			} else {
+				res.status(200).json(result);
+			}
+		})
+		.catch((errors) => res.status(400).json({errors}));
 });

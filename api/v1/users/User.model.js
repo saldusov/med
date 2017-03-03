@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt-nodejs");
 
-const SALT_WORK_FACTOR = "kldjsald231dfsfJFH342hFDJSDfjksdhf111";
+const SALT_WORK_FACTOR = 10;
 
 let UserSchema = new Schema({
 	username: { type: String, required: true, unique: true, trim: true },
@@ -10,7 +10,7 @@ let UserSchema = new Schema({
 	resource: [
 		{id: String, permissions: [String]}
 	],
-	group: String, /* admin, user-admin, user-doctor, user-buh, boss, user */
+	group: String, /* admin, user-admin, user-doctor, user-buh, boss, user, develop */
 	active: { type: Boolean, default: true },
 	personId: Schema.ObjectId
 },

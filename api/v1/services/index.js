@@ -8,9 +8,43 @@ let parseData = require("./middleware").parseData;
 
 /* GET items list. */
 app.get('/', function(req, res, next) {
-	ServiceModel.find(function(err, services) {
-		res.json(services);
-	});
+	ServiceModel
+		.aggregate([
+			{
+		      	$unwind: "$tags"
+		   	},
+			{
+				$lookup: {
+					from: "specialties",
+					localField: "tags",
+					foreignField: "_id",
+					as: "tag_item"
+				}
+			},
+			{
+		      	$unwind: "$tag_item"
+		   	},
+			{
+				$group: { 
+					_id: "$_id",
+					title: { $first: "$title" },
+					description: { $first: "$description" },
+					recommendations: { $first: "$recommendations" },
+					price: { $first: "$price" },
+					time: { $first: "$time" },
+					active: { $first: "$active" }, 
+					tags: { $addToSet: "$tags" }, 
+					tag_names: { $push: "$tag_item.name"}
+				}
+			}
+		])
+		.exec(function (err, foundItems) {
+			if(err) {
+				res.status(500).json({errors: [err]});
+			} else {
+				res.json(foundItems);
+			}
+		});
 });
 
 /* GET one item. */

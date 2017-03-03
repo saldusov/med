@@ -1,10 +1,15 @@
 const express = require("express");
 let app = module.exports = express();
 
-const UserModel = require('./User.model');
+const UserModel = require("./User.model");
+let personManager = require("../persons/crud");
+let userManager = require("./crud");
+let parseData = require("./middleware").parseData;
+let dbFunc = require("./db-func");
 
 /* GET items list. */
-app.get('/', function(req, res, next) {
+app.get("/", function(req, res, next) {
+
 	UserModel
 		.aggregate([
 				{
@@ -28,88 +33,57 @@ app.get('/', function(req, res, next) {
 });
 
 /* GET one item. */
-app.get('/:id', function(req, res, next) {
-	/*UserModel.findOne({_id: req.params.id}, {password: 0}).populate('info').exec(function(err, foundItem) {
-		if(foundItem.info) {
-			FileModel.findOne({_id: foundItem.info.image}, {_id: 1, filename: 1}).exec(function(err, foundImage){
-				if(err) {
-					res.json(foundItem);
-				} else {
-					foundItem.info.image = foundImage;
-					res.json(foundItem);
-				}
-			});
-		} else {
-			res.json(foundItem);
-		}
-	});*/
+app.get("/:id", function(req, res, next) {
+		
+	userManager
+		.read(req.params.id)
+		.then((result) => {
+			if(!result) {
+				res.status(404).json({errors: ["Пользователь не найден"]});
+			} else {
+				res.status(200).json(result);
+			}
+		})
+		.catch((errors) => res.status(400).json({errors}));
 });
 
 /* Insert item */
-app.post('/', function(req, res, next){
+app.post("/", parseData, function(req, res, next){
 
-	upload(req, res, function (err) {
-		console.log("i am here!");
-		if (err) {
-			console.log(err);
-		  // An error occurred when uploading
-		  return
-		}
-
-		let addItem = req.body;	
-		// Everything went fine
-		console.log(addItem);
-	});
-
-
-	next();
-	/*var user = new UserModel(addItem);
-	user.save(function(err, savedObject){
-		if (err) {
-			console.log(err);
-			throw new Error("500|Error user save!");
-		} else {
-			if(!savedObject) {
-				res.status(404).send();
-			} else {
-				res.json(savedObject);
-			}
-		}
-	});*/
+	userManager
+		.create(req.body)
+		.then((user) => dbFunc.checkPerson(req.body, user))
+		.then((user) => res.status(200).json(user))
+		.catch((errors) => res.status(400).json({errors}));
 
 });
 
-app.put('/:id', function(req, res, next){
-	var updateItem = req.body;
-	UserModel.findOne({_id: req.params.id}, function(err, foundObject){
-		if(err) {
-			res.status(500).json({err});
-		} else {
-			if(!foundObject) {
-				res.status(404).json({err});
-			} else {
-				UserModel.update({_id: foundObject._id}, {$set: updateItem}, function(err, updatedObject){
-					if(err) {
-						res.status(500).json({err});
-					} else {
-						res.status(200).json(updatedObject);
-					}
-				});
-			}
-		}
-	});
+app.put("/:id", parseData, function(req, res, next){
+	delete req.body.username;
+
+	dbFunc
+		.checkPerson2(req.body)
+		.then((data) => userManager.update(req.params.id, data))
+		.then((modifyData) => userManager.read(req.params.id))
+		.then((doctor) => res.status(200).json(doctor))
+		.catch((errors) => res.status(400).json({errors}));
+	/*userManager
+		.read(req.params.id)
+		.then((user) => dbFunc.checkPerson(req.body, user))
+		.then((user) => res.status(200).json(user))
+		.catch((errors) => res.status(400).json({errors}));*/
 });
 
-app.delete('/:id', function(req, res, next) {
-	UserModel.remove({ _id: req.params.id }, function(err, result) {
-    	if (err) {
-			res.status(500).json({err});
-    	} else {
-    		if(result.result.n > 0) {
-    			res.status(200).json({status: "ok"});
-    		} else {
-    			res.status(404).json({errors: ["пользователь не существует"]});
-    		}
-    	}
-	});
+app.delete("/:id", function(req, res, next) {
+
+	userManager
+		.delete(req.params.id)
+		.then((result) => {
+			if(!result) {
+				res.status(404).json({errors: ["Пользователь не существует"]});
+			} else {
+				res.status(200).json(result);
+			}
+		})
+		.catch((errors) => res.status(400).json({errors}));
 });

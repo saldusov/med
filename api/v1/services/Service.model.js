@@ -11,7 +11,7 @@ var serviceSchema = new Schema({
 		kmn: Number
 	},
 	time: Number,
-	tags: [String],
+	tags: [Schema.ObjectId],
 	active: Boolean
 });
 
