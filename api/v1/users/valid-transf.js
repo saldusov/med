@@ -1,4 +1,4 @@
-const PersonSchema = require("../persons/Person.model");
+const PersonSchema = require("../persons/Person.schema");
 const vtPerson = require("../persons/valid-transf");
 
 module.exports = {

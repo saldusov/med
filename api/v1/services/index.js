@@ -2,13 +2,13 @@ const express = require("express");
 let app = module.exports = express();
 
 const mongoose = require('mongoose');
-const ServiceModel = require('./Service.model');
+const ServiceSchema = require('./Service.schema');
 
 let parseData = require("./middleware").parseData;
 
 /* GET items list. */
 app.get('/', function(req, res, next) {
-	ServiceModel
+	ServiceSchema
 		.aggregate([
 			{
 		      	$unwind: "$tags"
@@ -49,7 +49,7 @@ app.get('/', function(req, res, next) {
 
 /* GET one item. */
 app.get('/:id', function(req, res, next) {
-	ServiceModel.findOne({_id: req.params.id}, function(err, foundItem) {
+	ServiceSchema.findOne({_id: req.params.id}, function(err, foundItem) {
 		res.json(foundItem);
 	});
 });
@@ -59,7 +59,7 @@ app.post('/', parseData, function(req, res, next){
 	
 	var serviceItem = req.body;
 	
-	var service = new ServiceModel(serviceItem);
+	var service = new ServiceSchema(serviceItem);
 	service.save(function(err, savedObject){
 		if (err) {
 			res.status(500).json({err});
@@ -77,14 +77,14 @@ app.post('/', parseData, function(req, res, next){
 app.put('/:id', parseData, function(req, res, next){
 	var serviceItem = req.body;
 
-	ServiceModel.findOne({_id: req.params.id}, function(err, foundObject){
+	ServiceSchema.findOne({_id: req.params.id}, function(err, foundObject){
 		if(err) {
 			res.status(500).json({err});
 		} else {
 			if(!foundObject) {
 				res.status(404).json({err});
 			} else {
-				ServiceModel.update({_id: foundObject._id}, {$set: serviceItem}, function(err, updatedObject){
+				ServiceSchema.update({_id: foundObject._id}, {$set: serviceItem}, function(err, updatedObject){
 					if(err) {
 						res.status(500).json({err});
 					} else {
@@ -97,7 +97,7 @@ app.put('/:id', parseData, function(req, res, next){
 });
 
 app.delete('/:id', function(req, res, next) {
-	ServiceModel.remove({ _id: req.params.id }, function(err, result) {
+	ServiceSchema.remove({ _id: req.params.id }, function(err, result) {
     	if (err) {
 			res.status(500).json({err});
     	} else {

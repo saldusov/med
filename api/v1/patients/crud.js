@@ -1,9 +1,9 @@
-const DoctorSchema = require('./Doctor.schema');
+const PatientSchema = require('./Patient.schema');
 
 let doctorManager = {
 	read: function(id) {
 		return new Promise(function(resolve, reject) {
-			DoctorSchema
+			PatientSchema
 				.findOne({_id: id}, function(errors, result) {
 					if(errors) {
 						reject([errors]);
@@ -20,14 +20,14 @@ let doctorManager = {
 
 	create: function(data) {
 		return new Promise(function(resolve, reject) {
-			let doctor = new DoctorSchema(data);
+			let patient = new PatientSchema(data);
 
-			doctor.save(function(errors, savedObject){
+			patient.save(function(errors, savedObject){
 				if (errors) {
 					reject([errors]);
 				} else {
 					if(!savedObject) {
-						reject(["Не удалось сохранить данные врача"]);
+						reject(["Не удалось сохранить данные пациента"]);
 					} else {
 						resolve(savedObject);
 					}
@@ -38,7 +38,7 @@ let doctorManager = {
 
 	update: function(id, data) {
 		return new Promise(function(resolve, reject) {
-			DoctorSchema.update({_id: id}, {$set: data}, function(errors, updatedObject){
+			PatientSchema.update({_id: id}, {$set: data}, function(errors, updatedObject){
 				if(errors) {
 					reject([errors]);
 				} else {
@@ -50,7 +50,7 @@ let doctorManager = {
 
 	delete: function(id) {
 		return new Promise(function(resolve, reject) {
-			DoctorSchema.remove({ _id: id }, function(errors, result) {
+			PatientSchema.remove({ _id: id }, function(errors, result) {
 		    	if (errors) {
 					reject([errors]);
 		    	} else {

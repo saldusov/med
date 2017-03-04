@@ -1,16 +1,16 @@
 const express = require("express");
 let app = module.exports = express();
 
-const UserModel = require("./User.model");
+const UserSchema = require("./User.schema");
 let personManager = require("../persons/crud");
 let userManager = require("./crud");
-let parseData = require("./middleware").parseData;
+let middleware = require("./middleware");
 let dbFunc = require("./db-func");
 
 /* GET items list. */
 app.get("/", function(req, res, next) {
 
-	UserModel
+	UserSchema
 		.aggregate([
 				{
 					$lookup: {
@@ -48,30 +48,33 @@ app.get("/:id", function(req, res, next) {
 });
 
 /* Insert item */
-app.post("/", parseData, function(req, res, next){
+app.post("/", middleware.parseAddData, function(req, res, next){
 
-	userManager
-		.create(req.body)
-		.then((user) => dbFunc.checkPerson(req.body, user))
+	dbFunc
+		.checkPerson(req.body)
+		.then((data) => userManager.create(data))
 		.then((user) => res.status(200).json(user))
 		.catch((errors) => res.status(400).json({errors}));
 
 });
 
-app.put("/:id", parseData, function(req, res, next){
-	delete req.body.username;
+app.put("/:id", middleware.parseUpdateData, function(req, res, next){
 
-	dbFunc
-		.checkPerson2(req.body)
-		.then((data) => userManager.update(req.params.id, data))
-		.then((modifyData) => userManager.read(req.params.id))
-		.then((doctor) => res.status(200).json(doctor))
-		.catch((errors) => res.status(400).json({errors}));
-	/*userManager
+	userManager
 		.read(req.params.id)
-		.then((user) => dbFunc.checkPerson(req.body, user))
+		.then((user) => {
+			if(user) {
+				return dbFunc
+					.checkPerson(req.body)
+					.then((data) => userManager.update(user, data));
+			} else {
+				res.status(404).json({errors: ["Пользователь не существует"]});
+			}
+		})
+		.then((modifyData) => userManager.read(req.params.id))
 		.then((user) => res.status(200).json(user))
-		.catch((errors) => res.status(400).json({errors}));*/
+		.catch((errors) => res.status(400).json({errors}));
+
 });
 
 app.delete("/:id", function(req, res, next) {

@@ -3,7 +3,7 @@ const vtPerson = require("../persons/valid-transf");
 
 module.exports = {
 	validation: function(data, errors) {
-		if(!data.tags) errors.push("Укажите специальность!");
+		if(!data.amb_number) errors.push("Укажите номер амбулаторной карты");
 
 		if(errors.length > 0) return false;
 		return true;

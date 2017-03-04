@@ -1,17 +1,17 @@
 const express = require("express");
 let app = module.exports = express();
 
-const DoctorSchema = require('./Doctor.schema');
+const PatientSchema = require('./Patient.schema');
 let parseData = require("./middleware").parseData;
 let personManager = require("../persons/crud");
-let doctorManager = require("./crud");
+let patientManager = require("./crud");
 let dbFunc = require("./db-func");
 
 const PersonSchema = require('../persons/Person.schema');
 
 /* GET items list. */
 app.get('/', function(req, res, next) {
-	DoctorSchema
+	PatientSchema
 		.aggregate([
 			{
 				$lookup: {
@@ -39,7 +39,7 @@ app.get('/', function(req, res, next) {
 
 /* GET one item. */
 app.get('/:id', function(req, res, next) {
-	DoctorSchema.findOne({_id: req.params.id}, function(errors, foundItem) {
+	PatientSchema.findOne({_id: req.params.id}, function(errors, foundItem) {
 		res.json(foundItem);
 	});
 });
@@ -48,7 +48,7 @@ app.get('/:id', function(req, res, next) {
 app.post('/', parseData, function(req, res, next){
 
 	dbFunc.checkPerson(req.body)
-		.then((data) => doctorManager.create(req.body))
+		.then((data) => patientManager.create(req.body))
 		.then((doctor) => res.status(200).json(doctor))
 		.catch((errors) => res.status(400).json({errors}));
 });
@@ -56,8 +56,8 @@ app.post('/', parseData, function(req, res, next){
 app.put('/:id', parseData, function(req, res, next){
 
 	dbFunc.checkPerson(req.body)
-		.then((data) => doctorManager.update(req.params.id, data))
-		.then((modifyData) => doctorManager.read(req.params.id))
+		.then((data) => patientManager.update(req.params.id, data))
+		.then((modifyData) => patientManager.read(req.params.id))
 		.then((doctor) => res.status(200).json(doctor))
 		.catch((errors) => res.status(400).json({errors}));
 
@@ -65,11 +65,11 @@ app.put('/:id', parseData, function(req, res, next){
 
 app.delete('/:id', function(req, res, next) {
 	
-	doctorManager
+	patientManager
 		.delete(req.params.id)
 		.then((result) => {
 			if(!result) {
-				res.status(404).json({errors: ["Персональные данные не существует"]});
+				res.status(404).json({errors: ["Пациент не существует"]});
 			} else {
 				res.status(200).json(result);
 			}

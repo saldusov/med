@@ -1,4 +1,4 @@
-const UserSchema = require('./User.model');
+const UserSchema = require('./User.schema');
 
 let userManager = {
 	read: function(id) {
@@ -36,16 +36,23 @@ let userManager = {
 		});
 	},
 
-	update: function(id, data) {
+	update: function(foundObject, data) {
 		return new Promise(function(resolve, reject) {
-			// change to save
-			UserSchema.update({_id: id}, {$set: data}, function(errors, updatedObject){
+
+			if(data.username) foundObject.username = data.username;
+			if(data.password) foundObject.password = data.password;
+			if(data.personId) foundObject.personId = data.personId;
+			if(data.group) foundObject.group = data.group;
+			if(data.active != null) foundObject.active = data.active;
+			if(data.resource) foundObject.resource = data.resource;
+
+			foundObject.save(function(errors, updatedObject){
 				if(errors) {
 					reject([errors]);
 				} else {
 					resolve(updatedObject);
 				}
-			});
+			});		
 		});
 	},
 

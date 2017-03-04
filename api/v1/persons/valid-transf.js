@@ -1,4 +1,4 @@
-const PersonSchema = require("./Person.model");
+const PersonSchema = require("./Person.schema");
 
 module.exports = {
 	validation: function(data, errors) {

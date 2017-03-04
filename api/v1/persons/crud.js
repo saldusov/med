@@ -1,4 +1,4 @@
-const PersonSchema = require('./Person.model');
+const PersonSchema = require('./Person.schema');
 
 let personManager = {
 	gerOrCreate: function(id, data) {
@@ -37,7 +37,6 @@ let personManager = {
 					if(!savedObject) {
 						reject(["Не удалось сохранить персональные данные"]);
 					} else {
-						console.log(savedObject);
 						resolve(savedObject);
 					}
 				}

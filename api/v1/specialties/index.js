@@ -2,7 +2,7 @@ const express = require("express");
 let app = module.exports = express();
 
 const mongoose = require('mongoose');
-const SpecialtySchema = require('./Specialty.model');
+const SpecialtySchema = require('./Specialty.schema');
 
 let parseData = require("./middleware").parseData;
 

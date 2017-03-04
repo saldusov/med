@@ -1,7 +1,7 @@
 const express = require("express");
 let app = module.exports = express();
 
-let PersonModel = require('../persons/Person.model');
+let PersonModel = require('../persons/Person.schema');
 let parseData = require("./middleware").parseData;
 let crud = require("./crud");
 
