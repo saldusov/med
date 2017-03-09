@@ -69,7 +69,7 @@ app.delete('/:id', function(req, res, next) {
 		.delete(req.params.id)
 		.then((result) => {
 			if(!result) {
-				res.status(404).json({errors: ["Персональные данные не существует"]});
+				res.status(404).json({errors: ["Персональные данные не существуют"]});
 			} else {
 				res.status(200).json(result);
 			}
