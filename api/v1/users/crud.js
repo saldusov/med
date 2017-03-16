@@ -1,17 +1,51 @@
+const mongoose = require("mongoose");
 const UserSchema = require('./User.schema');
 
 let userManager = {
 	read: function(id) {
 		return new Promise(function(resolve, reject) {
 			UserSchema
-				.findOne({_id: id}, function(errors, result) {
+				.aggregate([
+						{
+							$match: { _id: mongoose.Types.ObjectId(id) } 
+						},
+						{
+							$lookup: {
+								from: "persons",
+								localField: "personId",
+								foreignField: "_id",
+								as: "person"
+							}
+						},
+						{
+							$unwind: {
+								path: "$person",
+								preserveNullAndEmptyArrays: true
+							}
+						},
+						{
+							$lookup: {
+								from: "files",
+								localField: "person.picture",
+								foreignField: "_id",
+								as: "person.picture"
+							}
+						},
+						{
+							$unwind: {
+								path: "$person.picture",
+								preserveNullAndEmptyArrays: true
+							}
+						}
+					])
+				.exec(function(errors, foundObject) {
 					if(errors) {
 						reject([errors]);
 					} else {
-						if(!result) {
+						if(!foundObject) {
 							resolve(false);
 						} else {
-							resolve(result);
+							resolve(foundObject[0]);
 						}
 					}
 				});

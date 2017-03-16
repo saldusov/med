@@ -3,6 +3,7 @@ const vtPerson = require("../persons/valid-transf");
 
 module.exports = {
 	validation: function(data, errors) {
+		if(data._id && data._id == null) delete data._id;
 		if(!data.amb_number) errors.push("Укажите номер амбулаторной карты");
 
 		if(errors.length > 0) return false;

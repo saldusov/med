@@ -2,6 +2,7 @@ const PersonSchema = require("./Person.schema");
 
 module.exports = {
 	validation: function(data, errors) {
+		if(typeof data._id != "undefined" && data._id == null) delete data._id;
 		if(!data.last_name) errors.push("Укажите фамилию!");
 		if(!data.first_name) errors.push("Укажите имя!");
 
@@ -21,13 +22,18 @@ module.exports = {
 	checkCreate: function(data) {
 		data.createPerson = false;
 
+		let find = false;
 		let persProps = Object.keys(PersonSchema.schema.paths);
 
-		let find = Object.keys(data).find(function(objectKey, index) {
-		    if(persProps.indexOf(objectKey) > 0) return true;
-		});
+		if(typeof data.person != "undefined") {
+			find = Object.keys(data.person).find(function(objectKey, index) {
+			    if(persProps.indexOf(objectKey) > 0 && data.person[objectKey] != null) return true;
+			});
+		}
 
 		if(find) data.createPerson = true;
+
+		return data.createPerson;
 	}
 
 }

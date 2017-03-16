@@ -1,5 +1,5 @@
-webpackJsonp([0,10],Array(730).concat([
-/* 730 */
+webpackJsonp([4,10],Array(728).concat([
+/* 728 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,11 +9,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(247);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__users_users_component__ = __webpack_require__(1041);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_add_user_add_component__ = __webpack_require__(1038);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_update_user_update_component__ = __webpack_require__(1039);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__users_service__ = __webpack_require__(1025);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersModule", function() { return UsersModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_service__ = __webpack_require__(1022);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__specialties_specialties_component__ = __webpack_require__(1035);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpecialtiesModule", function() { return SpecialtiesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -30,35 +28,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-var USERS_ROUTES = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__users_users_component__["a" /* UsersComponent */] },
-    { path: 'add', component: __WEBPACK_IMPORTED_MODULE_6__user_add_user_add_component__["a" /* UserAddComponent */] },
-    { path: 'update/:id', component: __WEBPACK_IMPORTED_MODULE_7__user_update_user_update_component__["a" /* UserUpdateComponent */] }
+var SPECIALTIES_ROUTES = [
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_6__specialties_specialties_component__["a" /* SpecialtiesComponent */] }
 ];
-var UsersModule = (function () {
-    function UsersModule() {
+var SpecialtiesModule = (function () {
+    function SpecialtiesModule() {
     }
-    UsersModule = __decorate([
+    SpecialtiesModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forChild(USERS_ROUTES),
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forChild(SPECIALTIES_ROUTES),
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* ReactiveFormsModule */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__["a" /* MaterializeModule */]
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_5__users_users_component__["a" /* UsersComponent */], __WEBPACK_IMPORTED_MODULE_6__user_add_user_add_component__["a" /* UserAddComponent */], __WEBPACK_IMPORTED_MODULE_7__user_update_user_update_component__["a" /* UserUpdateComponent */]],
-            providers: [__WEBPACK_IMPORTED_MODULE_8__users_service__["a" /* UsersService */]],
-            exports: [__WEBPACK_IMPORTED_MODULE_5__users_users_component__["a" /* UsersComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_6__specialties_specialties_component__["a" /* SpecialtiesComponent */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_5__specialties_service__["a" /* SpecialtiesService */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_6__specialties_specialties_component__["a" /* SpecialtiesComponent */]]
         }), 
         __metadata('design:paramtypes', [])
-    ], UsersModule);
-    return UsersModule;
+    ], SpecialtiesModule);
+    return SpecialtiesModule;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/users.module.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/specialties.module.js.map
 
 /***/ }),
+/* 729 */,
+/* 730 */,
 /* 731 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15252,10 +15248,7 @@ exports.not = not;
 //# sourceMappingURL=not.js.map
 
 /***/ }),
-/* 1022 */,
-/* 1023 */,
-/* 1024 */,
-/* 1025 */
+/* 1022 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15263,7 +15256,7 @@ exports.not = not;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(761);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpecialtiesService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -15276,22 +15269,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UsersService = (function () {
-    function UsersService(_http) {
+var SpecialtiesService = (function () {
+    function SpecialtiesService(_http) {
         this._http = _http;
-        this._baseUrl = "/api/v1/users";
+        this._baseUrl = "/api/v1/specialties";
     }
-    UsersService.prototype.get = function () {
+    SpecialtiesService.prototype.get = function () {
         return this._http.get(this._baseUrl)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || "Server error"); });
     };
-    UsersService.prototype.getOne = function (id) {
+    SpecialtiesService.prototype.getOne = function (id) {
         return this._http.get(this._baseUrl + "/" + id)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
-    UsersService.prototype.add = function (body) {
+    SpecialtiesService.prototype.add = function (body) {
         var bodyString = JSON.stringify(body);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
@@ -15299,7 +15292,7 @@ var UsersService = (function () {
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
-    UsersService.prototype.update = function (body) {
+    SpecialtiesService.prototype.update = function (body) {
         var bodyString = JSON.stringify(body);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
@@ -15307,23 +15300,26 @@ var UsersService = (function () {
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
-    UsersService.prototype.remove = function (id) {
+    SpecialtiesService.prototype.remove = function (id) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
         return this._http.delete(this._baseUrl + "/" + id)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
-    UsersService = __decorate([
+    SpecialtiesService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === 'function' && _a) || Object])
-    ], UsersService);
-    return UsersService;
+    ], SpecialtiesService);
+    return SpecialtiesService;
     var _a;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/users.service.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/specialties.service.js.map
 
 /***/ }),
+/* 1023 */,
+/* 1024 */,
+/* 1025 */,
 /* 1026 */,
 /* 1027 */,
 /* 1028 */,
@@ -15333,278 +15329,16 @@ var UsersService = (function () {
 /* 1032 */,
 /* 1033 */,
 /* 1034 */,
-/* 1035 */,
-/* 1036 */,
-/* 1037 */,
-/* 1038 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_service__ = __webpack_require__(1025);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toolbar_service__ = __webpack_require__(248);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__ = __webpack_require__(418);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__ = __webpack_require__(416);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__user__ = __webpack_require__(1040);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserAddComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-var UserAddComponent = (function () {
-    function UserAddComponent(_usersService, _toastService, _toolbar, _formDataService, _fileSelectService, _router) {
-        this._usersService = _usersService;
-        this._toastService = _toastService;
-        this._toolbar = _toolbar;
-        this._formDataService = _formDataService;
-        this._fileSelectService = _fileSelectService;
-        this._router = _router;
-        this.submitted = false;
-    }
-    UserAddComponent.prototype.ngOnInit = function () {
-        this._toolbar.change({
-            title: "Добавить пользователя"
-        });
-        var picture = this._fileSelectService.get();
-        this.user = new __WEBPACK_IMPORTED_MODULE_8__user__["a" /* UserForm */]();
-        if (this._formDataService.check()) {
-            this.user.setParams(this._formDataService.get());
-        }
-        this.datePickerOptions = {
-            selectMonths: true,
-            selectYears: 50,
-            monthsFull: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Ин', 'Ил', 'Авг', 'Сент', 'Окт', 'Ноя', 'Дек'],
-            weekdaysFull: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-            weekdaysShort: ['Вск', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-            today: 'Сегодня',
-            clear: 'x',
-            close: 'Закрыть',
-            format: 'dd.mm.yyyy'
-        };
-        this.addForm = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
-            username: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].minLength(2)]),
-            passwords: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
-                password: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]),
-                passwordAgain: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]),
-            }, this.matchingPasswords('password', 'passwordAgain')),
-            active: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-            personId: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-            person: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
-                first_name: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-                second_name: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-                last_name: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-                gender: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-                birthdate: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-                phone: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-                email: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */](''),
-                picture: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormControl */]('')
-            })
-        });
-        this.addForm.patchValue(this.user);
-        this.addForm.patchValue({ person: { picture: picture } });
-    };
-    UserAddComponent.prototype.matchingPasswords = function (passwordKey, passwordConfirmationKey) {
-        return function (group) {
-            var passwordInput = group.controls[passwordKey];
-            var passwordConfirmationInput = group.controls[passwordConfirmationKey];
-            if (passwordInput.value !== passwordConfirmationInput.value) {
-                return passwordConfirmationInput.setErrors({ notEquivalent: true });
-            }
-        };
-    };
-    UserAddComponent.prototype.selectImage = function () {
-        this._formDataService.set(this.addForm.value);
-        this._fileSelectService.clear();
-        this._fileSelectService.single();
-        this._fileSelectService.start();
-        this._fileSelectService.returnMode = true;
-        if (this.addForm.value.person.picture) {
-            this._fileSelectService.add(this._formDataService.get().person.picture);
-        }
-        this._router.navigate(['/uploads']);
-    };
-    UserAddComponent.prototype.onSubmit = function (values, valid) {
-        var _this = this;
-        if (values.passwords.password)
-            values.password = values.passwords.password;
-        this.user.setParams(values);
-        if (valid) {
-            this._usersService.add(this.user)
-                .subscribe(function (data) { return _this._toastService.toast("Пользователь успешно добавлен!"); });
-        }
-    };
-    UserAddComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-user-add',
-            template: __webpack_require__(1065),
-            styles: [__webpack_require__(1053)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__["a" /* FormDataService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__["a" /* FormDataService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__["a" /* FileSelectService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _f) || Object])
-    ], UserAddComponent);
-    return UserAddComponent;
-    var _a, _b, _c, _d, _e, _f;
-}());
-//# sourceMappingURL=D:/projects/angular-med/src/user-add.component.js.map
-
-/***/ }),
-/* 1039 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserUpdateComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var UserUpdateComponent = (function () {
-    function UserUpdateComponent() {
-    }
-    UserUpdateComponent.prototype.ngOnInit = function () {
-    };
-    UserUpdateComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-user-update',
-            template: __webpack_require__(1066),
-            styles: [__webpack_require__(1054)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], UserUpdateComponent);
-    return UserUpdateComponent;
-}());
-//# sourceMappingURL=D:/projects/angular-med/src/user-update.component.js.map
-
-/***/ }),
-/* 1040 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1043);
-/* unused harmony export User */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserForm; });
-
-var User = (function () {
-    function User(object) {
-        this.default();
-        if (object != undefined) {
-            this.setParams(object);
-        }
-    }
-    User.prototype.clear = function () {
-        this.default();
-    };
-    User.prototype.setParams = function (object) {
-        this._id = object._id ? object._id : null;
-        this.username = object.first_name ? object.first_name : null;
-        this.setDate(this.createdAt, object.createdAt);
-        this.setDate(this.updatedAt, object.updatedAt);
-        this.active = object.active ? true : false;
-        this.resource = object.resource ? object.resource : [];
-        this.personId = object.personId ? object.personId : null;
-    };
-    User.prototype.setDate = function (self, date) {
-        if (date) {
-            if (date.search(/\d{2}.\d{2}.\d{4}/i) == -1) {
-                self = date;
-            }
-            else {
-                var _a = date.split('.'), day = _a[0], month = _a[1], year = _a[2];
-                self = new Date(year, month - 1, day, 0, 0, 0);
-            }
-        }
-    };
-    User.prototype.default = function () {
-        this._id = null;
-        this.username = null;
-        this.createdAt = null;
-        this.updatedAt = null;
-        this.active = true;
-        this.resource = [];
-        this.personId = null;
-    };
-    return User;
-}());
-var UserForm = (function () {
-    function UserForm(object) {
-        this.default();
-        if (object != undefined) {
-            this.setParams(object);
-        }
-    }
-    UserForm.prototype.clear = function () {
-        this.default();
-    };
-    UserForm.prototype.setParams = function (object) {
-        this._id = object._id ? object._id : null;
-        this.username = object.username ? object.username : null;
-        this.password = object.password ? object.password : null;
-        // this.setDate(this.createdAt, object.createdAt);
-        // this.setDate(this.updatedAt, object.updatedAt);
-        this.active = object.active ? true : false;
-        this.resource = object.resource ? object.resource : [];
-        this.personId = object.personId ? object.personId : null;
-        this.person = new __WEBPACK_IMPORTED_MODULE_0__shared_person__["a" /* Person */](object.person);
-    };
-    UserForm.prototype.setDate = function (self, date) {
-        if (date) {
-            if (date.search(/\d{2}.\d{2}.\d{4}/i) == -1) {
-                self = date;
-            }
-            else {
-                var _a = date.split('.'), day = _a[0], month = _a[1], year = _a[2];
-                self = new Date(year, month - 1, day, 0, 0, 0);
-            }
-        }
-    };
-    UserForm.prototype.default = function () {
-        this._id = null;
-        this.username = null;
-        this.createdAt = null;
-        this.updatedAt = null;
-        this.active = true;
-        this.resource = [];
-        this.personId = null;
-        this.person = new __WEBPACK_IMPORTED_MODULE_0__shared_person__["a" /* Person */]();
-    };
-    return UserForm;
-}());
-//# sourceMappingURL=D:/projects/angular-med/src/user.js.map
-
-/***/ }),
-/* 1041 */
+/* 1035 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__users_service__ = __webpack_require__(1025);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__specialties_service__ = __webpack_require__(1022);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__ = __webpack_require__(406);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpecialtiesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -15619,174 +15353,144 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UsersComponent = (function () {
-    function UsersComponent(_usersService, _toastService, _toolbar, _router) {
-        this._usersService = _usersService;
+var SpecialtiesComponent = (function () {
+    function SpecialtiesComponent(_specialtiesService, _toastService, _toolbar, _router) {
+        this._specialtiesService = _specialtiesService;
         this._toastService = _toastService;
         this._toolbar = _toolbar;
         this._router = _router;
         this.modalDeleteActions = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.modalDetailActions = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.modalAddActions = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
-    UsersComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._toolbar.change({
-            title: "Список пользователей",
-            name: "users",
-            add: {
-                action: function () { return _this._router.navigate(['users/add']); }
-            } });
-        this._usersService.get()
-            .subscribe(function (data) {
-            _this.users = data;
-        });
-    };
-    UsersComponent.prototype.openModal = function (item) {
-        this.currentItem = item;
-        this.modalDeleteActions.emit({ action: "modal", params: ['open'] });
-    };
-    UsersComponent.prototype.closeModal = function () {
-        this.modalDeleteActions.emit({ action: "modal", params: ['close'] });
-    };
-    UsersComponent.prototype.deleteItem = function (item) {
+    SpecialtiesComponent.prototype.ngOnInit = function () {
         var _this = this;
         var self = this;
-        this._usersService.remove(item._id)
+        this._toolbar.change({
+            title: "Список специальностей",
+            name: "specialties",
+            add: {
+                action: function () { return _this.openModal({ name: '', active: true }, 'add'); }
+            }
+        });
+        this._specialtiesService.get()
+            .subscribe(function (response) {
+            _this.specialties = response;
+        });
+    };
+    SpecialtiesComponent.prototype.openModal = function (item, modalName) {
+        this.currentItem = item;
+        modalName = modalName ? modalName : 'delete';
+        switch (modalName) {
+            case 'delete':
+                this.modalDeleteActions.emit({ action: "modal", params: ['open'] });
+                break;
+            case 'detail':
+                this.modalDetailActions.emit({ action: "modal", params: ['open'] });
+                break;
+            case 'add':
+                this.modalAddActions.emit({ action: "modal", params: ['open'] });
+                break;
+        }
+    };
+    SpecialtiesComponent.prototype.closeModal = function (modalName) {
+        modalName = modalName ? modalName : 'delete';
+        switch (modalName) {
+            case 'delete':
+                this.modalDeleteActions.emit({ action: "modal", params: ['close'] });
+                break;
+            case 'detail':
+                this.modalDetailActions.emit({ action: "modal", params: ['close'] });
+                break;
+            case 'add':
+                this.modalAddActions.emit({ action: "modal", params: ['close'] });
+                break;
+        }
+    };
+    SpecialtiesComponent.prototype.deleteItem = function (item) {
+        var _this = this;
+        var self = this;
+        this._specialtiesService.remove(item._id)
             .subscribe(function (data) {
             if (data.status == 'ok') {
-                _this.users.find(function (user, index) {
-                    if (item._id == user._id) {
+                _this.specialties.find(function (service, index) {
+                    if (item._id == service._id) {
                         self.currentItem = null;
-                        self.users.splice(index, 1);
+                        self.specialties.splice(index, 1);
                         return true;
                     }
                 });
-                _this._toastService.toast("Пользователь удален");
+                _this._toastService.toast("Специальность удалена");
             }
         });
     };
-    UsersComponent = __decorate([
+    SpecialtiesComponent.prototype.updateItem = function (item) {
+        var _this = this;
+        var self = this;
+        this._specialtiesService.update(item)
+            .subscribe(function (data) {
+            _this._toastService.toast("Специальность обновлена");
+        });
+    };
+    SpecialtiesComponent.prototype.addItem = function (item) {
+        var _this = this;
+        var self = this;
+        this._specialtiesService.add(item)
+            .subscribe(function (data) {
+            _this._toastService.toast("Специальность добавлена");
+            _this.specialties.unshift(data);
+        });
+    };
+    SpecialtiesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-users',
-            template: __webpack_require__(1067),
-            styles: [__webpack_require__(1055)]
+            selector: 'app-specialties',
+            template: __webpack_require__(1062),
+            styles: [__webpack_require__(1050)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _d) || Object])
-    ], UsersComponent);
-    return UsersComponent;
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__specialties_service__["a" /* SpecialtiesService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _d) || Object])
+    ], SpecialtiesComponent);
+    return SpecialtiesComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/users.component.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/specialties.component.js.map
 
 /***/ }),
+/* 1036 */,
+/* 1037 */,
+/* 1038 */,
+/* 1039 */,
+/* 1040 */,
+/* 1041 */,
 /* 1042 */,
-/* 1043 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Person; });
-var Person = (function () {
-    function Person(object) {
-        this.default();
-        if (object != undefined) {
-            this.setParams(object);
-        }
-    }
-    Person.prototype.clear = function () {
-        this.default();
-    };
-    Person.prototype.setParams = function (object) {
-        this._id = object._id ? object._id : null;
-        this.first_name = object.first_name ? object.first_name : null;
-        this.second_name = object.second_name ? object.second_name : null;
-        this.last_name = object.last_name ? object.last_name : null;
-        this.gender = object.gender ? object.gender : null;
-        if (object.birthdate) {
-            //console.log(typeof object.birthdate, object.birthdate);
-            if (typeof object.birthdate == 'string') {
-                if (object.birthdate.search(/\d{2}.\d{2}.\d{4}/i) == -1) {
-                    this.birthdate = object.birthdate;
-                }
-                else {
-                    var _a = object.birthdate.split('.'), day = _a[0], month = _a[1], year = _a[2];
-                    this.birthdate = new Date(year, month - 1, day, 0, 0, 0);
-                }
-            }
-            else {
-                this.birthdate = object.birthdate;
-            }
-        }
-        this.phone = object.phone ? object.phone : null;
-        this.email = object.email ? object.email : null;
-        this.picture = object.picture ? object.picture._id : null;
-    };
-    Person.prototype.default = function () {
-        this._id = null;
-        this.first_name = null;
-        this.second_name = null;
-        this.last_name = null;
-        this.gender = null;
-        this.birthdate = null;
-        this.phone = null;
-        this.email = null;
-    };
-    return Person;
-}());
-//# sourceMappingURL=D:/projects/angular-med/src/person.js.map
-
-/***/ }),
+/* 1043 */,
 /* 1044 */,
 /* 1045 */,
 /* 1046 */,
 /* 1047 */,
 /* 1048 */,
 /* 1049 */,
-/* 1050 */,
+/* 1050 */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
 /* 1051 */,
 /* 1052 */,
-/* 1053 */
-/***/ (function(module, exports) {
-
-module.exports = "ul.tabs {\r\n    margin-bottom: 10px;\r\n}\r\n\r\nimg.selected-img {\r\n    margin: 10px;\r\n}"
-
-/***/ }),
-/* 1054 */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-/* 1055 */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
+/* 1053 */,
+/* 1054 */,
+/* 1055 */,
 /* 1056 */,
 /* 1057 */,
 /* 1058 */,
 /* 1059 */,
 /* 1060 */,
 /* 1061 */,
-/* 1062 */,
-/* 1063 */,
-/* 1064 */,
-/* 1065 */
+/* 1062 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" class=\"form-container\">\n  <div class=\"col s12\">\n    <ul class=\"tabs\" materialize=\"tabs\">\n      <li class=\"tab col s3\"><a class=\"active\" href=\"#user-info\">Пользователь</a></li>\n      <li class=\"tab col s3\"><a href=\"#personal-info\">Персональная информация</a></li>\n    </ul>\n  </div>\n  <div id=\"user-info\" class=\"col s12\">\n    <form [formGroup]=\"addForm\"  novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"usernameField\" formControlName=\"username\" type=\"text\" placeholder=\"Логин\">\n          <label for=\"usernameField\" data-error=\"Вы не заполнили поле\">Логин</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"passwords\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"passwordField\" formControlName=\"password\" type=\"password\" placeholder=\"Пароль\">\n          <label for=\"passwordField\" data-error=\"Вы не заполнили поле\">Пароль</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <input id=\"passwordAgainField\" formControlName=\"passwordAgain\" type=\"password\" placeholder=\"Повторите пароль\" [ngClass]=\"{'invalid': addForm.controls.passwords.controls.password.dirty && addForm.controls.passwords.controls.passwordAgain.dirty &&!addForm.controls.passwords.valid, 'valid': addForm.controls.passwords.valid}\">\n          <label for=\"passwordAgainField\" data-error=\"Пароли не совпадают\">Повторите пароль</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input type=\"checkbox\" class=\"filled-in\" id=\"activeField\" formControlName=\"active\" />\n          <label for=\"activeField\">Активный</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/persons\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n  <div id=\"personal-info\" class=\"col s12\">\n     <form [formGroup]=\"addForm\" novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div formGroupName=\"person\">\n        <div class=\"row\">\n          <div class=\"input-field col s12 l4\">\n            <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\">\n            <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\">\n            <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n            <label for=\"secondNameField\">Отчество</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col s2\">\n            Пол:\n          </div>\n          <div class=\"col s10\">\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n              <label for=\"genderField2\">Женский</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n              <label for=\"genderField1\">Мужской</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n              <label for=\"genderField3\">Не определен</label>\n            </p>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">Дата рождения: {{ user.person.birthdate | date: \"dd.MM.y\" }}</div>\n          <div class=\"input-field col s12 l6\">\n            <input materialize=\"pickadate\" [materializeParams]=\"[datePickerOptions]\" formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n            <label for=\"birthdateField\">Новая дата рождения</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">\n            <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\">\n            <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n          </div>\n          <div class=\"input-field col s12 l6\">\n            <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\">\n            <label for=\"emailField\">Email</label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 valign-wrapper\">\n          <img class=\"valign selected-img\" *ngIf=\"addForm.value.person.picture\" src=\"/api/v1/uploads/thumbs/{{addForm.value.person.picture.filename}}\" alt=\"\">\n          <span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">Выбрать картинку</span>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/users\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>"
-
-/***/ }),
-/* 1066 */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  user-update works!\n</p>\n"
-
-/***/ }),
-/* 1067 */
-/***/ (function(module, exports) {
-
-module.exports = "<table class=\"responsive-table\">\n  <thead>\n    <tr>\n        <th data-field=\"username\">Логин</th>\n        <th data-field=\"group\">Группа</th>\n        <th data-field=\"create\">Дата создания</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of users\">\n      <td class=\"text-capitalize\">{{item.username}}</td>\n      <td>{{item.group}}</td>\n      <td>{{item.createdAt | date:\"dd.MM.y\"}}</td>\n      <td>\n        <a routerLink=\"/users/update/{{item._id}}\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n        <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить пользователя</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить пользователя: {{currentItem.username}}? <br> Дата создания: {{currentItem.createdAt | date:\"dd.MM.y\"}} </p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>"
+module.exports = "<table class=\"responsive-table\">\n  <thead>\n    <tr>\n        <th data-field=\"name\">Наименование</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of specialties\">\n      <td class=\"text-capitalize\">{{item.name}}</td>\n      <td>\n        <button (click)=\"openModal(item, 'detail')\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></button>\n        <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- Delete Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить специальность</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить специальность: {{currentItem.name}}?</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>\n\n<!-- Detail Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDetailActions\">\n  <div class=\"modal-content\">\n    <h4>Редактировать специальность</h4>\n    <div class=\"form-container row\" *ngIf=\"currentItem\">\n      <div class=\"input-field col s12\">\n        <input id=\"nameField\" type=\"text\" [(ngModel)]=\"currentItem.name\" placeholder=\"Наименование\">\n        <label for=\"nameField\" data-error=\"Вы не заполнили поле\" [ngClass]=\"{'active': currentItem.name}\">Наименование</label>\n      </div>\n      <div class=\"col s12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" [(ngModel)]=\"currentItem.active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n    </div>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal('detail')\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"updateItem(currentItem)\">Сохранить</button>\n  </div>\n</div>\n\n<!-- Detail Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalAddActions\">\n  <div class=\"modal-content\">\n    <h4>Добавить специальность</h4>\n    <div class=\"form-container row\" *ngIf=\"currentItem\">\n      <div class=\"input-field col s12\">\n        <input id=\"nameField\" type=\"text\" [(ngModel)]=\"currentItem.name\" placeholder=\"Наименование\">\n        <label for=\"nameField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n      </div>\n      <div class=\"col s12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" [(ngModel)]=\"currentItem.active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n    </div>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal('add')\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"addItem(currentItem)\">Сохранить</button>\n  </div>\n</div>"
 
 /***/ })
 ]));
-//# sourceMappingURL=0.bundle.map
+//# sourceMappingURL=4.bundle.map

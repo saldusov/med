@@ -3,6 +3,7 @@ const vtPerson = require("../persons/valid-transf");
 
 module.exports = {
 	validation: function(data, errors) {
+		if(typeof data._id != "undefined" && data._id == null) delete data._id;
 		if(!data.username) errors.push("Укажите логин!");
 
 		if(errors.length > 0) return false;
@@ -10,7 +11,7 @@ module.exports = {
 	},
 
 	transform: function(data) {
-		vtPerson.checkCreate(data);
+		
 	}
 
 }

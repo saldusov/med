@@ -60,9 +60,9 @@ fsManager = {
 		return new Promise((resolve, reject) => {
 
 			gm(path + filename)
-			    .resize(100, 125)
+			    .resize(150, 150)
 			    .gravity("Center")
-			    .extent(100, 125)
+			    .extent(150, 150)
 			    .quality(75)
 			    .noProfile()
 			    .write(thumbs + filename, function (errors) {

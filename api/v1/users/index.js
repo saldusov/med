@@ -34,7 +34,6 @@ app.get("/", function(req, res, next) {
 
 /* GET one item. */
 app.get("/:id", function(req, res, next) {
-		
 	userManager
 		.read(req.params.id)
 		.then((result) => {
