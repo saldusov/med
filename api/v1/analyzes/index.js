@@ -2,14 +2,34 @@ const express = require("express");
 let app = module.exports = express();
 
 let AnalyzesSchema = require('./Analyzes.schema');
-let parseData = require("./middleware").parseData;
+let middleware = require("./middleware");
 let crud = require("./crud");
 
 /* GET patiens list. */
-app.get('/', function(req, res, next) {
-	AnalyzesSchema.find(function(err, foundItems) {
-		res.json(foundItems);
-	});
+app.get('/', middleware.parseQuery, function(req, res, next) {
+	let pageNumber = req.mongoParams.pageNumber > 0 ? ((req.mongoParams.pageNumber-1)*req.mongoParams.nPerPage) : 0;
+	let nPerPage = req.mongoParams.nPerPage;
+	
+	let cursor = AnalyzesSchema
+		.aggregate([
+			{
+				$match: req.mongoParams.query
+			}
+		])
+        .cursor({batchSize: 1000})
+        .exec();
+
+		if(pageNumber > -1 && nPerPage) {
+			cursor.skip(pageNumber).limit(nPerPage);
+		}
+
+		cursor.toArray(function (err, items) {
+			if(err) throw new Error(err);
+
+			AnalyzesSchema.count(req.mongoParams.query, function(err, count) {
+				res.json({items, count});
+			});
+		});
 });
 
 app.get('/:id', function(req, res, next) {
@@ -18,7 +38,7 @@ app.get('/:id', function(req, res, next) {
 	});
 });
 
-app.post('/', parseData, function(req, res, next){
+app.post('/', middleware.parseData, function(req, res, next){
 	
 	crud
 		.create(req.body)
@@ -27,7 +47,7 @@ app.post('/', parseData, function(req, res, next){
 
 });
 
-app.put('/:id', parseData, function(req, res, next){
+app.put('/:id', middleware.parseData, function(req, res, next){
 	
 	crud
 		.read(req.params.id)
