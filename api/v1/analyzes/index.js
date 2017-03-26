@@ -1,11 +1,12 @@
 const express = require("express");
 let app = module.exports = express();
 
+const mongoose = require("mongoose");
+
 let AnalyzesSchema = require('./Analyzes.schema');
 let middleware = require("./middleware");
 let crud = require("./crud");
 
-/* GET patiens list. */
 app.get('/', middleware.parseQuery, function(req, res, next) {
 	let pageNumber = req.mongoParams.pageNumber > 0 ? ((req.mongoParams.pageNumber-1)*req.mongoParams.nPerPage) : 0;
 	let nPerPage = req.mongoParams.nPerPage;
@@ -47,19 +48,63 @@ app.post('/', middleware.parseData, function(req, res, next){
 
 });
 
-app.put('/:id', middleware.parseData, function(req, res, next){
+app.post('/merge', function(req, res, next){
 	
+	AnalyzesSchema
+		.aggregate([
+			{
+				$match: {
+					_id : {$in : req.body.ids.map((id) => mongoose.Types.ObjectId(id)) }
+				}
+			}
+		])
+		.exec(function(err, foundItems) {
+			if(err) {
+				res.status(400).json(err);
+			} else {
+				if(foundItems.length > 0) {
+					let mergeItem = foundItems[0];
+
+					foundItems.filter((item) => {
+						if(mergeItem._id != item._id) {
+							middleware.mergeItems(mergeItem.art, item.art);
+							middleware.mergeItems(mergeItem.title, item.title);
+							middleware.mergeItems(mergeItem.price, item.price);
+							middleware.mergeItems(mergeItem.time, item.time);
+							mergeItem.description = mergeItem.description.concat(item.description);
+
+							crud
+								.delete(item._id);
+						}
+					});
+
+					crud
+						.update(mergeItem._id, mergeItem)
+						.then((modifyInfo) => res.json(mergeItem))
+						.catch((errors) => res.status(400).json({errors}));
+					
+				} else {
+					res.status(404).json({errors: ["Анализы не найдены"]});
+				}
+			}
+		});
+
+});
+
+app.put('/:id', middleware.parseData, function(req, res, next){
+	console.log(req.body);
+
 	crud
 		.read(req.params.id)
-		.then((person) => {
-			if(!person) {
+		.then((analyz) => {
+			if(!analyz) {
 				res.status(404).json({errros: ["Анализ не существует"]})
 			} else {
 				return crud.update(req.params.id, req.body);
 			}
 		})
 		.then((modifyInfo) => crud.read(req.params.id))
-		.then((person) => res.status(200).json(person))
+		.then((analyz) => res.status(200).json(analyz))
 		.catch((errors) => res.status(400).json({errors}));
 });
 

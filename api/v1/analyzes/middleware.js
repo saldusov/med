@@ -2,7 +2,17 @@ let vt = require("./valid-transf");
 
 module.exports = {
 	parseData: function(req, res, next) {
-		
+		next();
+	},
+
+	mergeItems: function(merge, item) {
+		if(typeof merge === 'undefined') merge = '';
+		if(typeof merge.helix === 'undefined') merge.helix = '';
+		if(typeof merge.cmd === 'undefined') merge.cmd = '';
+		if(typeof merge.invitro === 'undefined') merge.invitro = '';
+		if(item && typeof item.helix !== 'undefined') merge.helix = item.helix ? item.helix : merge.helix;
+		if(item && typeof item.cmd !== 'undefined') merge.cmd = item.cmd ? item.cmd : merge.cmd;
+		if(item && typeof item.invitro !== 'undefined') merge.invitro = item.invitro ? item.invitro : merge.invitro; 
 	},
 
 	parseQuery: function(req, res, next) {
@@ -13,9 +23,7 @@ module.exports = {
 
 		if(params.text) {
 			let arrayText = req.query.text.split(",");
-
 			let text = "(" + arrayText.map((textItem) => textItem.trim()).join("|") + ")";
-			console.log(text);
 			let regexp = new RegExp(text, "i");
 
 			query = {
