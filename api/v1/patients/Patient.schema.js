@@ -19,7 +19,7 @@ var patientSchema = new Schema({
 	snils: String, // СНИЛС
 	insurans: String, // Наименование страховой организации
 	benefit_code: String, // Код категории льготы
-	certificate: { // Документ (паспорт, миграционная карта)
+	passport: { // Документ (паспорт, миграционная карта)
 		type: String,
 		series: String,
 		number: String,

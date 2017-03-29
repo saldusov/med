@@ -1,24 +1,58 @@
 const express = require("express");
 let app = module.exports = express();
 
-let PersonModel = require('../persons/Person.schema');
-let parseData = require("./middleware").parseData;
+let PersonSchema = require('../persons/Person.schema');
+let middleware = require("./middleware");
 let crud = require("./crud");
 
 /* GET patiens list. */
-app.get('/', function(req, res, next) {
-	PersonModel.find(function(err, foundItems) {
-		res.json(foundItems);
-	});
+app.get('/', middleware.parseQuery, function(req, res, next) {
+	let pageNumber = req.mongoParams.pageNumber > 0 ? ((req.mongoParams.pageNumber-1)*req.mongoParams.nPerPage) : 0;
+	let nPerPage = req.mongoParams.nPerPage;
+	
+	let cursor = PersonSchema
+		.aggregate([
+			{
+				$match: req.mongoParams.query
+			},
+			{
+				$lookup: {
+					from: "files",
+					localField: "picture",
+					foreignField: "_id",
+					as: "picture"
+				}
+			},
+			{
+				$unwind: {
+					path: "$picture",
+					preserveNullAndEmptyArrays: true
+				}
+			}
+		])
+        .cursor({batchSize: 1000})
+        .exec();
+
+		if(pageNumber > -1 && nPerPage) {
+			cursor.skip(pageNumber).limit(nPerPage);
+		}
+
+		cursor.toArray(function (err, items) {
+			if(err) throw new Error(err);
+
+			PersonSchema.count(req.mongoParams.query, function(err, count) {
+				res.json({items, count});
+			});
+		});
 });
 
 app.get('/:id', function(req, res, next) {
-	PersonModel.findOne({_id: req.params.id}).populate('picture').exec(function(err, foundItem) {
+	PersonSchema.findOne({_id: req.params.id}).populate('picture').exec(function(err, foundItem) {
 		res.json(foundItem);
 	});
 });
 
-app.post('/', parseData, function(req, res, next){
+app.post('/', middleware.parseData, function(req, res, next){
 	
 	crud
 		.create(req.body)
@@ -27,7 +61,7 @@ app.post('/', parseData, function(req, res, next){
 
 });
 
-app.put('/:id', parseData, function(req, res, next){
+app.put('/:id', middleware.parseData, function(req, res, next){
 	
 	crud
 		.read(req.params.id)

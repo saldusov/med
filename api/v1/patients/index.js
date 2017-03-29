@@ -2,7 +2,7 @@ const express = require("express");
 let app = module.exports = express();
 
 const PatientSchema = require('./Patient.schema');
-let parseData = require("./middleware").parseData;
+let middleware = require("./middleware");
 let personManager = require("../persons/crud");
 let patientManager = require("./crud");
 let dbFunc = require("./db-func");
@@ -10,9 +10,15 @@ let dbFunc = require("./db-func");
 const PersonSchema = require('../persons/Person.schema');
 
 /* GET items list. */
-app.get('/', function(req, res, next) {
-	PatientSchema
+app.get('/', middleware.parseQuery, middleware.parseQueryPerson, function(req, res, next) {
+	let pageNumber = req.mongoParams.pageNumber > 0 ? ((req.mongoParams.pageNumber-1)*req.mongoParams.nPerPage) : 0;
+	let nPerPage = req.mongoParams.nPerPage;
+
+	let cursor = PatientSchema
 		.aggregate([
+			{
+				$match: req.mongoParams.query
+			},
 			{
 				$lookup: {
 					from: "persons",
@@ -26,15 +32,24 @@ app.get('/', function(req, res, next) {
 		      		path: "$person",
 		      		preserveNullAndEmptyArrays: true
 		      	}
-		   	}
-		])
-		.exec(function (err, foundItems) {
-			if(err) {
-				res.status(500).json({errors: [err]});
-			} else {
-				res.json(foundItems);
+		   	},
+		   	{
+				$match: req.mongoParams.person.query
 			}
+		]) 
+		.cursor({batchSize: 1000})
+        .exec();
+
+        if(pageNumber > -1 && nPerPage) {
+			cursor.skip(pageNumber).limit(nPerPage);
+		}
+
+		cursor.toArray(function (err, items) {
+			if(err) throw new Error(err);
+
+			res.json({items});
 		});
+		
 });
 
 /* GET one item. */
@@ -45,15 +60,16 @@ app.get('/:id', function(req, res, next) {
 });
 
 /* Insert item */
-app.post('/', parseData, function(req, res, next){
+app.post('/', middleware.parseData, function(req, res, next){
 
-	dbFunc.checkPerson(req.body)
+	dbFunc.checkNumber(req.body)
+		.then((data) => dbFunc.checkPerson(req.body))
 		.then((data) => patientManager.create(req.body))
 		.then((doctor) => res.status(200).json(doctor))
-		.catch((errors) => res.status(400).json({errors}));
+		.catch((errors) => res.status(400).json(errors));
 });
 
-app.put('/:id', parseData, function(req, res, next){
+app.put('/:id', middleware.parseData, function(req, res, next){
 
 	dbFunc.checkPerson(req.body)
 		.then((data) => patientManager.update(req.params.id, data))
