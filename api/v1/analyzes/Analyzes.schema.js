@@ -26,4 +26,4 @@ var analyzesSchema = new Schema({
 	active: Boolean
 });
 
-module.exports = mongoose.model('analyses', analyzesSchema);
+module.exports = mongoose.model('analyzes', analyzesSchema);

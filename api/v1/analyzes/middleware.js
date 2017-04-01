@@ -36,6 +36,25 @@ module.exports = {
 			};
 		}
 
+		if(params.labs) {
+			let labs = params.labs.split(",");
+			let labQuery = {$or: []};
+			labs.map((lab) => {
+				lab = "art." + lab.trim();
+				let params = new Object();
+				params[lab] = {$ne: null};
+				labQuery.$or.push(params);
+			});
+
+			console.log(labQuery);
+			query = {
+				$and: [
+					query,
+					labQuery
+				]
+			}
+		}
+
 		req.mongoParams.pageNumber = params.pageNumber ? parseInt(params.pageNumber) : 0;
 		req.mongoParams.nPerPage = params.nPerPage ? parseInt(params.nPerPage) : 0;
 		req.mongoParams.sort = params.sort ? parseInt(params.sort) : 1;

@@ -1,0 +1,2 @@
+mongoexport --db medappl --collection analyzes --out analyzes.json
+mongoimport --db medtest --collection analyzes --file analyzes.json

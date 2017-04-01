@@ -6,6 +6,54 @@ const mongoose = require("mongoose");
 let AnalyzesSchema = require('./Analyzes.schema');
 let middleware = require("./middleware");
 let crud = require("./crud");
+let exportModule = require("./export");
+
+app.get("/export", function(req, res, next) {
+	exportModule
+		.exportAll()
+		.then((filepath) => {
+			console.log('File saved at:', filepath); 
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+});
+
+app.get('/test', function(req, res, next) {
+	let regexp = new RegExp("кровь", "i");
+
+	AnalyzesSchema
+		.aggregate([
+			{
+				$match: {
+					$and: [
+						{
+							$or: [
+								{"title.cmd": regexp},
+								{"title.helix": regexp},
+								{"title.invitro": regexp},
+								{"description": regexp}
+							],
+						},
+						{
+							$or: [
+								{"art.helix": {$ne: null}},
+								{"art.cmd": {$ne: null}}
+							]
+						}
+					]					
+				}
+			},
+			/*{
+				$project: {
+					priceProduct: { $max: ["$price.cmd", "$price.helix", "$price.invitro"] }
+				} 
+			}*/
+		])
+		.exec(function(err, result) {
+			res.json(result);
+		});
+});
 
 app.get('/', middleware.parseQuery, function(req, res, next) {
 	let pageNumber = req.mongoParams.pageNumber > 0 ? ((req.mongoParams.pageNumber-1)*req.mongoParams.nPerPage) : 0;

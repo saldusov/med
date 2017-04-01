@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 var routing = require("./api/routing");
 
 
-mongoose.connect('mongodb://localhost:27017/medtest1');
+mongoose.connect('mongodb://localhost:27017/medtest');
 
 // parse application/json
 app.use(bodyParser.json());                        

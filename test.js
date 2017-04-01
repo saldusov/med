@@ -2,7 +2,7 @@ const mongoXlsx = require('mongo-xlsx');
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/medtest');
-const AnalysisSchema = require("./api/v1/analyzes/Analyzes.schema");
+const AnalyzesSchema = require("./api/v1/analyzes/Analyzes.schema");
 
 // let model = [
 //   {
@@ -53,128 +53,186 @@ const AnalysisSchema = require("./api/v1/analyzes/Analyzes.schema");
 // ];
 
 let model = null;
-// Helix
-// mongoXlsx.xlsx2MongoData("./file.xlsx", model, function(err, mongoData) {
-// 	mongoData[0]
-// 		.map((data) => {
-// 			let analysis = new AnalysisSchema(data);
-// 			analysis.save(function(err, result) {
-// 				if(err) console.log(err);
-// 			});
-// 		});
-// });
-
-// CMD
-/*mongoXlsx.xlsx2MongoData("./filecmd1.xlsx", model, function(err, mongoData) {
-	let description = [];
-	let iter = 0;
+//Helix
+/*mongoXlsx.xlsx2MongoData("./helix.xlsx", model, function(err, mongoData) {
+	let description = null;
+	let update = 0;
+	let add = 0;
+	//console.log(mongoData);
 	mongoData[0]
 		.map((data) => {
-			//console.log(data.art.cmd, data.art.cmd == 'a')
-			if(description.length > 0 && data.art.cmd == 'a') {
-				description.pop();
-				iter = description.length;
+			if(!data.price && description) {
+				description = null;
 			}
 
-			if(!data.price && description.length > iter) {
-				description.pop();
-				iter = description.length;
+			if(data.art && !data.price) {
+				let descr = data.art.split(".");
+				description = descr[1].trim();
 			}
 
-			if(data.art.cmd && data.art.cmd != 'a' && !data.price) {
-				//console.log(data.art.cmd);
-				description.push(data.art.cmd.trim());
-				iter = description.length;
-			}
+			if(data.price) {
+				data.description = description;	
+				AnalyzesSchema.findOne({"art.helix": data.art}, function(error, found) {
+					if(error) console.log(error);
+					else {
+						if(found) {
+							found.title.helix = data.title;
+							found.price.helix = parseInt(data.price);
+							found.description = data.description;
 
-			if(data.art.cmd && data.price) {
-				iter = description.length - 1;
-				data.description = description;
-				//console.log(data);
-				AnalysisSchema
-					.findOne({ "art.cmd" : data.art.cmd})
-					.exec(function(err, foundObject) {
-						if(err) {
-							console.log('Read: ', err);
+							update++;
+							found.save((err, result) => {
+								if(err) console.log(err);
+								else update++;
+							});
 						} else {
-							if(foundObject) {
-								console.log(foundObject.art.cmd + "-" + data.art.cmd);
-								foundObject.title.cmd = data.title.cmd;
-								foundObject.price.cmd = data.price.cmd;
-								foundObject.description = data.description;
-								//foundObject.description = data.description.concat(foundObject.description);
-							} else {
-								foundObject = new AnalysisSchema(data);
-							}
-
-							foundObject.save(function(err, result) {
-								if(err) {
-									console.log('Save: ', err);
-									console.log(data);
-								}
+							data.description = description;
+							
+							add++;
+							let analysis = new AnalyzesSchema({
+								art: {
+									helix: data.art
+								},
+								title: {
+									helix: data.title
+								},
+								price: {
+									helix: parseInt(data.price)
+								},
+								description: data.description
+							});
+							console.log(analysis);
+							analysis.save(function(err, result) {
+								if(err) console.log(err);
+								else add++;
 							});
 						}
-					});
-			}
 
-			//console.log(description);
+						console.log('Update: '+update, 'Add: '+add);
+					}
+				});
+			}
+			
+		});
+});
+*/
+// CMD
+/*mongoXlsx.xlsx2MongoData("./cmd.xlsx", model, function(err, mongoData) {
+	let update = 0;
+	let add = 0;
+	//console.log(mongoData);
+	mongoData[0]
+		.map((data) => {
+			if(data.price) {
+				//data.description = description;	
+				AnalyzesSchema.findOne({"art.cmd": data.art}, function(error, found) {
+					if(error) console.log(error);
+					else {
+						if(found) {
+							found.title.cmd = data.title;
+							found.price.cmd = parseInt(data.price);
+							//found.description = data.description;
+
+							update++;
+							found.save((err, result) => {
+								if(err) console.log(err);
+								else update++;
+							});
+						} else {
+							//data.description = description;
+							
+							add++;
+							let analysis = new AnalyzesSchema({
+								art: {
+									cmd: data.art
+								},
+								title: {
+									cmd: data.title
+								},
+								price: {
+									cmd: parseInt(data.price)
+								},
+								//description: data.description
+							});
+							console.log(analysis);
+							analysis.save(function(err, result) {
+								if(err) console.log(err);
+								else add++;
+							});
+						}
+
+						console.log('Update: '+update, 'Add: '+add);
+					}
+				});
+			}
+			
 		});
 });*/
 
 // Invitro
-mongoXlsx.xlsx2MongoData("./fileinvitro.xlsx", model, function(err, mongoData) {
-	let description = [];
-	let iter = 0;
-	mongoData[0]
-		.map((data) => {
-			if(data.art.invitro == 'cl') {
-				description = [];
-				iter = 0;
-			}
-			//console.log(data.art.cmd, data.art.cmd == 'a')
-			if(description.length > 0 && data.art.invitro == 'up') {
-				description.pop();
-				iter = description.length;
-			}
+// mongoXlsx.xlsx2MongoData("./invitro.xlsx", model, function(err, mongoData) {
+// 	let setDescription = false;
+// 	let description = [];
+// 	let iter = 0;
+// 	mongoData[0]
+// 		.map((data) => {
+// 			if(setDescription) {
+// 				if(data.art == 'cl') {
+// 					description = [];
+// 					iter = 0;
+// 				}
+// 				//console.log(data.art.cmd, data.art.cmd == 'a')
+// 				if(description.length > 0 && data.art == 'up') {
+// 					description.pop();
+// 					iter = description.length;
+// 				}
 
-			if(!data.price && description.length > iter) {
-				description.pop();
-				iter = description.length;
-			}
+// 				if(!data.price && description.length > iter) {
+// 					description.pop();
+// 					iter = description.length;
+// 				}
 
-			if(data.art.invitro && data.art.invitro != 'up' && !data.price) {
-				//console.log(data.art.invitro);
-				description.push(data.art.invitro.trim());
-				iter = description.length;
-			}
+// 				if(data.art && data.art != 'up' && !data.price) {
+// 					//console.log(data.art);
+// 					description.push(data.art.trim());
+// 					iter = description.length;
+// 				}
+// 			}
 
-			if(data.art.invitro && data.price) {
-				iter = description.length - 1;
-				data.description = description;
-				
-				AnalysisSchema
-					.findOne({ "art.invitro" : data.art.invitro})
-					.exec(function(err, foundObject) {
-						if(err) {
-							console.log('Read: ', err);
-						} else {
-							if(foundObject) {
-								foundObject.title.invitro = data.title.invitro;
-								foundObject.price.invitro = data.price.invitro;
-								foundObject.description = data.description.concat(data.description);
-								//foundObject.description = data.description.concat(foundObject.description);
-							} else {
-								foundObject = new AnalysisSchema(data);
-							}
+// 			if(data.art && data.price) {
+// 				if(setDescription) {
+// 					iter = description.length - 1;
+// 					data.description = description;
+// 				}
+// 				AnalyzesSchema
+// 					.findOne({ "art.invitro" : data.art})
+// 					.exec(function(err, foundObject) {
+// 						if(err) {
+// 							console.log('Read: ', err);
+// 						} else {
+// 							if(foundObject) {
+// 								foundObject.title.invitro = data.title;
+// 								foundObject.price.invitro = data.price;
+// 								if(!foundObject.art.helix && !foundObject.art.cmd && setDescription) {
+// 									foundObject.description = data.description;
+// 								}
+// 								//foundObject.description = data.description.concat(foundObject.description);
+// 							} else {
+// 								foundObject = new AnalyzesSchema({
+// 									art: {invitro: data.art},
+// 									title: {invitro: data.title},
+// 									price: {invitro: data.price}
+// 								});
+// 							}
 
-							foundObject.save(function(err, result) {
-								if(err) {
-									console.log('Save: ', err);
-									console.log(data);
-								}
-							});
-						}
-					});
-			}
-		});
-});
+// 							foundObject.save(function(err, result) {
+// 								if(err) {
+// 									console.log('Save: ', err);
+// 									console.log(data);
+// 								}
+// 							});
+// 						}
+// 					});
+// 			}
+// 		});
+// });
