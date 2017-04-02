@@ -7,6 +7,7 @@ let AnalyzesSchema = require('./Analyzes.schema');
 let middleware = require("./middleware");
 let crud = require("./crud");
 let exportModule = require("./export");
+let func = require("./additFunc");
 
 app.get("/export", function(req, res, next) {
 	exportModule
@@ -19,39 +20,46 @@ app.get("/export", function(req, res, next) {
 		});
 });
 
+app.get("/export/:name", function(req, res, next) {
+	exportModule
+		.exportLab(req.params.name)
+		.then((filepath) => {
+			console.log('File saved at:', filepath); 
+			res.json({success: "ok", filepath: filepath});
+		})
+		.catch((error) => {
+			console.log(error);
+			res.status(400).json({error});
+		});
+});
+
 app.get('/test', function(req, res, next) {
-	let regexp = new RegExp("кровь", "i");
+	//let regexp = new RegExp("кровь", "i");
 
 	AnalyzesSchema
-		.aggregate([
-			{
-				$match: {
-					$and: [
-						{
-							$or: [
-								{"title.cmd": regexp},
-								{"title.helix": regexp},
-								{"title.invitro": regexp},
-								{"description": regexp}
-							],
-						},
-						{
-							$or: [
-								{"art.helix": {$ne: null}},
-								{"art.cmd": {$ne: null}}
-							]
-						}
-					]					
-				}
-			},
-			/*{
-				$project: {
-					priceProduct: { $max: ["$price.cmd", "$price.helix", "$price.invitro"] }
-				} 
-			}*/
-		])
+		.aggregate({
+			$project: {
+				price: 1,
+				title: 1,
+				art: 1,
+				productPrice: 1
+			}
+		})
 		.exec(function(err, result) {
+			if(err) res.json(err);
+			else{
+			/*result.map((analyz) => {
+				analyz.productPrice = {};
+				if(analyz.price.cmd) analyz.productPrice.cmd = func.roundOf(analyz.price.cmd);
+				if(analyz.price.helix) analyz.productPrice.helix = func.roundOf(analyz.price.helix);
+				if(analyz.price.invitro) analyz.productPrice.invitro = func.roundOf(analyz.price.invitro);
+				analyz.save(function(err, result) {
+					if(err) console.log(err);
+					console.log('Saved');
+				});
+			});*/
 			res.json(result);
+			}
 		});
 });
 

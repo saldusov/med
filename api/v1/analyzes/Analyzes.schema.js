@@ -22,6 +22,11 @@ var analyzesSchema = new Schema({
 		helix: String,
 		invitro: String
 	},
+	productPrice: {
+		cmd: Number,
+		helix: Number,
+		invitro: Number
+	},
 	description: [String],
 	active: Boolean
 });

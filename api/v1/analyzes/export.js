@@ -18,9 +18,44 @@ let exportModule = {
 				});
 		});
 	},
+	exportLab: (name) => {
+		return new Promise((resolve, reject) => {
+			let query = {};
+
+			if(name == 'helix') query = {"art.helix": {$ne: null}};
+			if(name == 'cmd') query = {"art.cmd": {$ne: null}};
+			if(name == 'invitro') query = {"art.invitro": {$ne: null}};
+
+			model
+				.find(query, "-_id -__v -time -description -active")
+				.exec(function(error, foundObjects) {
+					if(error) {
+						reject(error);
+					} else {
+						let modelBuild = mongoXlsx.buildDynamicModel(foundObjects);
+						mongoXlsx.mongoData2Xlsx(foundObjects, modelBuild, function(err, data) {
+						  	resolve(data.fullPath);
+						});
+					}
+				});
+		});
+	},
 	exportProduct: () => {
 		return new Promise((resolve, reject) => {
-			
+			model
+				.aggregate({
+					$project: "-_id -__v -time -description -active"
+				})
+				.exec(function(error, foundObjects) {
+					if(error) {
+						reject(error);
+					} else {
+						let modelBuild = mongoXlsx.buildDynamicModel(foundObjects);
+						mongoXlsx.mongoData2Xlsx(foundObjects, modelBuild, function(err, data) {
+						  	resolve(data.fullPath);
+						});
+					}
+				});
 		});
 	}
 };

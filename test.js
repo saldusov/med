@@ -75,11 +75,13 @@ let model = null;
 				AnalyzesSchema.findOne({"art.helix": data.art}, function(error, found) {
 					if(error) console.log(error);
 					else {
-						if(found) {
+						if(typeof data.price == 'string') {
+							data.price = data.price.toString().replace(/(,00| )/g, "");
+						}
+						if(found) {						
 							found.title.helix = data.title;
-							found.price.helix = parseInt(data.price);
+							found.price.helix = data.price;
 							found.description = data.description;
-
 							update++;
 							found.save((err, result) => {
 								if(err) console.log(err);
@@ -97,7 +99,7 @@ let model = null;
 									helix: data.title
 								},
 								price: {
-									helix: parseInt(data.price)
+									helix: data.price
 								},
 								description: data.description
 							});
