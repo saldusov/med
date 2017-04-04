@@ -23,7 +23,8 @@ module.exports = {
 
 		if(params.text) {
 			let arrayText = req.query.text.split(",");
-			let text = "(" + arrayText.map((textItem) => textItem.trim()).join("|") + ")";
+			let trimArray = arrayText.map((textItem) => textItem.trim());
+			let text = "(" + trimArray.join("|") + ")";
 			let regexp = new RegExp(text, "i");
 
 			query = {
@@ -31,6 +32,9 @@ module.exports = {
 					{"title.cmd": regexp},
 					{"title.helix": regexp},
 					{"title.invitro": regexp},
+					{"art.cmd": {$in: trimArray}},
+					{"art.helix":  {$in: trimArray}},
+					{"art.invitro":  {$in: trimArray}},
 					{"description": regexp}
 				]
 			};
@@ -46,7 +50,7 @@ module.exports = {
 				labQuery.$or.push(params);
 			});
 
-			console.log(labQuery);
+			//console.log(labQuery);
 			query = {
 				$and: [
 					query,

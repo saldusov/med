@@ -1,4 +1,5 @@
 /node_modules
+/notdownload
 /uploads/fullsize/*
 /uploads/thumbs/*
 /*.xlsx

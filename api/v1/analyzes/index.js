@@ -6,8 +6,12 @@ const mongoose = require("mongoose");
 let AnalyzesSchema = require('./Analyzes.schema');
 let middleware = require("./middleware");
 let crud = require("./crud");
+let db = require("./db");
 let exportModule = require("./export");
 let func = require("./additFunc");
+let test = require("./test");
+
+app.use("/test", test);
 
 app.get("/export", function(req, res, next) {
 	exportModule
@@ -33,66 +37,31 @@ app.get("/export/:name", function(req, res, next) {
 		});
 });
 
-app.get('/test', function(req, res, next) {
-	//let regexp = new RegExp("кровь", "i");
+app.get('/', middleware.parseQuery, function(req, res, next) {
 
-	AnalyzesSchema
-		.aggregate({
-			$project: {
-				price: 1,
-				title: 1,
-				art: 1,
-				productPrice: 1
-			}
-		})
-		.exec(function(err, result) {
-			if(err) res.json(err);
-			else{
-			/*result.map((analyz) => {
-				analyz.productPrice = {};
-				if(analyz.price.cmd) analyz.productPrice.cmd = func.roundOf(analyz.price.cmd);
-				if(analyz.price.helix) analyz.productPrice.helix = func.roundOf(analyz.price.helix);
-				if(analyz.price.invitro) analyz.productPrice.invitro = func.roundOf(analyz.price.invitro);
-				analyz.save(function(err, result) {
-					if(err) console.log(err);
-					console.log('Saved');
-				});
-			});*/
-			res.json(result);
-			}
-		});
+	db
+		.get(req.mongoParams)
+		.then((result) => res.json(result))
+		.catch((error) => res.status(400).json({errors: [error]}));
+
 });
 
-app.get('/', middleware.parseQuery, function(req, res, next) {
-	let pageNumber = req.mongoParams.pageNumber > 0 ? ((req.mongoParams.pageNumber-1)*req.mongoParams.nPerPage) : 0;
-	let nPerPage = req.mongoParams.nPerPage;
-	
-	let cursor = AnalyzesSchema
-		.aggregate([
-			{
-				$match: req.mongoParams.query
-			}
-		])
-        .cursor({batchSize: 1000})
-        .exec();
+app.get('/count', middleware.parseQuery, function(req, res, next) {
 
-		if(pageNumber > -1 && nPerPage) {
-			cursor.skip(pageNumber).limit(nPerPage);
-		}
+	db
+		.getCount(req.mongoParams)
+		.then((result) => res.json(result))
+		.catch((error) => res.status(400).json({errors: [error]}));
 
-		cursor.toArray(function (err, items) {
-			if(err) throw new Error(err);
-
-			AnalyzesSchema.count(req.mongoParams.query, function(err, count) {
-				res.json({items, count});
-			});
-		});
 });
 
 app.get('/:id', function(req, res, next) {
-	AnalyzesSchema.findOne({_id: req.params.id}).exec(function(err, foundItem) {
-		res.json(foundItem);
-	});
+
+	crud
+		.read(req.params.id)
+		.then((foundItem) => res.json(foundItem))
+		.catch((error) => res.status(400).json({errors: [error]}));
+
 });
 
 app.post('/', middleware.parseData, function(req, res, next){
@@ -126,6 +95,7 @@ app.post('/merge', function(req, res, next){
 							middleware.mergeItems(mergeItem.art, item.art);
 							middleware.mergeItems(mergeItem.title, item.title);
 							middleware.mergeItems(mergeItem.price, item.price);
+							middleware.mergeItems(mergeItem.productPrice, item.productPrice);
 							middleware.mergeItems(mergeItem.time, item.time);
 							mergeItem.description = mergeItem.description.concat(item.description);
 
@@ -148,8 +118,6 @@ app.post('/merge', function(req, res, next){
 });
 
 app.put('/:id', middleware.parseData, function(req, res, next){
-	console.log(req.body);
-
 	crud
 		.read(req.params.id)
 		.then((analyz) => {

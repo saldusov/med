@@ -1,18 +1,41 @@
-const AnalyzesSchema = require('./Analyzes.schema');
+const mongoose = require("mongoose");
+const AnalyzesSchema = require("./Analyzes.schema");
 
 let analyzesManager = {
 	read: function(id) {
 		return new Promise(function(resolve, reject) {
 			AnalyzesSchema
-				.findOne({_id: id}, function(errors, result) {
-					if(errors) {
-						reject([errors]);
-					} else {
-						if(!result) {
-							resolve(false);
-						} else {
-							resolve(result);
+				.aggregate([
+					{
+						$match: { _id: mongoose.Types.ObjectId(id)}
+					},
+					{
+						$project: {
+							_id: 1,
+							art: 1,
+							title: 1,
+							price: 1,
+							productPrice: 1,
+							description: 1,
+							active: 1,
+							finishPrice: {
+								$cond: { 
+									if: {
+										$gte: ["$productPrice.invitro", 0] 
+									}, 
+									then: "$productPrice.invitro",
+									else: { 
+										$max: ["$productPrice.helix", "$productPrice.cmd"] 
+									}	 
+								}
+							}
 						}
+					}
+				])
+				.exec(function (err, result) {
+					if(err) reject(err);
+					else {
+						resolve(result[0]);
 					}
 				});
 		});

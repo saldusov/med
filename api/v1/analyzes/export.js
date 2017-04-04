@@ -40,6 +40,30 @@ let exportModule = {
 				});
 		});
 	},
+	exportUniq: () => {
+		return new Promise((resolve, reject) => {
+			let query = {};
+
+			query = {
+				"art.invitro": {$ne: null},
+				"productPrice.invitro": {$ne: null},
+				"price.invitro": null
+			};
+
+			model
+				.find(query, "-_id -__v -time -description -active")
+				.exec(function(error, foundObjects) {
+					if(error) {
+						reject(error);
+					} else {
+						let modelBuild = mongoXlsx.buildDynamicModel(foundObjects);
+						mongoXlsx.mongoData2Xlsx(foundObjects, modelBuild, function(err, data) {
+						  	resolve(data.fullPath);
+						});
+					}
+				});
+		});
+	},
 	exportProduct: () => {
 		return new Promise((resolve, reject) => {
 			model

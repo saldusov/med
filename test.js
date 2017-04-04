@@ -53,6 +53,61 @@ const AnalyzesSchema = require("./api/v1/analyzes/Analyzes.schema");
 // ];
 
 let model = null;
+
+/*mongoXlsx.xlsx2MongoData("./jjj.xlsx", model, function(err, mongoData) {
+
+	let resultArray = [];
+	let summ = 0;
+	//console.log(mongoData);
+	mongoData[0]
+		.map((data) => {
+			
+			AnalyzesSchema
+				.aggregate([
+					{
+						$match: {
+							"art.helix": data.art
+						}
+					},
+					{
+						$project: {
+							art: 1,
+							productPrice: 1,
+							finishPrice: {
+								$cond: { 
+									if: {
+										$gte: ["$productPrice.invitro", 0] 
+									}, 
+									then: "$productPrice.invitro",
+									else: { 
+										$max: ["$productPrice.helix", "$productPrice.cmd"] 
+									}	 
+								}
+							}
+						}
+					},
+					{
+						$limit: 20
+					}
+				])
+				.exec(function(error, result) {
+					if(error) console.log(error);
+					else {
+						resultArray.push({
+							art: data.art,
+							count: data.count,
+							price: data.price,
+							finish: result[0].finishPrice,
+							summ: data.count * result[0].finishPrice
+						});
+
+						summ = summ + (parseInt(data.count) * parseInt(result[0].finishPrice));
+						console.log(data.count, result[0].finishPrice, (parseInt(data.count) * parseInt(result[0].finishPrice)));
+						console.log('Itog: ' + summ);
+					}
+				});
+		});
+});*/
 //Helix
 /*mongoXlsx.xlsx2MongoData("./helix.xlsx", model, function(err, mongoData) {
 	let description = null;
@@ -172,69 +227,73 @@ let model = null;
 });*/
 
 // Invitro
-// mongoXlsx.xlsx2MongoData("./invitro.xlsx", model, function(err, mongoData) {
-// 	let setDescription = false;
-// 	let description = [];
-// 	let iter = 0;
-// 	mongoData[0]
-// 		.map((data) => {
-// 			if(setDescription) {
-// 				if(data.art == 'cl') {
-// 					description = [];
-// 					iter = 0;
-// 				}
-// 				//console.log(data.art.cmd, data.art.cmd == 'a')
-// 				if(description.length > 0 && data.art == 'up') {
-// 					description.pop();
-// 					iter = description.length;
-// 				}
+mongoXlsx.xlsx2MongoData("./noprice.xlsx", model, function(err, mongoData) {
+	let setDescription = false;
+	let description = [];
+	let iter = 0;
 
-// 				if(!data.price && description.length > iter) {
-// 					description.pop();
-// 					iter = description.length;
-// 				}
+	mongoData//[0]
+		.map((data) => {
+			if(setDescription) {
+				if(data.art == 'cl') {
+					description = [];
+					iter = 0;
+				}
+				//console.log(data.art.cmd, data.art.cmd == 'a')
+				if(description.length > 0 && data.art == 'up') {
+					description.pop();
+					iter = description.length;
+				}
 
-// 				if(data.art && data.art != 'up' && !data.price) {
-// 					//console.log(data.art);
-// 					description.push(data.art.trim());
-// 					iter = description.length;
-// 				}
-// 			}
+				if(!data.price && description.length > iter) {
+					description.pop();
+					iter = description.length;
+				}
 
-// 			if(data.art && data.price) {
-// 				if(setDescription) {
-// 					iter = description.length - 1;
-// 					data.description = description;
-// 				}
-// 				AnalyzesSchema
-// 					.findOne({ "art.invitro" : data.art})
-// 					.exec(function(err, foundObject) {
-// 						if(err) {
-// 							console.log('Read: ', err);
-// 						} else {
-// 							if(foundObject) {
-// 								foundObject.title.invitro = data.title;
-// 								foundObject.price.invitro = data.price;
-// 								if(!foundObject.art.helix && !foundObject.art.cmd && setDescription) {
-// 									foundObject.description = data.description;
-// 								}
-// 								//foundObject.description = data.description.concat(foundObject.description);
-// 							} else {
-// 								foundObject = new AnalyzesSchema({
-// 									art: {invitro: data.art},
-// 									title: {invitro: data.title},
-// 									price: {invitro: data.price}
-// 								});
-// 							}
+				if(data.art && data.art != 'up' && !data.price) {
+					//console.log(data.art);
+					description.push(data.art.trim());
+					iter = description.length;
+				}
+			}
 
-// 							foundObject.save(function(err, result) {
-// 								if(err) {
-// 									console.log('Save: ', err);
-// 									console.log(data);
-// 								}
-// 							});
-// 						}
-// 					});
-// 			}
-// 		});
-// });
+			if(data.art && data.price) {
+				if(setDescription) {
+					iter = description.length - 1;
+					data.description = description;
+				}
+				AnalyzesSchema
+					.findOne({ "art.invitro" : data.art})
+					.exec(function(err, foundObject) {
+						if(err) {
+							console.log('Read: ', err);
+						} else {
+							if(foundObject) {
+								//foundObject.title.invitro = data.title;
+								foundObject.price.invitro = data.price;
+								if(!foundObject.art.helix && !foundObject.art.cmd && setDescription) {
+									foundObject.description = data.description;
+								}
+								//foundObject.description = data.description.concat(foundObject.description);
+
+								foundObject.save(function(err, result) {
+									if(err) {
+										console.log('Save: ', err);
+									}
+									console.log(result);
+								});
+							} else {
+								/*foundObject = new AnalyzesSchema({
+									art: {invitro: data.art},
+									title: {invitro: data.title},
+									price: {invitro: data.price}
+								});*/
+
+								
+							}
+
+						}
+					});
+			}
+		});
+});
