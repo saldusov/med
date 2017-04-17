@@ -227,7 +227,7 @@ let model = null;
 });*/
 
 // Invitro
-mongoXlsx.xlsx2MongoData("./noprice.xlsx", model, function(err, mongoData) {
+/*mongoXlsx.xlsx2MongoData("./noprice.xlsx", model, function(err, mongoData) {
 	let setDescription = false;
 	let description = [];
 	let iter = 0;
@@ -283,11 +283,11 @@ mongoXlsx.xlsx2MongoData("./noprice.xlsx", model, function(err, mongoData) {
 									console.log(result);
 								});
 							} else {
-								/*foundObject = new AnalyzesSchema({
+								foundObject = new AnalyzesSchema({
 									art: {invitro: data.art},
 									title: {invitro: data.title},
 									price: {invitro: data.price}
-								});*/
+								});
 
 								
 							}
@@ -296,4 +296,4 @@ mongoXlsx.xlsx2MongoData("./noprice.xlsx", model, function(err, mongoData) {
 					});
 			}
 		});
-});
+});*/

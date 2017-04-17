@@ -9,10 +9,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__users_users_component__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_add_user_add_component__ = __webpack_require__(1067);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_update_user_update_component__ = __webpack_require__(1068);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__users_users_component__ = __webpack_require__(1073);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_add_user_add_component__ = __webpack_require__(1071);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_update_user_update_component__ = __webpack_require__(1072);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__users_service__ = __webpack_require__(1042);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersModule", function() { return UsersModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -66,7 +66,7 @@ var UsersModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(449);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
@@ -131,7 +131,7 @@ var UsersService = (function () {
 
 /***/ }),
 
-/***/ 1046:
+/***/ 1047:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -187,11 +187,11 @@ var Person = (function () {
 
 /***/ }),
 
-/***/ 1053:
+/***/ 1056:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1046);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1047);
 /* unused harmony export User */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserForm; });
 
@@ -284,7 +284,7 @@ var UserForm = (function () {
 
 /***/ }),
 
-/***/ 1067:
+/***/ 1071:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -296,7 +296,7 @@ var UserForm = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__ = __webpack_require__(135);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__ = __webpack_require__(451);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__ = __webpack_require__(450);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__user__ = __webpack_require__(1053);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__user__ = __webpack_require__(1056);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserAddComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -404,8 +404,8 @@ var UserAddComponent = (function () {
     UserAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-user-add',
-            template: __webpack_require__(1098),
-            styles: [__webpack_require__(1083)]
+            template: __webpack_require__(1104),
+            styles: [__webpack_require__(1088)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__["a" /* FormDataService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__["a" /* FormDataService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__["a" /* FileSelectService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _f) || Object])
     ], UserAddComponent);
@@ -416,7 +416,7 @@ var UserAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1068:
+/***/ 1072:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -428,7 +428,7 @@ var UserAddComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__ = __webpack_require__(135);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__ = __webpack_require__(451);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__ = __webpack_require__(450);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__user__ = __webpack_require__(1053);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__user__ = __webpack_require__(1056);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserUpdateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -555,8 +555,8 @@ var UserUpdateComponent = (function () {
     UserUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-user-update',
-            template: __webpack_require__(1099),
-            styles: [__webpack_require__(1084)]
+            template: __webpack_require__(1105),
+            styles: [__webpack_require__(1089)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__["a" /* ToastService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__["a" /* FormDataService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_form_data_service__["a" /* FormDataService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_file_select_service__["a" /* FileSelectService */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _g) || Object])
     ], UserUpdateComponent);
@@ -567,7 +567,7 @@ var UserUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1069:
+/***/ 1073:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -647,8 +647,8 @@ var UsersComponent = (function () {
     UsersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-users',
-            template: __webpack_require__(1100),
-            styles: [__webpack_require__(1085)]
+            template: __webpack_require__(1106),
+            styles: [__webpack_require__(1090)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _e) || Object])
     ], UsersComponent);
@@ -659,42 +659,42 @@ var UsersComponent = (function () {
 
 /***/ }),
 
-/***/ 1083:
+/***/ 1088:
 /***/ (function(module, exports) {
 
 module.exports = "ul.tabs {\r\n    margin-bottom: 10px;\r\n}\r\n\r\nimg.selected-img {\r\n    margin: 10px;\r\n}"
 
 /***/ }),
 
-/***/ 1084:
+/***/ 1089:
 /***/ (function(module, exports) {
 
 module.exports = "ul.tabs {\r\n    margin-bottom: 10px;\r\n}\r\n\r\nimg.selected-img {\r\n    margin: 10px;\r\n}"
 
 /***/ }),
 
-/***/ 1085:
+/***/ 1090:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1098:
+/***/ 1104:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n  <div class=\"col s12\">\n    <ul class=\"tabs\" materialize=\"tabs\">\n      <li class=\"tab col s3\"><a class=\"active\" href=\"#user-info\">Пользователь</a></li>\n      <li class=\"tab col s3\"><a href=\"#personal-info\">Персональная информация</a></li>\n    </ul>\n  </div>\n  <div id=\"user-info\" class=\"col s12\">\n    <form [formGroup]=\"addForm\"  novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"usernameField\" formControlName=\"username\" type=\"text\" placeholder=\"Логин\">\n          <label for=\"usernameField\" data-error=\"Вы не заполнили поле\">Логин</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"passwords\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"passwordField\" formControlName=\"password\" type=\"password\" placeholder=\"Пароль\">\n          <label for=\"passwordField\" data-error=\"Вы не заполнили поле\">Пароль</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <input id=\"passwordAgainField\" formControlName=\"passwordAgain\" type=\"password\" placeholder=\"Повторите пароль\" [ngClass]=\"{'invalid': addForm.controls.passwords.controls.password.dirty && addForm.controls.passwords.controls.passwordAgain.dirty &&!addForm.controls.passwords.valid, 'valid': addForm.controls.passwords.valid}\">\n          <label for=\"passwordAgainField\" data-error=\"Пароли не совпадают\">Повторите пароль</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input type=\"checkbox\" class=\"filled-in\" id=\"activeField\" formControlName=\"active\" />\n          <label for=\"activeField\">Активный</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/persons\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n  <div id=\"personal-info\" class=\"col s12\">\n     <form [formGroup]=\"addForm\" novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div formGroupName=\"person\">\n        <div class=\"row\">\n          <div class=\"input-field col s12 l4\">\n            <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\">\n            <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\">\n            <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n            <label for=\"secondNameField\">Отчество</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col s2\">\n            Пол:\n          </div>\n          <div class=\"col s10\">\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n              <label for=\"genderField2\">Женский</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n              <label for=\"genderField1\">Мужской</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n              <label for=\"genderField3\">Не определен</label>\n            </p>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">Дата рождения: {{ user.person.birthdate | date: \"dd.MM.y\" }}</div>\n          <div class=\"input-field col s12 l6\">\n            <input materialize=\"pickadate\" [materializeParams]=\"[datePickerOptions]\" formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n            <label for=\"birthdateField\">Новая дата рождения</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">\n            <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\">\n            <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n          </div>\n          <div class=\"input-field col s12 l6\">\n            <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\">\n            <label for=\"emailField\">Email</label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 valign-wrapper\">\n          <img class=\"valign selected-img\" *ngIf=\"addForm.value.person.picture\" src=\"/api/v1/uploads/thumbs/{{addForm.value.person.picture.filename}}\" alt=\"\">\n          <span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">Выбрать картинку</span>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/users\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1099:
+/***/ 1105:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n  <div class=\"col s12\">\n    <ul class=\"tabs\" materialize=\"tabs\">\n      <li class=\"tab col s3\"><a class=\"active\" href=\"#user-info\">Пользователь</a></li>\n      <li class=\"tab col s3\"><a href=\"#personal-info\">Персональная информация</a></li>\n    </ul>\n  </div>\n  <div id=\"user-info\" class=\"col s12\">\n    <form [formGroup]=\"updateForm\"  novalidate (ngSubmit)=\"onSubmit(updateForm.value, updateForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"usernameField\" formControlName=\"username\" type=\"text\" placeholder=\"Логин\">\n          <label for=\"usernameField\" data-error=\"Вы не заполнили поле\">Логин</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"passwords\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"passwordField\" formControlName=\"password\" type=\"password\" placeholder=\"Пароль\">\n          <label for=\"passwordField\" data-error=\"Вы не заполнили поле\">Пароль</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <input id=\"passwordAgainField\" formControlName=\"passwordAgain\" type=\"password\" placeholder=\"Повторите пароль\" [ngClass]=\"{'invalid': updateForm.controls.passwords.controls.password.dirty && updateForm.controls.passwords.controls.passwordAgain.dirty &&!updateForm.controls.passwords.valid, 'valid': updateForm.controls.passwords.valid}\">\n          <label for=\"passwordAgainField\" data-error=\"Пароли не совпадают\">Повторите пароль</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input type=\"checkbox\" class=\"filled-in\" id=\"activeField\" formControlName=\"active\" />\n          <label for=\"activeField\">Активный</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!updateForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/persons\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n  <div id=\"personal-info\" class=\"col s12\">\n     <form *ngIf=\"createPerson\" [formGroup]=\"updateForm\" novalidate (ngSubmit)=\"onSubmit(updateForm.value, updateForm.valid)\">\n      <div formGroupName=\"person\">\n        <div class=\"row\">\n          <div class=\"input-field col s12 l4\">\n            <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\">\n            <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\">\n            <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n            <label for=\"secondNameField\">Отчество</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col s2\">\n            Пол:\n          </div>\n          <div class=\"col s10\">\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n              <label for=\"genderField2\">Женский</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n              <label for=\"genderField1\">Мужской</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n              <label for=\"genderField3\">Не определен</label>\n            </p>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">Дата рождения: {{ user.person.birthdate | date: \"dd.MM.y\" }}</div>\n          <div class=\"input-field col s12 l6\">\n            <input materialize=\"pickadate\" [materializeParams]=\"[datePickerOptions]\" formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n            <label for=\"birthdateField\">Новая дата рождения</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">\n            <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\">\n            <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n          </div>\n          <div class=\"input-field col s12 l6\">\n            <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\">\n            <label for=\"emailField\">Email</label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 valign-wrapper\">\n          <img class=\"valign selected-img\" *ngIf=\"updateForm.value.person.picture\" src=\"/api/v1/uploads/thumbs/{{updateForm.value.person.picture.filename}}\" alt=\"\">\n          <span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">Выбрать картинку</span>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!updateForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/users\">К списку</a>\n        </div>\n      </div>\n    </form>\n    <div *ngIf=\"!createPerson\" class=\"card\">\n      <div class=\"card-image\">\n        <img *ngIf=\"updateForm.value.person.picture\" src=\"/api/v1/uploads/{{updateForm.value.person.picture.filename}}\">\n        <span class=\"card-title\">{{[user.person.first_name, user.person.last_name].join(\" \")}}</span>\n        <a class=\"btn-floating halfway-fab waves-effect waves-light red\" (click)=\"toggleCreatePerson()\"><i class=\"material-icons\">remove</i></a>\n      </div>\n      <div class=\"card-content\">\n        <p>\n          <span class=\"text-capitalize\">Ф.И.О.: {{[user.person.last_name, user.person.first_name, user.person.second_name].join(\" \")}}</span> <br/>\n          Дата рождения: {{user.person.birthdate | date: \"dd.MM.y\"}} <br/>\n          Пол: {{user.person.gender == 'male' ? \"Мужской\" : \"Женский\" }} <br/>\n          Телефон: {{user.person.phone}} <br/>\n          Email: {{user.person.email}}\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1100:
+/***/ 1106:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"responsive-table\">\n  <thead>\n    <tr>\n        <th data-field=\"username\">Логин</th>\n        <th data-field=\"group\">Группа</th>\n        <th data-field=\"create\">Дата создания</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of users\">\n      <td class=\"text-capitalize\">{{item.username}}</td>\n      <td>{{item.group}}</td>\n      <td>{{item.createdAt | date:\"dd.MM.y\"}}</td>\n      <td>\n        <a routerLink=\"/users/update/{{item._id}}\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n        <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить пользователя</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить пользователя: {{currentItem.username}}? <br> Дата создания: {{currentItem.createdAt | date:\"dd.MM.y\"}} </p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>"

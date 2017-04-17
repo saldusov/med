@@ -9,13 +9,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__files_service__ = __webpack_require__(1052);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__file_upload_file_upload_component__ = __webpack_require__(1065);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__files_files_component__ = __webpack_require__(1066);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__files_service__ = __webpack_require__(1055);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__file_upload_file_upload_component__ = __webpack_require__(1069);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__files_files_component__ = __webpack_require__(1070);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_file_upload__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_ng2_file_upload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_long_press_directive__ = __webpack_require__(1070);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_long_press_directive__ = __webpack_require__(1074);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadsModule", function() { return UploadsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -64,12 +64,12 @@ var UploadsModule = (function () {
 
 /***/ }),
 
-/***/ 1052:
+/***/ 1055:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(449);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilesService; });
@@ -113,7 +113,7 @@ var FilesService = (function () {
 
 /***/ }),
 
-/***/ 1065:
+/***/ 1069:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -155,8 +155,8 @@ var FileUploadComponent = (function () {
     FileUploadComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-file-upload',
-            template: __webpack_require__(1096),
-            styles: [__webpack_require__(1081)]
+            template: __webpack_require__(1102),
+            styles: [__webpack_require__(1086)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _a) || Object])
     ], FileUploadComponent);
@@ -167,13 +167,13 @@ var FileUploadComponent = (function () {
 
 /***/ }),
 
-/***/ 1066:
+/***/ 1070:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__files_service__ = __webpack_require__(1052);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__files_service__ = __webpack_require__(1055);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__ = __webpack_require__(135);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_file_select_service__ = __webpack_require__(450);
@@ -292,8 +292,8 @@ var FilesComponent = (function () {
     FilesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-files',
-            template: __webpack_require__(1097),
-            styles: [__webpack_require__(1082)]
+            template: __webpack_require__(1103),
+            styles: [__webpack_require__(1087)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__files_service__["a" /* FilesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__files_service__["a" /* FilesService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__shared_file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_file_select_service__["a" /* FileSelectService */]) === 'function' && _f) || Object])
     ], FilesComponent);
@@ -304,7 +304,7 @@ var FilesComponent = (function () {
 
 /***/ }),
 
-/***/ 1070:
+/***/ 1074:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -433,28 +433,28 @@ var LongPress = (function () {
 
 /***/ }),
 
-/***/ 1081:
+/***/ 1086:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1082:
+/***/ 1087:
 /***/ (function(module, exports) {
 
 module.exports = ".card.selected {\r\n    background: #e2ffe2;\r\n    -webkit-transition: box-shadow .25s;\r\n    transition: box-shadow .25s;\r\n    box-shadow: 0;\r\n}\r\n\r\n.fix-right {\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 10px;\r\n}"
 
 /***/ }),
 
-/***/ 1096:
+/***/ 1102:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"form-container row\">\n    <div class=\"input-field col s12\">\n        <input id=\"signatureField\" type=\"text\" name=\"signature\" [(ngModel)] = \"signature\">\n        <label for=\"signatureField\">Подпись</label>\n    </div>\n    <div class=\"file-field input-field col s12\">\n        <div class=\"btn\">\n            <span>Выбрать</span>\n            <input type=\"file\" name=\"image\" ng2FileSelect [uploader]=\"uploader\" multiple />\n        </div>\n        <div class=\"file-path-wrapper\">\n            <input class=\"file-path validate\" type=\"text\" placeholder=\"Выберите один или несколько файлов\">\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col s12\">\n        <h3>Готовы к загрузке</h3>\n        <p>Количество: {{ uploader?.queue?.length }}</p>\n\n        <table class=\"table\">\n            <thead>\n            <tr>\n                <th width=\"50%\">Наименование</th>\n                <th>Размер</th>\n                <th>Прогресс</th>\n                <th>Статус</th>\n                <th>Действия</th>\n            </tr>\n            </thead>\n            <tbody>\n            <tr *ngFor=\"let item of uploader.queue\">\n                <td><strong>{{ item?.file?.name }}</strong></td>\n                <td *ngIf=\"uploader.isHTML5\" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>\n                <td *ngIf=\"uploader.isHTML5\">\n                    <div class=\"progress\" style=\"margin-bottom: 0;\">\n                        <div class=\"determinate\" [ngStyle]=\"{ 'width': item.progress + '%' }\"></div>\n                    </div>\n                </td>\n                <td class=\"text-center\">\n                    <span *ngIf=\"item.isSuccess\"><i class=\"glyphicon glyphicon-ok\"></i></span>\n                    <span *ngIf=\"item.isCancel\"><i class=\"glyphicon glyphicon-ban-circle\"></i></span>\n                    <span *ngIf=\"item.isError\"><i class=\"glyphicon glyphicon-remove\"></i></span>\n                </td>\n                <td nowrap>\n                    <button type=\"button\" class=\"btn btn-success btn-xs\"\n                            (click)=\"item.upload()\" [disabled]=\"item.isReady || item.isUploading || item.isSuccess\">\n                        <span class=\"glyphicon glyphicon-upload\"></span> Загрузить\n                    </button>\n                    <button type=\"button\" class=\"btn btn-warning btn-xs\"\n                            (click)=\"item.cancel()\" [disabled]=\"!item.isUploading\">\n                        <span class=\"glyphicon glyphicon-ban-circle\"></span> Отменить\n                    </button>\n                    <button type=\"button\" class=\"btn btn-danger btn-xs\"\n                            (click)=\"item.remove()\">\n                        <span class=\"glyphicon glyphicon-trash\"></span> Удалить\n                    </button>\n                </td>\n            </tr>\n            </tbody>\n        </table>\n\n        <div>\n            <div>\n                Прогресс загрузки:\n                <div class=\"progress\">\n                    <div class=\"determinate\" [ngStyle]=\"{ 'width': uploader.progress + '%' }\"></div>\n                </div>\n            </div>\n            <button type=\"button\" class=\"btn btn-success btn-s\"\n                    (click)=\"upload()\" [disabled]=\"!uploader.getNotUploadedItems().length\">\n                <span class=\"glyphicon glyphicon-upload\"></span> Загрузить все\n            </button>\n            <button type=\"button\" class=\"btn btn-warning btn-s\"\n                    (click)=\"uploader.cancelAll()\" [disabled]=\"!uploader.isUploading\">\n                <span class=\"glyphicon glyphicon-ban-circle\"></span> Отменить все\n            </button>\n            <button type=\"button\" class=\"btn btn-danger btn-s\"\n                    (click)=\"uploader.clearQueue()\" [disabled]=\"!uploader.queue.length\">\n                <span class=\"glyphicon glyphicon-trash\"></span> Удалить все\n            </button>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
-/***/ 1097:
+/***/ 1103:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\">\n  <div class=\"col s6 m3 l2\" *ngFor=\"let file of files\">\n    <!--<div class=\"card horizontal hoverable\" long-press (onLongPress)=\"toggleSelectMode()\" (click)=\"selectItem(file)\" [ngClass]=\"{'selected': file.check}\">\n      <div class=\"card-image valign-wrapper\">\n        <img class=\"valign center-align\" [src]=\"'/api/v1/uploads/thumbs/' + file.filename\">\n      </div>\n      <div class=\"card-stacked\">\n        <div class=\"fix-right\" *ngIf=\"file.check\"><i class=\"material-icons\">done</i></div>\n        <div class=\"card-content\">\n          <p>{{file.signature}}</p>\n        </div>\n        <div class=\"card-action\">\n          <a (click)=\"openDeleteModal(file)\">Удалить</a>\n        </div>\n      </div>\n    </div>-->\n    <div class=\"card hoverable\" long-press (onLongPress)=\"startSelectMode()\" (click)=\"selectItem(file)\" [ngClass]=\"{'selected': file.check}\">\n      <div class=\"card-image\">\n        <img [src]=\"'/api/v1/uploads/thumbs/' + file.filename\">\n      </div>\n      <div class=\"card-content\">\n         <p class=\"truncate\">{{file.signature}}</p>\n      </div>\n      <div class=\"card-action\">\n        <div class=\"fix-right\" *ngIf=\"file.check\"><i class=\"material-icons\">done</i></div>\n        <a (click)=\"openDeleteModal(file)\">Удалить</a>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Delete Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить файл</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить файл?</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeDeleteModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>"

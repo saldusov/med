@@ -1,20 +1,17 @@
 const mongoXlsx = require('mongo-xlsx');
 const model = require("./Analyzes.schema");
+const db = require("./db");
 
 let exportModule = {
 	exportAll: () => {
 		return new Promise((resolve, reject) => {
-			model
-				.find({}, "-_id -__v -time -description -active")
-				.exec(function(error, foundObjects) {
-					if(error) {
-						reject(error);
-					} else {
-						let modelBuild = mongoXlsx.buildDynamicModel(foundObjects);
-						mongoXlsx.mongoData2Xlsx(foundObjects, modelBuild, function(err, data) {
-						  	resolve(data.fullPath);
-						});
-					}
+			return db
+				.getAll()
+				.then((foundObjects) => {
+					let modelBuild = mongoXlsx.buildDynamicModel(foundObjects);
+					mongoXlsx.mongoData2Xlsx(foundObjects, modelBuild, function(err, data) {
+					  	return Promise.resolve(data.fullPath);
+					});
 				});
 		});
 	},

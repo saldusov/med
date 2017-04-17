@@ -9,12 +9,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_services_component__ = __webpack_require__(1063);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__service_add_service_add_component__ = __webpack_require__(1061);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_services_component__ = __webpack_require__(1067);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__service_add_service_add_component__ = __webpack_require__(1065);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__specialties_specialties_service__ = __webpack_require__(1040);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_service__ = __webpack_require__(1041);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__service_update_service_update_component__ = __webpack_require__(1062);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__service_update_service_update_component__ = __webpack_require__(1066);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServicesModule", function() { return ServicesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -68,7 +68,7 @@ var ServicesModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(449);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpecialtiesService; });
@@ -138,7 +138,7 @@ var SpecialtiesService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(449);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServicesService; });
@@ -204,7 +204,7 @@ var ServicesService = (function () {
 
 /***/ }),
 
-/***/ 1051:
+/***/ 1054:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -240,13 +240,13 @@ var Service = (function () {
 
 /***/ }),
 
-/***/ 1061:
+/***/ 1065:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service__ = __webpack_require__(1051);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service__ = __webpack_require__(1054);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_service__ = __webpack_require__(1041);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__ = __webpack_require__(1040);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__ = __webpack_require__(99);
@@ -317,8 +317,8 @@ var ServiceAddComponent = (function () {
     ServiceAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-service-add',
-            template: __webpack_require__(1092),
-            styles: [__webpack_require__(1077)]
+            template: __webpack_require__(1098),
+            styles: [__webpack_require__(1082)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_service__["a" /* ServicesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_service__["a" /* ServicesService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__["a" /* ToastService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _d) || Object])
     ], ServiceAddComponent);
@@ -329,14 +329,14 @@ var ServiceAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1062:
+/***/ 1066:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(1051);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(1054);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_service__ = __webpack_require__(1041);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__ = __webpack_require__(1040);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__ = __webpack_require__(99);
@@ -417,8 +417,8 @@ var ServiceUpdateComponent = (function () {
     ServiceUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-service-update',
-            template: __webpack_require__(1093),
-            styles: [__webpack_require__(1078)]
+            template: __webpack_require__(1099),
+            styles: [__webpack_require__(1083)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_service__["a" /* ServicesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_service__["a" /* ServicesService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__["a" /* ToastService */]) === 'function' && _e) || Object])
     ], ServiceUpdateComponent);
@@ -429,7 +429,7 @@ var ServiceUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1063:
+/***/ 1067:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -509,8 +509,8 @@ var ServicesComponent = (function () {
     ServicesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-services',
-            template: __webpack_require__(1094),
-            styles: [__webpack_require__(1079)]
+            template: __webpack_require__(1100),
+            styles: [__webpack_require__(1084)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_service__["a" /* ServicesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_service__["a" /* ServicesService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _e) || Object])
     ], ServicesComponent);
@@ -521,42 +521,42 @@ var ServicesComponent = (function () {
 
 /***/ }),
 
-/***/ 1077:
+/***/ 1082:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1078:
+/***/ 1083:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1079:
+/***/ 1084:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1092:
+/***/ 1098:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n    <form class=\"col s12\" [formGroup]=\"addForm\" novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"titleField\" formControlName=\"title\" type=\"text\" placeholder=\"Наименование\" \n            [ngClass]=\"{'invalid': addForm.controls.title.dirty && !addForm.controls.title.valid, 'valid': addForm.controls.title.valid}\">\n          <label for=\"titleField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\" \n            [ngClass]=\"{'invalid': addForm.controls.description.dirty && !addForm.controls.description.valid, 'valid': addForm.controls.description.valid}\"></textarea>\n          <label for=\"descrTextarea\" data-error=\"Вы не заполнили поле\">Описание</label>\n        </div>\n        <div class=\"input-field col s12\">\n          <textarea id=\"recTextarea\" formControlName=\"recommendations\" placeholder=\"Рекомендации\" class=\"materialize-textarea\" \n            [ngClass]=\"{'valid': addForm.controls.recommendations.dirty}\"></textarea>\n          <label for=\"recTextarea\">Рекомендации</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"price\">\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceDefField\" formControlName=\"default\" type=\"number\" placeholder=\"Врач\">\n          <label for=\"priceDefField\">Врач</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceTopField\" formControlName=\"top\" type=\"number\" placeholder=\"Врач высш. кат.\">\n          <label for=\"priceTopField\">Врач высш. кат.</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceKmnField\" formControlName=\"kmn\" type=\"number\" placeholder=\"Кандидат мед. наук\">\n          <label for=\"priceKmnField\">Кандидат мед. наук</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"timeField\" formControlName=\"time\" type=\"number\" placeholder=\"Время оказания\">\n          <label for=\"timeField\">Время оказания</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n            <option value=\"\" disabled selected>Выберите специальность</option>\n            <option value=\"{{tag._id}}\" *ngFor=\"let tag of tags\">{{tag.name}}</option>\n          </select>\n          <label for=\"tagsSelect\">Специальность</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/services\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
-/***/ 1093:
+/***/ 1099:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\" *ngIf=\"service\">\n    <form class=\"col s12\" [formGroup]=\"updateForm\" novalidate (ngSubmit)=\"onSubmit(updateForm.value, updateForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"titleField\" formControlName=\"title\" type=\"text\" placeholder=\"Наименование\" \n            [ngClass]=\"{'invalid': updateForm.controls.title.dirty && !updateForm.controls.title.valid, 'valid': updateForm.controls.title.valid}\">\n          <label for=\"titleField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\" \n            [ngClass]=\"{'invalid': updateForm.controls.description.dirty && !updateForm.controls.description.valid, 'valid': updateForm.controls.description.valid}\"></textarea>\n          <label for=\"descrTextarea\" data-error=\"Вы не заполнили поле\">Описание</label>\n        </div>\n        <div class=\"input-field col s12\">\n          <textarea id=\"recTextarea\" formControlName=\"recommendations\" placeholder=\"Рекомендации\" class=\"materialize-textarea\" \n            [ngClass]=\"{'valid': updateForm.controls.recommendations.dirty}\"></textarea>\n          <label for=\"recTextarea\">Рекомендации</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"price\">\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceDefField\" formControlName=\"default\" type=\"number\" placeholder=\"Врач\">\n          <label for=\"priceDefField\">Врач</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceTopField\" formControlName=\"top\" type=\"number\" placeholder=\"Врач высш. кат.\">\n          <label for=\"priceTopField\">Врач высш. кат.</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceKmnField\" formControlName=\"kmn\" type=\"number\" placeholder=\"Кандидат мед. наук\">\n          <label for=\"priceKmnField\">Кандидат мед. наук</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"timeField\" formControlName=\"time\" type=\"number\" placeholder=\"Время оказания\">\n          <label for=\"timeField\">Время оказания</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n            <option value=\"\" disabled selected>Выберите специальность</option>\n            <option value=\"{{tag._id}}\" *ngFor=\"let tag of tags\">{{tag.name}}</option>\n          </select>\n          <label for=\"tagsSelect\">Специальность</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!updateForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/services\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
-/***/ 1094:
+/***/ 1100:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"responsive-table\">\n  <thead>\n    <tr>\n        <th data-field=\"name\">Наименование</th>\n        <th data-field=\"priceDefault\">Ц. Врач</th>\n        <th data-field=\"priceTop\">Ц. Высш.</th>\n        <th data-field=\"priceKmn\">Ц. КМН</th>\n        <th data-field=\"tags\">Специальность</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of services\">\n      <td>{{item.title}}</td>\n      <td>{{item.price.default}}</td>\n      <td>{{item.price.top}}</td>\n      <td>{{item.price.kmn}}</td>\n      <td>{{item.tag_names.join(\", \")}}</td>\n      <td>\n        <a routerLink=\"/services/update/{{item._id}}\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n        <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить услугу</h4>\n    <p *ngIf=\"currentService\">Вы хотите удалить услугу: {{currentService.title}}? <br> Цены: {{currentService.price | json}}</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentService)\">Согласен</button>\n  </div>\n</div>"

@@ -48054,6 +48054,35 @@ exports.isNumeric = isNumeric;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__materialize_directive__ = __webpack_require__(366);
+/* unused harmony reexport MaterializeDirective */
+/* unused harmony reexport MaterializeAction */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__materialize_module__ = __webpack_require__(567);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__materialize_module__["a"]; });
+/* unused harmony export toast */
+
+
+if (!("Materialize" in window)) {
+    throw new Error("Couldn't find Materialize object on window. It is created by the materialize-css library. Please import materialize-css before importing angular2-materialize.");
+}
+if (!("Waves" in window)) {
+    throw new Error("Couldn't find Waves object on window. It is supposed to be created by the materialize-css library. Please import materialize-css before importing angular2-materialize.");
+}
+Waves.displayEffect();
+function toast() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i - 0] = arguments[_i];
+    }
+    Materialize.toast.apply(Materialize, args);
+}
+//# sourceMappingURL=D:/projects/angular-med/src/index.js.map
+
+/***/ }),
+/* 280 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index__ = __webpack_require__(534);
 /* unused harmony reexport BrowserXhr */
 /* unused harmony reexport JSONPBackend */
@@ -48096,35 +48125,6 @@ exports.isNumeric = isNumeric;
  */
 
 //# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 280 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__materialize_directive__ = __webpack_require__(366);
-/* unused harmony reexport MaterializeDirective */
-/* unused harmony reexport MaterializeAction */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__materialize_module__ = __webpack_require__(567);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__materialize_module__["a"]; });
-/* unused harmony export toast */
-
-
-if (!("Materialize" in window)) {
-    throw new Error("Couldn't find Materialize object on window. It is created by the materialize-css library. Please import materialize-css before importing angular2-materialize.");
-}
-if (!("Waves" in window)) {
-    throw new Error("Couldn't find Waves object on window. It is supposed to be created by the materialize-css library. Please import materialize-css before importing angular2-materialize.");
-}
-Waves.displayEffect();
-function toast() {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i - 0] = arguments[_i];
-    }
-    Materialize.toast.apply(Materialize, args);
-}
-//# sourceMappingURL=D:/projects/angular-med/src/index.js.map
 
 /***/ }),
 /* 281 */
