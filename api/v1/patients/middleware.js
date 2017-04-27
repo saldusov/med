@@ -45,9 +45,9 @@ module.exports = {
 	parseData: function(req, res, next) {
 		let errors = [];
 
-		if((req.body.personId ? true : vtPersons.validation(req.body, errors)) && vtPatients.validation(req.body, errors)) {
+		if((req.body.personId ? true : vtPersons.validation(req.body.person, errors)) && vtPatients.validation(req.body, errors)) {
 			if(!req.body.personId) {
-				vtPersons.transform(req.body);
+				vtPersons.transform(req.body.person);
 			}
 
 			vtPatients.transform(req.body);

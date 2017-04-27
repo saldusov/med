@@ -21,7 +21,7 @@ var doctorSchema = new Schema({
 	certificates: [
 		{
 			title: String,
-			imageId: Schema.ObjectId
+			_id: Schema.ObjectId
 		}
 	],
 	achievements: [String], // big, surg, ped, amb
@@ -37,6 +37,9 @@ var doctorSchema = new Schema({
 		type: Boolean,
 		default: true
 	}
+},
+{
+    timestamps: true
 });
 
 module.exports = mongoose.model('doctors', doctorSchema);

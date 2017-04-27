@@ -8,7 +8,7 @@ module.exports = {
 
 		if(data.createPerson) {
 			return personManager
-				.gerOrCreate(personId, data)
+				.gerOrCreate(personId, data.person)
 				.then((person) => {
 					if(!person) {
 						res.status(404).json({errors: ["Персональная информация не найдена"]});

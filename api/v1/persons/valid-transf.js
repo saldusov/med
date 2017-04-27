@@ -3,8 +3,8 @@ const PersonSchema = require("./Person.schema");
 module.exports = {
 	validation: function(data, errors) {
 		if(typeof data._id != "undefined" && data._id == null) delete data._id;
-		if(!data.last_name) errors.push("Укажите фамилию!");
-		if(!data.first_name) errors.push("Укажите имя!");
+		if(!data.last_name) errors.push("Поле Фамилия не заполнено!");
+		if(!data.first_name) errors.push("Поле Имя не заполнено!");
 
 		if(errors.length > 0) return false;
 		return true;
@@ -27,7 +27,7 @@ module.exports = {
 
 		if(typeof data.person != "undefined") {
 			find = Object.keys(data.person).find(function(objectKey, index) {
-			    if(persProps.indexOf(objectKey) > 0 && data.person[objectKey] != null) return true;
+			    if(persProps.indexOf(objectKey) > 0 && data.person[objectKey] != null && objectKey != 'gender') return true;
 			});
 		}
 

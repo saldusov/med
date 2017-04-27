@@ -9,6 +9,7 @@ let specialtiesRouting = require("./specialties");
 let doctorsRouting = require("./doctors");
 let patientsRouting = require("./patients");
 let uploadsRouting = require("./uploads");
+let paymentsRouting = require("./payments");
 
 app.use("/users", usersRouting);
 app.use("/services", servicesRouting);
@@ -18,3 +19,4 @@ app.use("/specialties", specialtiesRouting);
 app.use("/doctors", doctorsRouting);
 app.use("/patients", patientsRouting);
 app.use("/uploads", uploadsRouting);
+app.use("/payments", paymentsRouting);

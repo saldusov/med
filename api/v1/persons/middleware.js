@@ -18,6 +18,21 @@ module.exports = {
 			if(params.email) query.$and.push({email: new RegExp(params.email.trim(), "i")});
 
 			if(query.$and.length == 0) query = {};
+			
+			if(params.text) {
+				let arrayText = params.text.split(",");
+				let trimArray = arrayText.map((textItem) => textItem.trim());
+				let text = "(" + trimArray.join("|") + ")";
+				let regexp = new RegExp(text, "i");
+
+				query = {
+					$or: [
+						{"first_name": regexp},
+						{"last_name": regexp},
+						{"phone": regexp}
+					]
+				};
+			}
 		}
 
 		req.mongoParams.pageNumber = params.pageNumber ? parseInt(params.pageNumber) : 0;

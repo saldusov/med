@@ -23,7 +23,31 @@ module.exports =  {
 				      		path: "$person",
 				      		preserveNullAndEmptyArrays: true
 				      	}
-				   	}
+				   	},
+				   	{
+				      	$unwind: "$tags"
+				   	},
+					{
+						$lookup: {
+							from: "specialties",
+							localField: "tags",
+							foreignField: "_id",
+							as: "tag_item"
+						}
+					},
+					{
+				      	$unwind: "$tag_item"
+				   	},
+					{
+						$group: { 
+							_id: "$_id",
+							person: { $first: "$person"},
+							createdAt: { $first: "$createdAt" },
+							active: { $first: "$active"},
+							tags: { $addToSet: "$tags" }, 
+							tag_names: { $push: "$tag_item.name"}
+						}
+					}
 				])
 				.exec(function (err, foundItems) {
 					if(err) {
@@ -36,17 +60,8 @@ module.exports =  {
 	},
 
 	getOne: function(id) {
-		return new Promise((resolve, reject) => {
-			console.log('I am here!');
-			DoctorSchema.findOne({_id: id}, function(errors, foundItem) {
-			console.log('But not here!');
-				if(errors) {
-					reject(errors);
-				} else {
-					resolve(foundItem);
-				}
-			});
-		});
+		return doctorManager
+			.read(id);
 	},
 
 	add: function(data) {

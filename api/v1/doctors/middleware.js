@@ -5,11 +5,11 @@ module.exports = {
 	parseData: function(req, res, next) {
 		let errors = [];
 
-		if((req.body.personId ? true : vtPersons.validation(req.body, errors)) && vtDoctors.validation(req.body, errors)) {
+		if((req.body.personId ? true : vtPersons.validation(req.body.person, errors)) && vtDoctors.validation(req.body, errors)) {
 			if(!req.body.personId) {
-				vtPersons.transform(req.body);
+				vtPersons.transform(req.body.person);
 			}
-
+			
 			vtDoctors.transform(req.body);
 			next();
 		} else {
