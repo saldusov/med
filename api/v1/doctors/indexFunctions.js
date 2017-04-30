@@ -42,6 +42,7 @@ module.exports =  {
 						$group: { 
 							_id: "$_id",
 							person: { $first: "$person"},
+							doctorate: { $first: "$doctorate"},
 							createdAt: { $first: "$createdAt" },
 							active: { $first: "$active"},
 							tags: { $addToSet: "$tags" }, 

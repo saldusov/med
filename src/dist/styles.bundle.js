@@ -98,7 +98,7 @@ module.exports = __webpack_require__.p + "Roboto-Thin.eot";
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(694);
+var content = __webpack_require__(695);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(709)(content, {});
@@ -119,7 +119,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 693:
+/***/ 694:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(383)();
@@ -134,15 +134,15 @@ exports.push([module.i, "/*!\n * Materialize v0.98.0 (http://materializecss.com)
 
 /***/ }),
 
-/***/ 694:
+/***/ 695:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(383)();
 // imports
-exports.i(__webpack_require__(693), "");
+exports.i(__webpack_require__(694), "");
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n/*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/\n\nhtml {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    height: 100%;\n}\n\nbody {\n    width: 100%;\n    overflow: hidden;\n}\n\napp-toolbar {\n    display: block;\n}\n\napp-root {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: stretch;\n        -ms-flex-align: stretch;\n            align-items: stretch;\n}\n\n.wrapper .content {\n    height: 100%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: stretch;\n        -ms-flex-align: stretch;\n            align-items: stretch;\n}\n\n.wrapper .content > *:not(router-outlet) {\n    height: 100%;\n}\n\n.wrapper {\n    background: #efefef;\n}\n\n.nav-content .nav-title {\n    padding: 10px 0px;\n}\n\n.form-container {\n    margin-top: 10px;\n}\n\n.panel {\n    background: #fff;\n    -webkit-transition: box-shadow .25s;\n    transition: box-shadow .25s;\n    border-radius: 2px;\n}\n\n.panel .panel-title {\n    display: block;\n    min-height: 3rem;\n    line-height: 3rem;\n    padding: 0 1rem;\n    background-color: #fff;\n    border-bottom: 1px solid #ddd;\n}\n\n.text-capitalize {\n    text-transform: capitalize;\n}\n\n.text-align-center {\n  text-align: center;\n}\n\nbutton.absolute-position {\n    position: fixed;\n    right: 55px;\n    bottom: 55px;\n}\n\n[hidden] {\n    display: none;\n}\n\n::-webkit-scrollbar{\n    width:12px;\n}\n\n::-webkit-scrollbar-thumb{\n    border-width:1px 1px 1px 2px;\n    border-color: #777;\n    background-color: #aaa;\n}\n\n::-webkit-scrollbar-thumb:hover{\n    border-width: 1px 1px 1px 2px;\n    border-color: #555;\n    background-color: #777;\n}\n\n::-webkit-scrollbar-track{\n    border-width:0;\n}\n\n::-webkit-scrollbar-track:hover{\n    border-left: solid 1px #aaa;\n    background-color: #eee;\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n/*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/\n\nhtml {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    height: 100%;\n}\n\nbody {\n    width: 100%;\n    overflow: hidden;\n}\n\napp-toolbar {\n    display: block;\n}\n\napp-root {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: stretch;\n        -ms-flex-align: stretch;\n            align-items: stretch;\n}\n\n.wrapper .content {\n    height: 100%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: stretch;\n        -ms-flex-align: stretch;\n            align-items: stretch;\n}\n\n.wrapper .content > *:not(router-outlet) {\n    height: 100%;\n}\n\n.wrapper {\n    background: #efefef;\n}\n\n.nav-content .nav-title {\n    padding: 10px 0px;\n}\n\n.form-container {\n    margin-top: 10px;\n}\n\n.panel {\n    background: #fff;\n    -webkit-transition: box-shadow .25s;\n    transition: box-shadow .25s;\n    border-radius: 2px;\n}\n\n.panel .panel-title {\n    display: block;\n    min-height: 3rem;\n    line-height: 3rem;\n    padding: 0 1rem;\n    font-weight: bold;\n    background-color: #fff;\n    border-bottom: 1px solid #ddd;\n}\n\n.text-capitalize {\n    text-transform: capitalize;\n}\n\n.text-align-center {\n  text-align: center;\n}\n\nbutton.absolute-position {\n    position: fixed;\n    right: 55px;\n    bottom: 55px;\n}\n\n[hidden] {\n    display: none;\n}\n\ninput[type] {\n    margin: 0;\n}\n\n::-webkit-scrollbar{\n    width:12px;\n}\n\n::-webkit-scrollbar-thumb{\n    border-width:1px 1px 1px 2px;\n    border-color: #777;\n    background-color: #aaa;\n}\n\n::-webkit-scrollbar-thumb:hover{\n    border-width: 1px 1px 1px 2px;\n    border-color: #555;\n    background-color: #777;\n}\n\n::-webkit-scrollbar-track{\n    border-width:0;\n}\n\n::-webkit-scrollbar-track:hover{\n    border-left: solid 1px #aaa;\n    background-color: #eee;\n}", ""]);
 
 // exports
 

@@ -17,10 +17,18 @@ var paymentSchema = new Schema({
     },
     services: [{
     	_id: Schema.ObjectId,
+        count: {
+            type: Number,
+            default: 1
+        },
     	price: Number
     }],
     analyzes: [{
     	_id: Schema.ObjectId,
+        count: {
+            type: Number,
+            default: 1
+        },
     	price: Number
     }],
     payment: {

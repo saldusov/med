@@ -94,8 +94,8 @@ app.post('/merge', function(req, res, next){
 						if(mergeItem._id != item._id) {
 							middleware.mergeItems(mergeItem.art, item.art);
 							middleware.mergeItems(mergeItem.title, item.title);
-							middleware.mergeItems(mergeItem.price, item.price);
-							middleware.mergeItems(mergeItem.productPrice, item.productPrice);
+							middleware.mergeItems(mergeItem.priceLabs, item.priceLabs);
+							middleware.mergeItems(mergeItem.priceProd, item.priceProd);
 							middleware.mergeItems(mergeItem.time, item.time);
 							mergeItem.description = mergeItem.description.concat(item.description);
 

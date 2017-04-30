@@ -8,6 +8,7 @@ const getOne = require("./indexFunctions").getOne;
 const add = require("./indexFunctions").add;
 const update = require("./indexFunctions").update;
 const deleteOne = require("./indexFunctions").deleteOne;
+const socketNsp = require("./socket");
 
 /* GET items list. */
 app.get('/', function(req, res, next) {
@@ -26,13 +27,19 @@ app.get('/:id', function(req, res, next) {
 /* Insert item */
 app.post('/', parseData, function(req, res, next){
 	add(req.body)
-		.then((payment) => res.status(200).json(payment))
+		.then((payment) => {
+			socketNsp.emit('change', { status: payment.status, type: payment.type });
+			res.status(200).json(payment);
+		})
 		.catch((errors) => res.status(400).json({errors}));
 });
 
 app.put('/:id', parseData, function(req, res, next){
 	update(req.params.id, req.body)
-		.then((payment) => res.status(200).json(payment))
+		.then((payment) => {
+			socketNsp.emit('change', { status: payment.status, type: payment.type });
+			res.status(200).json(payment)
+		})
 		.catch((errors) => res.status(400).json({errors}));
 });
 

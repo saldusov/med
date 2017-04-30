@@ -23,37 +23,75 @@ let PaymentManager = {
 				      		preserveNullAndEmptyArrays: true
 				      	}
 				   	},
+				 //   	{
+				 //   		$unwind: {
+				 //      		path: "$specialists",
+				 //      		preserveNullAndEmptyArrays: true
+				 //      	}
+				 //   	},
+				 //   	{
+					// 	$lookup: {
+					// 		from: "doctors",
+					// 		localField: "specialists",
+					// 		foreignField: "_id",
+					// 		as: "specialists"
+					// 	}
+					// },
+					// {
+				 //   		$unwind: {
+				 //      		path: "$specialists",
+				 //      		preserveNullAndEmptyArrays: true
+				 //      	}
+				 //   	},
 				   	{
-				      	$unwind:  "$services",
+				      	$unwind:  {
+				      		path: "$services",
+				      		preserveNullAndEmptyArrays: true
+				      	}
 				   	},
 				   	{
 						$lookup: {
 							from: "services",
 							localField: "services._id",
 							foreignField: "_id",
-							as: "services.info"
+							as: "servicesLup"
+						}
+					},
+					{
+						$addFields: {
+							'servicesLup.count' : '$services.count',
+							'servicesLup.price' : '$services.price'
 						}
 					},
 					{
 				      	$unwind: {
-				      		path: "$services.info",
+				      		path: "$servicesLup",
 				      		preserveNullAndEmptyArrays: true
 				      	}
 				   	},
 				   	{
-				      	$unwind:  "$analyzes",
+				      	$unwind:  {
+				      		path: "$analyzes",
+				      		preserveNullAndEmptyArrays: true
+				      	}
 				   	},
 				   	{
 						$lookup: {
 							from: "analyzes",
 							localField: "analyzes._id",
 							foreignField: "_id",
-							as: "analyzes.info"
+							as: "analyzesLup"
+						}
+					},
+					{
+						$addFields: {
+							'analyzesLup.count' : '$analyzes.count',
+							'analyzesLup.price' : '$analyzes.price'
 						}
 					},
 					{
 				      	$unwind: {
-				      		path: "$analyzes.info",
+				      		path: "$analyzesLup",
 				      		preserveNullAndEmptyArrays: true
 				      	}
 				   	},
@@ -64,10 +102,10 @@ let PaymentManager = {
 							specialists: { $first: "$specialists"},
 							referral: { $first: "$referral" },
 							assistant: { $first: "$assistant"},
-							services: { $addToSet: "$services"},
-							analyzes: { $addToSet: "$analyzes"},
+							services: { $addToSet: "$servicesLup"},
+							analyzes: { $addToSet: "$analyzesLup"},
 							payment: { $first: "$payment"},
-							'type': { $first: "$'type'"},
+							'type': { $first: "$type"},
 							discount: { $first: "$discount"},
 							status: { $first: "$status"},
 							person: { $first: "$person"}
@@ -107,7 +145,6 @@ let PaymentManager = {
 	},
 
 	update: function(id, data) {
-		console.log(data);
 		return new Promise(function(resolve, reject) {
 			PaymentSchema.update({_id: id}, {$set: data}, function(errors, updatedObject){
 				if(errors) {

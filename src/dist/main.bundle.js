@@ -63,9 +63,12 @@ var ToolbarService = (function () {
                 route: '/uploads'
             },
             {
-                title: 'Оплата',
+                title: 'Расчет',
                 items: [
-                    { route: '/payments/add', name: 'list', title: "Оплата" }
+                    { route: '/payments', name: 'list', title: "Список оплат" },
+                    { route: '/payments/pay/reserve', name: 'reserve', title: "Создать заказ" },
+                    { route: '/payments/pay/create', name: 'create', title: "Создать талон" },
+                    { route: '/payments/pay/add', name: 'add', title: "Оплата" }
                 ]
             }
         ];
@@ -118,7 +121,7 @@ var ToolbarService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pagination_pagination__ = __webpack_require__(540);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pagination_pagination__ = __webpack_require__(541);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaginationService; });
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -139,7 +142,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PaginationService = (function (_super) {
     __extends(PaginationService, _super);
     function PaginationService() {
-        console.log('call constructor');
         _super.call(this);
     }
     PaginationService.prototype.setParams = function (params, profile) {
@@ -159,7 +161,7 @@ var PaginationService = (function (_super) {
             return this[profile];
         }
         else {
-            return false;
+            return new __WEBPACK_IMPORTED_MODULE_1__pagination_pagination__["a" /* Pagination */]();
         }
     };
     PaginationService.prototype.getPager = function (profile) {
@@ -258,7 +260,7 @@ var ToastService = (function () {
 
 /***/ }),
 
-/***/ 259:
+/***/ 253:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -318,7 +320,7 @@ var HelpPanelService = (function () {
 var map = {
 	"./+analyzes/analyzes.module": [
 		730,
-		2
+		4
 	],
 	"./+doctors/doctors.module": [
 		731,
@@ -326,7 +328,7 @@ var map = {
 	],
 	"./+patients/patients.module": [
 		732,
-		4
+		5
 	],
 	"./+payments/payments.module": [
 		733,
@@ -334,7 +336,7 @@ var map = {
 	],
 	"./+services/services.module": [
 		734,
-		5
+		2
 	],
 	"./+specialties/specialties.module": [
 		735,
@@ -374,10 +376,10 @@ webpackAsyncContext.id = 398;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(505);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(506);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(542);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(538);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(543);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(539);
 
 
 
@@ -391,6 +393,65 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 /***/ }),
 
 /***/ 413:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__toolbar_service__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toast_service__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__help_panel_service__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagination_service__ = __webpack_require__(251);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToolsService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ToolsService = (function () {
+    function ToolsService(toolbar, pagination, toast, helpPanel) {
+        this.toolbar = toolbar;
+        this.pagination = pagination;
+        this.toast = toast;
+        this.helpPanel = helpPanel;
+        this.init();
+    }
+    ToolsService.prototype.init = function () {
+        this.pagination.notShow();
+        this.toolbar.setMode('default');
+    };
+    ToolsService.prototype.getPagination = function () {
+        return this.pagination;
+    };
+    ToolsService.prototype.getToolbar = function () {
+        return this.toolbar;
+    };
+    ToolsService.prototype.getToast = function () {
+        return this.toast;
+    };
+    ToolsService.prototype.getHelpPanel = function () {
+        return this.helpPanel;
+    };
+    ToolsService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__toolbar_service__["a" /* ToolbarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__pagination_service__["a" /* PaginationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__toast_service__["a" /* ToastService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__help_panel_service__["a" /* HelpPanelService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__help_panel_service__["a" /* HelpPanelService */]) === 'function' && _d) || Object])
+    ], ToolsService);
+    return ToolsService;
+    var _a, _b, _c, _d;
+}());
+//# sourceMappingURL=D:/projects/angular-med/src/tools.service.js.map
+
+/***/ }),
+
+/***/ 414:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -530,65 +591,6 @@ var FileSelectService = (function () {
 
 /***/ }),
 
-/***/ 419:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__toolbar_service__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toast_service__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__help_panel_service__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagination_service__ = __webpack_require__(251);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToolsService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var ToolsService = (function () {
-    function ToolsService(toolbar, pagination, toast, helpPanel) {
-        this.toolbar = toolbar;
-        this.pagination = pagination;
-        this.toast = toast;
-        this.helpPanel = helpPanel;
-        this.init();
-    }
-    ToolsService.prototype.init = function () {
-        this.pagination.notShow();
-        this.toolbar.setMode('default');
-    };
-    ToolsService.prototype.getPagination = function () {
-        return this.pagination;
-    };
-    ToolsService.prototype.getToolbar = function () {
-        return this.toolbar;
-    };
-    ToolsService.prototype.getToast = function () {
-        return this.toast;
-    };
-    ToolsService.prototype.getHelpPanel = function () {
-        return this.helpPanel;
-    };
-    ToolsService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__toolbar_service__["a" /* ToolbarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__pagination_service__["a" /* PaginationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__toast_service__["a" /* ToastService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__help_panel_service__["a" /* HelpPanelService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__help_panel_service__["a" /* HelpPanelService */]) === 'function' && _d) || Object])
-    ], ToolsService);
-    return ToolsService;
-    var _a, _b, _c, _d;
-}());
-//# sourceMappingURL=D:/projects/angular-med/src/tools.service.js.map
-
-/***/ }),
-
 /***/ 420:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -630,7 +632,7 @@ var FormDataService = (function () {
 
 /***/ }),
 
-/***/ 537:
+/***/ 538:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -672,27 +674,27 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 538:
+/***/ 539:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(410);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__ = __webpack_require__(421);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_file_upload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routing__ = __webpack_require__(539);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(537);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_tools_service__ = __webpack_require__(419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routing__ = __webpack_require__(540);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(538);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_tools_service__ = __webpack_require__(413);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_toolbar_service__ = __webpack_require__(169);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_toast_service__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__shared_help_panel_service__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__shared_file_select_service__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__shared_help_panel_service__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__shared_file_select_service__ = __webpack_require__(414);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__shared_form_data_service__ = __webpack_require__(420);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__shared_pagination_service__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_toolbar_toolbar_component__ = __webpack_require__(541);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_toolbar_toolbar_component__ = __webpack_require__(542);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -756,7 +758,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 539:
+/***/ 540:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -803,7 +805,7 @@ var AppRoutingModule = (function () {
 
 /***/ }),
 
-/***/ 540:
+/***/ 541:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -842,7 +844,7 @@ var Pagination = (function () {
 
 /***/ }),
 
-/***/ 541:
+/***/ 542:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -911,7 +913,7 @@ var ToolbarComponent = (function () {
 
 /***/ }),
 
-/***/ 542:
+/***/ 543:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

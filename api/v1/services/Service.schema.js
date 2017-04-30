@@ -5,7 +5,7 @@ var serviceSchema = new Schema({
 	title: String,
 	description: String,
 	recommendations: String,
-	price: {
+	priceVariant: {
 		default: Number,
 		top: Number,
 		kmn: Number

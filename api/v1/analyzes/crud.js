@@ -14,18 +14,18 @@ let analyzesManager = {
 							_id: 1,
 							art: 1,
 							title: 1,
-							price: 1,
-							productPrice: 1,
+							priceLabs: 1,
+							priceProd: 1,
 							description: 1,
 							active: 1,
-							finishPrice: {
+							price: {
 								$cond: { 
 									if: {
-										$gte: ["$productPrice.invitro", 0] 
+										$gte: ["$priceProd.invitro", 0] 
 									}, 
-									then: "$productPrice.invitro",
+									then: "$priceProd.invitro",
 									else: { 
-										$max: ["$productPrice.helix", "$productPrice.cmd"] 
+										$max: ["$priceProd.helix", "$priceProd.cmd"] 
 									}	 
 								}
 							}

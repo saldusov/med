@@ -7,7 +7,7 @@ var analyzesSchema = new Schema({
 		helix: String,
 		invitro: String
 	},
-	price: {
+	priceLabs: {
 		cmd: Number,
 		helix: Number,
 		invitro: String
@@ -22,7 +22,7 @@ var analyzesSchema = new Schema({
 		helix: String,
 		invitro: String
 	},
-	productPrice: {
+	priceProd: {
 		cmd: Number,
 		helix: Number,
 		invitro: Number
