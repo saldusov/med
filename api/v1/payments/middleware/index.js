@@ -1,4 +1,4 @@
-let vtPerson = require("../persons/valid-transf");
+let vtPerson = require("../../persons/valid-transf");
 let vtPayments = require("./valid-transf");
 
 module.exports = {

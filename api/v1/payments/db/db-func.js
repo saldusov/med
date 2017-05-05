@@ -1,4 +1,4 @@
-let personManager = require("../persons/crud");
+let personManager = require("../../persons/crud");
 let doctorManager = require("./crud");
 
 module.exports = {

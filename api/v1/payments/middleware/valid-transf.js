@@ -1,5 +1,5 @@
-const PersonSchema = require("../persons/Person.schema");
-const vtPerson = require("../persons/valid-transf");
+const PersonSchema = require("../../persons/Person.schema");
+const vtPerson = require("../../persons/valid-transf");
 
 module.exports = {
 	validation: function(data, errors) {

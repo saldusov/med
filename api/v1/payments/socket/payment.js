@@ -1,4 +1,5 @@
-const io = require('../../sockets');
+const path = require('path');
+let io = require(path.resolve('api/global')).io;
 var nsp = io.of('/payments');
 
 nsp.on('connection', function (socket) {
@@ -6,10 +7,6 @@ nsp.on('connection', function (socket) {
   
   socket.on('disconnect', function(){
     console.log('user disconnected');
-  });
-  
-  socket.on('reserve-payment', (message) => {
-    nsp.emit('reserve', {type:'new-payment', text: 'new'});    
   });
 });
 

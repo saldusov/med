@@ -11,9 +11,6 @@ let patientsRouting = require("./patients");
 let uploadsRouting = require("./uploads");
 let paymentsRouting = require("./payments");
 
-// Sockets
-require("./payments/socket");
-
 app.use("/users", usersRouting);
 app.use("/services", servicesRouting);
 app.use("/analyzes", analyzesRouting);

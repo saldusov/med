@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const PaymentSchema = require('./Payment.schema');
+const PaymentSchema = require('../Payment.schema');
 
 let PaymentManager = {
 	read: function(id) {
