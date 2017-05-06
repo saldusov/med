@@ -5,6 +5,7 @@ const assert = require("chai").assert;
 const path = require("path");
 const dataHelp = require("./help/data");
 const paymentHelp = require("./help/payment");
+const specHelp = require("./help/specialist");
 
 var server = require(path.resolve('main.js'));
 
@@ -24,6 +25,35 @@ describe("Проверка модуля работы с заказами /api/v1
 			assert.equal(body.length, 0);
 			done();
 		});
+	});
+
+	it("Отправляем GET /?date_to=now(), создаем три платёжки и ищем по date_to, должны получить массив из 3 элементов", (done) => {
+		preparePaymentData()
+			.then((result) => {
+				let { person, analyzes, specialty, service, specialist } = result;
+
+				let payment1 = paymentHelp.createPayment(person, [service], [analyzes], [specialist], 'open');
+				let payment2 = paymentHelp.createPayment(person, [service], [analyzes], [specialist], 'collected');
+				let payment3 = paymentHelp.createPayment(person, [service], [analyzes], [specialist], 'closed');
+
+				Promise.all([payment1, payment2, payment3])
+					.then(result => {
+
+						let query = { date_to: new Date() };
+
+						request
+							.get('http://localhost:3000/api/v1/payments')
+							.query(query)
+							.end(function(err, httpResponse) {
+								let body = httpResponse.body;
+
+								assert.equal(200, httpResponse.statusCode);
+								assert.isArray(body);
+								assert.equal(body.length, 3);
+								done();
+							});
+					});
+			});
 	});
 
 	it('Отправляем POST с для статуса "open", не указываем обязательное поле specialists, должны получить объект со статусом 400 и полям errors = ["Выберите специалиста"]', (done) => {

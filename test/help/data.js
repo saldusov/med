@@ -185,6 +185,17 @@ let specs = [
 		doctorate: ['default'],
 		locations: ['bikovo'],
 		active: true
+	},
+	{
+		personId: null,
+		tags: [],
+		experience: 15,
+		comments: [],
+		certificates: [],
+		achievements: ['big', 'ped'], // big, surg, ped, amb
+		doctorate: ['top'],
+		locations: ['ostr'],
+		active: true
 	}
 ];
 
@@ -197,7 +208,6 @@ module.exports = {
 	createAnalyzes: createAnalyzes,
 	specialties: specialties,
 	services: services,
-	services1: services,
 	analyzes: analyzes,
 	specialists: specs
 };

@@ -7,10 +7,10 @@ const paymentManager = require("../db/crud");
 const socketNspPayment = require("../socket/payment");
 
 module.exports =  {
-	getPayments: function() {
+	getPayments: function(params) {
 		return new Promise((resolve, reject) => {
 			PaymentSchema
-				.aggregate(dbQueryConstructor.getAggregateParams())
+				.aggregate(dbQueryConstructor.getAggregateParams(params))
 				.exec(function (err, foundItems) {
 					if(err) {
 						reject(err);

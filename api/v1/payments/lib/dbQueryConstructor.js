@@ -3,59 +3,64 @@ module.exports = {
 	getAggregateGroupParam: getAggregateGroupParam
 }
 
-function getAggregateParams() {
-	return [{
-		$lookup: {
-			from: "persons",
-			localField: "personId",
-			foreignField: "_id",
-			as: "person"
-		}
-	},
-	{
-      	$unwind: {
-      		path: "$person",
-      		preserveNullAndEmptyArrays: true
-      	}
-   	},
-   	{
-   		$unwind: {
-      		path: "$specialists",
-      		preserveNullAndEmptyArrays: true
-      	}
-   	},
-   	{
-		$lookup: {
-			from: "doctors",
-			localField: "specialists",
-			foreignField: "_id",
-			as: "specialists"
-		}
-	},
-   	{
-   		$unwind: {
-      		path: "$specialists",
-      		preserveNullAndEmptyArrays: true
-      	}
-   	},
-	{
-		$lookup: {
-			from: "persons",
-			localField: "specialists.personId",
-			foreignField: "_id",
-			as: "specialists.person"
-		}
-	},
-	{
-   		$unwind: {
-      		path: "$specialists.person",
-      		preserveNullAndEmptyArrays: true
-      	}
-   	},
-   	getAggregateGroupParam(),
-	{
-		$sort: { createdAt: -1 }
-	}];
+function getAggregateParams(params) {
+	let aggregatePipeline = [{
+			$lookup: {
+				from: "persons",
+				localField: "personId",
+				foreignField: "_id",
+				as: "person"
+			}
+		},
+		{
+			$unwind: {
+				path: "$person",
+				preserveNullAndEmptyArrays: true
+			}
+		},
+		{
+			$unwind: {
+				path: "$specialists",
+				preserveNullAndEmptyArrays: true
+			}
+		},
+		{
+			$lookup: {
+				from: "doctors",
+				localField: "specialists",
+				foreignField: "_id",
+				as: "specialists"
+			}
+		},
+		{
+			$unwind: {
+				path: "$specialists",
+				preserveNullAndEmptyArrays: true
+			}
+		},
+		{
+			$lookup: {
+				from: "persons",
+				localField: "specialists.personId",
+				foreignField: "_id",
+				as: "specialists.person"
+			}
+		},
+		{
+			$unwind: {
+				path: "$specialists.person",
+				preserveNullAndEmptyArrays: true
+			}
+		},
+		getAggregateGroupParam(),
+		{
+			$sort: { createdAt: -1 }
+		}];
+	
+	if(params.match) aggregatePipeline.unshift({ $match: params.match });
+	console.log(aggregatePipeline[0]);
+		
+	return aggregatePipeline;
 }
 
 function getAggregateGroupParam() {

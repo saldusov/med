@@ -2,6 +2,7 @@ const express = require("express");
 let app = module.exports = express();
 
 let parseData = require("./middleware").parseData;
+let parseQuery = require("./middleware").parseQuery;
 
 const getPayments = require("./lib/indexFunctions").getPayments;
 const getPaymentById = require("./lib/indexFunctions").getPaymentById;
@@ -10,8 +11,8 @@ const updatePayment = require("./lib/indexFunctions").updatePayment;
 const deletePaymentById = require("./lib/indexFunctions").deletePaymentById;
 
 /* GET items list. */
-app.get('/', function(req, res, next) {
-	getPayments()
+app.get('/', parseQuery, function(req, res, next) {
+	getPayments(req.mongo)
 		.then(foundItems => res.json(foundItems))
 		.catch(errors => res.status(500).json({errors: [errors]}));
 });
