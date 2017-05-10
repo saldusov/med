@@ -14,6 +14,8 @@ var routing = require("./api/routing");
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/medtest111');
 
+app.use(require("./api/auth"));
+
 // parse application/json
 app.use(bodyParser.json());                        
 // parse application/x-www-form-urlencoded

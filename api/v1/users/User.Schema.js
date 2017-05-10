@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const bcrypt = require("bcrypt-nodejs");
+const crypto = require("crypto");
 
 const SALT_WORK_FACTOR = 10;
 
 let UserSchema = new Schema({
 	username: { type: String, required: true, unique: true, trim: true },
-	password: { type: String, required: true, trim: true },
+	passwordHash: { type: String, required: true, trim: true },
+  	salt: { type: String, required: true, trim: true },
 	resource: [
 		{id: String, permissions: [String]}
 	],
@@ -18,28 +19,27 @@ let UserSchema = new Schema({
     timestamps: true
 });
 
-UserSchema.pre('save', function(next) {
-    let user = this;
-	// only hash the password if it has been modified (or is new)
-	if (!user.isModified('password')) return next();
-   // generate a salt
-	bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
-	    if (err) return next(err);
-	    // hash the password using our new salt
-	    bcrypt.hash(user.password, salt, null, function(err, hash) {
-	        if (err) return next(err);
-	        // override the cleartext password with the hashed one
-	        user.password = hash;
-	        next();
-	    });
+UserSchema
+	.virtual('password')
+	.set(function (password) {
+	  this._plainPassword = password;
+	  if (password) {
+	    this.salt = crypto.randomBytes(128).toString('base64');
+	    this.passwordHash = crypto.pbkdf2Sync(password, this.salt, 1, 128, 'sha1');
+	  } else {
+	    this.salt = undefined;
+	    this.passwordHash = undefined;
+	  }
+	})
+	.get(function () {
+	  return this._plainPassword;
 	});
-});
 
-UserSchema.methods.comparePassword = function(candidatePassword, cb) {
-    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-        if (err) return cb(err);
-        cb(null, isMatch);
-    });
+UserSchema.methods.checkPassword = function (password) {
+  if (!password) return false;
+  if (!this.passwordHash) return false;
+  console.log('Pre success', crypto.pbkdf2Sync(password, this.salt, 1, 128, 'sha1') == this.passwordHash);
+  return crypto.pbkdf2Sync(password, this.salt, 1, 128, 'sha1') == this.passwordHash;
 };
 
 module.exports = mongoose.model('users', UserSchema);

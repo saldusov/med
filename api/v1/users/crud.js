@@ -36,6 +36,17 @@ let userManager = {
 								path: "$person.picture",
 								preserveNullAndEmptyArrays: true
 							}
+						},
+						{
+							$project: {
+								username: 1,
+								updatedAt: 1,
+								createdAt: 1,
+								personId: 1,
+								person: 1,
+								active: 1,
+								resource: 1
+							}
 						}
 					])
 				.exec(function(errors, foundObject) {
@@ -55,7 +66,6 @@ let userManager = {
 	create: function(data) {
 		return new Promise(function(resolve, reject) {
 			let user = new UserSchema(data);
-
 			user.save(function(errors, savedObject){
 				if (errors) {
 					reject([errors]);
@@ -70,17 +80,17 @@ let userManager = {
 		});
 	},
 
-	update: function(foundObject, data) {
+	update: function(id, data) {
 		return new Promise(function(resolve, reject) {
+			let updateData = {};
+			if(data.username) updateData.username = data.username;
+			if(data.password) updateData.password = data.password;
+			if(data.personId) updateData.personId = data.personId;
+			if(data.group) updateData.group = data.group;
+			if(data.active != null) updateData.active = data.active;
+			if(data.resource) updateData.resource = data.resource;
 
-			if(data.username) foundObject.username = data.username;
-			if(data.password) foundObject.password = data.password;
-			if(data.personId) foundObject.personId = data.personId;
-			if(data.group) foundObject.group = data.group;
-			if(data.active != null) foundObject.active = data.active;
-			if(data.resource) foundObject.resource = data.resource;
-
-			foundObject.save(function(errors, updatedObject){
+			UserSchema.update({_id: id}, {$set: updateData}, function(errors, updatedObject){
 				if(errors) {
 					reject([errors]);
 				} else {

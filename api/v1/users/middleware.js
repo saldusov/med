@@ -1,5 +1,6 @@
 let vt = require("./valid-transf");
 let vtPerson = require("../persons/valid-transf");
+const passport = require('passport'); 
 
 module.exports = {
 	parseAddData: function(req, res, next) {
@@ -20,5 +21,12 @@ module.exports = {
 	parseUpdateData: function(req, res, next) {
 		vt.transform(req.body);
 		next();
+	},
+
+	checkAccess: function(rules) {
+		return function(req, res, next) {
+			console.log('Rule: ', rules);
+			next();
+		}
 	}
 }

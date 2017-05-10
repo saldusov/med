@@ -17065,7 +17065,7 @@ var PaymentsService = (function () {
     function PaymentsService(_http) {
         this._http = _http;
         this._baseUrl = "/api/v1/payments";
-        this.sokectUrl = 'http://localhost:3030/payments';
+        this.sokectUrl = '/payments';
     }
     PaymentsService.prototype.get = function (params) {
         var query = this.createQuaryParams(params);
