@@ -80,9 +80,13 @@ app.get('/thumbs/:filename', function(req, res, next) {
 			if(err) {
 				res.status(404).send();
 			} else {
-				var img = fs.readFileSync(foundObject.thumbs);
-				res.writeHead(200, {'Content-Type': foundObject.mimetype });
-				res.end(img, 'binary');
+				if(foundObject) {
+					var img = fs.readFileSync(foundObject.thumbs);
+					res.writeHead(200, {'Content-Type': foundObject.mimetype });
+					res.end(img, 'binary');
+				} else {
+					res.status(404).send();
+				}
 			}
 		});
 });

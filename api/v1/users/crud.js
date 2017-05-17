@@ -44,6 +44,7 @@ let userManager = {
 								createdAt: 1,
 								personId: 1,
 								person: 1,
+								group: 1,
 								active: 1,
 								resource: 1
 							}
@@ -89,7 +90,7 @@ let userManager = {
 			if(data.group) updateData.group = data.group;
 			if(data.active != null) updateData.active = data.active;
 			if(data.resource) updateData.resource = data.resource;
-
+			console.log(updateData);
 			UserSchema.update({_id: id}, {$set: updateData}, function(errors, updatedObject){
 				if(errors) {
 					reject([errors]);

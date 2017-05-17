@@ -35,6 +35,17 @@ module.exports =  {
 			});
 	},
 
+	payPayment: function(id, data) {
+		data.status = 'closed';
+		return dbFunc.checkPerson(data)
+			.then((data) => paymentManager.update(id, data))
+			.then((modifyData) => paymentManager.read(id))
+			.then((payment) => {
+				socketNspPayment.emit('change', { status: payment.status, type: payment.type });
+				return payment;
+			});
+	},
+
 	updatePayment: function(id, data) {
 		return dbFunc.checkPerson(data)
 			.then((data) => paymentManager.update(id, data))

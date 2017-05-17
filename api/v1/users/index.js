@@ -47,7 +47,10 @@ app.put("/:id", middleware.parseUpdateData, function(req, res, next){
 
 	indexFunctions.updateUser(req.params.id, req.body)
 		.then((user) => res.status(200).json(user))
-		.catch((errors) => res.status(400).json({errors}));
+		.catch((errors) => {
+			console.log(errors);
+			res.status(400).json({errors})
+		});
 
 });
 

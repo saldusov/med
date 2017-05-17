@@ -25,7 +25,9 @@ module.exports = {
 
 	checkAccess: function(rules) {
 		return function(req, res, next) {
-			console.log('Rule: ', rules);
+			/*console.log('Rule: ', rules);
+			console.log('User: ', req.user);*/
+			console.log(req.body);
 			next();
 		}
 	}

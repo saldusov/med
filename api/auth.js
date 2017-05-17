@@ -49,8 +49,7 @@ passport.use(new JwtStrategy(jwtOptions, function (payload, done) {
         done(null, false)
       }
     });
-  })
-);
+}));
 
 passport.serializeUser(function(user, done) {
 	console.log('serialize');

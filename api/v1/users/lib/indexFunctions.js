@@ -59,11 +59,7 @@ module.exports =  {
 					res.status(404).json({errors: ["Пользователь не существует"]});
 				}
 			})
-			.then((modifyData) => userManager.read(id))
-			.then((payment) => {
-				socketNspPayment.emit('change', { status: payment.status, type: payment.type });
-				return payment;
-			});
+			.then((modifyData) => userManager.read(id));
 	},
 
 	deleteUserById: function(id) {

@@ -24,6 +24,7 @@ module.exports = {
 		req.mongo.match = (!!andOper && andOper.length > 0) ? { $and: andOper } : undefined;
 		next();
 	},
+	
 	parseData: function(req, res, next) {
 		let errors = [];
 
@@ -37,5 +38,9 @@ module.exports = {
 		} else {
 			res.status(400).json({errors});
 		}
-	} 
+	},
+
+	parseDataPay: function(req, res, next) {
+		next();
+	}
 }

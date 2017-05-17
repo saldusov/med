@@ -2,6 +2,7 @@ const express = require("express");
 let app = module.exports = express();
 
 let parseData = require("./middleware").parseData;
+let parseDataPay = require("./middleware").parseDataPay;
 let parseQuery = require("./middleware").parseQuery;
 
 const getPayments = require("./lib/indexFunctions").getPayments;
@@ -27,6 +28,12 @@ app.get('/:id', function(req, res, next) {
 /* Insert item */
 app.post('/', parseData, function(req, res, next){
 	addPayment(req.body)
+		.then((payment) => res.status(200).json(payment))
+		.catch((errors) => res.status(400).json({errors}));
+});
+
+app.post('/pay/:id', parseDataPay, function(req, res, next){
+	payPayment(req.params.id, req.body)
 		.then((payment) => res.status(200).json(payment))
 		.catch((errors) => res.status(400).json({errors}));
 });

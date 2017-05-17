@@ -9,12 +9,10 @@ module.exports = {
 			return personManager
 				.gerOrCreate(personId, data.person)
 				.then((person) => {
-					console.log(person);
 					if(!person) {
 						res.status(404).json({errors: ["Персональная информация не найдена"]});
 					}
 					else {
-						console.log('I am here!');
 						data.personId = person._id;
 						return Promise.resolve(data);
 					}
