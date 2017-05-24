@@ -1,5 +1,7 @@
+const path = require("path");
 const UserSchema = require("../User.schema");
 const jwt = require('jsonwebtoken'); // аутентификация по JWT для hhtp
+const cfg = require(path.resolve("api/global")).config;
 
 const personManager = require("../../persons/crud");
 const userManager = require("../crud");
@@ -67,19 +69,31 @@ module.exports =  {
 			.delete(id);
 	},
 
-	loginUser: function(user) {
+	loginUser: function(body) {
 		return new Promise((resolve, reject) => {
-			if (user == false) {
-			  reject(["auth failed"]);
-			} else {
-			  //--payload - информация которую мы храним в токене и можем из него получать
-			  const payload = {
-			    id: user.id,
-			    username: user.username
-			  };
-			  const token = jwt.sign(payload, "ht23Ydsj01`1-2^&#DJK1NDNSdha321"); //здесь создается JWT
-			  resolve({username: user.username, token: 'JWT ' + token});
-			}
+			if (body.username && body.password) {
+		        var username = body.username;
+		        var password = body.password;
+		       	UserSchema.findOne({username}, (error, user) => {
+			        if (error) {
+			          reject({error});
+			        }
+
+			        if (!user || !user.checkPassword(password)) {
+			          reject("Нет такого пользователя или пароль неверен.");
+			        } else {
+						//--payload - информация которую мы храним в токене и можем из него получать
+						const payload = {
+							id: user.id,
+							username: user.username
+						};
+						const token = jwt.sign(payload, cfg.jwtSecret); //здесь создается JWT
+						resolve({username: user.username, token: 'JWT ' + token});
+					}
+		      	});
+		    } else {
+		    	reject("Не указано имя или пароль");
+		    }	
 		});
 	}
 }

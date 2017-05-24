@@ -9,7 +9,7 @@ const specHelp = require("./help/specialist");
 
 var server = require(path.resolve('main.js'));
 
-describe("Проверка модуля работы с заказами /api/v1/payments", () => {
+describe.only("Проверка модуля работы с заказами /api/v1/payments", () => {
 
 	beforeEach((done) => { //Перед каждым тестом чистим базу
       Promise.all(dataHelp.clearAll())

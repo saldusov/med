@@ -8,7 +8,7 @@ const usersHelp = require("./help/users");
 
 var server = require(path.resolve('main.js'));
 
-describe.only("Проверка модуля работы с пользователями /api/v1/users", () => {
+describe("Проверка модуля работы с пользователями /api/v1/users", () => {
 
 	beforeEach((done) => { //Перед каждым тестом чистим базу
      	usersHelp.clearAll()

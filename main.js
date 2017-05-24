@@ -9,15 +9,15 @@ const favicon = require('serve-favicon');
 const bodyParser = require("body-parser");
 const path = require('path');
 
+var auth = require("./api/auth")();
 var routing = require("./api/routing");
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/medtest111');
 
-app.use(require("./api/auth"));
-
 // parse application/json
-app.use(bodyParser.json());                        
+app.use(bodyParser.json());
+app.use(auth.initialize());                
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded());
 app.use(express.static(__dirname + '/src/dist'));

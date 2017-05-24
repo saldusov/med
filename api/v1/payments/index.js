@@ -9,6 +9,7 @@ const getPayments = require("./lib/indexFunctions").getPayments;
 const getPaymentById = require("./lib/indexFunctions").getPaymentById;
 const addPayment = require("./lib/indexFunctions").addPayment;
 const updatePayment = require("./lib/indexFunctions").updatePayment;
+const payPayment = require("./lib/indexFunctions").payPayment;
 const deletePaymentById = require("./lib/indexFunctions").deletePaymentById;
 
 /* GET items list. */

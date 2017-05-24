@@ -36,9 +36,14 @@ module.exports =  {
 	},
 
 	payPayment: function(id, data) {
-		data.status = 'closed';
-		return dbFunc.checkPerson(data)
-			.then((data) => paymentManager.update(id, data))
+		let payment = {
+			payment: data.payment,
+			type: data.type || null,
+			status: 'closed',
+			discount: data.discount || null
+		};
+
+		return paymentManager.update(id, payment)
 			.then((modifyData) => paymentManager.read(id))
 			.then((payment) => {
 				socketNspPayment.emit('change', { status: payment.status, type: payment.type });
