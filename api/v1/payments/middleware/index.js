@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 let vtPerson = require("../../persons/valid-transf");
 let vtPayments = require("./valid-transf");
 
@@ -10,9 +11,12 @@ module.exports = {
 			if(params.date_to) andOper.push({createdAt: {$lte: new Date(params.date_to)}});
 			if(params.date_from) andOper.push({createdAt: {$gte: new Date(params.date_from)}});
 
+			// Фильтруем только по специалисту
+			if(req.user.group == 'user-spec') params.specialists = [req.user.specialist._id];
 			if(params.specialists) andOper.push({specialists: { 
 				$in : params.specialists.map(_id => mongoose.Types.ObjectId(_id)) 
 			}});
+
 		}
 
 		req.mongo = {

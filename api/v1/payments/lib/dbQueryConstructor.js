@@ -58,7 +58,6 @@ function getAggregateParams(params) {
 		}];
 	
 	if(params.match) aggregatePipeline.unshift({ $match: params.match });
-	console.log(aggregatePipeline[0]);
 		
 	return aggregatePipeline;
 }

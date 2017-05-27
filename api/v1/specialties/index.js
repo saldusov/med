@@ -9,14 +9,14 @@ const SpecialtySchema = require('./Specialty.schema');
 let parseData = require("./middleware").parseData;
 
 /* GET items list. */
-app.get('/', function(req, res, next) {
+app.get('/', auth.checkAccess("specialties"), function(req, res, next) {
 	SpecialtySchema.find(function(err, specialties) {
 		res.json(specialties);
 	});
 });
 
 /* GET one item. */
-app.get('/:id', function(req, res, next) {
+app.get('/:id', auth.checkAccess("specialties"), function(req, res, next) {
 	SpecialtySchema.findOne({_id: req.params.id}, function(err, foundItem) {
 		res.json(foundItem);
 	});

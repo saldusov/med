@@ -4,7 +4,7 @@ const dbQueryConstructor = require('./dbQueryConstructor')
 let dbFunc = require("../db/db-func");
 const paymentManager = require("../db/crud");
 
-const socketNspPayment = require("../socket/payment");
+const emmiterPayment = require("../socket/emmiter");
 
 module.exports =  {
 	getPayments: function(params) {
@@ -30,7 +30,7 @@ module.exports =  {
 		return dbFunc.checkPerson(data)
 			.then((data) => paymentManager.create(data))
 			.then((payment) => {
-				socketNspPayment.emit('change', { status: payment.status, type: payment.type });
+				emmiterPayment.changePayment(payment);
 				return payment;
 			});
 	},
@@ -46,7 +46,7 @@ module.exports =  {
 		return paymentManager.update(id, payment)
 			.then((modifyData) => paymentManager.read(id))
 			.then((payment) => {
-				socketNspPayment.emit('change', { status: payment.status, type: payment.type });
+				emmiterPayment.changePayment(payment);
 				return payment;
 			});
 	},
@@ -56,7 +56,7 @@ module.exports =  {
 			.then((data) => paymentManager.update(id, data))
 			.then((modifyData) => paymentManager.read(id))
 			.then((payment) => {
-				socketNspPayment.emit('change', { status: payment.status, type: payment.type });
+				emmiterPayment.changePayment(payment);
 				return payment;
 			});
 	},

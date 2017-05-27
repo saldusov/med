@@ -43,7 +43,7 @@ module.exports =  {
 			.read(id);
 	},
 
-	getUserByIdTest: function(id) {
+	getUserByIdWithSpecialistInfo: function(id) {
 		return new Promise((resolve, reject) => {
 			UserSchema
 				.aggregate([
@@ -52,15 +52,15 @@ module.exports =  {
 					},
 					{
 						$lookup: {
-							from: "persons",
+							from: "specialists",
 							localField: "personId",
-							foreignField: "_id",
-							as: "person"
+							foreignField: "personId",
+							as: "specialist"
 						}
 					},
 					{
 						$unwind: {
-							path: "$person",
+							path: "$specialist",
 							preserveNullAndEmptyArrays: true
 						}
 					}
@@ -69,7 +69,7 @@ module.exports =  {
 					if(err) {
 						reject(err);
 					} else {
-						resolve(foundItems);
+						resolve(foundItems[0] || false);
 					}
 				});
 		});

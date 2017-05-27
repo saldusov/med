@@ -7,6 +7,7 @@ const ExtractJwt = require('passport-jwt').ExtractJwt; // авторизация
 const socketioJwt = require('socketio-jwt'); // аутентификация по JWT для socket.io
 const cfg = require("./global").config;
 const rulesManager = require("./v1/users/lib/rules-manager");
+const userDBFunc = require("./v1/users/lib/indexFunctions");
 
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeader(),
@@ -17,16 +18,9 @@ const UserSchema = require("./v1/users/User.schema");
 
 module.exports = function() {
   var jwtStrategy = new JwtStrategy(jwtOptions, function (payload, done) {
-      UserSchema.findById(payload.id, (err, user) => {
-        if (err) {
-          return done(err)
-        }
-        if (user) {
-          done(null, user)
-        } else {
-          done(null, false);
-        }
-      });
+      userDBFunc.getUserByIdWithSpecialistInfo(payload.id)
+        .then( user => done(null, user) )
+        .catch( err => done(err) );
   });
 
   passport.use(jwtStrategy);
@@ -43,7 +37,8 @@ module.exports = function() {
     checkAccess: function(rule) {
       return function(req, res, next) {
         passport.authenticate("jwt", cfg.jwtSession, function(err, user, info) {
-          req.user = user || { group: "guest" }
+          req.user = user || { group: "guest" };
+
           let allowed = rulesManager.get(req.user.group);
 
           if(allowed.indexOf(rule) >= 0 || rule == "tools") {

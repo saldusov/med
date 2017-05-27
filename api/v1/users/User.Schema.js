@@ -11,7 +11,7 @@ let UserSchema = new Schema({
 	resource: [
 		{id: String, permissions: [String]}
 	],
-	group: String, /* admin, user-admin, user-doctor, user-buh, boss, user, develop */
+	group: String, /* admin, user-admin, user-spec, user-buh, boss, user, develop */
 	active: { type: Boolean, default: true },
 	personId: Schema.ObjectId
 },

@@ -3,7 +3,7 @@ const toolsManager = require("./tools-manager");
 const rules = {
 	"develop": [
 		"analyzes", "analyzes.add", "analyzes.update", "analyzes.delete", 
-		"specialists", 
+		"specialists", "specialists.add", "specialists.update", "specialists.delete",
 		"patients", "patients.add", "patients.update", "patients.delete", 
 		"payments", "payments.add", "payments.create", "payments.reserve", "payments.pay", "payments.update", "payments.delete", 
 		"persons", "persons.add", "persons.update", "persons.delete",
@@ -21,9 +21,9 @@ const rules = {
 		"specialties", 
 		"users.auth",
 	],
-	"user-doctor": [
+	"user-spec": [
 		"specialists",
-		"payments", "payments.add", "payments.create", "payments.onlyself",
+		"payments", "payments.create", "payments.onlyself",
 		"persons", "persons.add", "persons.update",
 		"specialties", 
 		"users.auth"
