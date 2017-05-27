@@ -1,12 +1,14 @@
 const express = require("express");
 let app = module.exports = express();
+const path = require("path");
+const auth = require(path.resolve("api/auth"))();
 
 let PersonSchema = require('../persons/Person.schema');
 let middleware = require("./middleware");
 let crud = require("./crud");
 
 /* GET patiens list. */
-app.get('/', middleware.parseQuery, function(req, res, next) {
+app.get('/', auth.checkAccess("persons"), middleware.parseQuery, function(req, res, next) {
 	let pageNumber = req.mongoParams.pageNumber > 0 ? ((req.mongoParams.pageNumber-1)*req.mongoParams.nPerPage) : 0;
 	let nPerPage = req.mongoParams.nPerPage;
 	
@@ -46,13 +48,13 @@ app.get('/', middleware.parseQuery, function(req, res, next) {
 		});
 });
 
-app.get('/:id', function(req, res, next) {
+app.get('/:id', auth.checkAccess("persons"), function(req, res, next) {
 	PersonSchema.findOne({_id: req.params.id}).populate('picture').exec(function(err, foundItem) {
 		res.json(foundItem);
 	});
 });
 
-app.post('/', middleware.parseData, function(req, res, next){
+app.post('/', auth.checkAccess("persons.add"), middleware.parseData, function(req, res, next){
 	
 	crud
 		.create(req.body)
@@ -61,7 +63,7 @@ app.post('/', middleware.parseData, function(req, res, next){
 
 });
 
-app.put('/:id', middleware.parseData, function(req, res, next){
+app.put('/:id', auth.checkAccess("persons.update"), middleware.parseData, function(req, res, next){
 	
 	crud
 		.read(req.params.id)
@@ -77,7 +79,7 @@ app.put('/:id', middleware.parseData, function(req, res, next){
 		.catch((errors) => res.status(400).json({errors}));
 });
 
-app.delete('/:id', function(req, res, next) {
+app.delete('/:id', auth.checkAccess("persons.delete"), function(req, res, next) {
 	
 	crud
 		.delete(req.params.id)

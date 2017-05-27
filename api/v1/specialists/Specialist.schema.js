@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var doctorSchema = new Schema({
+var specialistsSchema = new Schema({
 	personId: {
 		type: Schema.ObjectId,
 		require: true
@@ -42,4 +42,4 @@ var doctorSchema = new Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('doctors', doctorSchema);
+module.exports = mongoose.model('specialists', specialistsSchema);

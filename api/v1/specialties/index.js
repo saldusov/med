@@ -1,5 +1,7 @@
 const express = require("express");
 let app = module.exports = express();
+const path = require("path");
+const auth = require(path.resolve("api/auth"))();
 
 const mongoose = require('mongoose');
 const SpecialtySchema = require('./Specialty.schema');
@@ -21,7 +23,7 @@ app.get('/:id', function(req, res, next) {
 });
 
 /* Insert item */
-app.post('/', parseData, function(req, res, next){
+app.post('/', auth.checkAccess("specialties.add"), parseData, function(req, res, next){
 	
 	var specialtyItem = req.body;
 	
@@ -40,7 +42,7 @@ app.post('/', parseData, function(req, res, next){
 
 });
 
-app.put('/:id', parseData, function(req, res, next){
+app.put('/:id', auth.checkAccess("specialties.update"), parseData, function(req, res, next){
 	var specialtyItem = req.body;
 
 	SpecialtySchema.findOne({_id: req.params.id}, function(err, foundObject){
@@ -62,7 +64,7 @@ app.put('/:id', parseData, function(req, res, next){
 	});
 });
 
-app.delete('/:id', function(req, res, next) {
+app.delete('/:id', auth.checkAccess("specialties.delete"), function(req, res, next) {
 	SpecialtySchema.remove({ _id: req.params.id }, function(err, result) {
     	if (err) {
 			res.status(500).json({err});

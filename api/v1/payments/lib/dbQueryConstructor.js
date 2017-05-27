@@ -26,7 +26,7 @@ function getAggregateParams(params) {
 		},
 		{
 			$lookup: {
-				from: "doctors",
+				from: "specialists",
 				localField: "specialists",
 				foreignField: "_id",
 				as: "specialists"

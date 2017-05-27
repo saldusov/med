@@ -1,5 +1,7 @@
 const express = require("express");
 let app = module.exports = express();
+const path = require("path");
+const auth = require(path.resolve("api/auth"))();
 
 let parseData = require("./middleware").parseData;
 let parseDataPay = require("./middleware").parseDataPay;
@@ -13,39 +15,39 @@ const payPayment = require("./lib/indexFunctions").payPayment;
 const deletePaymentById = require("./lib/indexFunctions").deletePaymentById;
 
 /* GET items list. */
-app.get('/', parseQuery, function(req, res, next) {
+app.get('/', auth.checkAccess("payments"), parseQuery, function(req, res, next) {
 	getPayments(req.mongo)
 		.then(foundItems => res.json(foundItems))
 		.catch(errors => res.status(500).json({errors: [errors]}));
 });
 
 /* GET one item. */
-app.get('/:id', function(req, res, next) {
+app.get('/:id', auth.checkAccess("payments"), function(req, res, next) {
 	getPaymentById(req.params.id)
 		.then(foundItem => res.json(foundItem))
 		.catch(errors => res.status(500).json({errors: [errors]}));
 });
 
 /* Insert item */
-app.post('/', parseData, function(req, res, next){
+app.post('/', auth.checkAccess("payments.add"), parseData, function(req, res, next){
 	addPayment(req.body)
 		.then((payment) => res.status(200).json(payment))
 		.catch((errors) => res.status(400).json({errors}));
 });
 
-app.post('/pay/:id', parseDataPay, function(req, res, next){
+app.post('/pay/:id', auth.checkAccess("payments.pay"), parseDataPay, function(req, res, next){
 	payPayment(req.params.id, req.body)
 		.then((payment) => res.status(200).json(payment))
 		.catch((errors) => res.status(400).json({errors}));
 });
 
-app.put('/:id', parseData, function(req, res, next){
+app.put('/:id', auth.checkAccess("payments.update"), parseData, function(req, res, next){
 	updatePayment(req.params.id, req.body)
 		.then((payment) => res.status(200).json(payment))
 		.catch((errors) => res.status(400).json({errors}));
 });
 
-app.delete('/:id', function(req, res, next) {
+app.delete('/:id', auth.checkAccess("payments.delete"), function(req, res, next) {
 	
 	deletePaymentById(req.params.id)
 		.then((result) => {

@@ -39,8 +39,8 @@ let toolsManager = {
 				result.items.push({route: '/patients', title: "Список пациентов"});
 			}
 
-			if(rules.indexOf('doctors') >= 0) {
-				result.items.push({route: '/doctors', title: "Список врачей"});
+			if(rules.indexOf('specialists') >= 0) {
+				result.items.push({route: '/specialists', title: "Список специалистов"});
 			}
 
 			if(rules.indexOf('users') >= 0) {
@@ -54,7 +54,7 @@ let toolsManager = {
 	createPaymentsTools: function(rules) {
 		var result = false;
 
-		if(rules.indexOf('payments')) {
+		if(rules.indexOf('payments') >= 0) {
 			result = {
 	      title: 'Расчет',
 	      items: [

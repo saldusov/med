@@ -1,6 +1,6 @@
-const DoctorSchema = require('./Doctor.schema');
+const SpecialistSchema = require('./Specialist.schema');
 let personManager = require("../persons/crud");
-let doctorManager = require("./crud");
+let specialistsManager = require("./crud");
 let dbFunc = require("./db-func");
 
 const PersonSchema = require('../persons/Person.schema');
@@ -8,7 +8,7 @@ const PersonSchema = require('../persons/Person.schema');
 module.exports =  {
 	get: function() {
 		return new Promise((resolve, reject) => {
-			DoctorSchema
+			SpecialistSchema
 				.aggregate([
 					{
 						$lookup: {
@@ -61,23 +61,23 @@ module.exports =  {
 	},
 
 	getOne: function(id) {
-		return doctorManager
+		return specialistsManager
 			.read(id);
 	},
 
 	add: function(data) {
 		return dbFunc.checkPerson(data)
-			.then((data) => doctorManager.create(data));
+			.then((data) => specialistsManager.create(data));
 	},
 
 	update: function(id, data) {
 		return dbFunc.checkPerson(data)
-			.then((data) => doctorManager.update(id, data))
-			.then((modifyData) => doctorManager.read(id));
+			.then((data) => specialistsManager.update(id, data))
+			.then((modifyData) => specialistsManager.read(id));
 	},
 
 	deleteOne: function(id) {
-		return doctorManager
+		return specialistsManager
 			.delete(id);
 	}
 }

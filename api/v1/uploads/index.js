@@ -1,6 +1,7 @@
 const express = require("express");
 let app = module.exports = express();
 const path = require("path");
+const auth = require(path.resolve("api/auth"))();
 
 const fs = require("fs");
 const multer = require('multer');
@@ -93,7 +94,7 @@ app.get('/thumbs/:filename', function(req, res, next) {
 
 
 // Post files
-app.post('/', function(req, res, next) {
+app.post('/', auth.checkAccess("uploads"), function(req, res, next) {
 	upload(req, res, function(errors) {
 		if(errors) res.status(400).json({errors: [errors]});
 		else {

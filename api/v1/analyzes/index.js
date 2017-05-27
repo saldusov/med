@@ -1,5 +1,7 @@
 const express = require("express");
 let app = module.exports = express();
+const path = require("path");
+const auth = require(path.resolve("api/auth"))();
 
 const mongoose = require("mongoose");
 
@@ -13,7 +15,7 @@ let test = require("./test");
 
 app.use("/test", test);
 
-app.get("/export", function(req, res, next) {
+app.get("/export", auth.checkAccess("analyzes.export"), function(req, res, next) {
 	exportModule
 		.exportAll()
 		.then((filepath) => {
@@ -24,7 +26,7 @@ app.get("/export", function(req, res, next) {
 		});
 });
 
-app.get("/export/:name", function(req, res, next) {
+app.get("/export/:name", auth.checkAccess("analyzes.export"), function(req, res, next) {
 	exportModule
 		.exportLab(req.params.name)
 		.then((filepath) => {
@@ -37,7 +39,7 @@ app.get("/export/:name", function(req, res, next) {
 		});
 });
 
-app.get('/', middleware.parseQuery, function(req, res, next) {
+app.get('/', auth.checkAccess("analyzes"), middleware.parseQuery, function(req, res, next) {
 
 	db
 		.get(req.mongoParams)
@@ -46,7 +48,7 @@ app.get('/', middleware.parseQuery, function(req, res, next) {
 
 });
 
-app.get('/count', middleware.parseQuery, function(req, res, next) {
+app.get('/count', auth.checkAccess("analyzes"), middleware.parseQuery, function(req, res, next) {
 
 	db
 		.getCount(req.mongoParams)
@@ -55,7 +57,7 @@ app.get('/count', middleware.parseQuery, function(req, res, next) {
 
 });
 
-app.get('/:id', function(req, res, next) {
+app.get('/:id', auth.checkAccess("analyzes"), function(req, res, next) {
 
 	crud
 		.read(req.params.id)
@@ -64,7 +66,7 @@ app.get('/:id', function(req, res, next) {
 
 });
 
-app.post('/', middleware.parseData, function(req, res, next){
+app.post('/', auth.checkAccess("analyzes.add"), middleware.parseData, function(req, res, next){
 	
 	crud
 		.create(req.body)
@@ -73,7 +75,7 @@ app.post('/', middleware.parseData, function(req, res, next){
 
 });
 
-app.post('/merge', function(req, res, next){
+app.post('/merge', auth.checkAccess("analyzes.update"), function(req, res, next){
 	
 	AnalyzesSchema
 		.aggregate([
@@ -117,7 +119,7 @@ app.post('/merge', function(req, res, next){
 
 });
 
-app.put('/:id', middleware.parseData, function(req, res, next){
+app.put('/:id', auth.checkAccess("analyzes.update"), middleware.parseData, function(req, res, next){
 	crud
 		.read(req.params.id)
 		.then((analyz) => {
@@ -132,7 +134,7 @@ app.put('/:id', middleware.parseData, function(req, res, next){
 		.catch((errors) => res.status(400).json({errors}));
 });
 
-app.delete('/:id', function(req, res, next) {
+app.delete('/:id', auth.checkAccess("analyzes.delete"), function(req, res, next) {
 	
 	crud
 		.delete(req.params.id)

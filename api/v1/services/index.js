@@ -1,5 +1,7 @@
 const express = require("express");
 let app = module.exports = express();
+const path = require("path");
+const auth = require(path.resolve("api/auth"))();
 
 const mongoose = require('mongoose');
 const ServiceSchema = require('./Service.schema');
@@ -7,7 +9,7 @@ const ServiceSchema = require('./Service.schema');
 let middleware = require("./middleware");
 
 /* GET items list. */
-app.get('/', middleware.parseQuery, function(req, res, next) {
+app.get('/', auth.checkAccess("services"), middleware.parseQuery, function(req, res, next) {
 	let pipeline = [
 		{
 	      	$unwind: {
@@ -59,14 +61,14 @@ app.get('/', middleware.parseQuery, function(req, res, next) {
 });
 
 /* GET one item. */
-app.get('/:id', function(req, res, next) {
+app.get('/:id', auth.checkAccess("services"), function(req, res, next) {
 	ServiceSchema.findOne({_id: req.params.id}, function(err, foundItem) {
 		res.json(foundItem);
 	});
 });
 
 /* Insert item */
-app.post('/', middleware.parseData, function(req, res, next){
+app.post('/', auth.checkAccess("services.add"), middleware.parseData, function(req, res, next){
 	
 	var serviceItem = req.body;
 	
@@ -85,7 +87,7 @@ app.post('/', middleware.parseData, function(req, res, next){
 
 });
 
-app.put('/:id', middleware.parseData, function(req, res, next){
+app.put('/:id', auth.checkAccess("services.update"), middleware.parseData, function(req, res, next){
 	var serviceItem = req.body;
 
 	ServiceSchema.findOne({_id: req.params.id}, function(err, foundObject){
@@ -107,7 +109,7 @@ app.put('/:id', middleware.parseData, function(req, res, next){
 	});
 });
 
-app.delete('/:id', function(req, res, next) {
+app.delete('/:id', auth.checkAccess("services.delete"), function(req, res, next) {
 	ServiceSchema.remove({ _id: req.params.id }, function(err, result) {
     	if (err) {
 			res.status(500).json({err});

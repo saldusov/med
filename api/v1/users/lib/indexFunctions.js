@@ -1,6 +1,7 @@
 const path = require("path");
+const mongoose = require("mongoose");
 const UserSchema = require("../User.schema");
-const jwt = require('jsonwebtoken'); // аутентификация по JWT для hhtp
+const jwt = require('jsonwebtoken'); // аутентификация по JWT для http
 const cfg = require(path.resolve("api/global")).config;
 
 const personManager = require("../../persons/crud");
@@ -40,6 +41,38 @@ module.exports =  {
 	getUserById: function(id) {
 		return userManager
 			.read(id);
+	},
+
+	getUserByIdTest: function(id) {
+		return new Promise((resolve, reject) => {
+			UserSchema
+				.aggregate([
+					{
+						$match: { _id: mongoose.Types.ObjectId(id) } 
+					},
+					{
+						$lookup: {
+							from: "persons",
+							localField: "personId",
+							foreignField: "_id",
+							as: "person"
+						}
+					},
+					{
+						$unwind: {
+							path: "$person",
+							preserveNullAndEmptyArrays: true
+						}
+					}
+				])
+				.exec(function (err, foundItems) {
+					if(err) {
+						reject(err);
+					} else {
+						resolve(foundItems);
+					}
+				});
+		});
 	},
 
 	addUser: function(data) {

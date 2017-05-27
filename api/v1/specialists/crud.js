@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const DoctorSchema = require('./Doctor.schema');
+const SpecialistSchema = require('./Specialist.schema');
 
-let doctorManager = {
+let specialistManager = {
 	read: function(id) {
 		return new Promise(function(resolve, reject) {
-			DoctorSchema
+			SpecialistSchema
 				.aggregate([
 					{
 						$match: { _id: mongoose.Types.ObjectId(id) } 
@@ -57,58 +57,6 @@ let doctorManager = {
 							tags: { $first: "$tags"}
 						}
 					}
-						/*{
-							$match: { _id: mongoose.Types.ObjectId(id) } 
-						},
-						{
-							$lookup: {
-								from: "persons",
-								localField: "personId",
-								foreignField: "_id",
-								as: "person"
-							}
-						},
-						{
-					      	$unwind: {
-					      		path: "$person",
-					      		preserveNullAndEmptyArrays: true
-					      	}
-				   		},
-				   		{
-					      	$unwind: {
-					      		path: "$certificates",
-					      		preserveNullAndEmptyArrays: true
-					      	}
-				   		},
-				   		{
-							$lookup: {
-								from: "files",
-								localField: "certificates",
-								foreignField: "_id",
-								as: "certificates"
-							}
-						},
-						{
-							$unwind: {
-								path: "$certificates",
-								preserveNullAndEmptyArrays: true
-							}
-						},
-						{
-							$group: { 
-								_id: "$_id",
-								person: { $first: "$person"},
-								personId: { $first: "$personId"},
-								experience: { $first: "$experience" },
-								certificates: { $addToSet: "$certificates"},
-								achievements: { $first: "$achievements"},
-								doctorate: { $first: "$doctorate"},
-								locations: { $first: "$locations"},
-								createdAt: { $first: "$createdAt"},
-								active: { $first: "$active"},
-								tags: { $first: "$tags"}
-							}
-						}*/
 				])
 				.exec(function(errors, foundObject) {
 					if(errors) {
@@ -126,7 +74,7 @@ let doctorManager = {
 
 	create: function(data) {
 		return new Promise(function(resolve, reject) {
-			let doctor = new DoctorSchema(data);
+			let doctor = new SpecialistSchema(data);
 
 			doctor.save(function(errors, savedObject){
 				if (errors) {
@@ -144,7 +92,7 @@ let doctorManager = {
 
 	update: function(id, data) {
 		return new Promise(function(resolve, reject) {
-			DoctorSchema.update({_id: id}, {$set: data}, function(errors, updatedObject){
+			SpecialistSchema.update({_id: id}, {$set: data}, function(errors, updatedObject){
 				if(errors) {
 					reject([errors]);
 				} else {
@@ -156,7 +104,7 @@ let doctorManager = {
 
 	delete: function(id) {
 		return new Promise(function(resolve, reject) {
-			DoctorSchema.remove({ _id: id }, function(errors, result) {
+			SpecialistSchema.remove({ _id: id }, function(errors, result) {
 		    	if (errors) {
 					reject([errors]);
 		    	} else {
@@ -171,4 +119,4 @@ let doctorManager = {
 	}
 };
 
-module.exports = doctorManager;
+module.exports = specialistManager;
