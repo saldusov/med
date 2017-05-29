@@ -1,0 +1,50 @@
+[
+	{
+		"title": "Первичный прием терапевта",
+		"priceVariant": {"default": 1300}
+	},
+	{
+		"title": "Повторный прием терапевта",
+		"priceVariant": {"default": 1100}
+	},
+	{
+		"title": "Выезд врача терапевта на дом",
+		"priceVariant": {"default": 2000}
+	},
+	{
+		"title": "ЭКГ с расшифровкой",
+		"priceVariant": {"default": 900}
+	},
+	{
+		"title": "ЭКГ без расшифровки",
+		"priceVariant": {"default": 700}
+	},
+	{
+		"title": "Выписка из амбулаторной карты",
+		"priceVariant": {"default": 800}
+	},
+	{
+		"title": "Консультация по результатам обследования",
+		"priceVariant": {"default": 600}
+	},
+	{
+		"title": "Выдача заключения о состоянии пациента и проведенном лечении (выписка)",
+		"priceVariant": {"default": 900}
+	},
+	{
+		"title": "Выдача справки о прохождении лечения",
+		"priceVariant": {"default": 600}
+	},
+	{
+		"title": "Выдача направления на госпитализацию",
+		"priceVariant": {"default": 600}
+	},
+	{
+		"title": "Лист назначения врача",
+		"priceVariant": {"default": 500}
+	},
+	{
+		"title": "Заключение о состоянии здоровья",
+		"priceVariant": {"default": 800}
+	}
+]

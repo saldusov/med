@@ -1,0 +1,50 @@
+[
+	{	
+		"title": "Первичный прием врача",
+		"priceVariant": {"default": 1300, "top": 1300}
+	},
+	{	
+		"title": "Повторный прием врача",
+		"priceVariant": {"default": 1100, "top": 1100}
+	},
+	{	
+		"title": "Проведение лекарственных процедур",
+		"priceVariant": {"default": 500}
+	},
+	{	
+		"title": "Забор материала на исследование",
+		"priceVariant": {"default": 500}
+	},
+	{	
+		"title": "Консультация по результатам исследования",
+		"priceVariant": {"default": 500}
+	},
+	{	
+		"title": "Массаж простаты для забора сока простаты",
+		"priceVariant": {"default": 900}
+	},
+	{	
+		"title": "Массаж лечебный",
+		"priceVariant": {"default": 700}
+	},
+	{	
+		"title": "Выписка из амбулаторной карты",
+		"priceVariant": {"default": 800}
+	},
+	{	
+		"title": "Выдача заключения о состоянии и проведенном лечении",
+		"priceVariant": {"default": 800}
+	},
+	{	
+		"title": "Выдача справки",
+		"priceVariant": {"default": 400}
+	},
+	{	
+		"title": "Выдача направления",
+		"priceVariant": {"default": 400}
+	},
+	{	
+		"title": "Замена эпицистостомы",
+		"priceVariant": {"default": 1000}
+	}
+]

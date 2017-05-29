@@ -1,0 +1,54 @@
+[
+	{
+		"title": "Первичный прием врача",
+		"priceVariant": {"default": 1300}
+	},
+	{
+	"title": "Повторный прием врача",
+	"priceVariant": {"default": 1100}
+	},
+	{
+	"title": "Консультация по прививкам",
+	"priceVariant": {"default": 800}
+	},
+	{
+	"title": "Выдача справки после каникул",
+	"priceVariant": {"default": 600}
+	},
+	{
+	"title": "Выдача справки в бассейн",
+	"priceVariant": {"default": 1500}
+	},
+	{
+	"title": "Выдача справки в спортивную секцию",
+	"priceVariant": {"default": 1300}
+	},
+	{
+	"title": "Вакцинация Пентаксим",
+	"priceVariant": {"default": 4500}
+	},
+	{
+	"title": "Вакцинация Приорикс",
+	"priceVariant": {"default": 1600}
+	},
+	{
+	"title": "Вакцинация Энджерикс",
+	"priceVariant": {"default": 1000}
+	},
+	{
+	"title": "Вакцинация Пневмо 23",
+	"priceVariant": {"default": 4500}
+	},
+	{
+	"title": "Оформление формы №026-У",
+	"priceVariant": {"default": 7000}
+	},
+	{
+	"title": "Оформление формы №079-У (Карта в пионерский лагерь)",
+	"priceVariant": {"default": 1100}
+	},
+	{
+	"title": "Оформление формы №070-У (Санаторно-курортная карта)",
+	"priceVariant": {"default": 2500}
+	}
+]

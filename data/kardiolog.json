@@ -1,0 +1,13 @@
+[
+	{"title": "Первичный прием врача кардиолога", "priceVariant": {"default": 1300 }},
+	{"title": "Повторный прием врача кардиолога", "priceVariant": {"default": 1100 }},
+	{"title": "ЭКГ с расшифровкой врача", "priceVariant": {"default": 900 }},
+	{"title": "ЭКГ с машинной расшифровкой", "priceVariant": {"default": 700 }},
+	{"title": "Расшифровка ЭКГ", "priceVariant": {"default": 200 }},
+	{"title": "ЭКГ с нагрузкой", "priceVariant": {"default": 1200 }},
+	{"title": "ЭХО-КГ с доплерами (3)", "priceVariant": {"default": 1900 }},
+	{"title": "Выдача справки", "priceVariant": {"default": 500 }},
+	{"title": "Выдача направления", "priceVariant": {"default": 500 }},
+	{"title": "Лист назначения врача", "priceVariant": {"default": 500 }},
+	{"title": "Холтерское мониторирование (сутки)", "priceVariant": {"default": 2200 }}
+]

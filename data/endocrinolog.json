@@ -1,0 +1,38 @@
+[
+	{ 
+		"title": "Первичный прием врача эндокринолога", 
+		"priceVariant": {"default": 1300 }
+	},
+	{ 
+		"title": "Повторный прием врача эндокринолога", 
+		"priceVariant": {"default": 1100 }
+	},
+	{ 
+		"title": "Составление плана питания", 
+		"priceVariant": {"default": 3000 }
+	},
+	{ 
+		"title": "Выдача справки", 
+		"priceVariant": {"default": 500 }
+	},
+	{ 
+		"title": "Выдача направления", 
+		"priceVariant": {"default": 500 }
+	},
+	{ 
+		"title": "Консультация по результатам обследования", 
+		"priceVariant": {"default": 600 }
+	},
+	{ 
+		"title": "Выписка из амбулаторной карты", 
+		"priceVariant": {"default": 900 }
+	},
+	{ 
+		"title": "Лист назначения врача", 
+		"priceVariant": {"default": 500}
+	},
+	{ 
+		"title": "Выдача заключения о состоянии пациента и проведенном лечении", 
+		"priceVariant": {"default": 1000 }
+	}
+]

@@ -1,0 +1,372 @@
+[
+{
+	"title": "Забор крови из вены с 12 лет",
+	"priceVariant": { "default": 250 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Забор крови из вены детям до 5 лет (на усмотрение медсестры)",
+	"priceVariant": { "default": 500 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Забор крови из вены детям с 5 до 12 лет",
+	"priceVariant": { "default": 300 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Забор крови для сложных анализов",
+	"priceVariant": { "default": 500 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Забор крови из пальца",
+	"priceVariant": { "default": 250 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Забор крови на плазмолифтинг и центрифугирование",
+	"priceVariant": { "default": 500 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Забор на посев и соскоб",
+	"priceVariant": { "default": 250 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Внутривенная инъекция",
+	"priceVariant": { "default": 400 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Внутривенная инфузия простая (1 флакон + 2 лекарственных препарата)",
+	"priceVariant": { "default": 700 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Внутривенная инфузия сложная (1 флакон + 3 лекарственных препарата или 2 флакона)",
+	"priceVariant": { "default": 1050 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Внутривенная инфузия (3 флакона)",
+	"priceVariant": { "default": 1200 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Внутривенная инфузия (4 флакон и более)",
+	"priceVariant": { "default": 1400 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Внутримышечная инъекция",
+	"priceVariant": { "default": 200 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Подкожная инъекция",
+	"priceVariant": { "default": 200 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Экспресс диагностика крови на сахар",
+	"priceVariant": { "default": 550 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Перевязка с обработкой и наложением мазевой повязки",
+	"priceVariant": { "default": 700 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Обработка и наложение сухой повязки (без мазевых препаратов)",
+	"priceVariant": { "default": 400 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Постановка банок",
+	"priceVariant": { "default": 500 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Забор на ПЦР мочи на туберкулез",
+	"priceVariant": { "default": 350 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Озонированная капельница (250 мл. физ. раствора)",
+	"priceVariant": { "default": 1200 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Аутогемотерапия 1 процедура",
+	"priceVariant": { "default": 900 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Озонированное масло (250 мл.)",
+	"priceVariant": { "default": 1000 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Озонированное масло (500 мл.)",
+	"priceVariant": { "default": 1400 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Озонированное масло (750 мл.)",
+	"priceVariant": { "default": 1650 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Озонированное масло (1000 мл.)",
+	"priceVariant": { "default": 1950 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Обработка миндалин раствором Люголя",
+	"priceVariant": { "default": 200 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Адреналин 0,1% 1 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Актовегин 5,0 мл.",
+	"priceVariant": { "default": 300 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Актрапид (Инсулин) 1 ед.",
+	"priceVariant": { "default": 25 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Аминокапроновая кислота 100 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Анальгин 50% 2 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Глюкоза в порошке 75 мл. для приема внутрь",
+	"priceVariant": { "default": 150 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Дексаметазон 1 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Дибазол 1% 5 мл.",
+	"priceVariant": { "default": 150 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Дицинон 2 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Димедрол 1 мл.",
+	"priceVariant": { "default": 200 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Кальция глюконат 10% 10 мл.",
+	"priceVariant": { "default": 200 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Кардиомин 1,0",
+	"priceVariant": { "default": 150 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Кокарбоксилаза 50 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Коргликард 1,0 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Лазикс 2,0 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Магния сульфат 25% 5 мл.",
+	"priceVariant": { "default": 60 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Мезатон 1,0 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Натрия хлорид 0,9% 200 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Натрия хлорид 0,9% 250 мл.",
+	"priceVariant": { "default": 150 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Натрия хлорид 0,9% 5 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Новокаин 0,5% 5 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Ношпа 2 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Окситоцин 1,0 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Омнадрен 250 – 1,0 мл.",
+	"priceVariant": { "default": 500 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Панангин 10,0",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Папаверин 2% 2 мл.",
+	"priceVariant": { "default": 80 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Пирацетам 5,0",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Платифилин 1,0 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Реополиглюкин 200 мл.",
+	"priceVariant": { "default": 400 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Реополиглюкин 500 мл.",
+	"priceVariant": { "default": 600 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Р-р Рингера 200 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Строфантин 1,0 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Супрастин 20мг 1 мл.",
+	"priceVariant": { "default": 150 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Тавегил 1мг 2 мл.",
+	"priceVariant": { "default": 200 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Трентал 5 мл.",
+	"priceVariant": { "default": 160 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Форосемид 2,0 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Хлосоль 200 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Церукал 10мг 2 мл.",
+	"priceVariant": { "default": 150 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Эссенциале 5,0 мл.",
+	"priceVariant": { "default": 300 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Этамзилат натрия 12,5% 2 мл.",
+	"priceVariant": { "default": 150 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Эуфиллин 2,4% 10 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Эуфиллин 5,0 мл.",
+	"priceVariant": { "default": 50 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Аскорбиновая кислота 2,0",
+	"priceVariant": { "default": 30 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Баралгин 5,0 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Витамин B1",
+	"priceVariant": { "default": 30 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Витамин B6",
+	"priceVariant": { "default": 30 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Глюкоза 5 % 200 мл.",
+	"priceVariant": { "default": 100 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+},
+{
+	"title": "Глюкоза 5% 400 мл.",
+	"priceVariant": { "default": 150 },
+ 	"tags": ["592ad81625028d253c752dec"] 
+}
+]

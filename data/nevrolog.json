@@ -1,0 +1,12 @@
+[
+	{"title": "Первичный прием врача", "priceVariant": {"default": 1300}},
+	{"title": "Повторный прием врача", "priceVariant": {"default": 1100}},
+	{"title": "Проведение денситометрии", "priceVariant": {"default": 500}},
+	{"title": "Консультативный прием по результатам обследования", "priceVariant": {"default": 500}},
+	{"title": "Выдача заключения о состоянии пациента и проведенном лечении", "priceVariant": {"default": 800}},
+	{"title": "Выписка из амбулаторной карты", "priceVariant": {"default": 800}},
+	{"title": "Выдача справки", "priceVariant": {"default": 400}},
+	{"title": "Выдача направления", "priceVariant": {"default": 400}},
+	{"title": "Сеанс мануальной терапии", "priceVariant": {"default": 800}},
+	{"title": "ЭЭГ (электроэнцефалография)", "priceVariant": {"default": 1500}}
+]

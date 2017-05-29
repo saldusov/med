@@ -1,0 +1,50 @@
+[	
+	{
+		"title": "УЗИ щитовидной железы",
+		"priceVariant": {"default": 1000}
+	},
+	{
+		"title": "УЗИ молочных желез",
+		"priceVariant": {"default": 1000}
+	},
+	{
+		"title": "УЗИ лимфатических узлов (одна зона)",
+		"priceVariant": {"default": 800}
+	},
+	{
+		"title": "УЗИ органов малого таза",
+		"priceVariant": {"default": 1200}
+	},
+	{
+		"title": "УЗИ брюшной полости",
+		"priceVariant": {"default": 1700}
+	},
+	{
+		"title": "УЗИ почек и мочевого пузыря",
+		"priceVariant": {"default": 1200}
+	},
+	{
+		"title": "УЗИ почек,мочевого пузыря,надпочечников",
+		"priceVariant": {"default": 1500}
+	},
+	{
+		"title": "УЗИ мягких тканей (одна зона)",
+		"priceVariant": {"default": 800}
+	},
+	{
+		"title": "УЗИ тимуса (Виловочковая железа) (дети до 7 лет)",
+		"priceVariant": {"default": 1000}
+	},
+	{
+		"title": "Нейросонография",
+		"priceVariant": {"default": 1600}
+	},
+	{
+		"title": "УЗИ тазобедренных суставов (до 1 года)",
+		"priceVariant": {"default": 1200}
+	},
+	{
+		"title": "УЗИ машонки",
+		"priceVariant": {"default": 1000}
+	}
+]
