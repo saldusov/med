@@ -17,6 +17,7 @@ module.exports = {
 
 	parseQuery: function(req, res, next) {
 		req.mongoParams = {};
+		checkSpecialRule(req);
 
 		let params = req.query ? req.query : req.body;
 		
@@ -133,4 +134,10 @@ function parseSearch(text) {
 	let arrayText = text.split(re);
 	let reText = "(" + arrayText.map((textItem) => textItem.trim()).join("|") + ")";
 	return new RegExp(reText, "i");
+}
+
+function checkSpecialRule(req) {
+	if(req.user.group == 'user-spec') {
+		req.query.variant = req.user.doctorate;
+	}
 }

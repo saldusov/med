@@ -10,13 +10,11 @@ var nsp = io.of('/payments').use(socketioJwt.authorize({
 }));
 
 nsp.on('connection', function (socket) {
-  //console.log('hello! ', socket.decoded_token);
   userDBFunc
   	.getUserByIdWithSpecialistInfo(socket.decoded_token.id)
   	.then((user) => {
   		if(user.group == 'user-spec') {
   			socket.join(user.specialist._id);
-  			//console.log('My room is ' + user.specialist._id);
   		} else {
   			socket.join('all');
   		}

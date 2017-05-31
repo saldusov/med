@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Видеогастроскопия",
+		"priceVariant": {"default": 3200}
+	},
+	{
+		"title": "Хеликобактер тест",
+		"priceVariant": {"default": 600}
+	},
+	{
+		"title": "Взятие материала на биопсию",
+		"priceVariant": {"default": 700}
+	}
+]

@@ -22,9 +22,11 @@ const rules = {
 		"users.auth",
 	],
 	"user-spec": [
+		"analyzes",
 		"specialists",
 		"payments", "payments.create", "payments.onlyself",
 		"persons", "persons.add", "persons.update",
+		"services",
 		"specialties", 
 		"users.auth"
 	],

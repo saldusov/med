@@ -19,13 +19,13 @@ module.exports = {
 
 		}
 
-		req.mongo = {
+		req.mongoParams = {
 			pageNumber: params.pageNumber || 0,
 			nPerPage: params.nPerPage || 0,
 			sort: params.sort || 1
 		};
 
-		req.mongo.match = (!!andOper && andOper.length > 0) ? { $and: andOper } : undefined;
+		req.mongoParams.match = (!!andOper && andOper.length > 0) ? { $and: andOper } : undefined;
 		next();
 	},
 	

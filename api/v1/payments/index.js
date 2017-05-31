@@ -16,7 +16,7 @@ const deletePaymentById = require("./lib/indexFunctions").deletePaymentById;
 
 /* GET items list. */
 app.get('/', auth.checkAccess("payments"), parseQuery, function(req, res, next) {
-	getPayments(req.mongo)
+	getPayments(req.mongoParams)
 		.then(foundItems => res.json(foundItems))
 		.catch(errors => res.status(500).json({errors: [errors]}));
 });

@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Первичный прием врача психотерапевта",
+		"priceVariant": {"default": 1300}
+	},
+	{
+		"title": "Повторный прием врача психотерапевта",
+		"priceVariant": {"default": 1100}
+	},
+	{
+		"title": "Выдача заключения о состоянии пациента",
+		"priceVariant": {"default": 900}
+	},
+	{
+		"title": "Выдача справки",
+		"priceVariant": {"default": 400}
+	},
+	{
+		"title": "Выдача направления",
+		"priceVariant": {"default": 400}
+	}
+]

@@ -65,6 +65,22 @@ module.exports =  {
 			.read(id);
 	},
 
+	getOneByPersonId: function(id) {
+		return new Promise((resolve, reject) => {
+			SpecialistSchema.findOne({personId: id}, function(error, foundItem) {
+				if(error) {
+					reject([error]);
+				} else {
+					if(!foundItem) {
+						reject(["Специалист не найден"]);
+					} else {
+						resolve(foundItem);
+					}
+				}
+			});
+		});
+	},
+
 	add: function(data) {
 		return dbFunc.checkPerson(data)
 			.then((data) => specialistsManager.create(data));

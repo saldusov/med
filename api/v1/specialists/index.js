@@ -10,11 +10,18 @@ const getOne = require("./indexFunctions").getOne;
 const add = require("./indexFunctions").add;
 const update = require("./indexFunctions").update;
 const deleteOne = require("./indexFunctions").deleteOne;
+const getOneByPersonId = require("./indexFunctions").getOneByPersonId;
 
 /* GET items list. */
 app.get('/', auth.checkAccess("specialists"), function(req, res, next) {
 	get()
 		.then(foundItems => res.json(foundItems))
+		.catch(errors => res.status(500).json({errors: [errors]}));
+});
+
+app.get('/byauth', auth.checkAccess("specialists"), function(req, res, next) {
+	getOneByPersonId(req.user.personId)
+		.then(foundItem => res.json(foundItem))
 		.catch(errors => res.status(500).json({errors: [errors]}));
 });
 
