@@ -25,15 +25,28 @@ const endoscopiya = require("./data/endoscopiya");
 const rentgen = require("./data/rentgen");
 const ginekolog = require("./data/ginekolog");
 const girudo = require("./data/girudo");
+const funkcio = require("./data/funkcio");
+
+
+const doctors = require("./data/doctors");
 
 
 mongoose.connect('mongodb://localhost:27017/medtest111');
 const ServiceSchema = require("./api/v1/services/Service.schema");
 const SpecialtySchema = require("./api/v1/specialties/Specialty.schema");
+const PersonSchema = require("./api/v1/persons/Person.schema");
+const UserSchema = require("./api/v1/users/User.schema");
+const SpecialistSchema = require("./api/v1/specialists/Specialist.schema");
 
-Promise.all([ServiceSchema.remove({}), SpecialtySchema.remove({})])
-      	.then(() => init())
-      	.then(() => console.log('cicle done!'));
+Promise.all([
+		//ServiceSchema.remove({}), 
+		//SpecialtySchema.remove({}), 
+		PersonSchema.remove({}), 
+		UserSchema.remove({}), 
+		SpecialistSchema.remove({})
+	])
+    .then(() => initPerson())
+    .then(() => console.log('cicle done!'));
 
 
 function init() {
@@ -396,6 +409,46 @@ function init() {
 			});
 		});
 
+		//funkcio
+		let funkcioProc = new SpecialtySchema({name: "Функциональная диагностика"});
+		var funkcioValue = null;
+
+		funkcioProc.save((err, result) => {
+			funkcioValue = result;
+			funkcio.forEach( service => {
+				service.active = true;
+				service.tags = [funkcioValue._id];
+				let serviceObj = new ServiceSchema(service);
+
+				serviceObj.save();
+			});
+		});
+
 		resolve();
+	});
+}
+
+function initPerson() {
+	// без kosmetolog, logoped, manik, anasteziolog
+
+	doctors.forEach( (data) => {
+		if(!!data.birthdate) data.birthdate = new Date(data.birthdate);
+		let person = new PersonSchema(data);
+
+		person.save((err, savePerson) => {
+			if(err) {
+				console.log(err);
+			} else {
+				data.personId = savePerson._id;
+				data.password = "123";
+
+				if(data.group == 'user-spec') {
+					let doctor = new SpecialistSchema(data);
+					doctor.save();
+				}
+				let user = new UserSchema(data);
+				user.save();
+			}
+		});
 	});
 }

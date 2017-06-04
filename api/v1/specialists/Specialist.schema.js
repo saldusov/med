@@ -8,7 +8,7 @@ var specialistsSchema = new Schema({
 	},
 	tags: {
 		type: [Schema.ObjectId],
-		require: true
+		//require: true
 	},
 	experience: Number,
 	comments: [
@@ -30,8 +30,8 @@ var specialistsSchema = new Schema({
 		default: 'def'
 	},
 	locations: {
-		type: [String], // bik, ost
-		default: ['bik']
+		type: [String], // bikovo, ostr
+		default: ['bikovo']
 	},
 	active: {
 		type: Boolean,

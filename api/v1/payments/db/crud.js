@@ -70,6 +70,22 @@ let PaymentManager = {
 				      	}
 				   	},
 				   	{
+				   		$group: {
+				   			_id: "$_id",
+							personId: { $first: "$personId"},
+							specialists: { $first: "$specialists"},
+							referral: { $first: "$referral" },
+							assistant: { $first: "$assistant"},
+							services: { $push: "$servicesLup"},
+							analyzes: { $first: "$analyzes"},
+							payment: { $first: "$payment"},
+							'type': { $first: "$type"},
+							discount: { $first: "$discount"},
+							status: { $first: "$status"},
+							person: { $first: "$person"}
+				   		}
+				   	},
+				   	{
 				      	$unwind:  {
 				      		path: "$analyzes",
 				      		preserveNullAndEmptyArrays: true
@@ -102,7 +118,7 @@ let PaymentManager = {
 							specialists: { $first: "$specialists"},
 							referral: { $first: "$referral" },
 							assistant: { $first: "$assistant"},
-							services: { $addToSet: "$servicesLup"},
+							services: { $first: "$services"},
 							analyzes: { $addToSet: "$analyzesLup"},
 							payment: { $first: "$payment"},
 							'type': { $first: "$type"},

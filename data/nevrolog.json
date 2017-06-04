@@ -7,6 +7,5 @@
 	{"title": "Выписка из амбулаторной карты", "priceVariant": {"default": 800}},
 	{"title": "Выдача справки", "priceVariant": {"default": 400}},
 	{"title": "Выдача направления", "priceVariant": {"default": 400}},
-	{"title": "Сеанс мануальной терапии", "priceVariant": {"default": 800}},
-	{"title": "ЭЭГ (электроэнцефалография)", "priceVariant": {"default": 1500}}
+	{"title": "Сеанс мануальной терапии", "priceVariant": {"default": 800}}
 ]

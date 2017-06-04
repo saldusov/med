@@ -48,6 +48,9 @@ module.exports =  {
 							tags: { $addToSet: "$tags" }, 
 							tag_names: { $push: "$tag_item.name"}
 						}
+					},
+					{
+						$sort: { "person.last_name": 1 }
 					}
 				])
 				.exec(function (err, foundItems) {

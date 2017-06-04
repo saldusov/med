@@ -24,7 +24,7 @@ const rules = {
 	"user-spec": [
 		"analyzes",
 		"specialists",
-		"payments", "payments.create", "payments.onlyself",
+		"payments", "payments.update", "payments.create", "payments.onlyself",
 		"persons", "persons.add", "persons.update",
 		"services",
 		"specialties", 

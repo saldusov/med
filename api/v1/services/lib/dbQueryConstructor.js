@@ -27,7 +27,7 @@ function getAggregateParams(params) {
 	   	},
 		getAggregateGroupParam(),
 		{
-			$sort: { tags: -1 }
+			$sort: { score: -1 }
 		}];
 	
 	if(params.match) aggregatePipeline.unshift(params.match);
@@ -45,6 +45,7 @@ function getAggregateGroupParam() {
 			recommendations: { $first: "$recommendations" },
 			priceVariant: { $first: "$priceVariant" },
 			time: { $first: "$time" },
+			score: { $first: "$score" }, 
 			active: { $first: "$active" }, 
 			tags: { $addToSet: "$tags" }, 
 			tag_names: { $push: "$tag_item.name"}

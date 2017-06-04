@@ -23,25 +23,7 @@ let specialistManager = {
 				      		preserveNullAndEmptyArrays: true
 				      	}
 				   	},
-				   	{
-				      	$unwind: "$certificates"
-				   	},
-					{
-						$lookup: {
-							from: "files",
-							localField: "certificates._id",
-							foreignField: "_id",
-							as: "certImage"
-						}
-					},
-					{
-						$addFields: {
-							"certImage.title" : "$certificates.title"
-						}
-					},
-					{
-				      	$unwind: "$certImage"
-				   	},
+				   
 				   	{
 						$group: { 
 							_id: "$_id",
