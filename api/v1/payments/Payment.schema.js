@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var paymentSchema = new Schema({
+    serialNumber: Number,
 	personId: {
 		type: Schema.ObjectId,
 
@@ -47,7 +48,9 @@ var paymentSchema = new Schema({
     status: {
     	type: String,
     	default: 'open'
-    }
+    },
+    creator: Schema.ObjectId,
+    updater: Schema.ObjectId
 },
 {
     timestamps: true

@@ -66,6 +66,7 @@ function getAggregateGroupParam() {
 	return {
 		$group: { 
 			_id: "$_id",
+			serialNumber: { $first: "$serialNumber" },
 			personId: { $first: "$personId" },
 		    specialists: {
 		    	$addToSet :
