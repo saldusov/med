@@ -42,9 +42,10 @@ function checkErrorIsClose(data, errors) {
 		let services = [];
 		if(!!data.services || data.services.length > 0) services = services.concat(data.services);
 		if(!!data.analyzes || data.analyzes.length > 0) services = services.concat(data.analyzes);
+		if(!!data.goods || data.goods.length > 0) services = services.concat(data.goods);
 
 		if(services.length === 0) {
-			errors.push('Выберите услуги к оплате');
+			errors.push('Выберите услуги или товар к оплате');
 		}
 	}
 }

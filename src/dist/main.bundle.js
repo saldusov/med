@@ -1,4 +1,4 @@
-webpackJsonp([10,14],{
+webpackJsonp([11,15],{
 
 /***/ 1026:
 /***/ (function(module, exports, __webpack_require__) {
@@ -523,38 +523,42 @@ var UserLoginComponent = (function () {
 var map = {
 	"./+analyzes/analyzes.module": [
 		1030,
+		6
+	],
+	"./+goods/goods.module": [
+		1031,
 		5
 	],
 	"./+patients/patients.module": [
-		1031,
-		6
+		1032,
+		7
 	],
 	"./+payments/payments.module": [
-		1032,
+		1033,
 		0
 	],
 	"./+persons/persons.module": [
-		1033,
+		1034,
 		3
 	],
 	"./+services/services.module": [
-		1034,
+		1035,
 		4
 	],
 	"./+specialists/specialists.module": [
-		1035,
+		1036,
 		1
 	],
 	"./+specialties/specialties.module": [
-		1036,
-		8
+		1037,
+		9
 	],
 	"./+uploads/uploads.module": [
-		1037,
-		7
+		1038,
+		8
 	],
 	"./+users/users.module": [
-		1038,
+		1039,
 		2
 	]
 };
@@ -1127,6 +1131,7 @@ var AppRoutes = [
     //{ path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'persons', loadChildren: './+persons/persons.module#PersonsModule' },
     { path: 'services', loadChildren: './+services/services.module#ServicesModule' },
+    { path: 'goods', loadChildren: './+goods/goods.module#GoodsModule' },
     { path: 'analyzes', loadChildren: './+analyzes/analyzes.module#AnalyzesModule' },
     { path: 'specialists', loadChildren: './+specialists/specialists.module#SpecialistsModule' },
     { path: 'specialties', loadChildren: './+specialties/specialties.module#SpecialtiesModule' },

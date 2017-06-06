@@ -54,7 +54,7 @@ function getAggregateParams(params) {
 		},
 		getAggregateGroupParam(),
 		{
-			$sort: { createdAt: -1 }
+			$sort: { serialNumber: -1, createdAt: -1 }
 		}];
 	
 	if(params.match) aggregatePipeline.unshift({ $match: params.match });
@@ -84,6 +84,7 @@ function getAggregateGroupParam() {
 		    assistant: { $first: "$assistant" },
 		    services: { $first: "$services" },
 		    analyzes: { $first: "$analyzes" },
+		    goods: { $first: "$goods" },
 		    payment: { $first: "$payment" },
 		    type: { $first: "$type" },
 		    discount: { $first: "$discount" },

@@ -8,7 +8,7 @@ module.exports = {
 
 		if(params) {
 			var andOper = [];
-			if(params.date_to) andOper.push({createdAt: {$lte: new Date(params.date_to)}});
+			if(params.date_to) andOper.push({createdAt: {$lt: new Date(params.date_to)}});
 			if(params.date_from) andOper.push({createdAt: {$gte: new Date(params.date_from)}});
 
 			// Фильтруем только по специалисту
@@ -16,7 +16,6 @@ module.exports = {
 			if(params.specialists) andOper.push({specialists: { 
 				$in : params.specialists.map(_id => mongoose.Types.ObjectId(_id)) 
 			}});
-
 		}
 
 		req.mongoParams = {
@@ -26,6 +25,8 @@ module.exports = {
 		};
 
 		req.mongoParams.match = (!!andOper && andOper.length > 0) ? { $and: andOper } : undefined;
+
+		//console.log(req.mongoParams.match.$and);
 		next();
 	},
 	

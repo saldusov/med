@@ -21,6 +21,26 @@ let toolsManager = {
 		return result;
 	},
 
+	createGoodsTools: function(rules) {
+		var result = false;
+
+		if(rules.indexOf('goods') >= 0) {
+			result = { 
+				title: 'Товары',
+				name: 'goods',
+				items: [
+				  { route: '/goods', title: "Список товаров" }
+				]
+			};
+
+			if(rules.indexOf('goods.add')) {
+				result.items.push({route: '/goods/add', title: "Добавить товар"});
+			}
+		}
+
+		return result;
+	},
+
 	createPeapleTools: function(rules) {
 		var result = false;
 

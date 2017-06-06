@@ -8,6 +8,7 @@ const rules = {
 		"payments", "payments.add", "payments.create", "payments.reserve", "payments.pay", "payments.update", "payments.delete", 
 		"persons", "persons.add", "persons.update", "persons.delete",
 		"services", "services.add", "services.update", "services.delete", 
+		"goods", "goods.add", "goods.update", "goods.delete", 
 		"specialties", "specialties.add", "specialties.update", "specialties.delete",
 		"uploads",
 		"users", "users.auth", "users.add", "users.update", "users.delete"
@@ -18,6 +19,7 @@ const rules = {
 		"payments", "payments.add", "payments.reserve", "payments.pay",
 		"persons", "persons.add", "persons.update",
 		"services",
+		"goods",
 		"specialties", 
 		"users.auth",
 	],
@@ -27,11 +29,12 @@ const rules = {
 		"payments", "payments.update", "payments.create",  "payments.add", "payments.onlyself",
 		"persons", "persons.add", "persons.update",
 		"services",
+		"goods",
 		"specialties", 
 		"users.auth"
 	],
 	"guest": [
-		"users", "users.auth", "users.add", "users.update", "users.delete"
+		"users.auth"
 	]
 };
 
@@ -41,6 +44,7 @@ function getTools(name) {
 
 	if(peapleTools = toolsManager.createPeapleTools(groupRules)) tools.push(peapleTools);
 	if(servicesTools = toolsManager.createServicesTools(groupRules)) tools.push(servicesTools);
+	if(goodsTools = toolsManager.createGoodsTools(groupRules)) tools.push(goodsTools);
 	if(analyzesTools = toolsManager.createAnalyzesTools(groupRules)) tools.push(analyzesTools);
 	if(paymentsTools = toolsManager.createPaymentsTools(groupRules)) tools.push(paymentsTools);
 	if(specialtiesTools = toolsManager.createSpecialtiesTools(groupRules)) tools.push(specialtiesTools);

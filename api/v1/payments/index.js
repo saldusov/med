@@ -35,10 +35,7 @@ app.post('/', auth.checkAccess("payments.add"), parseData, checkCreator, functio
 	var id = null;
 	addPayment(req.body)
 		.then((payment) => { id = payment._id; return counter.add("payments")})
-		.then((result) => {
-			console.log(id, result);
-			return updatePayment(id, {serialNumber: result})
-		})
+		.then((result) => updatePayment(id, {serialNumber: result}))
 		.then((payment) => res.status(200).json(payment))
 		.catch((errors) => res.status(400).json({errors}));
 });

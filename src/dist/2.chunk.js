@@ -1,6 +1,6 @@
-webpackJsonp([2,14],{
+webpackJsonp([2,15],{
 
-/***/ 1038:
+/***/ 1039:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11,12 +11,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__widgets_users_widget__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__persons_widgets_persons_widget__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_shared_module__ = __webpack_require__(1039);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__users_users_component__ = __webpack_require__(1158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__user_add_user_add_component__ = __webpack_require__(1156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__user_update_user_update_component__ = __webpack_require__(1157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__users_service__ = __webpack_require__(1091);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__persons_widgets_persons_widget__ = __webpack_require__(1071);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_shared_module__ = __webpack_require__(1040);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__users_users_component__ = __webpack_require__(1169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__user_add_user_add_component__ = __webpack_require__(1167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__user_update_user_update_component__ = __webpack_require__(1168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__users_service__ = __webpack_require__(1095);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersModule", function() { return UsersModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -70,7 +70,7 @@ var UsersModule = (function () {
 
 /***/ }),
 
-/***/ 1039:
+/***/ 1040:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -148,7 +148,7 @@ var SharedModule = (function () {
 
 /***/ }),
 
-/***/ 1040:
+/***/ 1041:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -237,7 +237,7 @@ var PersonsService = (function () {
 
 /***/ }),
 
-/***/ 1041:
+/***/ 1042:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -298,57 +298,6 @@ var Person = (function () {
     return Person;
 }());
 //# sourceMappingURL=D:/projects/angular-med/src/person.js.map
-
-/***/ }),
-
-/***/ 1042:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(451);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__ = __webpack_require__(279);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilesService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var FilesService = (function () {
-    function FilesService(_http) {
-        this._http = _http;
-        this._baseUrl = "/api/v1/uploads";
-    }
-    FilesService.prototype.get = function () {
-        return this._http.get(this._baseUrl)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || "Server error"); });
-    };
-    FilesService.prototype.remove = function (id) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
-        return this._http.delete(this._baseUrl + "/" + id)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
-    };
-    FilesService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__["a" /* HttpClient */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__["a" /* HttpClient */]) === 'function' && _a) || Object])
-    ], FilesService);
-    return FilesService;
-    var _a;
-}());
-//# sourceMappingURL=D:/projects/angular-med/src/files.service.js.map
 
 /***/ }),
 
@@ -1060,15 +1009,66 @@ module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"bt
 
 /***/ }),
 
-/***/ 1068:
+/***/ 1066:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(451);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__ = __webpack_require__(279);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilesService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var FilesService = (function () {
+    function FilesService(_http) {
+        this._http = _http;
+        this._baseUrl = "/api/v1/uploads";
+    }
+    FilesService.prototype.get = function () {
+        return this._http.get(this._baseUrl)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || "Server error"); });
+    };
+    FilesService.prototype.remove = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
+        return this._http.delete(this._baseUrl + "/" + id)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
+    FilesService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__["a" /* HttpClient */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__["a" /* HttpClient */]) === 'function' && _a) || Object])
+    ], FilesService);
+    return FilesService;
+    var _a;
+}());
+//# sourceMappingURL=D:/projects/angular-med/src/files.service.js.map
+
+/***/ }),
+
+/***/ 1070:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__person__ = __webpack_require__(1041);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__persons_service__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uploads_files_service__ = __webpack_require__(1042);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__person__ = __webpack_require__(1042);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__persons_service__ = __webpack_require__(1041);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uploads_files_service__ = __webpack_require__(1066);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonFormContentComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1179,8 +1179,8 @@ var PersonFormContentComponent = (function () {
     PersonFormContentComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-person-form-content',
-            template: __webpack_require__(1077),
-            styles: [__webpack_require__(1074)]
+            template: __webpack_require__(1079),
+            styles: [__webpack_require__(1076)]
         }), 
         __metadata('design:paramtypes', [(typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__uploads_files_service__["a" /* FilesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__uploads_files_service__["a" /* FilesService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__persons_service__["a" /* PersonsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__persons_service__["a" /* PersonsService */]) === 'function' && _f) || Object])
     ], PersonFormContentComponent);
@@ -1191,7 +1191,7 @@ var PersonFormContentComponent = (function () {
 
 /***/ }),
 
-/***/ 1069:
+/***/ 1071:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1199,11 +1199,11 @@ var PersonFormContentComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_materialize_src__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1039);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uploads_widgets_uploads_widget__ = __webpack_require__(1073);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__persons_service__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__person_form_person_form_component__ = __webpack_require__(1071);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__person_form_content_person_form_content_component__ = __webpack_require__(1068);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1040);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uploads_widgets_uploads_widget__ = __webpack_require__(1075);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__persons_service__ = __webpack_require__(1041);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__person_form_person_form_component__ = __webpack_require__(1073);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__person_form_content_person_form_content_component__ = __webpack_require__(1070);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonsWidgetModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1247,13 +1247,13 @@ var PersonsWidgetModule = (function () {
 
 /***/ }),
 
-/***/ 1071:
+/***/ 1073:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__person__ = __webpack_require__(1041);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__person__ = __webpack_require__(1042);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonFormComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1309,8 +1309,8 @@ var PersonFormComponent = (function () {
     PersonFormComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-person-form',
-            template: __webpack_require__(1078),
-            styles: [__webpack_require__(1075)]
+            template: __webpack_require__(1080),
+            styles: [__webpack_require__(1077)]
         }), 
         __metadata('design:paramtypes', [])
     ], PersonFormComponent);
@@ -1321,7 +1321,7 @@ var PersonFormComponent = (function () {
 
 /***/ }),
 
-/***/ 1072:
+/***/ 1074:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1378,8 +1378,8 @@ var ImagesListComponent = (function () {
     ImagesListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-images-list',
-            template: __webpack_require__(1079),
-            styles: [__webpack_require__(1076)]
+            template: __webpack_require__(1081),
+            styles: [__webpack_require__(1078)]
         }), 
         __metadata('design:paramtypes', [])
     ], ImagesListComponent);
@@ -1390,15 +1390,15 @@ var ImagesListComponent = (function () {
 
 /***/ }),
 
-/***/ 1073:
+/***/ 1075:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__users_widgets_users_widget__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__files_service__ = __webpack_require__(1042);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_list_images_list_component__ = __webpack_require__(1072);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__files_service__ = __webpack_require__(1066);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_list_images_list_component__ = __webpack_require__(1074);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UploadsWidgetModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1435,49 +1435,49 @@ var UploadsWidgetModule = (function () {
 
 /***/ }),
 
-/***/ 1074:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 1075:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ 1076:
 /***/ (function(module, exports) {
 
-module.exports = ".card.selected {\r\n    background: #e2ffe2;\r\n    -webkit-transition: box-shadow .25s;\r\n    transition: box-shadow .25s;\r\n    box-shadow: 0;\r\n}\r\n\r\n.fix-right {\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 10px;\r\n}"
+module.exports = ""
 
 /***/ }),
 
 /***/ 1077:
 /***/ (function(module, exports) {
 
-module.exports = "<div [formGroup]=\"form\">\n  <div class=\"row\" >\n    <div class=\"input-field col s12\">\n      <app-autocomplete (searchChange)=\"onSearch($event)\" (close)=\"onCloseSearchPerson()\">\n        <li *ngFor=\"let item of foundPersons\" (click)=\"selectPerson(item)\"><span class=\"text-capitalize\">{{item.fullname}} Тел: {{item.phone}}</span></li>\n      </app-autocomplete>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col s12 m6\">\n      <div class=\"input-field\">\n        <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\">\n        <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n      </div>\n      <div class=\"input-field\">\n        <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\">\n        <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n      </div>\n      <div class=\"input-field\">\n        <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n        <label for=\"secondNameField\">Отчество</label>\n      </div>\n    </div>\n    <div class=\"col s12 m6\">\n      <div class=\"input-field\">\n        <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\">\n        <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n      </div>\n      <div class=\"input-field\">\n        <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\">\n        <label for=\"emailField\">Email</label>\n      </div>\n      <div class=\"input-field\">Дата рождения: {{ person.birthdate | date: \"dd.MM.y\" }}</div>\n      <div class=\"input-field\">\n        <input materialize=\"pickadate\" [materializeParams]=\"[datePickerOptions]\" formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n        <label for=\"birthdateField\">Новая дата рождения</label>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col s2\">\n      Пол:\n    </div>\n    <div class=\"col s10\">\n      <p class=\"col s12 m4\">\n        <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n        <label for=\"genderField2\">Женский</label>\n      </p>\n      <p class=\"col s12 m4\">\n        <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n        <label for=\"genderField1\">Мужской</label>\n      </p>\n      <p class=\"col s12 m4\">\n        <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n        <label for=\"genderField3\">Не определен</label>\n      </p>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col s12 valign-wrapper\">\n      <img class=\"valign selected-img\" *ngFor=\"let image of selectedImages\" src=\"{{_basePicturePath + image.filename}}\" alt=\"\">\n      <span class=\"btn valign waves-effect waves-light\" (click)=\"imagesModal.open(); reloadImages();\">Выбрать картинку</span>\n    </div>\n  </div>\n</div>\n\n<app-modal #imagesModal (close)=\"onCloseImages()\" (success)=\"onSuccessImages($event)\">\n  <app-images-list [images]=\"images$ | async\" [selectedImages] = \"selectedImages\" (checkItem)=\"toogleSelectImage($event)\"></app-images-list>\n</app-modal>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 1078:
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"form\" novalidate (ngSubmit)=\"onSubmit($event)\">\n  <app-person-form-content [form]=\"form\" (selectImage)=\"onSelectImage()\" [person]=\"person\"></app-person-form-content>\n  <div class=\"row\">\n    <div class=\"col s12 l12 right-align\">\n      <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"!form.valid ? true : null\">Сохранить</button>\n      <a class=\"waves-effect waves-green btn-flat\" (click)=\"onClose()\">Закрыть</a>\n    </div>\n  </div>\n</form>"
+module.exports = ".card.selected {\r\n    background: #e2ffe2;\r\n    -webkit-transition: box-shadow .25s;\r\n    transition: box-shadow .25s;\r\n    box-shadow: 0;\r\n}\r\n\r\n.fix-right {\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 10px;\r\n}"
 
 /***/ }),
 
 /***/ 1079:
 /***/ (function(module, exports) {
 
+module.exports = "<div [formGroup]=\"form\">\n  <div class=\"row\" >\n    <div class=\"input-field col s12\">\n      <app-autocomplete (searchChange)=\"onSearch($event)\" (close)=\"onCloseSearchPerson()\">\n        <li *ngFor=\"let item of foundPersons\" (click)=\"selectPerson(item)\"><span class=\"text-capitalize\">{{item.fullname}} Тел: {{item.phone}}</span></li>\n      </app-autocomplete>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col s12 m6\">\n      <div class=\"input-field\">\n        <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\">\n        <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n      </div>\n      <div class=\"input-field\">\n        <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\">\n        <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n      </div>\n      <div class=\"input-field\">\n        <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n        <label for=\"secondNameField\">Отчество</label>\n      </div>\n    </div>\n    <div class=\"col s12 m6\">\n      <div class=\"input-field\">\n        <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\">\n        <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n      </div>\n      <div class=\"input-field\">\n        <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\">\n        <label for=\"emailField\">Email</label>\n      </div>\n      <div class=\"input-field\">Дата рождения: {{ person.birthdate | date: \"dd.MM.y\" }}</div>\n      <div class=\"input-field\">\n        <input formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n        <label for=\"birthdateField\">Новая дата рождения</label>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col s2\">\n      Пол:\n    </div>\n    <div class=\"col s10\">\n      <p class=\"col s12 m4\">\n        <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n        <label for=\"genderField2\">Женский</label>\n      </p>\n      <p class=\"col s12 m4\">\n        <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n        <label for=\"genderField1\">Мужской</label>\n      </p>\n      <p class=\"col s12 m4\">\n        <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n        <label for=\"genderField3\">Не определен</label>\n      </p>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col s12 valign-wrapper\">\n      <img class=\"valign selected-img\" *ngFor=\"let image of selectedImages\" src=\"{{_basePicturePath + image.filename}}\" alt=\"\">\n      <span class=\"btn valign waves-effect waves-light\" (click)=\"imagesModal.open(); reloadImages();\">Выбрать картинку</span>\n    </div>\n  </div>\n</div>\n\n<app-modal #imagesModal (close)=\"onCloseImages()\" (success)=\"onSuccessImages($event)\">\n  <app-images-list [images]=\"images$ | async\" [selectedImages] = \"selectedImages\" (checkItem)=\"toogleSelectImage($event)\"></app-images-list>\n</app-modal>"
+
+/***/ }),
+
+/***/ 1080:
+/***/ (function(module, exports) {
+
+module.exports = "<form [formGroup]=\"form\" novalidate (ngSubmit)=\"onSubmit($event)\">\n  <app-person-form-content [form]=\"form\" (selectImage)=\"onSelectImage()\" [person]=\"person\"></app-person-form-content>\n  <div class=\"row\">\n    <div class=\"col s12 l12 right-align\">\n      <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"!form.valid ? true : null\">Сохранить</button>\n      <a class=\"waves-effect waves-green btn-flat\" (click)=\"onClose()\">Закрыть</a>\n    </div>\n  </div>\n</form>"
+
+/***/ }),
+
+/***/ 1081:
+/***/ (function(module, exports) {
+
 module.exports = "<div class=\"row\">\n  <div class=\"col s6 m3 l2\" *ngFor=\"let image of images\">\n    <div class=\"card hoverable\" (click)=\"onCheck(image)\" [ngClass]=\"{'selected': isSelect(image)}\">\n      <div class=\"card-image\">\n        <img [src]=\"images_path + image.filename\">\n      </div>\n      <div class=\"card-content\">\n         <p class=\"truncate\">{{image.signature}}</p>\n      </div>\n      <div class=\"card-action\">\n        <div class=\"fix-right\" *ngIf=\"isSelect(image)\"><i class=\"material-icons\">done</i></div>\n        <a (click)=\"onDelete(image)\">Удалить</a>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1091:
+/***/ 1095:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1547,7 +1547,7 @@ var UsersService = (function () {
 
 /***/ }),
 
-/***/ 1100:
+/***/ 1106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1610,11 +1610,11 @@ var Person = (function () {
 
 /***/ }),
 
-/***/ 1115:
+/***/ 1123:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1106);
 /* unused harmony export User */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserForm; });
 
@@ -1696,16 +1696,16 @@ var UserForm = (function () {
 
 /***/ }),
 
-/***/ 1156:
+/***/ 1167:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_service__ = __webpack_require__(1091);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_service__ = __webpack_require__(1095);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__user__ = __webpack_require__(1115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__user__ = __webpack_require__(1123);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserAddComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1801,8 +1801,8 @@ var UserAddComponent = (function () {
     UserAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-user-add',
-            template: __webpack_require__(1234),
-            styles: [__webpack_require__(1204)]
+            template: __webpack_require__(1251),
+            styles: [__webpack_require__(1218)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === 'function' && _d) || Object])
     ], UserAddComponent);
@@ -1813,16 +1813,16 @@ var UserAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1157:
+/***/ 1168:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_service__ = __webpack_require__(1091);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_service__ = __webpack_require__(1095);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__user__ = __webpack_require__(1115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__user__ = __webpack_require__(1123);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserUpdateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1926,8 +1926,8 @@ var UserUpdateComponent = (function () {
     UserUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-user-update',
-            template: __webpack_require__(1235),
-            styles: [__webpack_require__(1205)]
+            template: __webpack_require__(1252),
+            styles: [__webpack_require__(1219)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormBuilder */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _e) || Object])
     ], UserUpdateComponent);
@@ -1938,13 +1938,13 @@ var UserUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1158:
+/***/ 1169:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__users_service__ = __webpack_require__(1091);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__users_service__ = __webpack_require__(1095);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__ = __webpack_require__(280);
@@ -2018,8 +2018,8 @@ var UsersComponent = (function () {
     UsersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-users',
-            template: __webpack_require__(1236),
-            styles: [__webpack_require__(1206)]
+            template: __webpack_require__(1253),
+            styles: [__webpack_require__(1220)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _e) || Object])
     ], UsersComponent);
@@ -2030,42 +2030,42 @@ var UsersComponent = (function () {
 
 /***/ }),
 
-/***/ 1204:
+/***/ 1218:
 /***/ (function(module, exports) {
 
 module.exports = "ul.tabs {\r\n    margin-bottom: 10px;\r\n}\r\n\r\nimg.selected-img {\r\n    margin: 10px;\r\n}\r\n\r\n.user-add-wrapper {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    margin: 10px;\r\n}\r\n\r\n.user-add-wrapper > panel {\r\n    max-width: 800px;\r\n}"
 
 /***/ }),
 
-/***/ 1205:
+/***/ 1219:
 /***/ (function(module, exports) {
 
 module.exports = "ul.tabs {\r\n    margin-bottom: 10px;\r\n}\r\n\r\nimg.selected-img {\r\n    margin: 10px;\r\n}"
 
 /***/ }),
 
-/***/ 1206:
+/***/ 1220:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1234:
+/***/ 1251:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"user-add-wrapper\">\n  <div class=\"panel\">\n    <div class=\"row\">\n      <div class=\"col s12\">\n        <ul class=\"tabs\" materialize=\"tabs\">\n          <li class=\"tab col s3\"><a class=\"active\" href=\"#user-info\">Пользователь</a></li>\n          <li class=\"tab col s3\"><a href=\"#personal-info\">Персональная информация</a></li>\n        </ul>\n      </div>\n      <div id=\"user-info\" class=\"col s12\">\n        <app-user-form [form]=\"form.controls.user\" (submitForm)=\"onSubmit($event)\" (close)=\"toList()\"></app-user-form>\n      </div>\n      <div id=\"personal-info\" class=\"col s12\">\n        <app-person-form [form]=\"form.controls.person\" (submitForm)=\"onSubmit($event)\" (close)=\"toList()\"></app-person-form>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1235:
+/***/ 1252:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"user-add-wrapper\">\n  <div class=\"panel\">\n    <div class=\"row\">\n      <div class=\"col s12\">\n        <ul class=\"tabs\" materialize=\"tabs\">\n          <li class=\"tab col s3\"><a class=\"active\" href=\"#user-info\">Пользователь</a></li>\n          <li class=\"tab col s3\"><a href=\"#personal-info\">Персональная информация</a></li>\n        </ul>\n      </div>\n      <div id=\"user-info\" class=\"col s12\">\n        <app-user-form [form]=\"form.controls.user\" (submitForm)=\"onSubmit($event)\" (close)=\"toList()\"></app-user-form>\n      </div>\n      <div id=\"personal-info\" class=\"col s12\">\n        <app-person-form [form]=\"form.controls.person\" [person]=\"user.person\" (submitForm)=\"onSubmit($event)\" (close)=\"toList()\"></app-person-form>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1236:
+/***/ 1253:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"default-wrapper\">\n  <div class=\"panel\">\n    <table class=\"responsive-table\">\n      <thead>\n        <tr>\n            <th data-field=\"username\">Логин</th>\n            <th data-field=\"group\">Группа</th>\n            <th data-field=\"create\">Дата создания</th>\n            <th>Действия</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let item of users\">\n          <td class=\"text-capitalize\">{{item.username}}</td>\n          <td>{{item.group}}</td>\n          <td>{{item.createdAt | date:\"dd.MM.y\"}}</td>\n          <td>\n            <a routerLink=\"/users/update/{{item._id}}\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n            <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить пользователя</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить пользователя: {{currentItem.username}}? <br> Дата создания: {{currentItem.createdAt | date:\"dd.MM.y\"}} </p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>"

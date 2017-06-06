@@ -78,6 +78,7 @@ let PaymentManager = {
 							assistant: { $first: "$assistant"},
 							services: { $push: "$servicesLup"},
 							analyzes: { $first: "$analyzes"},
+							goods: { $first: "$goods"},
 							payment: { $first: "$payment"},
 							'type': { $first: "$type"},
 							discount: { $first: "$discount"},
@@ -119,7 +120,51 @@ let PaymentManager = {
 							referral: { $first: "$referral" },
 							assistant: { $first: "$assistant"},
 							services: { $first: "$services"},
-							analyzes: { $addToSet: "$analyzesLup"},
+							analyzes: { $push: "$analyzesLup"},
+							goods: { $first: "$goods"},
+							payment: { $first: "$payment"},
+							'type': { $first: "$type"},
+							discount: { $first: "$discount"},
+							status: { $first: "$status"},
+							person: { $first: "$person"}
+				   		}
+				   	},
+				   	{
+				      	$unwind:  {
+				      		path: "$goods",
+				      		preserveNullAndEmptyArrays: true
+				      	}
+				   	},
+				   	{
+						$lookup: {
+							from: "goods",
+							localField: "goods._id",
+							foreignField: "_id",
+							as: "goodsLup"
+						}
+					},
+					{
+						$addFields: {
+							'goodsLup.count' : '$goods.count',
+							'goodsLup.price' : '$goods.price'
+						}
+					},
+					{
+				      	$unwind: {
+				      		path: "$goodsLup",
+				      		preserveNullAndEmptyArrays: true
+				      	}
+				   	},
+				   	{
+				   		$group: {
+				   			_id: "$_id",
+							personId: { $first: "$personId"},
+							specialists: { $first: "$specialists"},
+							referral: { $first: "$referral" },
+							assistant: { $first: "$assistant"},
+							services: { $first: "$services"},
+							analyzes: { $first: "$analyzes"},
+							goods: { $push: "$goodsLup"},
 							payment: { $first: "$payment"},
 							'type': { $first: "$type"},
 							discount: { $first: "$discount"},

@@ -24,6 +24,10 @@ var paymentSchema = new Schema({
     	_id: Schema.ObjectId,
     	price: Number
     }],
+    goods: [{
+        _id: Schema.ObjectId,
+        price: Number
+    }],
     payment: {
         'type': {
         	type: String

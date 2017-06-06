@@ -1,6 +1,6 @@
-webpackJsonp([4,14],{
+webpackJsonp([4,15],{
 
-/***/ 1034:
+/***/ 1035:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,13 +10,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__widgets_services_widget__ = __webpack_require__(1096);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__ = __webpack_require__(1039);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_services_component__ = __webpack_require__(1148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__service_add_service_add_component__ = __webpack_require__(1146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__specialties_specialties_service__ = __webpack_require__(1066);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_service__ = __webpack_require__(1081);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__service_update_service_update_component__ = __webpack_require__(1147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__widgets_services_widget__ = __webpack_require__(1102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__ = __webpack_require__(1040);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_services_component__ = __webpack_require__(1159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__service_add_service_add_component__ = __webpack_require__(1157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__specialties_specialties_service__ = __webpack_require__(1065);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_service__ = __webpack_require__(1083);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__service_update_service_update_component__ = __webpack_require__(1158);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServicesModule", function() { return ServicesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -69,7 +69,7 @@ var ServicesModule = (function () {
 
 /***/ }),
 
-/***/ 1039:
+/***/ 1040:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -855,7 +855,7 @@ module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"bt
 
 /***/ }),
 
-/***/ 1066:
+/***/ 1065:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -927,7 +927,7 @@ var SpecialtiesService = (function () {
 
 /***/ }),
 
-/***/ 1081:
+/***/ 1083:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1021,7 +1021,7 @@ var ServicesService = (function () {
 
 /***/ }),
 
-/***/ 1086:
+/***/ 1089:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1072,12 +1072,12 @@ var Service = (function () {
 
 /***/ }),
 
-/***/ 1090:
+/***/ 1094:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__servicesListOptions__ = __webpack_require__(1097);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__servicesListOptions__ = __webpack_require__(1103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__servicesListOptions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__servicesListOptions__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServicesListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1206,8 +1206,8 @@ var ServicesListComponent = (function () {
     ServicesListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-services-list',
-            template: __webpack_require__(1110),
-            styles: [__webpack_require__(1106)]
+            template: __webpack_require__(1118),
+            styles: [__webpack_require__(1113)]
         }), 
         __metadata('design:paramtypes', [])
     ], ServicesListComponent);
@@ -1218,7 +1218,7 @@ var ServicesListComponent = (function () {
 
 /***/ }),
 
-/***/ 1096:
+/***/ 1102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1226,9 +1226,9 @@ var ServicesListComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_materialize_src__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1039);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_list_services_list_component__ = __webpack_require__(1090);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_pipes_orderby_pipe__ = __webpack_require__(1101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1040);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_list_services_list_component__ = __webpack_require__(1094);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_pipes_orderby_pipe__ = __webpack_require__(1107);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServicesWidgetModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1268,14 +1268,14 @@ var ServicesWidgetModule = (function () {
 
 /***/ }),
 
-/***/ 1097:
+/***/ 1103:
 /***/ (function(module, exports) {
 
 //# sourceMappingURL=D:/projects/angular-med/src/servicesListOptions.js.map
 
 /***/ }),
 
-/***/ 1101:
+/***/ 1107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1367,29 +1367,29 @@ var OrderBy = (function () {
 
 /***/ }),
 
-/***/ 1106:
+/***/ 1113:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1110:
+/***/ 1118:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"table highlight\">\n  <thead>\n    <tr>\n        <th data-field=\"name\">Наименование</th>\n        <th data-field=\"priceDefault\" *ngIf=\"options.priceVariant\">Ц. Врач</th>\n        <th data-field=\"priceTop\" *ngIf=\"options.priceVariant\">Ц. Высш.</th>\n        <th data-field=\"priceKmn\" *ngIf=\"options.priceVariant\">Ц. КМН</th>\n        <th data-field=\"tags\" *ngIf=\"options.tags\">Специальность</th>\n        <th *ngIf=\"options.tools\">Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of services\" [ngClass]=\"{'teal lighten-4' : item.check}\">\n      <td>{{item.title}}</td>\n      <td *ngIf=\"options.priceVariant\">{{item.priceVariant.default}}</td>\n      <td *ngIf=\"options.priceVariant\">{{item.priceVariant.top}}</td>\n      <td *ngIf=\"options.priceVariant\">{{item.priceVariant.kmn}}</td>\n      <td *ngIf=\"options.tags\">{{item.tag_names.join(\", \")}}</td>\n      <td *ngIf=\"options.tools\" class=\"tools\">\n        <button *ngIf=\"options.tools.add\" (click)=\"onAdd(item)\" class=\"btn btn-floating\"><i class=\"material-icons\">add</i></button>\n        <app-action-buttons \n          (edit)=\"editItem(item)\"\n          (delete)=\"deleteItem(item)\"\n          (check)=\"clickItem(item)\"\n          [options]=\"options.tools\"\n          [checked]=\"isSelect(item)\">\n        </app-action-buttons>\n      </td>\n    </tr>\n  </tbody>\n</table>"
 
 /***/ }),
 
-/***/ 1146:
+/***/ 1157:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service__ = __webpack_require__(1086);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_service__ = __webpack_require__(1081);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__ = __webpack_require__(1066);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service__ = __webpack_require__(1089);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_service__ = __webpack_require__(1083);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__ = __webpack_require__(1065);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__ = __webpack_require__(282);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceAddComponent; });
@@ -1458,8 +1458,8 @@ var ServiceAddComponent = (function () {
     ServiceAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-service-add',
-            template: __webpack_require__(1225),
-            styles: [__webpack_require__(1195)]
+            template: __webpack_require__(1242),
+            styles: [__webpack_require__(1209)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_service__["a" /* ServicesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_service__["a" /* ServicesService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__["a" /* ToastService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _d) || Object])
     ], ServiceAddComponent);
@@ -1470,16 +1470,16 @@ var ServiceAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1147:
+/***/ 1158:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(1086);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_service__ = __webpack_require__(1081);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__ = __webpack_require__(1066);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(1089);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_service__ = __webpack_require__(1083);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__ = __webpack_require__(1065);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__ = __webpack_require__(282);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceUpdateComponent; });
@@ -1559,8 +1559,8 @@ var ServiceUpdateComponent = (function () {
     ServiceUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-service-update',
-            template: __webpack_require__(1226),
-            styles: [__webpack_require__(1196)]
+            template: __webpack_require__(1243),
+            styles: [__webpack_require__(1210)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_service__["a" /* ServicesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_service__["a" /* ServicesService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__["a" /* ToastService */]) === 'function' && _e) || Object])
     ], ServiceUpdateComponent);
@@ -1571,14 +1571,14 @@ var ServiceUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1148:
+/***/ 1159:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_service__ = __webpack_require__(1081);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_service__ = __webpack_require__(1083);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServicesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1634,8 +1634,8 @@ var ServicesComponent = (function () {
     ServicesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-services',
-            template: __webpack_require__(1227),
-            styles: [__webpack_require__(1197)]
+            template: __webpack_require__(1244),
+            styles: [__webpack_require__(1211)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__["a" /* ToolsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_service__["a" /* ServicesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_service__["a" /* ServicesService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _c) || Object])
     ], ServicesComponent);
@@ -1646,42 +1646,42 @@ var ServicesComponent = (function () {
 
 /***/ }),
 
-/***/ 1195:
+/***/ 1209:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1196:
+/***/ 1210:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1197:
+/***/ 1211:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1225:
+/***/ 1242:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n    <form class=\"col s12\" [formGroup]=\"addForm\" novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"titleField\" formControlName=\"title\" type=\"text\" placeholder=\"Наименование\" \n            [ngClass]=\"{'invalid': addForm.controls.title.dirty && !addForm.controls.title.valid, 'valid': addForm.controls.title.valid}\">\n          <label for=\"titleField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\" \n            [ngClass]=\"{'invalid': addForm.controls.description.dirty && !addForm.controls.description.valid, 'valid': addForm.controls.description.valid}\"></textarea>\n          <label for=\"descrTextarea\" data-error=\"Вы не заполнили поле\">Описание</label>\n        </div>\n        <div class=\"input-field col s12\">\n          <textarea id=\"recTextarea\" formControlName=\"recommendations\" placeholder=\"Рекомендации\" class=\"materialize-textarea\" \n            [ngClass]=\"{'valid': addForm.controls.recommendations.dirty}\"></textarea>\n          <label for=\"recTextarea\">Рекомендации</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"priceVariant\">\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceDefField\" formControlName=\"default\" type=\"number\" placeholder=\"Врач\">\n          <label for=\"priceDefField\">Врач</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceTopField\" formControlName=\"top\" type=\"number\" placeholder=\"Врач высш. кат.\">\n          <label for=\"priceTopField\">Врач высш. кат.</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceKmnField\" formControlName=\"kmn\" type=\"number\" placeholder=\"Кандидат мед. наук\">\n          <label for=\"priceKmnField\">Кандидат мед. наук</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"timeField\" formControlName=\"time\" type=\"number\" placeholder=\"Время оказания\">\n          <label for=\"timeField\">Время оказания</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n            <option value=\"\" disabled selected>Выберите специальность</option>\n            <option value=\"{{tag._id}}\" *ngFor=\"let tag of tags\">{{tag.name}}</option>\n          </select>\n          <label for=\"tagsSelect\">Специальность</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/services\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
-/***/ 1226:
+/***/ 1243:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\" *ngIf=\"service\">\n    <form class=\"col s12\" [formGroup]=\"updateForm\" novalidate (ngSubmit)=\"onSubmit(updateForm.value, updateForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"titleField\" formControlName=\"title\" type=\"text\" placeholder=\"Наименование\" \n            [ngClass]=\"{'invalid': updateForm.controls.title.dirty && !updateForm.controls.title.valid, 'valid': updateForm.controls.title.valid}\">\n          <label for=\"titleField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\" \n            [ngClass]=\"{'invalid': updateForm.controls.description.dirty && !updateForm.controls.description.valid, 'valid': updateForm.controls.description.valid}\"></textarea>\n          <label for=\"descrTextarea\" data-error=\"Вы не заполнили поле\">Описание</label>\n        </div>\n        <div class=\"input-field col s12\">\n          <textarea id=\"recTextarea\" formControlName=\"recommendations\" placeholder=\"Рекомендации\" class=\"materialize-textarea\" \n            [ngClass]=\"{'valid': updateForm.controls.recommendations.dirty}\"></textarea>\n          <label for=\"recTextarea\">Рекомендации</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"priceVariant\">\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceDefField\" formControlName=\"default\" type=\"number\" placeholder=\"Врач\">\n          <label for=\"priceDefField\">Врач</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceTopField\" formControlName=\"top\" type=\"number\" placeholder=\"Врач высш. кат.\">\n          <label for=\"priceTopField\">Врач высш. кат.</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceKmnField\" formControlName=\"kmn\" type=\"number\" placeholder=\"Кандидат мед. наук\">\n          <label for=\"priceKmnField\">Кандидат мед. наук</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12 l3\">\n          <input id=\"timeField\" formControlName=\"time\" type=\"number\" placeholder=\"Время оказания\">\n          <label for=\"timeField\">Время оказания</label>\n        </div>\n        <div class=\"input-field col s12 l3\">\n          <input id=\"timeField\" formControlName=\"score\" type=\"number\" placeholder=\"Вес\">\n          <label for=\"timeField\">Вес</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n            <option value=\"\" disabled selected>Выберите специальность</option>\n            <option value=\"{{tag._id}}\" *ngFor=\"let tag of tags\">{{tag.name}}</option>\n          </select>\n          <label for=\"tagsSelect\">Специальность</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!updateForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/services\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
-/***/ 1227:
+/***/ 1244:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"default_wrapper\">\n  <div class=\"panel\">\n    <app-services-list #servicesList [services]=\"services$ | async\" (delete)=\"deleteModal.open()\" (edit)=\"onEdit($event)\"></app-services-list>\n  </div>\n</div>\n\n<app-modal #deleteModal (success)=\"deleteItem(servicesList.currentItem)\">\n    <h4>Удалить услугу</h4>\n    <p *ngIf=\"servicesList.currentItem\">Вы хотите удалить услугу: {{servicesList.currentItem.title}}? <br> Цены: {{servicesList.currentItem.price | json}}</p>\n</app-modal>"

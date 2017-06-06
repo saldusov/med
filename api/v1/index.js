@@ -4,6 +4,7 @@ let auth = require("../auth")();
 
 let usersRouting = require("./users");
 let servicesRouting = require("./services");
+let goodsRouting = require("./goods");
 let analyzesRouting = require("./analyzes");
 let personsRouting = require("./persons");
 let specialtiesRouting = require("./specialties");
@@ -14,6 +15,7 @@ let paymentsRouting = require("./payments");
 
 app.use("/users", usersRouting);
 app.use("/services", servicesRouting);
+app.use("/goods", goodsRouting);
 app.use("/analyzes", analyzesRouting);
 app.use("/persons", personsRouting);
 app.use("/specialties", specialtiesRouting);
