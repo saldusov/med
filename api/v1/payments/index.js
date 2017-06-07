@@ -16,6 +16,10 @@ const updatePayment = require("./lib/indexFunctions").updatePayment;
 const payPayment = require("./lib/indexFunctions").payPayment;
 const deletePaymentById = require("./lib/indexFunctions").deletePaymentById;
 
+/* Include payments reports routes */
+const reports = require("./reports/route");
+app.use('/reports', reports);
+
 /* GET items list. */
 app.get('/', auth.checkAccess("payments"), parseQuery, function(req, res, next) {
 	getPayments(req.mongoParams)
