@@ -13,9 +13,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__widgets_users_widget__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__persons_widgets_persons_widget__ = __webpack_require__(1071);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__users_users_component__ = __webpack_require__(1169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__user_add_user_add_component__ = __webpack_require__(1167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__user_update_user_update_component__ = __webpack_require__(1168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__users_users_component__ = __webpack_require__(1171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__user_add_user_add_component__ = __webpack_require__(1169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__user_update_user_update_component__ = __webpack_require__(1170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__users_service__ = __webpack_require__(1095);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersModule", function() { return UsersModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1696,7 +1696,7 @@ var UserForm = (function () {
 
 /***/ }),
 
-/***/ 1167:
+/***/ 1169:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1801,8 +1801,8 @@ var UserAddComponent = (function () {
     UserAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-user-add',
-            template: __webpack_require__(1251),
-            styles: [__webpack_require__(1218)]
+            template: __webpack_require__(1255),
+            styles: [__webpack_require__(1221)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === 'function' && _d) || Object])
     ], UserAddComponent);
@@ -1813,7 +1813,7 @@ var UserAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1168:
+/***/ 1170:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1926,8 +1926,8 @@ var UserUpdateComponent = (function () {
     UserUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-user-update',
-            template: __webpack_require__(1252),
-            styles: [__webpack_require__(1219)]
+            template: __webpack_require__(1256),
+            styles: [__webpack_require__(1222)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormBuilder */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _e) || Object])
     ], UserUpdateComponent);
@@ -1938,7 +1938,7 @@ var UserUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1169:
+/***/ 1171:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2018,8 +2018,8 @@ var UsersComponent = (function () {
     UsersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-users',
-            template: __webpack_require__(1253),
-            styles: [__webpack_require__(1220)]
+            template: __webpack_require__(1257),
+            styles: [__webpack_require__(1223)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _e) || Object])
     ], UsersComponent);
@@ -2030,42 +2030,42 @@ var UsersComponent = (function () {
 
 /***/ }),
 
-/***/ 1218:
+/***/ 1221:
 /***/ (function(module, exports) {
 
 module.exports = "ul.tabs {\r\n    margin-bottom: 10px;\r\n}\r\n\r\nimg.selected-img {\r\n    margin: 10px;\r\n}\r\n\r\n.user-add-wrapper {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    margin: 10px;\r\n}\r\n\r\n.user-add-wrapper > panel {\r\n    max-width: 800px;\r\n}"
 
 /***/ }),
 
-/***/ 1219:
+/***/ 1222:
 /***/ (function(module, exports) {
 
 module.exports = "ul.tabs {\r\n    margin-bottom: 10px;\r\n}\r\n\r\nimg.selected-img {\r\n    margin: 10px;\r\n}"
 
 /***/ }),
 
-/***/ 1220:
+/***/ 1223:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1251:
+/***/ 1255:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"user-add-wrapper\">\n  <div class=\"panel\">\n    <div class=\"row\">\n      <div class=\"col s12\">\n        <ul class=\"tabs\" materialize=\"tabs\">\n          <li class=\"tab col s3\"><a class=\"active\" href=\"#user-info\">Пользователь</a></li>\n          <li class=\"tab col s3\"><a href=\"#personal-info\">Персональная информация</a></li>\n        </ul>\n      </div>\n      <div id=\"user-info\" class=\"col s12\">\n        <app-user-form [form]=\"form.controls.user\" (submitForm)=\"onSubmit($event)\" (close)=\"toList()\"></app-user-form>\n      </div>\n      <div id=\"personal-info\" class=\"col s12\">\n        <app-person-form [form]=\"form.controls.person\" (submitForm)=\"onSubmit($event)\" (close)=\"toList()\"></app-person-form>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1252:
+/***/ 1256:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"user-add-wrapper\">\n  <div class=\"panel\">\n    <div class=\"row\">\n      <div class=\"col s12\">\n        <ul class=\"tabs\" materialize=\"tabs\">\n          <li class=\"tab col s3\"><a class=\"active\" href=\"#user-info\">Пользователь</a></li>\n          <li class=\"tab col s3\"><a href=\"#personal-info\">Персональная информация</a></li>\n        </ul>\n      </div>\n      <div id=\"user-info\" class=\"col s12\">\n        <app-user-form [form]=\"form.controls.user\" (submitForm)=\"onSubmit($event)\" (close)=\"toList()\"></app-user-form>\n      </div>\n      <div id=\"personal-info\" class=\"col s12\">\n        <app-person-form [form]=\"form.controls.person\" [person]=\"user.person\" (submitForm)=\"onSubmit($event)\" (close)=\"toList()\"></app-person-form>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1253:
+/***/ 1257:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"default-wrapper\">\n  <div class=\"panel\">\n    <table class=\"responsive-table\">\n      <thead>\n        <tr>\n            <th data-field=\"username\">Логин</th>\n            <th data-field=\"group\">Группа</th>\n            <th data-field=\"create\">Дата создания</th>\n            <th>Действия</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let item of users\">\n          <td class=\"text-capitalize\">{{item.username}}</td>\n          <td>{{item.group}}</td>\n          <td>{{item.createdAt | date:\"dd.MM.y\"}}</td>\n          <td>\n            <a routerLink=\"/users/update/{{item._id}}\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n            <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить пользователя</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить пользователя: {{currentItem.username}}? <br> Дата создания: {{currentItem.createdAt | date:\"dd.MM.y\"}} </p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>"

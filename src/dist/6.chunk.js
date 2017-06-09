@@ -16,7 +16,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__analyzes_analyzes_component__ = __webpack_require__(1139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__analyzes_add_analyzes_add_component__ = __webpack_require__(1137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__analyzes_update_analyzes_update_component__ = __webpack_require__(1138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__analyzes_service__ = __webpack_require__(1087);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__analyzes_service__ = __webpack_require__(1088);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnalyzesModule", function() { return AnalyzesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -856,7 +856,7 @@ module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"bt
 
 /***/ }),
 
-/***/ 1086:
+/***/ 1087:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1033,7 +1033,7 @@ var AnalyzesListComponent = (function () {
 
 /***/ }),
 
-/***/ 1087:
+/***/ 1088:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1066,8 +1066,8 @@ var AnalyzesService = (function () {
         var query = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
         query.set('nPerPage', params.nPerPage);
         query.set('pageNumber', params.currentPage);
-        if (params.text)
-            query.set('text', params.text);
+        if (params.search)
+            query.set('search', params.search);
         if (params.labs) {
             var labs_1 = [];
             Object.keys(params.labs).map(function (lab) {
@@ -1086,8 +1086,8 @@ var AnalyzesService = (function () {
         var query = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
         query.set('nPerPage', params.nPerPage);
         query.set('pageNumber', params.currentPage);
-        if (params.text)
-            query.set('text', params.text);
+        if (params.search)
+            query.set('search', params.search);
         if (params.labs) {
             var labs_2 = [];
             Object.keys(params.labs).map(function (lab) {
@@ -1150,7 +1150,7 @@ var AnalyzesService = (function () {
 
 /***/ }),
 
-/***/ 1091:
+/***/ 1089:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1239,7 +1239,7 @@ var Analyzes = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__analyzes_list_analyzes_list_component__ = __webpack_require__(1086);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__analyzes_list_analyzes_list_component__ = __webpack_require__(1087);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesWidgetModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1316,8 +1316,8 @@ var AnalyzesAddComponent = (function () {
     AnalyzesAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-analyzes-add',
-            template: __webpack_require__(1221),
-            styles: [__webpack_require__(1188)]
+            template: __webpack_require__(1224),
+            styles: [__webpack_require__(1190)]
         }), 
         __metadata('design:paramtypes', [])
     ], AnalyzesAddComponent);
@@ -1337,8 +1337,8 @@ var AnalyzesAddComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__analyzes_service__ = __webpack_require__(1087);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__analyzes__ = __webpack_require__(1091);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__analyzes_service__ = __webpack_require__(1088);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__analyzes__ = __webpack_require__(1089);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesUpdateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1434,8 +1434,8 @@ var AnalyzesUpdateComponent = (function () {
     AnalyzesUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-analyzes-update',
-            template: __webpack_require__(1222),
-            styles: [__webpack_require__(1189)]
+            template: __webpack_require__(1225),
+            styles: [__webpack_require__(1191)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__analyzes_service__["a" /* AnalyzesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__analyzes_service__["a" /* AnalyzesService */]) === 'function' && _f) || Object])
     ], AnalyzesUpdateComponent);
@@ -1454,11 +1454,11 @@ var AnalyzesUpdateComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__analyzes_service__ = __webpack_require__(1087);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__analyzes_service__ = __webpack_require__(1088);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_modal_modal_component__ = __webpack_require__(1043);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__widgets_analyzes_list_analyzes_list_component__ = __webpack_require__(1086);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__widgets_analyzes_list_analyzes_list_component__ = __webpack_require__(1087);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1503,7 +1503,7 @@ var AnalyzesComponent = (function () {
                 //add: () => this._router.navigate(['analyzes/add']),
                 search: function (searchText) {
                     _this._pagination.setParams({
-                        text: searchText,
+                        search: searchText,
                         currentPage: 1
                     }, 'analyzes-list');
                     _this.reloadAnalyzes();
@@ -1578,8 +1578,8 @@ var AnalyzesComponent = (function () {
     AnalyzesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-analyzes',
-            template: __webpack_require__(1223),
-            styles: [__webpack_require__(1190)]
+            template: __webpack_require__(1226),
+            styles: [__webpack_require__(1192)]
         }), 
         __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__analyzes_service__["a" /* AnalyzesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__analyzes_service__["a" /* AnalyzesService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _f) || Object])
     ], AnalyzesComponent);
@@ -1590,42 +1590,42 @@ var AnalyzesComponent = (function () {
 
 /***/ }),
 
-/***/ 1188:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 1189:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ 1190:
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ 1191:
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ 1192:
 /***/ (function(module, exports) {
 
 module.exports = ".analyzes-list {\r\n    width: 1200px;\r\n}"
 
 /***/ }),
 
-/***/ 1221:
+/***/ 1224:
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  analyzes-add works!\n</p>\n"
 
 /***/ }),
 
-/***/ 1222:
+/***/ 1225:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\" *ngIf=\"analyz\">\n    <form class=\"col s12\" [formGroup]=\"updateForm\" novalidate (ngSubmit)=\"onSubmit(updateForm.value, updateForm.valid)\">\n      <div class=\"row\" formGroupName=\"art\">\n        <div class=\"col l12\">Артикул</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Артикул Helix\">\n          <label for=\"artHelix\" [ngClass]=\"{active: updateForm.value.art.helix}\">Артикул Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Артикул CMD\">\n          <label for=\"artCMD\" [ngClass]=\"{active: updateForm.value.art.cmd}\">Артикул CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Артикул Инвитро\">\n          <label for=\"artInvitro\" [ngClass]=\"{active: updateForm.value.art.invitro}\">Артикул Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"title\">\n        <div class=\"col l12\">Заголовок</div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Заголовок Helix\">\n          <label for=\"titleHelix\" [ngClass]=\"{active: updateForm.value.title.helix}\">Заголовок Helix</label>\n        </div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Заголовок CMD\">\n          <label for=\"titleCMD\" [ngClass]=\"{active: updateForm.value.title.cmd}\">Заголовок CMD</label>\n        </div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Заголовок Инвитро\">\n          <label for=\"titleInvitro\" [ngClass]=\"{active: updateForm.value.title.invitro}\">Заголовок Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"priceLabs\">\n        <div class=\"col l12\">Цена</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceHelix\" formControlName=\"helix\" type=\"number\" placeholder=\"Цена Helix\">\n          <label for=\"priceHelix\" [ngClass]=\"{active: updateForm.value.priceLabs.helix}\">Цена Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceCMD\" formControlName=\"cmd\" type=\"number\" placeholder=\"Цена CMD\">\n          <label for=\"priceCMD\" [ngClass]=\"{active: updateForm.value.priceLabs.cmd}\">Цена CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceInvitro\" formControlName=\"invitro\" type=\"number\" placeholder=\"Цена Инвитро\">\n          <label for=\"priceInvitro\" [ngClass]=\"{active: updateForm.value.priceLabs.invitro}\">Цена Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"priceProd\">\n        <div class=\"col l12\">Цена на продажу</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceHelix\" formControlName=\"helix\" type=\"number\" placeholder=\"Цена Helix\">\n          <label for=\"priceHelix\" [ngClass]=\"{active: updateForm.value.priceProd.helix}\">Цена Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceCMD\" formControlName=\"cmd\" type=\"number\" placeholder=\"Цена CMD\">\n          <label for=\"priceCMD\" [ngClass]=\"{active: updateForm.value.priceProd.cmd}\">Цена CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceInvitro\" formControlName=\"invitro\" type=\"number\" placeholder=\"Цена Инвитро\">\n          <label for=\"priceInvitro\" [ngClass]=\"{active: updateForm.value.priceProd.invitro}\">Цена Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"time\">\n        <div class=\"col l12\">Время</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Время Helix\">\n          <label for=\"timeHelix\" [ngClass]=\"{active: updateForm.value.time.helix}\">Время Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Время CMD\">\n          <label for=\"timeCMD\" [ngClass]=\"{active: updateForm.value.time.cmd}\">Время CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Время Инвитро\">\n          <label for=\"timeInvitro\" [ngClass]=\"{active: updateForm.value.time.invitro}\">Время Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\"></textarea>\n          <label for=\"descrTextarea\" data-error=\"Вы не заполнили поле\" [ngClass]=\"{active: updateForm.value.description}\">Описание</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!updateForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/analyzes\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
-/***/ 1223:
+/***/ 1226:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"fix-wrapper analyzes-list\">\n  <div class=\"panel\">\n    <div class=\"panel-content\">\n      <app-analyzes-list #analyzesList [analyzes] = \"analyzes$ | async\" (startmerge)=\"_tools.getToolbar().setMode('done');\" (delete)=\"deleteModal.open()\" (edit)=\"editItem($event)\"></app-analyzes-list>\n    </div>\n    <app-pagination class=\"center-align\" name=\"analyzes-list\" (changePage)=\"changePageAnalyzes($event)\"></app-pagination>\n  </div>\n</div>\n\n<!--<app-help-panel title=\"Фильтр\" (enter)=\"filterGetAnalyzes()\">\n  <div class=\"filterPanel row\">\n    <div class=\"input-field\">\n      <input id=\"search\" type=\"search\" [(ngModel)] = \"_pager.text\">\n      <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n      <i class=\"material-icons\">close</i>\n    </div>\n    <div class=\"input-field col s12\">\n      <input type=\"checkbox\" class=\"filled-in\" id=\"helixCheckBox\" [(ngModel)] = \"filter.labs.helix\" />\n      <label for=\"helixCheckBox\">Helix</label>\n    </div>\n    <div class=\"input-field col s12\">\n      <input type=\"checkbox\" class=\"filled-in\" id=\"cmdCheckBox\" [(ngModel)] = \"filter.labs.cmd\" />\n      <label for=\"cmdCheckBox\">CMD</label>\n    </div>\n    <div class=\"input-field col s12\">\n      <input type=\"checkbox\" class=\"filled-in\" id=\"invitroCheckBox\" [(ngModel)] = \"filter.labs.invitro\" />\n      <label for=\"invitroCheckBox\">Инвитро</label>\n    </div>\n    <div class=\"input-field col s12\">\n      <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"filterGetAnalyzes()\">Фильтровать</button>\n    </div>\n  </div>\n</app-help-panel>-->\n\n<!-- Merge Modal -->\n<app-modal #mergeModal (success)=\"mergeItems(analyzesList.selectedItems)\">\n    <h4>Объединить анализы</h4>\n    <p *ngIf=\"analyzesList.selectedItems.length > 0\">Вы хотите объединить следующие анализы?</p>\n    <app-analyzes-list [analyzes] = \"analyzesList.selectedItems\" [options]=\"{price: false, tools: false}\"></app-analyzes-list>\n</app-modal>\n\n<!-- Delete Modal -->\n<app-modal #deleteModal (success)=\"deleteItem(analyzesList.currentItem)\">\n    <h4>Удалить анализ</h4>\n    <p *ngIf=\"analyzesList.currentItem\">Вы хотите удалить анализ?</p>\n</app-modal>"

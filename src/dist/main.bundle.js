@@ -1170,7 +1170,7 @@ var Pagination = (function () {
         this.pages = options.pages || [];
         this.action = options.action || function () { console.log('empty function'); };
         this.countItems = options.countItems || 0;
-        this.text = options.text || null;
+        this.search = options.search || null;
     }
     Pagination.prototype.setParams = function (options) {
         this.currentPage = options.currentPage !== undefined ? options.currentPage : this.currentPage;
@@ -1179,7 +1179,7 @@ var Pagination = (function () {
         this.pages = options.pages !== undefined ? options.pages : this.pages;
         this.action = options.action !== undefined ? options.action : this.action;
         this.countItems = options.countItems !== undefined ? options.countItems : this.countItems;
-        this.text = options.text !== undefined ? options.text : this.text;
+        this.search = options.search !== undefined ? options.search : this.search;
     };
     Pagination.prototype.default = function () {
         this.currentPage = 1;
@@ -1188,7 +1188,7 @@ var Pagination = (function () {
         this.pages = [];
         this.action = function () { return console.log('empty function'); };
         this.countItems = 0;
-        this.text = null;
+        this.search = null;
     };
     return Pagination;
 }());

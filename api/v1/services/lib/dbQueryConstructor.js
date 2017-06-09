@@ -4,6 +4,9 @@ module.exports = {
 };	
 
 function getAggregateParams(params) {
+	let pageNumber = params.pageNumber > 0 ? ((params.pageNumber-1)*params.nPerPage) : 0;
+	let nPerPage = params.nPerPage;
+
 	let aggregatePipeline = [
 		{
 	      	$unwind: {
@@ -32,6 +35,8 @@ function getAggregateParams(params) {
 	
 	if(params.match) aggregatePipeline.unshift(params.match);
 	if(params.addFields) aggregatePipeline.push(params.addFields);
+	if(pageNumber > 0) aggregatePipeline.push({$skip: pageNumber});
+	if(nPerPage > 0) aggregatePipeline.push({$limit: nPerPage});
 		
 	return aggregatePipeline;
 }
@@ -45,6 +50,7 @@ function getAggregateGroupParam() {
 			recommendations: { $first: "$recommendations" },
 			priceVariant: { $first: "$priceVariant" },
 			time: { $first: "$time" },
+			multiple: { $first: "$multiple" },
 			score: { $first: "$score" }, 
 			active: { $first: "$active" }, 
 			tags: { $addToSet: "$tags" }, 

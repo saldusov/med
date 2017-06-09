@@ -21,8 +21,8 @@ module.exports = {
 
 		req.mongoParams = {};
 
-		if(params.text) {
-			let arrayText = req.query.text.split(",");
+		if(params.search) {
+			let arrayText = req.query.search.split(",");
 			let trimArray = arrayText.map((textItem) => textItem.trim());
 			let text = "(" + trimArray.join("|") + ")";
 			let regexp = new RegExp(text, "i");

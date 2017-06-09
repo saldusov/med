@@ -12,7 +12,9 @@ module.exports =  {
 					if(err) {
 						reject(err);
 					} else {
-						resolve(foundItems);
+						ServiceSchema.count(params.match ? params.match.$match : {}, function(err, count) {
+							resolve({count, items: foundItems});
+						});
 					}
 				});
 		});

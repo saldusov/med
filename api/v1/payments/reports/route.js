@@ -11,10 +11,10 @@ const PaymentSchema = require("../Payment.schema");
 app.get('/', function(req, res, next) {
 	
 	Promise.all([
-		getTotalPaymentsByDate(new Date("2017-06-02T00:00:00.000Z"), new Date("2017-06-03T00:00:00.000Z")),
-		getTotalServicesByDate(new Date("2017-06-02T00:00:00.000Z"), new Date("2017-06-03T00:00:00.000Z")),
-		getTotalAnalyzesByDate(new Date("2017-06-02T00:00:00.000Z"), new Date("2017-06-03T00:00:00.000Z")),
-		getTotalGoodsByDate(new Date("2017-06-02T00:00:00.000Z"), new Date("2017-06-03T00:00:00.000Z"))
+		getTotalPaymentsByDate(new Date("2017-06-08T00:00:00.000Z"), new Date("2017-06-10T00:00:00.000Z")),
+		getTotalServicesByDate(new Date("2017-06-08T00:00:00.000Z"), new Date("2017-06-10T00:00:00.000Z")),
+		getTotalAnalyzesByDate(new Date("2017-06-08T00:00:00.000Z"), new Date("2017-06-10T00:00:00.000Z")),
+		getTotalGoodsByDate(new Date("2017-06-08T00:00:00.000Z"), new Date("2017-06-10T00:00:00.000Z"))
 	])
 	.then((result) => {
 		let [payments, services, analyzes, goods] = result;

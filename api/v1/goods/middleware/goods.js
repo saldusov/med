@@ -57,8 +57,7 @@ function createMatchPipeline(params) {
 		pipeline.$match.$and.push({ 
 			$or: [
 				{"title": re},
-				{"description": re},
-				{"recommendations": re}
+				{"description": re}
 			]
 		});
 

@@ -12,6 +12,7 @@ var serviceSchema = new Schema({
 	},
 	time: Number,
 	tags: [Schema.ObjectId],
+	multiple: Boolean,
 	score: {
 		type: Number,
 		default: 0
