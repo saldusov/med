@@ -1,6 +1,6 @@
 webpackJsonp([5,15],{
 
-/***/ 1031:
+/***/ 1030:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,14 +10,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__widgets_goods_widget__ = __webpack_require__(1098);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__goods_goods_component__ = __webpack_require__(1142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__good_add_good_add_component__ = __webpack_require__(1140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__specialties_specialties_service__ = __webpack_require__(1065);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__goods_service__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__good_update_good_update_component__ = __webpack_require__(1141);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GoodsModule", function() { return GoodsModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_shared_module__ = __webpack_require__(1040);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__widgets_analyzes_widget__ = __webpack_require__(1098);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__users_widgets_users_widget__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__analyzes_analyzes_component__ = __webpack_require__(1143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__analyzes_add_analyzes_add_component__ = __webpack_require__(1141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__analyzes_update_analyzes_update_component__ = __webpack_require__(1142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__analyzes_service__ = __webpack_require__(1088);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnalyzesModule", function() { return AnalyzesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -39,33 +39,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var GOODS_ROUTES = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_7__goods_goods_component__["a" /* GoodsComponent */] },
-    { path: 'add', component: __WEBPACK_IMPORTED_MODULE_8__good_add_good_add_component__["a" /* GoodAddComponent */] },
-    { path: 'update/:id', component: __WEBPACK_IMPORTED_MODULE_11__good_update_good_update_component__["a" /* GoodUpdateComponent */] }
+var ANALYZES_ROUTES = [
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_8__analyzes_analyzes_component__["a" /* AnalyzesComponent */] },
+    { path: 'add', component: __WEBPACK_IMPORTED_MODULE_9__analyzes_add_analyzes_add_component__["a" /* AnalyzesAddComponent */] },
+    { path: 'update/:id', component: __WEBPACK_IMPORTED_MODULE_10__analyzes_update_analyzes_update_component__["a" /* AnalyzesUpdateComponent */] }
 ];
-var GoodsModule = (function () {
-    function GoodsModule() {
+var AnalyzesModule = (function () {
+    function AnalyzesModule() {
     }
-    GoodsModule = __decorate([
+    AnalyzesModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forChild(GOODS_ROUTES),
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forChild(ANALYZES_ROUTES),
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* ReactiveFormsModule */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__["a" /* MaterializeModule */],
-                __WEBPACK_IMPORTED_MODULE_5__widgets_goods_widget__["a" /* GoodsWidgetModule */],
-                __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__["a" /* SharedModule */]
+                __WEBPACK_IMPORTED_MODULE_5__shared_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_6__widgets_analyzes_widget__["a" /* AnalyzesWidgetModule */],
+                __WEBPACK_IMPORTED_MODULE_7__users_widgets_users_widget__["a" /* UsersWidgetModule */]
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_7__goods_goods_component__["a" /* GoodsComponent */], __WEBPACK_IMPORTED_MODULE_8__good_add_good_add_component__["a" /* GoodAddComponent */], __WEBPACK_IMPORTED_MODULE_11__good_update_good_update_component__["a" /* GoodUpdateComponent */]],
-            providers: [__WEBPACK_IMPORTED_MODULE_10__goods_service__["a" /* GoodsService */], __WEBPACK_IMPORTED_MODULE_9__specialties_specialties_service__["a" /* SpecialtiesService */]],
-            exports: [__WEBPACK_IMPORTED_MODULE_7__goods_goods_component__["a" /* GoodsComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_8__analyzes_analyzes_component__["a" /* AnalyzesComponent */], __WEBPACK_IMPORTED_MODULE_9__analyzes_add_analyzes_add_component__["a" /* AnalyzesAddComponent */], __WEBPACK_IMPORTED_MODULE_10__analyzes_update_analyzes_update_component__["a" /* AnalyzesUpdateComponent */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_11__analyzes_service__["a" /* AnalyzesService */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_8__analyzes_analyzes_component__["a" /* AnalyzesComponent */]]
         }), 
         __metadata('design:paramtypes', [])
-    ], GoodsModule);
-    return GoodsModule;
+    ], AnalyzesModule);
+    return AnalyzesModule;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/goods.module.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes.module.js.map
 
 /***/ }),
 
@@ -795,7 +796,7 @@ module.exports = ""
 /***/ 1056:
 /***/ (function(module, exports) {
 
-module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1.2rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}"
+module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
 
 /***/ }),
 
@@ -855,79 +856,88 @@ module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"bt
 
 /***/ }),
 
-/***/ 1065:
+/***/ 1082:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(451);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__ = __webpack_require__(279);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpecialtiesService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var SpecialtiesService = (function () {
-    function SpecialtiesService(_http) {
-        this._http = _http;
-        this._baseUrl = "/api/v1/specialties";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Analyzes; });
+var Analyzes = (function () {
+    function Analyzes(object) {
+        this.default();
+        if (object != undefined) {
+            this.setParams(object);
+        }
     }
-    SpecialtiesService.prototype.get = function () {
-        return this._http.get(this._baseUrl)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || "Server error"); });
+    Object.defineProperty(Analyzes.prototype, "finishTitle", {
+        get: function () {
+            return this.title.helix || this.title.cmd || this.title.invitro;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Analyzes.prototype.setParams = function (object) {
+        this._id = object._id || null;
+        this.serialNumber = object.serialNumber || this.serialNumber;
+        if (object.art)
+            this.setLabs(this.art, object.art);
+        if (object.title)
+            this.setLabs(this.title, object.title);
+        if (object.priceLabs)
+            this.setLabs(this.priceLabs, object.priceLabs);
+        if (object.priceProd)
+            this.setLabs(this.priceProd, object.priceProd);
+        if (object.time)
+            this.setLabs(this.time, object.time);
+        this.description = object.description || null;
+        this.price = object.price || null;
+        this.active = !!object.active;
     };
-    SpecialtiesService.prototype.getOne = function (id) {
-        return this._http.get(this._baseUrl + "/" + id)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    Analyzes.prototype.clear = function () {
+        this.default();
     };
-    SpecialtiesService.prototype.add = function (body) {
-        var bodyString = JSON.stringify(body);
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
-        return this._http.post(this._baseUrl, JSON.stringify(body), options)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    Analyzes.prototype.setLabs = function (field, params) {
+        field.helix = params.helix || null;
+        field.cmd = params.cmd || null;
+        field.invitro = params.invitro || null;
     };
-    SpecialtiesService.prototype.update = function (body) {
-        var bodyString = JSON.stringify(body);
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
-        return this._http.put(this._baseUrl + "/" + body._id, JSON.stringify(body), options)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    Analyzes.prototype.default = function () {
+        this._id = null;
+        this.art = {
+            helix: null,
+            cmd: null,
+            invitro: null
+        };
+        this.title = {
+            helix: null,
+            cmd: null,
+            invitro: null
+        };
+        this.priceLabs = {
+            helix: null,
+            cmd: null,
+            invitro: null
+        };
+        this.priceProd = {
+            helix: null,
+            cmd: null,
+            invitro: null
+        };
+        this.time = {
+            helix: null,
+            cmd: null,
+            invitro: null
+        };
+        this.price = null;
+        this.description = null;
+        this.active = true;
     };
-    SpecialtiesService.prototype.remove = function (id) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
-        return this._http.delete(this._baseUrl + "/" + id)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
-    };
-    SpecialtiesService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__["a" /* HttpClient */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__["a" /* HttpClient */]) === 'function' && _a) || Object])
-    ], SpecialtiesService);
-    return SpecialtiesService;
-    var _a;
+    return Analyzes;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/specialties.service.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes.js.map
 
 /***/ }),
 
-/***/ 1069:
+/***/ 1088:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -936,7 +946,7 @@ var SpecialtiesService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(451);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__ = __webpack_require__(279);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodsService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -950,25 +960,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var GoodsService = (function () {
-    function GoodsService(_http) {
+
+var AnalyzesService = (function () {
+    function AnalyzesService(_http) {
         this._http = _http;
-        //private _baseUrl: string = "/package.json";
-        this._baseUrl = "/api/v1/goods";
+        this._baseUrl = "/api/v1/analyzes";
     }
-    GoodsService.prototype.get = function (params) {
-        var query = this.createQueryParams(params);
+    AnalyzesService.prototype.get = function (params) {
+        var query = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
+        query.set('nPerPage', params.nPerPage);
+        query.set('pageNumber', params.currentPage);
+        if (params.search)
+            query.set('search', params.search);
+        if (params.labs) {
+            var labs_1 = [];
+            Object.keys(params.labs).map(function (lab) {
+                if (params.labs[lab])
+                    labs_1.push(lab);
+            });
+            if (labs_1.length > 0)
+                query.set('labs', labs_1.toString());
+        }
         return this._http.get(this._baseUrl, { search: query })
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || "Server error"); })
             .share();
     };
-    GoodsService.prototype.getOne = function (id) {
+    AnalyzesService.prototype.getCount = function (params) {
+        var query = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
+        query.set('nPerPage', params.nPerPage);
+        query.set('pageNumber', params.currentPage);
+        if (params.search)
+            query.set('search', params.search);
+        if (params.labs) {
+            var labs_2 = [];
+            Object.keys(params.labs).map(function (lab) {
+                if (params.labs[lab])
+                    labs_2.push(lab);
+            });
+            if (labs_2.length > 0)
+                query.set('labs', labs_2.toString());
+        }
+        return this._http.get(this._baseUrl + "/count", { search: query })
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || "Server error"); })
+            .share();
+    };
+    AnalyzesService.prototype.getOne = function (id) {
         return this._http.get(this._baseUrl + "/" + id)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
-    GoodsService.prototype.add = function (body) {
+    AnalyzesService.prototype.add = function (body) {
         var bodyString = JSON.stringify(body);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
@@ -976,7 +1019,7 @@ var GoodsService = (function () {
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
-    GoodsService.prototype.update = function (body) {
+    AnalyzesService.prototype.update = function (body) {
         var bodyString = JSON.stringify(body);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
@@ -984,72 +1027,30 @@ var GoodsService = (function () {
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
-    GoodsService.prototype.remove = function (id) {
+    AnalyzesService.prototype.merge = function (items) {
+        var ids = { ids: items.map(function (item) { return item._id; }) };
+        var bodyString = JSON.stringify(items);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
+        return this._http.post(this._baseUrl + "/merge", JSON.stringify(ids), options)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
+    AnalyzesService.prototype.remove = function (id) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
         return this._http.delete(this._baseUrl + "/" + id)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
-    GoodsService.prototype.createQueryParams = function (params) {
-        var query = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
-        if (params) {
-            if (params.nPerPage)
-                query.set('nPerPage', params.nPerPage);
-            if (params.currentPage)
-                query.set('pageNumber', params.currentPage);
-            if (params.tags !== undefined) {
-                params.tags.forEach(function (tag, index) { return query.set("tags[" + index + "]", tag); });
-                if (params.tags.length == 0)
-                    query.set("tags", 'empty');
-            }
-            if (params.search)
-                query.set('search', params.search);
-        }
-        return query;
-    };
-    GoodsService = __decorate([
+    AnalyzesService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__["a" /* HttpClient */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__users_services_http_client_service__["a" /* HttpClient */]) === 'function' && _a) || Object])
-    ], GoodsService);
-    return GoodsService;
+    ], AnalyzesService);
+    return AnalyzesService;
     var _a;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/goods.service.js.map
-
-/***/ }),
-
-/***/ 1090:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Good; });
-var Good = (function () {
-    function Good(object) {
-        this.active = true;
-        if (object) {
-            this.setParams(object);
-        }
-    }
-    Good.prototype.setParams = function (options) {
-        this._id = options._id || null;
-        this.title = options.title || null;
-        this.description = options.description || null;
-        this.price = options.price || 0;
-        this.tags = options.tags || [];
-        this.active = options.active || false;
-    };
-    Good.prototype.clear = function () {
-        this._id = null;
-        this.title = null;
-        this.description = null;
-        this.price = 0;
-        this.tags = [];
-        this.active = false;
-    };
-    return Good;
-}());
-//# sourceMappingURL=D:/projects/angular-med/src/good.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes.service.js.map
 
 /***/ }),
 
@@ -1058,9 +1059,7 @@ var Good = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__goodsListOptions__ = __webpack_require__(1099);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__goodsListOptions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__goodsListOptions__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodsListComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1071,129 +1070,242 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-var GoodsListComponent = (function () {
-    function GoodsListComponent() {
-        this.goods = [];
-        this.eCheck = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+var AnalyzesListComponent = (function () {
+    function AnalyzesListComponent() {
+        this.analyzes = [];
+        this.viewType = 'full';
+        this.startMerge = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.eDelete = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.eCheck = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.eEdit = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.eAdd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.selectedItems = [];
         this._options = {
             tools: {
+                merge: true,
                 edit: true,
                 delete: true,
-                add: false,
                 check: false
             },
-            price: true,
-            tags: true
+            view: {
+                priceLabs: true,
+                priceProd: true,
+                price: true
+            }
         };
+        this.merge = [];
+        this.mergeMode = false;
+        this.selectedItems = [];
     }
-    Object.defineProperty(GoodsListComponent.prototype, "options", {
-        get: function () { return this._options; },
-        set: function (options) {
-            this._options = {
-                tools: {
-                    edit: !!options.tools.edit,
-                    delete: !!options.tools.delete,
-                    check: !!options.tools.check,
-                    add: !!options.tools.add
-                },
-                price: !!options.price,
-                tags: !!options.tags
-            };
+    Object.defineProperty(AnalyzesListComponent.prototype, "options", {
+        get: function () {
+            return this._options;
+        },
+        set: function (value) {
+            if (value.tools !== undefined) {
+                this.options.tools.edit = !!value.tools.edit;
+                this.options.tools.check = !!value.tools.check;
+                this.options.tools.delete = !!value.tools.delete;
+                this.options.tools.merge = !!value.tools.merge;
+            }
+            ;
+            if (value.view !== undefined) {
+                this.options.view.priceLabs = !!value.view.priceLabs;
+                this.options.view.priceProd = !!value.view.priceProd;
+                this.options.view.price = !!value.view.price;
+            }
+            ;
         },
         enumerable: true,
         configurable: true
     });
     ;
-    GoodsListComponent.prototype.ngOnInit = function () {
+    AnalyzesListComponent.prototype.ngOnInit = function () {
     };
-    GoodsListComponent.prototype.addItem = function (item) {
-        this.selectItem(item);
-    };
-    GoodsListComponent.prototype.deleteItem = function (item) {
+    AnalyzesListComponent.prototype.deleteItem = function (item) {
         this.currentItem = item;
         this.eDelete.emit(item);
     };
-    GoodsListComponent.prototype.editItem = function (item) {
+    AnalyzesListComponent.prototype.mergeStart = function (item) {
+        this.mergeMode = true;
+        this.selectedItems = [];
+        this.startMerge.emit();
+    };
+    AnalyzesListComponent.prototype.mergeStop = function () {
+        this.mergeMode = false;
+    };
+    AnalyzesListComponent.prototype.clickItem = function (item) {
         this.currentItem = item;
+        var deleted = false;
+        if (this.mergeMode) {
+            this.checkForMerge(item);
+        }
+        else {
+            this.defaultCheck(item);
+        }
+    };
+    AnalyzesListComponent.prototype.editItem = function (item) {
         this.eEdit.emit(item);
     };
-    GoodsListComponent.prototype.clickItem = function (item) {
+    AnalyzesListComponent.prototype.selectItem = function (item) {
+        this.selectedItems.push(item);
+    };
+    AnalyzesListComponent.prototype.unSelectItem = function (item) {
+        var _this = this;
+        this.selectedItems.forEach(function (found, index) {
+            if (found._id == item._id)
+                _this.selectedItems.splice(index, 1);
+        });
+    };
+    AnalyzesListComponent.prototype.isSelect = function (item) {
+        return !!this.selectedItems.find(function (found) {
+            if (found._id === item._id)
+                return true;
+        });
+    };
+    AnalyzesListComponent.prototype.getSelectedItems = function () {
+        return this.selectedItems;
+    };
+    AnalyzesListComponent.prototype.checkForMerge = function (item) {
+        var domEl = document.querySelector('#checkField' + item._id);
+        if (this.isSelect(item)) {
+            this.unSelectItem(item);
+        }
+        else {
+            if (this.selectedItems.length < 3) {
+                this.selectItem(item);
+            }
+            else {
+                domEl.checked = false;
+            }
+        }
+    };
+    AnalyzesListComponent.prototype.clearSelected = function () {
+        this.selectedItems = [];
+    };
+    AnalyzesListComponent.prototype.defaultCheck = function (item) {
         if (this.isSelect(item))
             this.unSelectItem(item);
         else
             this.selectItem(item);
         this.eCheck.emit(item);
     };
-    GoodsListComponent.prototype.selectItem = function (item) {
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('analyzes'), 
+        __metadata('design:type', Array)
+    ], AnalyzesListComponent.prototype, "analyzes", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('viewtype'), 
+        __metadata('design:type', String)
+    ], AnalyzesListComponent.prototype, "viewType", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('options'), 
+        __metadata('design:type', Object), 
+        __metadata('design:paramtypes', [Object])
+    ], AnalyzesListComponent.prototype, "options", null);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('startmerge'), 
+        __metadata('design:type', Object)
+    ], AnalyzesListComponent.prototype, "startMerge", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('delete'), 
+        __metadata('design:type', Object)
+    ], AnalyzesListComponent.prototype, "eDelete", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('check'), 
+        __metadata('design:type', Object)
+    ], AnalyzesListComponent.prototype, "eCheck", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('edit'), 
+        __metadata('design:type', Object)
+    ], AnalyzesListComponent.prototype, "eEdit", void 0);
+    AnalyzesListComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-analyzes-list',
+            template: __webpack_require__(1119),
+            styles: [__webpack_require__(1113)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AnalyzesListComponent);
+    return AnalyzesListComponent;
+}());
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes-list.component.js.map
+
+/***/ }),
+
+/***/ 1093:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesProductListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AnalyzesProductListComponent = (function () {
+    function AnalyzesProductListComponent() {
+        this.analyzes = [];
+        this.eCheck = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.merge = [];
+        this.mergeMode = false;
+        this.selectedItems = [];
+    }
+    AnalyzesProductListComponent.prototype.ngOnInit = function () {
+    };
+    AnalyzesProductListComponent.prototype.clickItem = function (item) {
+        this.currentItem = item;
+        this.defaultCheck(item);
+    };
+    AnalyzesProductListComponent.prototype.selectItem = function (item) {
         this.selectedItems.push(item);
     };
-    GoodsListComponent.prototype.unSelectItem = function (item) {
+    AnalyzesProductListComponent.prototype.unSelectItem = function (item) {
         var _this = this;
-        this.selectedItems.find(function (found, index) {
-            if (found._id == item._id) {
+        this.selectedItems.forEach(function (found, index) {
+            if (found._id == item._id)
                 _this.selectedItems.splice(index, 1);
-                return true;
-            }
         });
     };
-    GoodsListComponent.prototype.isSelect = function (item) {
+    AnalyzesProductListComponent.prototype.isSelect = function (item) {
         return !!this.selectedItems.find(function (found) {
             if (found._id === item._id)
                 return true;
         });
     };
-    GoodsListComponent.prototype.getSelectedItems = function () {
+    AnalyzesProductListComponent.prototype.getSelectedItems = function () {
         return this.selectedItems;
     };
-    GoodsListComponent.prototype.clearSelected = function () {
+    AnalyzesProductListComponent.prototype.clearSelected = function () {
         this.selectedItems = [];
     };
-    GoodsListComponent.prototype.onAdd = function (item) {
-        this.addItem(item);
-        this.eAdd.emit(item);
+    AnalyzesProductListComponent.prototype.defaultCheck = function (item) {
+        this.selectItem(item);
+        this.eCheck.emit(item);
     };
     __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('goods'), 
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('analyzes'), 
         __metadata('design:type', Array)
-    ], GoodsListComponent.prototype, "goods", void 0);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('options'), 
-        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__goodsListOptions__["IGoodsListOptions"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__goodsListOptions__["IGoodsListOptions"]) === 'function' && _a) || Object), 
-        __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__goodsListOptions__["IGoodsListOptions"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__goodsListOptions__["IGoodsListOptions"]) === 'function' && _b) || Object])
-    ], GoodsListComponent.prototype, "options", null);
+    ], AnalyzesProductListComponent.prototype, "analyzes", void 0);
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('check'), 
-        __metadata('design:type', (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _c) || Object)
-    ], GoodsListComponent.prototype, "eCheck", void 0);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('delete'), 
-        __metadata('design:type', (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _d) || Object)
-    ], GoodsListComponent.prototype, "eDelete", void 0);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('edit'), 
-        __metadata('design:type', (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _e) || Object)
-    ], GoodsListComponent.prototype, "eEdit", void 0);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('add'), 
-        __metadata('design:type', (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _f) || Object)
-    ], GoodsListComponent.prototype, "eAdd", void 0);
-    GoodsListComponent = __decorate([
+        __metadata('design:type', Object)
+    ], AnalyzesProductListComponent.prototype, "eCheck", void 0);
+    AnalyzesProductListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-goods-list',
-            template: __webpack_require__(1117),
-            styles: [__webpack_require__(1112)]
+            selector: 'app-analyzes-product-list',
+            template: __webpack_require__(1120),
+            styles: [__webpack_require__(1114)]
         }), 
         __metadata('design:paramtypes', [])
-    ], GoodsListComponent);
-    return GoodsListComponent;
-    var _a, _b, _c, _d, _e, _f;
+    ], AnalyzesProductListComponent);
+    return AnalyzesProductListComponent;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/goods-list.component.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes-product-list.component.js.map
 
 /***/ }),
 
@@ -1206,9 +1318,9 @@ var GoodsListComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__goods_service__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__goods_list_goods_list_component__ = __webpack_require__(1092);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodsWidgetModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__analyzes_list_analyzes_list_component__ = __webpack_require__(1092);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__analyzes_product_list_analyzes_product_list_component__ = __webpack_require__(1093);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesWidgetModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1225,10 +1337,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var GoodsWidgetModule = (function () {
-    function GoodsWidgetModule() {
+var AnalyzesWidgetModule = (function () {
+    function AnalyzesWidgetModule() {
     }
-    GoodsWidgetModule = __decorate([
+    AnalyzesWidgetModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
@@ -1236,119 +1348,42 @@ var GoodsWidgetModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3_angular2_materialize_src__["a" /* MaterializeModule */],
                 __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__["a" /* SharedModule */]
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_6__goods_list_goods_list_component__["a" /* GoodsListComponent */]],
-            providers: [__WEBPACK_IMPORTED_MODULE_5__goods_service__["a" /* GoodsService */]],
-            exports: [__WEBPACK_IMPORTED_MODULE_6__goods_list_goods_list_component__["a" /* GoodsListComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_5__analyzes_list_analyzes_list_component__["a" /* AnalyzesListComponent */], __WEBPACK_IMPORTED_MODULE_6__analyzes_product_list_analyzes_product_list_component__["a" /* AnalyzesProductListComponent */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_5__analyzes_list_analyzes_list_component__["a" /* AnalyzesListComponent */], __WEBPACK_IMPORTED_MODULE_6__analyzes_product_list_analyzes_product_list_component__["a" /* AnalyzesProductListComponent */]]
         }), 
         __metadata('design:paramtypes', [])
-    ], GoodsWidgetModule);
-    return GoodsWidgetModule;
+    ], AnalyzesWidgetModule);
+    return AnalyzesWidgetModule;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/goods.widget.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes.widget.js.map
 
 /***/ }),
 
-/***/ 1099:
+/***/ 1113:
 /***/ (function(module, exports) {
 
-//# sourceMappingURL=D:/projects/angular-med/src/goodsListOptions.js.map
+module.exports = ".helix-color {\r\n    color: #186400;\r\n}\r\n\r\n.cmd-color {\r\n    color: #642a00;\r\n}\r\n\r\n.invitro-color {\r\n    color: #001a64;\r\n}\r\n\r\n.col-title {\r\n    width: 500px;\r\n}\r\n\r\n.small-table {\r\n    font-size: 85%;\r\n}\r\n\r\n.small-table td,\r\n.small-table th {\r\n    padding: 4px;\r\n}\r\n\r\n.helix-th {\r\n    min-width: 55px;\r\n}"
 
 /***/ }),
 
-/***/ 1112:
+/***/ 1114:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".helix-color {\r\n    color: #186400;\r\n}\r\n\r\n.cmd-color {\r\n    color: #642a00;\r\n}\r\n\r\n.invitro-color {\r\n    color: #001a64;\r\n}\r\n\r\n.col-title {\r\n    width: 500px;\r\n}\r\n\r\n.small-table {\r\n    font-size: 85%;\r\n}\r\n\r\n.small-table td,\r\n.small-table th {\r\n    padding: 4px;\r\n}\r\n\r\n.helix-td {\r\n    min-width: 55px;\r\n}"
 
 /***/ }),
 
-/***/ 1117:
+/***/ 1119:
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table highlight\">\n  <thead>\n    <tr>\n        <th data-field=\"name\">Наименование</th>\n        <th data-field=\"price\" *ngIf=\"options.price\">Цена</th>\n        <th data-field=\"tags\" *ngIf=\"options.tags\">Тэг</th>\n        <th *ngIf=\"options.tools\">Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of goods\" [ngClass]=\"{'teal lighten-4' : item.check}\">\n      <td>{{item.title}}</td>\n      <td *ngIf=\"options.price\">{{item.price}}</td>\n      <td *ngIf=\"options.tags\">{{item.tag_names.join(\", \")}}</td>\n      <td *ngIf=\"options.tools\" class=\"tools\">\n        <button *ngIf=\"options.tools.add\" (click)=\"onAdd(item)\" class=\"btn btn-floating\"><i class=\"material-icons\">add</i></button>\n        <app-action-buttons \n          (edit)=\"editItem(item)\"\n          (delete)=\"deleteItem(item)\"\n          (check)=\"clickItem(item)\"\n          [options]=\"options.tools\"\n          [checked]=\"isSelect(item)\">\n        </app-action-buttons>\n      </td>\n    </tr>\n  </tbody>\n</table>"
+module.exports = "<table class=\"table bordered highlight small-table\">\n  <thead>\n    <tr>\n        <th data-field=\"art\" colspan=\"3\" class=\"col-art text-align-center\">Артикул</th>\n        <th data-field=\"title\" rowspan=\"2\" class=\"col-title\">Наименование</th>\n        <th data-field=\"price\" colspan=\"3\" class=\"col-price text-align-center\" *ngIf=\"options.view.priceLabs\">Цена</th>\n        <th rowspan=\"2\" class=\"col-price text-align-center\" *ngIf=\"options.view.priceProd\">Продажа</th>\n        <th rowspan=\"2\" class=\"col-action\" *ngIf=\"options.view.tools\">Действия</th>\n    </tr>\n    <tr>\n        <th class=\"helix-th\">Helix</th>\n        <th>CMD</th>\n        <th>Инвитро</th>\n        <th *ngIf=\"options.view.priceLabs\">Helix</th>\n        <th *ngIf=\"options.view.priceLabs\">CMD</th>\n        <th *ngIf=\"options.view.priceLabs\">Инвитро</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of analyzes\">\n      <td class=\"helix-color\">{{item.art.helix ? item.art.helix : \"-\"}}</td>\n      <td class=\"cmd-color\">{{item.art.cmd ? item.art.cmd : \"-\"}}</td>\n      <td class=\"invitro-color\">{{item.art.invitro ? item.art.invitro : \"-\"}}</td>\n      <td>\n        <span class=\"helix-color\">H: {{item.title.helix ? item.title.helix : 'Не указан'}}</span><br/>\n        <span class=\"cmd-color\">C: {{item.title.cmd ? item.title.cmd : 'Не указан'}}</span><br/>\n        <span class=\"invitro-color\">I: {{item.title.invitro ? item.title.invitro : 'Не указан'}}</span>\n      </td>\n      <td class=\"helix-color\" *ngIf=\"options.view.priceLabs\">{{item.priceLabs.helix ? item.priceLabs.helix : 0}} / {{item.priceProd.helix ? item.priceProd.helix : 0}}</td>\n      <td class=\"cmd-color\" *ngIf=\"options.view.priceLabs\">{{item.priceLabs.cmd ? item.priceLabs.cmd : 0}} / {{item.priceProd.cmd ? item.priceProd.cmd : 0}}</td>\n      <td class=\"invitro-color\" *ngIf=\"options.view.priceLabs\">{{item.priceLabs.invitro ? item.priceLabs.invitro : 0}} / {{item.priceProd.invitro ? item.priceProd.invitro : 0}}</td>\n      <td class=\"text-align-center\" *ngIf=\"options.view.price\">{{item.price}}</td>\n      <td *ngIf=\"!mergeMode && options.tools\" class=\"td-actions\"> \n        <button *ngIf=\"options.tools.merge\" (click)=\"mergeStart(item)\" class=\"btn btn-floating\" ><i class=\"material-icons\">assignment_late</i></button>\n        <app-action-buttons \n          (edit)=\"editItem(item)\"\n          (delete)=\"deleteItem(item)\"\n          (check)=\"clickItem(item)\"\n          [options]=\"options.tools\"\n          [checked]=\"isSelect(item)\">\n        </app-action-buttons>\n      </td>\n      <td *ngIf=\"mergeMode && options.tools\" class=\"td-actions\">\n        <div class=\"input-field\">\n          <input #itemId type=\"checkbox\" class=\"filled-in\" id=\"checkField{{item._id}}\" (click)=\"clickItem(item)\"/>\n          <label for=\"checkField{{item._id}}\"></label>\n        </div>\n      </td>\n    </tr>\n  </tbody>\n</table>"
 
 /***/ }),
 
-/***/ 1140:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 1120:
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__good__ = __webpack_require__(1090);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__goods_service__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__ = __webpack_require__(1065);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__ = __webpack_require__(282);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodAddComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var GoodAddComponent = (function () {
-    function GoodAddComponent(_toolbar, _goodsService, _toastService, _specialtiesService) {
-        this._toolbar = _toolbar;
-        this._goodsService = _goodsService;
-        this._toastService = _toastService;
-        this._specialtiesService = _specialtiesService;
-        this.submitted = false;
-    }
-    GoodAddComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._toolbar.change({
-            title: "Добавить товар",
-            name: "goods.add"
-        });
-        this.good = new __WEBPACK_IMPORTED_MODULE_2__good__["a" /* Good */]();
-        this._specialtiesService.get()
-            .subscribe(function (response) { return _this.tags = response; });
-        this.form = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
-            title: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].minLength(5)]),
-            description: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* FormControl */](),
-            price: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* FormControl */](),
-            tags: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* FormControl */](),
-            active: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* FormControl */]('')
-        });
-    };
-    GoodAddComponent.prototype.clearForm = function (options) {
-        if (this.good != undefined) {
-            this.good.clear();
-        }
-        else {
-            this.good = new __WEBPACK_IMPORTED_MODULE_2__good__["a" /* Good */]();
-        }
-    };
-    GoodAddComponent.prototype.onSubmit = function (values, valid) {
-        var _this = this;
-        if (valid) {
-            this._goodsService.add(values)
-                .subscribe(function (data) { return _this._toastService.toast("Товар успешно добавлен!"); });
-        }
-    };
-    GoodAddComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-good-add',
-            template: __webpack_require__(1227),
-            styles: [__webpack_require__(1193)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__goods_service__["a" /* GoodsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__goods_service__["a" /* GoodsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__["a" /* ToastService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _d) || Object])
-    ], GoodAddComponent);
-    return GoodAddComponent;
-    var _a, _b, _c, _d;
-}());
-//# sourceMappingURL=D:/projects/angular-med/src/good-add.component.js.map
+module.exports = "<table class=\"table bordered highlight small-table\">\r\n  <thead>\r\n    <tr>\r\n        <th class=\"text-align-center\" colspan=\"3\">Артикулы</th>\r\n        <th class=\"col-title\">Наименование</th>\r\n        <th class=\"col-price text-align-center\">Цена</th>\r\n        <th class=\"col-action\">*</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr *ngFor=\"let item of analyzes\">\r\n      <td class=\"helix-color helix-td\">{{item.art.helix ? item.art.helix : \"-\"}}</td>\r\n      <td class=\"cmd-color\">{{item.art.cmd ? item.art.cmd : \"-\"}}</td>\r\n      <td class=\"invitro-color\">{{item.art.invitro ? item.art.invitro : \"-\"}}</td>\r\n      <td>{{item.finishTitle}}</td>\r\n      <td class=\"text-align-center\" >{{item.price}}</td>\r\n      <td class=\"td-actions\"> \r\n        <button (click)=\"clickItem(item)\" class=\"btn btn-floating\" ><i class=\"material-icons\">add</i></button>\r\n      </td>\r\n    </tr>\r\n  </tbody>\r\n</table>"
 
 /***/ }),
 
@@ -1357,13 +1392,7 @@ var GoodAddComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__good__ = __webpack_require__(1090);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__goods_service__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__ = __webpack_require__(1065);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_tools_service__ = __webpack_require__(452);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodUpdateComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesAddComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1374,72 +1403,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-
-
-
-
-var GoodUpdateComponent = (function () {
-    function GoodUpdateComponent(_route, _tools, _goodsService, _specialtiesService) {
-        this._route = _route;
-        this._tools = _tools;
-        this._goodsService = _goodsService;
-        this._specialtiesService = _specialtiesService;
+var AnalyzesAddComponent = (function () {
+    function AnalyzesAddComponent() {
     }
-    GoodUpdateComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._tools.getToolbar().change({
-            title: "Обновить товар"
-        });
-        this._specialtiesService.get()
-            .subscribe(function (response) { return _this.tags = response; });
-        this.form = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormGroup */]({
-            _id: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required]),
-            title: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].minLength(5)]),
-            description: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
-            price: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
-            tags: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](''),
-            active: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]('')
-        });
-        this._route.params.forEach(function (params) {
-            var id = params['id'];
-            _this._goodsService.getOne(id)
-                .subscribe(function (good) {
-                _this.good = good;
-                _this.form
-                    .patchValue(_this.good);
-            });
-        });
+    AnalyzesAddComponent.prototype.ngOnInit = function () {
     };
-    GoodUpdateComponent.prototype.clearForm = function (options) {
-        if (this.good != undefined) {
-            this.good.clear();
-        }
-        else {
-            this.good = new __WEBPACK_IMPORTED_MODULE_3__good__["a" /* Good */]();
-        }
-    };
-    GoodUpdateComponent.prototype.onSubmit = function (values, valid) {
-        var _this = this;
-        //console.log(values);
-        if (valid) {
-            this._goodsService.update(values)
-                .subscribe(function (data) { return _this._tools.getToast().toast("Товар успешно обновлен!"); });
-        }
-    };
-    GoodUpdateComponent = __decorate([
+    AnalyzesAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-good-update',
+            selector: 'app-analyzes-add',
             template: __webpack_require__(1228),
             styles: [__webpack_require__(1194)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_tools_service__["a" /* ToolsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__goods_service__["a" /* GoodsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__goods_service__["a" /* GoodsService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _d) || Object])
-    ], GoodUpdateComponent);
-    return GoodUpdateComponent;
-    var _a, _b, _c, _d;
+        __metadata('design:paramtypes', [])
+    ], AnalyzesAddComponent);
+    return AnalyzesAddComponent;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/good-update.component.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes-add.component.js.map
 
 /***/ }),
 
@@ -1449,9 +1428,13 @@ var GoodUpdateComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__goods_service__ = __webpack_require__(1069);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__analyzes_service__ = __webpack_require__(1088);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__analyzes__ = __webpack_require__(1082);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesUpdateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1465,63 +1448,243 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var GoodsComponent = (function () {
-    function GoodsComponent(_tools, _goods, _router) {
-        this._tools = _tools;
-        this._goods = _goods;
+
+
+
+
+var AnalyzesUpdateComponent = (function () {
+    function AnalyzesUpdateComponent(_route, _router, _toolbar, _toastService, _pager, _analyzesService) {
+        this._route = _route;
         this._router = _router;
-        this.reloadGoods();
+        this._toolbar = _toolbar;
+        this._toastService = _toastService;
+        this._pager = _pager;
+        this._analyzesService = _analyzesService;
     }
-    GoodsComponent.prototype.ngOnInit = function () {
+    AnalyzesUpdateComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._tools.getToolbar().change({
-            title: "Список товаров",
-            name: "goods",
-            actions: {
-                add: function () { return _this._router.navigate(['goods/add']); }
-            },
-            actionsPosition: {
-                extend: ['add']
-            }
+        this._pager.notShow();
+        this._toolbar.change({
+            title: "Обновить анализ"
+        });
+        this.updateForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormGroup */]({
+            _id: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required]),
+            art: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormGroup */]({
+                cmd: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                helix: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                invitro: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]()
+            }),
+            title: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormGroup */]({
+                cmd: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                helix: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                invitro: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]()
+            }),
+            priceLabs: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormGroup */]({
+                cmd: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                helix: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                invitro: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]()
+            }),
+            priceProd: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormGroup */]({
+                cmd: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                helix: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                invitro: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]()
+            }),
+            time: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormGroup */]({
+                cmd: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                helix: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+                invitro: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]()
+            }),
+            description: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */](),
+            active: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormControl */]()
+        });
+        this._route.params.forEach(function (params) {
+            var id = params['id'];
+            _this._analyzesService.getOne(id)
+                .subscribe(function (item) {
+                _this.analyz = new __WEBPACK_IMPORTED_MODULE_7__analyzes__["a" /* Analyzes */](item);
+                _this.updateForm
+                    .patchValue(_this.analyz);
+            });
         });
     };
-    GoodsComponent.prototype.reloadGoods = function () {
-        this.goods$ = this._goods.get();
-        this.goods$.subscribe();
+    AnalyzesUpdateComponent.prototype.clearForm = function (options) {
+        if (this.analyz != undefined) {
+            this.analyz.clear();
+        }
+        else {
+            this.analyz = new __WEBPACK_IMPORTED_MODULE_7__analyzes__["a" /* Analyzes */]();
+        }
     };
-    GoodsComponent.prototype.onEdit = function (item) {
-        this._router.navigate(['goods/update/', item._id]);
-    };
-    GoodsComponent.prototype.deleteItem = function (item) {
+    AnalyzesUpdateComponent.prototype.onSubmit = function (values, valid) {
         var _this = this;
-        var self = this;
-        var remove$ = this._goods.remove(item._id);
-        remove$.subscribe(function (data) {
-            if (data.status == 'ok') {
-                _this.reloadGoods();
-                _this._tools.getToast().toast("Товар удален");
-            }
-        });
+        //console.log(values);
+        if (valid) {
+            this._analyzesService.update(values)
+                .subscribe(function (data) {
+                _this._router.navigate(['/analyzes']);
+                _this._toastService.toast("Анализ успешно обновлен!");
+            });
+        }
     };
-    GoodsComponent = __decorate([
+    AnalyzesUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-goods',
+            selector: 'app-analyzes-update',
             template: __webpack_require__(1229),
             styles: [__webpack_require__(1195)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__["a" /* ToolsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__goods_service__["a" /* GoodsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__goods_service__["a" /* GoodsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _c) || Object])
-    ], GoodsComponent);
-    return GoodsComponent;
-    var _a, _b, _c;
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__analyzes_service__["a" /* AnalyzesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__analyzes_service__["a" /* AnalyzesService */]) === 'function' && _f) || Object])
+    ], AnalyzesUpdateComponent);
+    return AnalyzesUpdateComponent;
+    var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/projects/angular-med/src/goods.component.js.map
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes-update.component.js.map
 
 /***/ }),
 
-/***/ 1193:
-/***/ (function(module, exports) {
+/***/ 1143:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__analyzes__ = __webpack_require__(1082);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__analyzes_service__ = __webpack_require__(1088);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__ = __webpack_require__(452);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_pagination_service__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_modal_modal_component__ = __webpack_require__(1043);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__widgets_analyzes_list_analyzes_list_component__ = __webpack_require__(1092);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var AnalyzesComponent = (function () {
+    function AnalyzesComponent(_analyzesService, _tools, _router, _pagination) {
+        this._analyzesService = _analyzesService;
+        this._tools = _tools;
+        this._router = _router;
+        this._pagination = _pagination;
+        this.initAnalyzes();
+    }
+    AnalyzesComponent.prototype.initAnalyzes = function () {
+        this._pagination.setParams({
+            nPerPage: 10
+        }, 'analyzes-list');
+        this.reloadAnalyzes();
+    };
+    AnalyzesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.filter = {
+            labs: { helix: false, invitro: false, cmd: false }
+        };
+        this._tools.getToolbar().change({
+            title: "Список анализов",
+            name: "analyzes",
+            actions: {
+                //add: () => this._router.navigate(['analyzes/add']),
+                search: function (searchText) {
+                    _this._pagination.setParams({
+                        search: searchText,
+                        currentPage: 1
+                    }, 'analyzes-list');
+                    _this.reloadAnalyzes();
+                },
+                done: {
+                    ok: function () {
+                        _this.mergeModal.open();
+                    },
+                    close: function () {
+                        _this.analyzesList.mergeStop();
+                    }
+                }
+            },
+            actionsPosition: {
+                extend: ['search'] //'add', 
+            }
+        });
+        this.reloadAnalyzes();
+    };
+    AnalyzesComponent.prototype.deleteItem = function (item) {
+        var _this = this;
+        var self = this;
+        var deleteAnalyzes$ = this._analyzesService.remove(item._id);
+        deleteAnalyzes$
+            .subscribe(function (data) {
+            if (data.status == 'ok') {
+                _this.reloadAnalyzes();
+                _this._tools.getToast().toast("Анализ удален");
+            }
+        });
+    };
+    AnalyzesComponent.prototype.editItem = function (item) {
+        this._router.navigate(['/analyzes/update/' + item._id]);
+    };
+    AnalyzesComponent.prototype.mergeItems = function (items) {
+        var _this = this;
+        var mergeAnalyzes$ = this._analyzesService.merge(items);
+        mergeAnalyzes$
+            .subscribe(function (data) {
+            _this.analyzesList.mergeStop();
+            _this._tools.getToolbar().setMode('default');
+            _this.reloadAnalyzes();
+        });
+    };
+    AnalyzesComponent.prototype.changePageAnalyzes = function (params) {
+        this.reloadAnalyzes(params);
+    };
+    AnalyzesComponent.prototype.reloadAnalyzes = function (params) {
+        var _this = this;
+        params = params !== undefined ? params : this._pagination.getParams('analyzes-list');
+        this.analyzes$ = this._analyzesService.get(params)
+            .map(function (analyzes) { return analyzes.map(function (analyz) { return new __WEBPACK_IMPORTED_MODULE_3__analyzes__["a" /* Analyzes */](analyz); }); });
+        var analyzesCount$ = this._analyzesService.getCount(params);
+        var $combined = __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].concat(this.analyzes$, analyzesCount$);
+        $combined
+            .subscribe(function (result) {
+            if (typeof result === 'number') {
+                _this._pagination.setParams({
+                    countItems: result
+                }, 'analyzes-list');
+                _this._pagination.getPager('analyzes-list');
+            }
+        });
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('mergeModal'), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_7__shared_modal_modal_component__["a" /* ModalComponent */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_modal_modal_component__["a" /* ModalComponent */]) === 'function' && _a) || Object)
+    ], AnalyzesComponent.prototype, "mergeModal", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('analyzesList'), 
+        __metadata('design:type', (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__widgets_analyzes_list_analyzes_list_component__["a" /* AnalyzesListComponent */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__widgets_analyzes_list_analyzes_list_component__["a" /* AnalyzesListComponent */]) === 'function' && _b) || Object)
+    ], AnalyzesComponent.prototype, "analyzesList", void 0);
+    AnalyzesComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-analyzes',
+            template: __webpack_require__(1230),
+            styles: [__webpack_require__(1196)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__analyzes_service__["a" /* AnalyzesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__analyzes_service__["a" /* AnalyzesService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _f) || Object])
+    ], AnalyzesComponent);
+    return AnalyzesComponent;
+    var _a, _b, _c, _d, _e, _f;
+}());
+//# sourceMappingURL=D:/projects/angular-med/src/analyzes.component.js.map
 
 /***/ }),
 
@@ -1539,24 +1702,31 @@ module.exports = ""
 
 /***/ }),
 
-/***/ 1227:
+/***/ 1196:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" class=\"form-container\">\n    <form class=\"col s12\" [formGroup]=\"form\" novalidate (ngSubmit)=\"onSubmit(form.value, form.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"titleField\" formControlName=\"title\" type=\"text\" placeholder=\"Наименование\" \n            [ngClass]=\"{'invalid': form.controls.title.dirty && !form.controls.title.valid, 'valid': form.controls.title.valid}\">\n          <label for=\"titleField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\"></textarea>\n          <label for=\"descrTextarea\">Описание</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"priceDefField\" formControlName=\"price\" type=\"number\" placeholder=\"Цена\">\n          <label for=\"priceDefField\">Цена</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n            <option value=\"\" disabled selected>Тэг</option>\n            <option value=\"{{tag._id}}\" *ngFor=\"let tag of tags\">{{tag.name}}</option>\n          </select>\n          <label for=\"tagsSelect\">Тэг</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!form.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/goods\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
+module.exports = ".analyzes-list {\r\n    width: 1200px;\r\n}"
 
 /***/ }),
 
 /***/ 1228:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" class=\"form-container\" *ngIf=\"service\">\n    <form class=\"col s12\" [formGroup]=\"form\" novalidate (ngSubmit)=\"onSubmit(form.value, form.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"titleField\" formControlName=\"title\" type=\"text\" placeholder=\"Наименование\" \n            [ngClass]=\"{'invalid': form.controls.title.dirty && !form.controls.title.valid, 'valid': form.controls.title.valid}\">\n          <label for=\"titleField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\"></textarea>\n          <label for=\"descrTextarea\">Описание</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"priceField\" formControlName=\"price\" type=\"number\" placeholder=\"Цена\">\n          <label for=\"priceField\">Цена</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n            <option value=\"\" disabled selected>Выберите тэг</option>\n            <option value=\"{{tag._id}}\" *ngFor=\"let tag of tags\">{{tag.name}}</option>\n          </select>\n          <label for=\"tagsSelect\">Тэг</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!form.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/goods\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
+module.exports = "<p>\n  analyzes-add works!\n</p>\n"
 
 /***/ }),
 
 /***/ 1229:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"default_wrapper\">\n  <div class=\"panel\">\n    <app-goods-list #goodsList [goods]=\"goods$ | async\" (delete)=\"deleteModal.open()\" (edit)=\"onEdit($event)\"></app-goods-list>\n  </div>\n</div>\n\n<app-modal #deleteModal (success)=\"deleteItem(goodsList.currentItem)\">\n    <h4>Удалить услугу</h4>\n    <p *ngIf=\"goodsList.currentItem\">Вы хотите удалить услугу: {{goodsList.currentItem.title}}? <br> Цены: {{goodsList.currentItem.price | json}}</p>\n</app-modal>"
+module.exports = "<div class=\"row\" class=\"form-container\" *ngIf=\"analyz\">\n    <form class=\"col s12\" [formGroup]=\"updateForm\" novalidate (ngSubmit)=\"onSubmit(updateForm.value, updateForm.valid)\">\n      <div class=\"row\" formGroupName=\"art\">\n        <div class=\"col l12\">Артикул</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Артикул Helix\">\n          <label for=\"artHelix\" [ngClass]=\"{active: updateForm.value.art.helix}\">Артикул Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Артикул CMD\">\n          <label for=\"artCMD\" [ngClass]=\"{active: updateForm.value.art.cmd}\">Артикул CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Артикул Инвитро\">\n          <label for=\"artInvitro\" [ngClass]=\"{active: updateForm.value.art.invitro}\">Артикул Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"title\">\n        <div class=\"col l12\">Заголовок</div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Заголовок Helix\">\n          <label for=\"titleHelix\" [ngClass]=\"{active: updateForm.value.title.helix}\">Заголовок Helix</label>\n        </div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Заголовок CMD\">\n          <label for=\"titleCMD\" [ngClass]=\"{active: updateForm.value.title.cmd}\">Заголовок CMD</label>\n        </div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Заголовок Инвитро\">\n          <label for=\"titleInvitro\" [ngClass]=\"{active: updateForm.value.title.invitro}\">Заголовок Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"priceLabs\">\n        <div class=\"col l12\">Цена</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceHelix\" formControlName=\"helix\" type=\"number\" placeholder=\"Цена Helix\">\n          <label for=\"priceHelix\" [ngClass]=\"{active: updateForm.value.priceLabs.helix}\">Цена Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceCMD\" formControlName=\"cmd\" type=\"number\" placeholder=\"Цена CMD\">\n          <label for=\"priceCMD\" [ngClass]=\"{active: updateForm.value.priceLabs.cmd}\">Цена CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceInvitro\" formControlName=\"invitro\" type=\"number\" placeholder=\"Цена Инвитро\">\n          <label for=\"priceInvitro\" [ngClass]=\"{active: updateForm.value.priceLabs.invitro}\">Цена Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"priceProd\">\n        <div class=\"col l12\">Цена на продажу</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceHelix\" formControlName=\"helix\" type=\"number\" placeholder=\"Цена Helix\">\n          <label for=\"priceHelix\" [ngClass]=\"{active: updateForm.value.priceProd.helix}\">Цена Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceCMD\" formControlName=\"cmd\" type=\"number\" placeholder=\"Цена CMD\">\n          <label for=\"priceCMD\" [ngClass]=\"{active: updateForm.value.priceProd.cmd}\">Цена CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceInvitro\" formControlName=\"invitro\" type=\"number\" placeholder=\"Цена Инвитро\">\n          <label for=\"priceInvitro\" [ngClass]=\"{active: updateForm.value.priceProd.invitro}\">Цена Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"time\">\n        <div class=\"col l12\">Время</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Время Helix\">\n          <label for=\"timeHelix\" [ngClass]=\"{active: updateForm.value.time.helix}\">Время Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Время CMD\">\n          <label for=\"timeCMD\" [ngClass]=\"{active: updateForm.value.time.cmd}\">Время CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Время Инвитро\">\n          <label for=\"timeInvitro\" [ngClass]=\"{active: updateForm.value.time.invitro}\">Время Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\"></textarea>\n          <label for=\"descrTextarea\" data-error=\"Вы не заполнили поле\" [ngClass]=\"{active: updateForm.value.description}\">Описание</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!updateForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/analyzes\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
+
+/***/ }),
+
+/***/ 1230:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"fix-wrapper analyzes-list\">\n  <div class=\"panel\">\n    <div class=\"panel-content\">\n      <app-analyzes-list #analyzesList [analyzes] = \"analyzes$ | async\" (startmerge)=\"_tools.getToolbar().setMode('done');\" (delete)=\"deleteModal.open()\" (edit)=\"editItem($event)\"></app-analyzes-list>\n    </div>\n    <app-pagination class=\"center-align\" name=\"analyzes-list\" (changePage)=\"changePageAnalyzes($event)\"></app-pagination>\n  </div>\n</div>\n\n<!-- Merge Modal -->\n<app-modal #mergeModal (success)=\"mergeItems(analyzesList.selectedItems)\">\n    <h4>Объединить анализы</h4>\n    <p *ngIf=\"analyzesList.selectedItems.length > 0\">Вы хотите объединить следующие анализы?</p>\n    <app-analyzes-list [analyzes] = \"analyzesList.selectedItems\" [options]=\"{price: false, tools: false}\"></app-analyzes-list>\n</app-modal>\n\n<!-- Delete Modal -->\n<app-modal #deleteModal (success)=\"deleteItem(analyzesList.currentItem)\">\n    <h4>Удалить анализ</h4>\n    <p *ngIf=\"analyzesList.currentItem\">Вы хотите удалить анализ?</p>\n</app-modal>"
 
 /***/ })
 

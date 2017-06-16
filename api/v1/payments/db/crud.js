@@ -83,6 +83,7 @@ let PaymentManager = {
 							'type': { $first: "$type"},
 							discount: { $first: "$discount"},
 							status: { $first: "$status"},
+							note: { $first: "$note"},
 							person: { $first: "$person"}
 				   		}
 				   	},
@@ -126,6 +127,7 @@ let PaymentManager = {
 							'type': { $first: "$type"},
 							discount: { $first: "$discount"},
 							status: { $first: "$status"},
+							note: { $first: "$note"},
 							person: { $first: "$person"}
 				   		}
 				   	},
@@ -169,6 +171,7 @@ let PaymentManager = {
 							'type': { $first: "$type"},
 							discount: { $first: "$discount"},
 							status: { $first: "$status"},
+							note: { $first: "$note"},
 							person: { $first: "$person"}
 				   		}
 				   	}

@@ -9,12 +9,18 @@ const getTotalGoodsByDate = require("../db/reports/servicesReport").getTotalGood
 const PaymentSchema = require("../Payment.schema");
 
 app.get('/', function(req, res, next) {
+	let today = new Date();
+	today.setHours(0, 0, 0, 0);
+	let nextDay = new Date(today.getTime() + (24 * 60 * 60 * 1000));
+	let date_to = req.query.date_to ? new Date(req.query.date_to) : nextDay;
+	let date_from = req.query.date_from ? new Date(req.query.date_from) : today;
 	
+
 	Promise.all([
-		getTotalPaymentsByDate(new Date("2017-06-08T00:00:00.000Z"), new Date("2017-06-10T00:00:00.000Z")),
-		getTotalServicesByDate(new Date("2017-06-08T00:00:00.000Z"), new Date("2017-06-10T00:00:00.000Z")),
-		getTotalAnalyzesByDate(new Date("2017-06-08T00:00:00.000Z"), new Date("2017-06-10T00:00:00.000Z")),
-		getTotalGoodsByDate(new Date("2017-06-08T00:00:00.000Z"), new Date("2017-06-10T00:00:00.000Z"))
+		getTotalPaymentsByDate(date_from, date_to),
+		getTotalServicesByDate(date_from, date_to),
+		getTotalAnalyzesByDate(date_from, date_to),
+		getTotalGoodsByDate(date_from, date_to)
 	])
 	.then((result) => {
 		let [payments, services, analyzes, goods] = result;

@@ -138,6 +138,6 @@ function parseSearch(text) {
 
 function checkSpecialRule(req) {
 	if(req.user.group == 'user-spec') {
-		req.query.variant = req.user.doctorate;
+		req.query.variant = req.user.specialist.doctorate;
 	}
 }

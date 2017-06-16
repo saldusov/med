@@ -11,10 +11,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__widgets_specialists_widget__ = __webpack_require__(1105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__specialists_specialists_component__ = __webpack_require__(1164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__specialist_add_specialist_add_component__ = __webpack_require__(1162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__specialist_update_specialist_update_component__ = __webpack_require__(1163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__widgets_specialists_widget__ = __webpack_require__(1107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__specialists_specialists_component__ = __webpack_require__(1168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__specialist_add_specialist_add_component__ = __webpack_require__(1166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__specialist_update_specialist_update_component__ = __webpack_require__(1167);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpecialistsModule", function() { return SpecialistsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -944,7 +944,7 @@ module.exports = ""
 /***/ 1056:
 /***/ (function(module, exports) {
 
-module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1.2rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}"
+module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
 
 /***/ }),
 
@@ -1828,8 +1828,8 @@ var SpecialistsFormComponent = (function () {
     SpecialistsFormComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-specialists-form',
-            template: __webpack_require__(1119),
-            styles: [__webpack_require__(1114)],
+            template: __webpack_require__(1123),
+            styles: [__webpack_require__(1117)],
             providers: [__WEBPACK_IMPORTED_MODULE_2__specialties_specialties_service__["a" /* SpecialtiesService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _g) || Object])
@@ -1841,7 +1841,7 @@ var SpecialistsFormComponent = (function () {
 
 /***/ }),
 
-/***/ 1104:
+/***/ 1106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1887,8 +1887,8 @@ var SpecialistsListComponent = (function () {
     SpecialistsListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-specialists-list',
-            template: __webpack_require__(1120),
-            styles: [__webpack_require__(1115)]
+            template: __webpack_require__(1124),
+            styles: [__webpack_require__(1118)]
         }), 
         __metadata('design:paramtypes', [])
     ], SpecialistsListComponent);
@@ -1898,7 +1898,7 @@ var SpecialistsListComponent = (function () {
 
 /***/ }),
 
-/***/ 1105:
+/***/ 1107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1907,7 +1907,7 @@ var SpecialistsListComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialists_list_specialists_list_component__ = __webpack_require__(1104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialists_list_specialists_list_component__ = __webpack_require__(1106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__specialists_form_specialists_form_component__ = __webpack_require__(1091);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__specialists_service__ = __webpack_require__(1067);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__users_widgets_users_widget__ = __webpack_require__(453);
@@ -1957,35 +1957,35 @@ var SpecialistWidgetModule = (function () {
 
 /***/ }),
 
-/***/ 1114:
+/***/ 1117:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1115:
+/***/ 1118:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1119:
+/***/ 1123:
 /***/ (function(module, exports) {
 
 module.exports = "<form [formGroup]=\"form\"  novalidate (ngSubmit)=\"onSubmit()\">\n  <app-person-form-content [form]=\"form.controls.person\"></app-person-form-content>\n  <div class=\"row\">\n    <div class=\"input-field col s12 l6\">\n      <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n        <option value=\"\" disabled selected>Выберите специальность</option>\n        <option value=\"{{tag._id}}\" *ngFor=\"let tag of (tags$ | async)\">{{tag.name}}</option>\n      </select>\n      <label for=\"tagsSelect\">Специальность</label>\n    </div>\n    <div class=\"input-field col s12 l6\">\n      <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"locationsSelect\" multiple formControlName=\"locations\">\n        <option value=\"\" disabled selected>Выберите место работы</option>\n        <option value=\"{{loc.id}}\" *ngFor=\"let loc of locations\">{{loc.display}}</option>\n      </select>\n      <label for=\"locationsSelect\">Место работы</label>\n    </div>\n  </div>\n  <div class=\"row\" formGroupName=\"achievements\">\n    <div class=\"input-field col s3\" *ngFor=\"let achiev of achievements; let i = index\">\n      <input type=\"checkbox\" class=\"filled-in\" id=\"achievementsfield{{i}}\" [formControlName]=\"achiev.id\"/>\n      <label for=\"achievementsfield{{i}}\">{{achiev.display}}</label>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"input-field col s12 l6\">\n      <input id=\"experienceField\" formControlName=\"experience\" type=\"number\" placeholder=\"Опыт работы\">\n      <label for=\"experienceField\" data-error=\"Вы не заполнили поле\">Опыт работы</label>\n    </div>\n    <div class=\"input-field col s12 l6\">\n      <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"doctorateSelect\" formControlName=\"doctorate\">\n        <option value=\"\" disabled selected>Степень</option>\n        <option value=\"{{doctorate.id}}\" *ngFor=\"let doctorate of doctorates\">{{doctorate.display}}</option>\n      </select>\n      <label for=\"locationsSelect\">Степень</label>\n    </div>\n  </div>\n\t<!-- Сделать добавление сертификатов (изображение + текст) -->\n  <div class=\"row\">\n    <div class=\"input-field col s12\">\n      <input type=\"checkbox\" class=\"filled-in\" id=\"activeField\" formControlName=\"active\" />\n      <label for=\"activeField\">Активный</label>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col s12 l12 right-align\">\n      <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!form.valid || submitted) ? true : null\">Сохранить</button>\n      <a class=\"waves-effect waves-green btn-flat\" (click)=\"onClose()\">К списку</a>\n    </div>\n  </div>\n</form>"
 
 /***/ }),
 
-/***/ 1120:
+/***/ 1124:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"table\">\n  <thead>\n    <tr>\n        <th>ФИО</th>\n        <th>Телефон</th>\n        <th>Специальность</th>\n        <th>Дата создания</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of specialists\">\n      <td class=\"text-capitalize\">{{[item.person.last_name, item.person.first_name, item.person.second_name].join(\" \")}}</td>\n      <td>{{item.person.phone}}</td>\n      <td>{{item.tag_names.join(\", \")}}</td>\n      <td>{{item.createdAt | date:\"dd.MM.y\"}}</td>\n      <td>\n        <a (click)=\"editItem(item)\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n        <button (click)=\"deleteItem(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>"
 
 /***/ }),
 
-/***/ 1162:
+/***/ 1166:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2059,8 +2059,8 @@ var SpecialistAddComponent = (function () {
     SpecialistAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-specialist-add',
-            template: __webpack_require__(1249),
-            styles: [__webpack_require__(1215)],
+            template: __webpack_require__(1253),
+            styles: [__webpack_require__(1219)],
             providers: [__WEBPACK_IMPORTED_MODULE_3__persons_persons_service__["a" /* PersonsService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__persons_persons_service__["a" /* PersonsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__persons_persons_service__["a" /* PersonsService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__specialists_service__["a" /* SpecialistsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__specialists_service__["a" /* SpecialistsService */]) === 'function' && _e) || Object])
@@ -2072,7 +2072,7 @@ var SpecialistAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1163:
+/***/ 1167:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2167,8 +2167,8 @@ var SpecialistUpdateComponent = (function () {
     SpecialistUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-specialist-update',
-            template: __webpack_require__(1250),
-            styles: [__webpack_require__(1216)],
+            template: __webpack_require__(1254),
+            styles: [__webpack_require__(1220)],
             providers: [__WEBPACK_IMPORTED_MODULE_3__persons_persons_service__["a" /* PersonsService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_tools_service__["a" /* ToolsService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__persons_persons_service__["a" /* PersonsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__persons_persons_service__["a" /* PersonsService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__specialists_service__["a" /* SpecialistsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__specialists_service__["a" /* SpecialistsService */]) === 'function' && _f) || Object])
@@ -2180,7 +2180,7 @@ var SpecialistUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1164:
+/***/ 1168:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2245,8 +2245,8 @@ var SpecialistsComponent = (function () {
     SpecialistsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-specialists',
-            template: __webpack_require__(1251),
-            styles: [__webpack_require__(1217)]
+            template: __webpack_require__(1255),
+            styles: [__webpack_require__(1221)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__["a" /* ToolsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__specialists_service__["a" /* SpecialistsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__specialists_service__["a" /* SpecialistsService */]) === 'function' && _c) || Object])
     ], SpecialistsComponent);
@@ -2257,42 +2257,42 @@ var SpecialistsComponent = (function () {
 
 /***/ }),
 
-/***/ 1215:
+/***/ 1219:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1216:
+/***/ 1220:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1217:
+/***/ 1221:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1249:
+/***/ 1253:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"default-wrapper\">\n  <div class=\"panel\">\n    <app-specialists-form [formValues]=\"specialist\" (search)=\"searchPersons($event)\" (submited)=\"sendForm($event)\" (closed)=\"returnToList()\"></app-specialists-form>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1250:
+/***/ 1254:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n  <div class=\"col s12\">\n    <app-specialists-form [formValues]=\"specialist\" (imageselect)=\"blockLoad()\" (search)=\"searchPersons($event)\" (submited)=\"sendForm($event)\" (closed)=\"returnToList()\"></app-specialists-form>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1251:
+/***/ 1255:
 /***/ (function(module, exports) {
 
 module.exports = "<app-specialists-list #specialistsList [specialists] = \"specialists$ | async\" (delete)=\"deleteModal.open()\" (edit)=\"goEditPage($event)\"></app-specialists-list>\n\n<!-- Delete Modal -->\n<app-modal #deleteModal (success)=\"deleteItem(specialistsList.currentItem)\">\n    <h4>Удалить информацию врача</h4>\n    <p *ngIf=\"specialistsList.currentItem\">Вы хотите удалить информацию врача: {{[specialistsList.currentItem.person.last_name, specialistsList.currentItem.person.first_name, specialistsList.currentItem.person.second_name].join(\" \")}}? <br> Дата создания: {{specialistsList.currentItem.createdAt | date:\"dd.MM.y\"}} </p>\n</app-modal>"

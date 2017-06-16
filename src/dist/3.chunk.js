@@ -13,10 +13,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_shared_module__ = __webpack_require__(1040);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__persons_service__ = __webpack_require__(1041);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__widgets_persons_widget__ = __webpack_require__(1071);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__person_add_person_add_component__ = __webpack_require__(1156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__persons_persons_component__ = __webpack_require__(1158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__person_update_person_update_component__ = __webpack_require__(1157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__users_guards_auth_guard_service__ = __webpack_require__(1168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__person_add_person_add_component__ = __webpack_require__(1160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__persons_persons_component__ = __webpack_require__(1162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__person_update_person_update_component__ = __webpack_require__(1161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__users_guards_auth_guard_service__ = __webpack_require__(1172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__users_services_http_client_service__ = __webpack_require__(279);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonsModule", function() { return PersonsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -950,7 +950,7 @@ module.exports = ""
 /***/ 1056:
 /***/ (function(module, exports) {
 
-module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1.2rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}"
+module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
 
 /***/ }),
 
@@ -1478,7 +1478,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col s6 m3 l2\" *ngFor=\"le
 
 /***/ }),
 
-/***/ 1156:
+/***/ 1160:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1551,8 +1551,8 @@ var PersonAddComponent = (function () {
     PersonAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-person-add',
-            template: __webpack_require__(1243),
-            styles: [__webpack_require__(1209)]
+            template: __webpack_require__(1247),
+            styles: [__webpack_require__(1213)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__persons_service__["a" /* PersonsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__persons_service__["a" /* PersonsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object])
     ], PersonAddComponent);
@@ -1563,7 +1563,7 @@ var PersonAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1157:
+/***/ 1161:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1641,8 +1641,8 @@ var PersonUpdateComponent = (function () {
     PersonUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-person-update',
-            template: __webpack_require__(1244),
-            styles: [__webpack_require__(1210)]
+            template: __webpack_require__(1248),
+            styles: [__webpack_require__(1214)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__persons_service__["a" /* PersonsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__persons_service__["a" /* PersonsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */]) === 'function' && _c) || Object])
     ], PersonUpdateComponent);
@@ -1653,7 +1653,7 @@ var PersonUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1158:
+/***/ 1162:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1724,8 +1724,8 @@ var PersonsComponent = (function () {
     PersonsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-persons',
-            template: __webpack_require__(1245),
-            styles: [__webpack_require__(1211)]
+            template: __webpack_require__(1249),
+            styles: [__webpack_require__(1215)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__persons_service__["a" /* PersonsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__persons_service__["a" /* PersonsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_tools_service__["a" /* ToolsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _c) || Object])
     ], PersonsComponent);
@@ -1736,7 +1736,7 @@ var PersonsComponent = (function () {
 
 /***/ }),
 
-/***/ 1168:
+/***/ 1172:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1779,42 +1779,42 @@ var AuthGuard = (function () {
 
 /***/ }),
 
-/***/ 1209:
+/***/ 1213:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1210:
+/***/ 1214:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1211:
+/***/ 1215:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1243:
+/***/ 1247:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n  <form class=\"col s12\" [formGroup]=\"addForm\" novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n    <div class=\"row\">\n      <div class=\"input-field col s12 l4\">\n        <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\" \n          [ngClass]=\"{'invalid': addForm.controls.last_name.dirty && !addForm.controls.last_name.valid, 'valid': addForm.controls.last_name.valid}\">\n        <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n      </div>\n      <div class=\"input-field col s12 l4\">\n        <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\" \n          [ngClass]=\"{'invalid': addForm.controls.first_name.dirty && !addForm.controls.first_name.valid, 'valid': addForm.controls.first_name.valid}\">\n        <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n      </div>\n      <div class=\"input-field col s12 l4\">\n        <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n        <label for=\"secondNameField\">Отчество</label>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col s2\">\n        Пол:\n      </div>\n      <div class=\"col s10\">\n        <p class=\"col s12 l4\">\n          <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n          <label for=\"genderField2\">Женский</label>\n        </p>\n        <p class=\"col s12 l4\">\n          <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n          <label for=\"genderField1\">Мужской</label>\n        </p>\n        <p class=\"col s12 l4\">\n          <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n          <label for=\"genderField3\">Не определен</label>\n        </p>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"input-field col s12 l6\">Дата рождения: {{ person.birthdate | date: \"dd.MM.y\" }}</div>\n      <div class=\"input-field col s12 l6\">\n        <input materialize=\"pickadate\" [materializeParams]=\"[datePickerOptions]\" formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n        <label for=\"birthdateField\">Новая дата рождения</label>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"input-field col s12 l6\">\n        <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\" \n        [ngClass]=\"{'invalid': addForm.controls.phone.dirty && !addForm.controls.phone.valid, 'valid': addForm.controls.phone.valid}\">\n        <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n      </div>\n      <div class=\"input-field col s12 l6\">\n        <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\">\n        <label for=\"emailField\">Email</label>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col s12 l12 right-align\">\n        <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n        <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/persons\">К списку</a>\n      </div>\n    </div>\n  </form>\n</div>"
 
 /***/ }),
 
-/***/ 1244:
+/***/ 1248:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\" *ngIf=\"person\">\n  <form class=\"col s12\" [formGroup]=\"updateForm\" novalidate (ngSubmit)=\"onSubmit(updateForm.value, updateForm.valid)\">\n    <div class=\"row\">\n      <div class=\"input-field col s12 l4\">\n        <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\" \n          [ngClass]=\"{'invalid': updateForm.controls.last_name.dirty && !updateForm.controls.last_name.valid, 'valid': updateForm.controls.last_name.valid}\">\n        <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n      </div>\n      <div class=\"input-field col s12 l4\">\n        <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\" \n          [ngClass]=\"{'invalid': updateForm.controls.first_name.dirty && !updateForm.controls.first_name.valid, 'valid': updateForm.controls.first_name.valid}\">\n        <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n      </div>\n      <div class=\"input-field col s12 l4\">\n        <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n        <label for=\"secondNameField\">Отчество</label>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col s2\">\n        Пол:\n      </div>\n      <div class=\"col s10\">\n        <p class=\"col s12 l4\">\n          <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n          <label for=\"genderField2\">Женский</label>\n        </p>\n        <p class=\"col s12 l4\">\n          <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n          <label for=\"genderField1\">Мужской</label>\n        </p>\n        <p class=\"col s12 l4\">\n          <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n          <label for=\"genderField3\">Не определен</label>\n        </p>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"input-field col s12 l6\">Дата рождения: {{ person.birthdate | date: \"dd.MM.y\" }}</div>\n      <div class=\"input-field col s12 l6\">\n        <input materialize=\"pickadate\" [materializeParams]=\"[datePickerOptions]\" formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n        <label for=\"birthdateField\">Новая дата рождения</label>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"input-field col s12 l6\">\n        <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\" \n        [ngClass]=\"{'invalid': updateForm.controls.phone.dirty && !updateForm.controls.phone.valid, 'valid': updateForm.controls.phone.valid}\">\n        <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n      </div>\n      <div class=\"input-field col s12 l6\">\n        <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\">\n        <label for=\"emailField\">Email</label>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col s12 l12 right-align\">\n        <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!updateForm.valid || submitted) ? true : null\">Сохранить</button>\n        <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/persons\">К списку</a>\n      </div>\n    </div>\n  </form>\n</div>"
 
 /***/ }),
 
-/***/ 1245:
+/***/ 1249:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"responsive-table\">\n  <thead>\n    <tr>\n        <th data-field=\"name\">Ф.И.О.</th>\n        <th data-field=\"phone\">Телефон</th>\n        <th data-field=\"email\">Email</th>\n        <th data-field=\"birthdate\">Дата рождения</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of persons\">\n      <td class=\"text-capitalize\">{{[item.last_name, item.first_name, item.second_name].join(\" \")}}</td>\n      <td>{{item.phone}}</td>\n      <td>{{item.email}}</td>\n      <td>{{item.birthdate | date:\"dd.MM.y\"}}</td>\n      <td>\n        <a routerLink=\"/persons/update/{{item._id}}\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n        <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить информацию</h4>\n    <p *ngIf=\"currentPerson\">Вы хотите удалить информацию: {{[currentPerson.last_name, currentPerson.first_name, currentPerson.second_name].join(\" \")}}? <br> Телефон: {{currentPerson.phone}}, дата рождения: {{currentPerson.birthdate | date:\"dd.MM.y\"}}</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentPerson)\">Согласен</button>\n  </div>\n</div>"

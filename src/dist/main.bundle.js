@@ -38,7 +38,7 @@ var AuthenticationService = (function () {
         this._baseUrl = '/api/v1/users';
         this.eLogin = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.allowed = [];
-        console.log('Auth init');
+        //console.log('Auth init');
         // set token if saved in local storage
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.token = currentUser && currentUser.token;
@@ -523,11 +523,11 @@ var UserLoginComponent = (function () {
 var map = {
 	"./+analyzes/analyzes.module": [
 		1030,
-		6
+		5
 	],
 	"./+goods/goods.module": [
 		1031,
-		5
+		6
 	],
 	"./+patients/patients.module": [
 		1032,

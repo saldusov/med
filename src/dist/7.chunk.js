@@ -12,10 +12,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__users_widgets_users_widget__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__patients_patients_component__ = __webpack_require__(1146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__patient_add_patient_add_component__ = __webpack_require__(1143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__patient_update_patient_update_component__ = __webpack_require__(1144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__patients_service__ = __webpack_require__(1100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__patients_patients_component__ = __webpack_require__(1150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__patient_add_patient_add_component__ = __webpack_require__(1147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__patient_update_patient_update_component__ = __webpack_require__(1148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__patients_service__ = __webpack_require__(1101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__persons_persons_service__ = __webpack_require__(1041);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PatientsModule", function() { return PatientsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -884,7 +884,7 @@ module.exports = ""
 /***/ 1056:
 /***/ (function(module, exports) {
 
-module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1.2rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}"
+module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
 
 /***/ }),
 
@@ -944,7 +944,7 @@ module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"bt
 
 /***/ }),
 
-/***/ 1100:
+/***/ 1101:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1023,7 +1023,7 @@ var PatientsService = (function () {
 
 /***/ }),
 
-/***/ 1106:
+/***/ 1108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1086,14 +1086,14 @@ var Person = (function () {
 
 /***/ }),
 
-/***/ 1143:
+/***/ 1147:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__patients_service__ = __webpack_require__(1100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__patients_service__ = __webpack_require__(1101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__persons_persons_service__ = __webpack_require__(1041);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__ = __webpack_require__(192);
@@ -1102,7 +1102,7 @@ var Person = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_file_select_service__ = __webpack_require__(454);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_pagination_service__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__shared_help_panel_service__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__patient__ = __webpack_require__(1145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__patient__ = __webpack_require__(1149);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientAddComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1236,8 +1236,8 @@ var PatientAddComponent = (function () {
     PatientAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-patient-add',
-            template: __webpack_require__(1230),
-            styles: [__webpack_require__(1196)]
+            template: __webpack_require__(1234),
+            styles: [__webpack_require__(1200)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__patients_service__["a" /* PatientsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__patients_service__["a" /* PatientsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__persons_persons_service__["a" /* PersonsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__persons_persons_service__["a" /* PersonsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__["a" /* ToastService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_8__shared_form_data_service__["a" /* FormDataService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__shared_form_data_service__["a" /* FormDataService */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_9__shared_file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_9__shared_file_select_service__["a" /* FileSelectService */]) === 'function' && _g) || Object, (typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_10__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_10__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _h) || Object, (typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_11__shared_help_panel_service__["a" /* HelpPanelService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_11__shared_help_panel_service__["a" /* HelpPanelService */]) === 'function' && _j) || Object, (typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === 'function' && _k) || Object])
     ], PatientAddComponent);
@@ -1248,7 +1248,7 @@ var PatientAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1144:
+/***/ 1148:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1272,8 +1272,8 @@ var PatientUpdateComponent = (function () {
     PatientUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-patient-update',
-            template: __webpack_require__(1231),
-            styles: [__webpack_require__(1197)]
+            template: __webpack_require__(1235),
+            styles: [__webpack_require__(1201)]
         }), 
         __metadata('design:paramtypes', [])
     ], PatientUpdateComponent);
@@ -1283,11 +1283,11 @@ var PatientUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1145:
+/***/ 1149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1108);
 /* unused harmony export IPatient */
 /* unused harmony export Patient */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientForm; });
@@ -1402,13 +1402,13 @@ var PatientForm = (function (_super) {
 
 /***/ }),
 
-/***/ 1146:
+/***/ 1150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__patients_service__ = __webpack_require__(1100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__patients_service__ = __webpack_require__(1101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__ = __webpack_require__(280);
@@ -1484,8 +1484,8 @@ var PatientsComponent = (function () {
     PatientsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-patients',
-            template: __webpack_require__(1232),
-            styles: [__webpack_require__(1198)]
+            template: __webpack_require__(1236),
+            styles: [__webpack_require__(1202)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__patients_service__["a" /* PatientsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__patients_service__["a" /* PatientsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__shared_help_panel_service__["a" /* HelpPanelService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_help_panel_service__["a" /* HelpPanelService */]) === 'function' && _f) || Object])
     ], PatientsComponent);
@@ -1496,42 +1496,42 @@ var PatientsComponent = (function () {
 
 /***/ }),
 
-/***/ 1196:
+/***/ 1200:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1197:
+/***/ 1201:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1198:
+/***/ 1202:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1230:
+/***/ 1234:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n  <div class=\"col s12\">\n    <ul class=\"tabs\" materialize=\"tabs\">\n      <li class=\"tab col s3\"><a class=\"active\" href=\"#top-info\">Персональная информация</a></li>\n      <li class=\"tab col s3\"><a href=\"#add-info\">Дополнительные данные</a></li>\n    </ul>\n  </div>\n  <div id=\"top-info\" class=\"col s12\">\n    <form [formGroup]=\"addForm\"  novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"ambNumberField\" formControlName=\"amb_number\" type=\"number\" placeholder=\"Номер карты\"\n            [ngClass]=\"{'invalid': addForm.controls.amb_number.dirty && !addForm.controls.amb_number.valid, 'valid': addForm.controls.amb_number.valid}\">\n          <label for=\"ambNumberField\" data-error=\"Вы не заполнили поле\">Номер карты</label>\n        </div>\n      </div>\n      <div formGroupName=\"person\">\n        <div class=\"row\">\n          <div class=\"input-field col s12 l4\">\n            <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\" (focusout)=\"searchCoincidence()\">\n            <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\" (focusout)=\"searchCoincidence()\">\n            <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n            <label for=\"secondNameField\">Отчество</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col s2\">\n            Пол:\n          </div>\n          <div class=\"col s10\">\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n              <label for=\"genderField2\">Женский</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n              <label for=\"genderField1\">Мужской</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n              <label for=\"genderField3\">Не определен</label>\n            </p>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">Дата рождения: {{ patient.person.birthdate | date: \"dd.MM.y\" }}</div>\n          <div class=\"input-field col s12 l6\">\n            <input materialize=\"pickadate\" [materializeParams]=\"[datePickerOptions]\" formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n            <label for=\"birthdateField\">Новая дата рождения</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">\n            <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\" (focusout)=\"searchCoincidence()\">\n            <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n          </div>\n          <div class=\"input-field col s12 l6\">\n            <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\" (focusout)=\"searchCoincidence()\">\n            <label for=\"emailField\">Email</label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input type=\"checkbox\" class=\"filled-in\" id=\"activeField\" formControlName=\"active\" />\n          <label for=\"activeField\">Активный</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/patients\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n  <div id=\"add-info\" class=\"col s12\">\n     <form [formGroup]=\"addForm\" novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div class=\"row\" *ngIf=\"addForm.value.person\" formGroupName=\"person\">\n        <div class=\"col s12 valign-wrapper\">\n          <img class=\"valign selected-img\" *ngIf=\"addForm.value.person.picture\" src=\"/api/v1/uploads/thumbs/{{addForm.value.person.picture.filename}}\" alt=\"\">\n          <span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">Выбрать картинку</span>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/patients\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>\n\n<app-help-panel title=\"Найдены совпадения\" (toggle)=\"openHelpPanel($event)\">\n  <div class=\"foundsPatients\">\n    <ul class=\"collection\" *ngIf=\"coincidencePersons\">\n        <li class=\"collection-item dismissable\" *ngFor=\"let item of coincidencePersons\"><div>{{[item.last_name, item.first_name, item.second_name].join(\" \")}}<br> {{item.phone ? item.phone : \"Не указан\"}} <br> {{item.email ? item.email : \"Не указан\"}}<a class=\"secondary-content\" (click)=\"setPerson(item)\"><i class=\"material-icons\">send</i></a></div></li>\n    </ul>\n  </div>\n</app-help-panel>\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalFoundActions\">\n  <div class=\"modal-content\">\n    <h4>Карта для данного пациента уже создана! (№: {{foundItem.amb_number}})</h4>\n    <p *ngIf=\"currentItem\">Вы хотите перейти к редактированию найденной карты?</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <a class=\"modal-action modal-close waves-effect waves-green btn\" routerLink=\"/patients/update/{{foundItem._id}}\">Перейти</a>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1231:
+/***/ 1235:
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  patient-update works!\n</p>\n"
 
 /***/ }),
 
-/***/ 1232:
+/***/ 1236:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"responsive-table\">\n  <thead>\n    <tr>\n        <th>№</th>\n        <th>ФИО</th>\n        <th>Телефон</th>\n        <th>Дата создания</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of patients\">\n      <td class=\"text-capitalize\">{{item.amb_number}}</td>\n      <td class=\"text-capitalize\">{{[item.person.last_name, item.person.first_name, item.person.second_name].join(\" \")}}</td>\n      <td>{{item.person.phone}}</td>\n      <td>{{item.createdAt | date:\"dd.MM.y\"}}</td>\n      <td>\n        <a routerLink=\"/patients/update/{{item._id}}\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n        <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить карту пациента</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить пользователя: {{[currentItem.person.last_name, currentItem.person.first_name, currentItem.person.second_name].join(\" \")}}? <br> Дата создания: {{currentItem.createdAt | date:\"dd.MM.y\"}} </p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>"

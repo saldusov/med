@@ -90,6 +90,7 @@ function getAggregateGroupParam() {
 		    discount: { $first: "$discount" },
 		    status: { $first: "$status" },
 		    person: { $first: "$person" },
+		    note: {$first: "$note"},
 		    createdAt: { $first: "$createdAt" }
 		}
 	};

@@ -43,16 +43,24 @@ var paymentSchema = new Schema({
     	default: 'default'
     },
     discount: {
-        type: {
-        	type: String
+        services: {
+            isPercent: Boolean,
+            number: Number
         },
-        isPercent: Boolean,
-        number: Number
+        analyzes: {
+            isPercent: Boolean,
+            number: Number
+        },
+        goods: {
+            isPercent: Boolean,
+            number: Number
+        }
     },
     status: {
     	type: String,
     	default: 'open'
     },
+    note: String,
     creator: Schema.ObjectId,
     updater: Schema.ObjectId
 },
