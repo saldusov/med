@@ -1312,14 +1312,14 @@ module.exports = ".login-wrapper {\r\n    display: -webkit-box;\r\n    display: 
 /***/ 739:
 /***/ (function(module, exports) {
 
-module.exports = ".dropdown-content {\r\n  min-width: 200px;\r\n}"
+module.exports = ".dropdown-content {\r\n  min-width: 200px;\r\n}\r\n\r\n@media print {\r\n  #app-footer {\r\n    display: none;\r\n  }\r\n}"
 
 /***/ }),
 
 /***/ 740:
 /***/ (function(module, exports) {
 
-module.exports = ".nav-content.additional-nav {\r\n    padding-bottom: 10px;\r\n}\r\n\r\n.navbar-fixed.extended {\r\n    height: 185px;\r\n}\r\n\r\n.btn-container-floating {\r\n    position: absolute;\r\n    right: 25px;\r\n}\r\n\r\n.nav-container {\r\n    margin: 0px 10px;\r\n}\r\n\r\n.nav-button {\r\n    margin: 0px 10px; \r\n}"
+module.exports = ".nav-content.additional-nav {\r\n    padding-bottom: 10px;\r\n}\r\n\r\n.navbar-fixed.extended {\r\n    height: 185px;\r\n}\r\n\r\n.btn-container-floating {\r\n    position: absolute;\r\n    right: 25px;\r\n}\r\n\r\n.nav-container {\r\n    margin: 0px 10px;\r\n}\r\n\r\n.nav-button {\r\n    margin: 0px 10px; \r\n}\r\n\r\n@media print {\r\n    nav {\r\n        display: none;\r\n    }\r\n}"
 
 /***/ }),
 

@@ -10,13 +10,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__widgets_goods_widget__ = __webpack_require__(1099);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__widgets_goods_widget__ = __webpack_require__(1104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__goods_goods_component__ = __webpack_require__(1146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__good_add_good_add_component__ = __webpack_require__(1144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__specialties_specialties_service__ = __webpack_require__(1065);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__goods_service__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__good_update_good_update_component__ = __webpack_require__(1145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__goods_goods_component__ = __webpack_require__(1151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__good_add_good_add_component__ = __webpack_require__(1149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__specialties_specialties_service__ = __webpack_require__(1069);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__goods_service__ = __webpack_require__(1073);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__good_update_good_update_component__ = __webpack_require__(1150);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GoodsModule", function() { return GoodsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -77,14 +77,15 @@ var GoodsModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__ = __webpack_require__(1048);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_modal_component__ = __webpack_require__(1043);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__files_selected_files_selected_files_component__ = __webpack_require__(1045);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__ = __webpack_require__(1049);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__ = __webpack_require__(1046);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__ = __webpack_require__(1050);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__ = __webpack_require__(1047);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__ = __webpack_require__(1044);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__ = __webpack_require__(1049);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_modal_component__ = __webpack_require__(1044);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__files_selected_files_selected_files_component__ = __webpack_require__(1046);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__ = __webpack_require__(1050);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__ = __webpack_require__(1047);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__ = __webpack_require__(1051);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__ = __webpack_require__(1048);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__ = __webpack_require__(1045);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__ = __webpack_require__(1052);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -95,6 +96,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -127,7 +129,8 @@ var SharedModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__["a" /* AutocompleteComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__["a" /* ActionButtonsComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__["a" /* ClickOutsideDirective */]
+                __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__["a" /* ClickOutsideDirective */],
+                __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__["a" /* CounterInListsComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__["a" /* HelpPanelComponent */],
@@ -136,7 +139,8 @@ var SharedModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__["a" /* PaginationComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__["a" /* AutocompleteComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__["a" /* ActionButtonsComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__["a" /* CounterInListsComponent */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -147,7 +151,7 @@ var SharedModule = (function () {
 
 /***/ }),
 
-/***/ 1043:
+/***/ 1044:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -208,8 +212,8 @@ var ModalComponent = (function () {
     ModalComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-modal',
-            template: __webpack_require__(1062),
-            styles: [__webpack_require__(1055)]
+            template: __webpack_require__(1065),
+            styles: [__webpack_require__(1057)]
         }), 
         __metadata('design:paramtypes', [])
     ], ModalComponent);
@@ -219,7 +223,7 @@ var ModalComponent = (function () {
 
 /***/ }),
 
-/***/ 1044:
+/***/ 1045:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -272,7 +276,7 @@ var ClickOutsideDirective = (function () {
 
 /***/ }),
 
-/***/ 1045:
+/***/ 1046:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -344,8 +348,8 @@ var SelectedFilesComponent = (function () {
     SelectedFilesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-selected-files',
-            template: __webpack_require__(1058),
-            styles: [__webpack_require__(1051)]
+            template: __webpack_require__(1061),
+            styles: [__webpack_require__(1053)]
         }), 
         __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__file_select_service__["a" /* FileSelectService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _d) || Object])
     ], SelectedFilesComponent);
@@ -356,7 +360,7 @@ var SelectedFilesComponent = (function () {
 
 /***/ }),
 
-/***/ 1046:
+/***/ 1047:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -380,6 +384,7 @@ var AutocompleteComponent = (function () {
         this.eSelect = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.eClose = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.showItems = false;
+        this.search = "";
     }
     AutocompleteComponent.prototype.onKeyPress = function (target) {
         var _this = this;
@@ -387,13 +392,24 @@ var AutocompleteComponent = (function () {
             clearTimeout(this.timer);
             this.timer = null;
         }
-        this.timer = setTimeout(function () { return _this.eKeyPress.emit(_this.search); }, this.time);
+        if (this.search.length >= 2) {
+            this.timer = setTimeout(function () { return _this.eKeyPress.emit(_this.search); }, this.time);
+        }
+        if (this.search.length == 0) {
+            this.onHideItems();
+        }
+        else {
+            this.onShowItems();
+        }
     };
-    AutocompleteComponent.prototype.onKeyDown = function (target) {
+    AutocompleteComponent.prototype.onKeyUp = function (target) {
         if (target.key === 'Escape') {
             this.onHideItems();
         }
         else if (target.key == 'Backspace') {
+            this.onKeyPress(target);
+        }
+        else {
             this.onKeyPress(target);
         }
     };
@@ -406,6 +422,11 @@ var AutocompleteComponent = (function () {
     };
     AutocompleteComponent.prototype.onClean = function () {
         this.eClose.emit();
+    };
+    AutocompleteComponent.prototype.onFocusField = function () {
+        if (this.search.length >= 2) {
+            this.onShowItems();
+        }
     };
     AutocompleteComponent.prototype.onShowItems = function () {
         this.showItems = true;
@@ -438,8 +459,8 @@ var AutocompleteComponent = (function () {
     AutocompleteComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-autocomplete',
-            template: __webpack_require__(1059),
-            styles: [__webpack_require__(1052)]
+            template: __webpack_require__(1062),
+            styles: [__webpack_require__(1054)]
         }), 
         __metadata('design:paramtypes', [])
     ], AutocompleteComponent);
@@ -450,7 +471,7 @@ var AutocompleteComponent = (function () {
 
 /***/ }),
 
-/***/ 1047:
+/***/ 1048:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -504,8 +525,8 @@ var SearchFieldComponent = (function () {
     SearchFieldComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-search-field',
-            template: __webpack_require__(1060),
-            styles: [__webpack_require__(1053)]
+            template: __webpack_require__(1063),
+            styles: [__webpack_require__(1055)]
         }), 
         __metadata('design:paramtypes', [])
     ], SearchFieldComponent);
@@ -515,7 +536,7 @@ var SearchFieldComponent = (function () {
 
 /***/ }),
 
-/***/ 1048:
+/***/ 1049:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -568,8 +589,8 @@ var HelpPanelComponent = (function () {
     HelpPanelComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-help-panel',
-            template: __webpack_require__(1061),
-            styles: [__webpack_require__(1054)],
+            template: __webpack_require__(1064),
+            styles: [__webpack_require__(1056)],
             animations: [
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["trigger"])('statePanel', [
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["state"])('inactive', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({
@@ -592,7 +613,7 @@ var HelpPanelComponent = (function () {
 
 /***/ }),
 
-/***/ 1049:
+/***/ 1050:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -673,8 +694,8 @@ var PaginationComponent = (function () {
     PaginationComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-pagination',
-            template: __webpack_require__(1063),
-            styles: [__webpack_require__(1056)],
+            template: __webpack_require__(1066),
+            styles: [__webpack_require__(1058)],
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__pagination_service__["a" /* PaginationService */]) === 'function' && _b) || Object])
     ], PaginationComponent);
@@ -685,7 +706,7 @@ var PaginationComponent = (function () {
 
 /***/ }),
 
-/***/ 1050:
+/***/ 1051:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -746,8 +767,8 @@ var ActionButtonsComponent = (function () {
     ActionButtonsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-action-buttons',
-            template: __webpack_require__(1064),
-            styles: [__webpack_require__(1057)]
+            template: __webpack_require__(1067),
+            styles: [__webpack_require__(1059)]
         }), 
         __metadata('design:paramtypes', [])
     ], ActionButtonsComponent);
@@ -757,45 +778,91 @@ var ActionButtonsComponent = (function () {
 
 /***/ }),
 
-/***/ 1051:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ 1052:
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".autocomplete-wrapper input[type] {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.close-icon {\r\n    position: absolute;\r\n    top: 8px;\r\n    right: 1rem;\r\n    cursor: pointer;\r\n    font-size: 1.6rem;\r\n    -webkit-transition: .3s color;\r\n    transition: .3s color;\r\n}"
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CounterInListsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CounterInListsComponent = (function () {
+    function CounterInListsComponent() {
+        this.items = [];
+    }
+    CounterInListsComponent.prototype.ngOnInit = function () {
+    };
+    CounterInListsComponent.prototype.getCountSelectedItems = function () {
+        var _this = this;
+        var result = 0;
+        this.items.forEach(function (found) {
+            if (found._id === _this.item._id)
+                result++;
+        });
+        return result;
+    };
+    CounterInListsComponent.prototype.isSelect = function () {
+        var _this = this;
+        return !!this.items.find(function (found) {
+            if (found._id === _this.item._id)
+                return true;
+        });
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('selected'), 
+        __metadata('design:type', Array)
+    ], CounterInListsComponent.prototype, "items", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('item'), 
+        __metadata('design:type', Object)
+    ], CounterInListsComponent.prototype, "item", void 0);
+    CounterInListsComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'tm-counter-in-lists',
+            template: __webpack_require__(1068),
+            styles: [__webpack_require__(1060)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], CounterInListsComponent);
+    return CounterInListsComponent;
+}());
+//# sourceMappingURL=D:/projects/angular-med/src/counter-in-lists.component.js.map
 
 /***/ }),
 
 /***/ 1053:
 /***/ (function(module, exports) {
 
-module.exports = ".input-field-search {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}"
+module.exports = ""
 
 /***/ }),
 
 /***/ 1054:
 /***/ (function(module, exports) {
 
-module.exports = ".help-panel {\r\n  position: fixed;\r\n  top: 0px;\r\n  left: 0px;\r\n  width: 300px;\r\n  height: 100%;\r\n  background: #fff;\r\n  border-right: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .title {\r\n  font-size: 1.5em;\r\n  padding: 5px 10px;\r\n  border-bottom: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .anchor {\r\n  position: absolute;\r\n  top: 20%;\r\n  right: -62px;\r\n}\r\n\r\n.help-panel .anchor .badge {\r\n  position: absolute;\r\n  right: -20px;\r\n  top: 4px;\r\n}"
+module.exports = ".autocomplete-wrapper input[type] {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.close-icon {\r\n    position: absolute;\r\n    top: 8px;\r\n    right: 1rem;\r\n    cursor: pointer;\r\n    font-size: 1.6rem;\r\n    -webkit-transition: .3s color;\r\n    transition: .3s color;\r\n}"
 
 /***/ }),
 
 /***/ 1055:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".input-field-search {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}"
 
 /***/ }),
 
 /***/ 1056:
 /***/ (function(module, exports) {
 
-module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
+module.exports = ".help-panel {\r\n  position: fixed;\r\n  top: 0px;\r\n  left: 0px;\r\n  width: 300px;\r\n  height: 100%;\r\n  background: #fff;\r\n  border-right: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .title {\r\n  font-size: 1.5em;\r\n  padding: 5px 10px;\r\n  border-bottom: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .anchor {\r\n  position: absolute;\r\n  top: 20%;\r\n  right: -62px;\r\n}\r\n\r\n.help-panel .anchor .badge {\r\n  position: absolute;\r\n  right: -20px;\r\n  top: 4px;\r\n}"
 
 /***/ }),
 
@@ -809,53 +876,81 @@ module.exports = ""
 /***/ 1058:
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"files.length > 0\">\n  <img class=\"valign selected-img\" *ngFor=\"let file of files\" src=\"/api/v1/uploads/thumbs/{{file.filename}}\" alt=\"\">\n</div>\n<span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">{{buttonTitle}}</span>"
+module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
 
 /***/ }),
 
 /***/ 1059:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"autocomplete-wrapper\" (clickOutside)=\"onClickOutside()\">\n  <div class=\"input-field\">\n    <input [(ngModel)]=\"search\" id=\"searchAutocomplete\" placeholder=\"Найти пациента\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" (focus)=\"onShowItems()\" (click)=\"onShowItems()\" autocomplete=\"off\">\n    <i class=\"material-icons close-icon\" (click)=\"onClean()\">close</i>\n  </div>\n  <ul class=\"autocomplete-content dropdown-content\" [hidden]=\"!showItems\">\n    <ng-content></ng-content>\n  </ul>\n</div>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 1060:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"input-field input-field-search\">\n  <input id=\"search\" type=\"search\" [(ngModel)] = \"search\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" placeholder=\"Найти\">\n  <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n  <i class=\"material-icons\" (click)=\"onClean()\">close</i>\n</div>"
+module.exports = "span.counter {\r\n    padding: 0px 4px;\r\n    margin-right: 5px;\r\n    border: 1px solid #26a69a;\r\n    color: #26a69a;\r\n}"
 
 /***/ }),
 
 /***/ 1061:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"help-panel\" [@statePanel]=\"panel.show\" (keydown)=\"keyDownFunction($event)\">\n  <div *ngIf=\"panel.anchor\" class=\"anchor teal darken-1 white-text\" (click)=\"panel.toggle()\"><span class=\"new badge deep-orange darken-1\" *ngIf=\"panel.anchor.count\">{{panel.anchor.count}}</span><i class=\"medium material-icons\">{{panel.anchor.icon}}</i></div>\n  <div class=\"title teal lighten-1 white-text\">\n    {{title}}\n  </div>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"files.length > 0\">\n  <img class=\"valign selected-img\" *ngFor=\"let file of files\" src=\"/api/v1/uploads/thumbs/{{file.filename}}\" alt=\"\">\n</div>\n<span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">{{buttonTitle}}</span>"
 
 /***/ }),
 
 /***/ 1062:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"params\" [materializeActions]=\"modal\">\n  <div class=\"modal-content\">\n    <ng-content></ng-content>\n  </div>\n  <div class=\"modal-footer\">\n    <button type=\"button\" class=\"waves-effect waves-green btn-flat\" (click)=\"close()\">Отменить</button>\n    <button type=\"button\" class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"success()\">Согласен</button>\n  </div>\n</div>"
+module.exports = "<div class=\"autocomplete-wrapper\" (clickOutside)=\"onClickOutside()\">\n  <div class=\"input-field\">\n    <input [(ngModel)]=\"search\" id=\"searchAutocomplete\" placeholder=\"Найти пациента\" (keyup)=\"onKeyUp($event)\" (focus)=\"onFocusField()\" autocomplete=\"off\">\n    <i class=\"material-icons close-icon\" (click)=\"onClean()\">close</i>\n  </div>\n  <ul class=\"autocomplete-content dropdown-content\" [hidden]=\"!showItems\">\n    <ng-content></ng-content>\n  </ul>\n</div>"
 
 /***/ }),
 
 /***/ 1063:
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"pagination\" *ngIf=\"name\">\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(1)\"><i class=\"material-icons\">first_page</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage - 1)\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li *ngFor=\"let page of pages\" [ngClass]=\"{active: page === currentPage}\" class=\"waves-effect\"><a (click)=\"setPage(page)\">{{page}}</a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage + 1)\"><i class=\"material-icons\">chevron_right</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(totalPages)\"><i class=\"material-icons\">last_page</i></a></li>\n  <li class=\"count\"><span>{{((currentPage - 1) * nPerPage) + 1}} - {{currentPage * nPerPage}} из {{countItems}}</span></li>\n</ul>"
+module.exports = "<div class=\"input-field input-field-search\">\n  <input id=\"search\" type=\"search\" [(ngModel)] = \"search\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" placeholder=\"Найти\">\n  <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n  <i class=\"material-icons\" (click)=\"onClean()\">close</i>\n</div>"
 
 /***/ }),
 
 /***/ 1064:
 /***/ (function(module, exports) {
 
-module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></button>\n<button *ngIf=\"options.delete\" (click)=\"onDelete()\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n<button *ngIf=\"options.check\" (click)=\"onCheck()\" class=\"btn btn-floating\" [ngClass]=\"{'teal lighten-1': checked, 'grey lighten-3': !checked}\"><i class=\"material-icons \" [ngClass]=\"{'white-text': checked, 'grey-text text-darken-4': !checked}\">{{ checked ? 'done' : 'panorama_fish_eye' }}</i></button>"
+module.exports = "<div class=\"help-panel\" [@statePanel]=\"panel.show\" (keydown)=\"keyDownFunction($event)\">\n  <div *ngIf=\"panel.anchor\" class=\"anchor teal darken-1 white-text\" (click)=\"panel.toggle()\"><span class=\"new badge deep-orange darken-1\" *ngIf=\"panel.anchor.count\">{{panel.anchor.count}}</span><i class=\"medium material-icons\">{{panel.anchor.icon}}</i></div>\n  <div class=\"title teal lighten-1 white-text\">\n    {{title}}\n  </div>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 1065:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"params\" [materializeActions]=\"modal\">\n  <div class=\"modal-content\">\n    <ng-content></ng-content>\n  </div>\n  <div class=\"modal-footer\">\n    <button type=\"button\" class=\"waves-effect waves-green btn-flat\" (click)=\"close()\">Отменить</button>\n    <button type=\"button\" class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"success()\">Согласен</button>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ 1066:
+/***/ (function(module, exports) {
+
+module.exports = "<ul class=\"pagination\" *ngIf=\"name\">\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(1)\"><i class=\"material-icons\">first_page</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage - 1)\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li *ngFor=\"let page of pages\" [ngClass]=\"{active: page === currentPage}\" class=\"waves-effect\"><a (click)=\"setPage(page)\">{{page}}</a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage + 1)\"><i class=\"material-icons\">chevron_right</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(totalPages)\"><i class=\"material-icons\">last_page</i></a></li>\n  <li class=\"count\"><span>{{((currentPage - 1) * nPerPage) + 1}} - {{currentPage * nPerPage}} из {{countItems}}</span></li>\n</ul>"
+
+/***/ }),
+
+/***/ 1067:
+/***/ (function(module, exports) {
+
+module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></button>\n<button *ngIf=\"options.delete\" (click)=\"onDelete()\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n<button *ngIf=\"options.check\" (click)=\"onCheck()\" class=\"btn btn-floating\" [ngClass]=\"{'teal lighten-1': checked, 'grey lighten-3': !checked}\"><i class=\"material-icons \" [ngClass]=\"{'white-text': checked, 'grey-text text-darken-4': !checked}\">{{ checked ? 'done' : 'panorama_fish_eye' }}</i></button>"
+
+/***/ }),
+
+/***/ 1068:
+/***/ (function(module, exports) {
+
+module.exports = "<span class=\"counter\" *ngIf=\"isSelect()\">{{getCountSelectedItems()}}</span>"
+
+/***/ }),
+
+/***/ 1069:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -927,7 +1022,7 @@ var SpecialtiesService = (function () {
 
 /***/ }),
 
-/***/ 1069:
+/***/ 1073:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1019,7 +1114,7 @@ var GoodsService = (function () {
 
 /***/ }),
 
-/***/ 1089:
+/***/ 1094:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1054,12 +1149,12 @@ var Good = (function () {
 
 /***/ }),
 
-/***/ 1094:
+/***/ 1098:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__goodsListOptions__ = __webpack_require__(1100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__goodsListOptions__ = __webpack_require__(1105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__goodsListOptions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__goodsListOptions__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodsListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1186,8 +1281,8 @@ var GoodsListComponent = (function () {
     GoodsListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-goods-list',
-            template: __webpack_require__(1121),
-            styles: [__webpack_require__(1115)]
+            template: __webpack_require__(1125),
+            styles: [__webpack_require__(1119)]
         }), 
         __metadata('design:paramtypes', [])
     ], GoodsListComponent);
@@ -1198,7 +1293,7 @@ var GoodsListComponent = (function () {
 
 /***/ }),
 
-/***/ 1099:
+/***/ 1104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1207,8 +1302,8 @@ var GoodsListComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__goods_service__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__goods_list_goods_list_component__ = __webpack_require__(1094);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__goods_service__ = __webpack_require__(1073);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__goods_list_goods_list_component__ = __webpack_require__(1098);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodsWidgetModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1249,36 +1344,36 @@ var GoodsWidgetModule = (function () {
 
 /***/ }),
 
-/***/ 1100:
+/***/ 1105:
 /***/ (function(module, exports) {
 
 //# sourceMappingURL=D:/projects/angular-med/src/goodsListOptions.js.map
 
 /***/ }),
 
-/***/ 1115:
+/***/ 1119:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1121:
+/***/ 1125:
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table highlight\">\n  <thead>\n    <tr>\n        <th data-field=\"name\">Наименование</th>\n        <th data-field=\"price\" *ngIf=\"options.price\">Цена</th>\n        <th data-field=\"tags\" *ngIf=\"options.tags\">Тэг</th>\n        <th *ngIf=\"options.tools\">Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of goods\" [ngClass]=\"{'teal lighten-4' : item.check}\">\n      <td>{{item.title}}</td>\n      <td *ngIf=\"options.price\">{{item.price}}</td>\n      <td *ngIf=\"options.tags\">{{item.tag_names.join(\", \")}}</td>\n      <td *ngIf=\"options.tools\" class=\"tools\">\n        <button *ngIf=\"options.tools.add\" (click)=\"onAdd(item)\" class=\"btn btn-floating\"><i class=\"material-icons\">add</i></button>\n        <app-action-buttons \n          (edit)=\"editItem(item)\"\n          (delete)=\"deleteItem(item)\"\n          (check)=\"clickItem(item)\"\n          [options]=\"options.tools\"\n          [checked]=\"isSelect(item)\">\n        </app-action-buttons>\n      </td>\n    </tr>\n  </tbody>\n</table>"
+module.exports = "<table class=\"table highlight\">\n  <thead>\n    <tr>\n        <th data-field=\"name\">Наименование</th>\n        <th data-field=\"price\" *ngIf=\"options.price\">Цена</th>\n        <th data-field=\"tags\" *ngIf=\"options.tags\">Тэг</th>\n        <th *ngIf=\"options.tools\">Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of goods\" [ngClass]=\"{'teal lighten-4' : item.check}\">\n      <td><tm-counter-in-lists [selected]=\"selectedItems\" [item]=\"item\"></tm-counter-in-lists>{{item.title}}</td>\n      <td *ngIf=\"options.price\">{{item.price}}</td>\n      <td *ngIf=\"options.tags\">{{item.tag_names.join(\", \")}}</td>\n      <td *ngIf=\"options.tools\" class=\"tools\">\n        <button *ngIf=\"options.tools.add\" (click)=\"onAdd(item)\" class=\"btn btn-floating\"><i class=\"material-icons\">add</i></button>\n        <app-action-buttons \n          (edit)=\"editItem(item)\"\n          (delete)=\"deleteItem(item)\"\n          (check)=\"clickItem(item)\"\n          [options]=\"options.tools\"\n          [checked]=\"isSelect(item)\">\n        </app-action-buttons>\n      </td>\n    </tr>\n  </tbody>\n</table>"
 
 /***/ }),
 
-/***/ 1144:
+/***/ 1149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__good__ = __webpack_require__(1089);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__goods_service__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__ = __webpack_require__(1065);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__good__ = __webpack_require__(1094);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__goods_service__ = __webpack_require__(1073);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__ = __webpack_require__(1069);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__ = __webpack_require__(282);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodAddComponent; });
@@ -1341,8 +1436,8 @@ var GoodAddComponent = (function () {
     GoodAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-good-add',
-            template: __webpack_require__(1231),
-            styles: [__webpack_require__(1197)]
+            template: __webpack_require__(1250),
+            styles: [__webpack_require__(1209)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__goods_service__["a" /* GoodsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__goods_service__["a" /* GoodsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_toast_service__["a" /* ToastService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _d) || Object])
     ], GoodAddComponent);
@@ -1353,16 +1448,16 @@ var GoodAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1145:
+/***/ 1150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__good__ = __webpack_require__(1089);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__goods_service__ = __webpack_require__(1069);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__ = __webpack_require__(1065);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__good__ = __webpack_require__(1094);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__goods_service__ = __webpack_require__(1073);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__ = __webpack_require__(1069);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_tools_service__ = __webpack_require__(452);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodUpdateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1432,8 +1527,8 @@ var GoodUpdateComponent = (function () {
     GoodUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-good-update',
-            template: __webpack_require__(1232),
-            styles: [__webpack_require__(1198)]
+            template: __webpack_require__(1251),
+            styles: [__webpack_require__(1210)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_tools_service__["a" /* ToolsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__goods_service__["a" /* GoodsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__goods_service__["a" /* GoodsService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__specialties_specialties_service__["a" /* SpecialtiesService */]) === 'function' && _d) || Object])
     ], GoodUpdateComponent);
@@ -1444,14 +1539,14 @@ var GoodUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1146:
+/***/ 1151:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__goods_service__ = __webpack_require__(1069);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__goods_service__ = __webpack_require__(1073);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoodsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1507,8 +1602,8 @@ var GoodsComponent = (function () {
     GoodsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-goods',
-            template: __webpack_require__(1233),
-            styles: [__webpack_require__(1199)]
+            template: __webpack_require__(1252),
+            styles: [__webpack_require__(1211)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_tools_service__["a" /* ToolsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__goods_service__["a" /* GoodsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__goods_service__["a" /* GoodsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _c) || Object])
     ], GoodsComponent);
@@ -1519,42 +1614,42 @@ var GoodsComponent = (function () {
 
 /***/ }),
 
-/***/ 1197:
+/***/ 1209:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1198:
+/***/ 1210:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1199:
+/***/ 1211:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1231:
+/***/ 1250:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n    <form class=\"col s12\" [formGroup]=\"form\" novalidate (ngSubmit)=\"onSubmit(form.value, form.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"titleField\" formControlName=\"title\" type=\"text\" placeholder=\"Наименование\" \n            [ngClass]=\"{'invalid': form.controls.title.dirty && !form.controls.title.valid, 'valid': form.controls.title.valid}\">\n          <label for=\"titleField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\"></textarea>\n          <label for=\"descrTextarea\">Описание</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"priceDefField\" formControlName=\"price\" type=\"number\" placeholder=\"Цена\">\n          <label for=\"priceDefField\">Цена</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n            <option value=\"\" disabled selected>Тэг</option>\n            <option value=\"{{tag._id}}\" *ngFor=\"let tag of tags\">{{tag.name}}</option>\n          </select>\n          <label for=\"tagsSelect\">Тэг</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!form.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/goods\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
-/***/ 1232:
+/***/ 1251:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\" *ngIf=\"service\">\n    <form class=\"col s12\" [formGroup]=\"form\" novalidate (ngSubmit)=\"onSubmit(form.value, form.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"titleField\" formControlName=\"title\" type=\"text\" placeholder=\"Наименование\" \n            [ngClass]=\"{'invalid': form.controls.title.dirty && !form.controls.title.valid, 'valid': form.controls.title.valid}\">\n          <label for=\"titleField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\"></textarea>\n          <label for=\"descrTextarea\">Описание</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12 l6\">\n          <input id=\"priceField\" formControlName=\"price\" type=\"number\" placeholder=\"Цена\">\n          <label for=\"priceField\">Цена</label>\n        </div>\n        <div class=\"input-field col s12 l6\">\n          <select materialize=\"material_select\" [materializeSelectOptions]=\"tags\" id=\"tagsSelect\" multiple formControlName=\"tags\">\n            <option value=\"\" disabled selected>Выберите тэг</option>\n            <option value=\"{{tag._id}}\" *ngFor=\"let tag of tags\">{{tag.name}}</option>\n          </select>\n          <label for=\"tagsSelect\">Тэг</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!form.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/goods\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
-/***/ 1233:
+/***/ 1252:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"default_wrapper\">\n  <div class=\"panel\">\n    <app-goods-list #goodsList [goods]=\"goods$ | async\" (delete)=\"deleteModal.open()\" (edit)=\"onEdit($event)\"></app-goods-list>\n  </div>\n</div>\n\n<app-modal #deleteModal (success)=\"deleteItem(goodsList.currentItem)\">\n    <h4>Удалить услугу</h4>\n    <p *ngIf=\"goodsList.currentItem\">Вы хотите удалить услугу: {{goodsList.currentItem.title}}? <br> Цены: {{goodsList.currentItem.price | json}}</p>\n</app-modal>"

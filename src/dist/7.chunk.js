@@ -12,10 +12,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__users_widgets_users_widget__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__patients_patients_component__ = __webpack_require__(1150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__patient_add_patient_add_component__ = __webpack_require__(1147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__patient_update_patient_update_component__ = __webpack_require__(1148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__patients_service__ = __webpack_require__(1101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__patients_patients_component__ = __webpack_require__(1155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__patient_add_patient_add_component__ = __webpack_require__(1152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__patient_update_patient_update_component__ = __webpack_require__(1153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__patients_service__ = __webpack_require__(1106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__persons_persons_service__ = __webpack_require__(1041);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PatientsModule", function() { return PatientsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -77,14 +77,15 @@ var PatientsModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__ = __webpack_require__(1048);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_modal_component__ = __webpack_require__(1043);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__files_selected_files_selected_files_component__ = __webpack_require__(1045);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__ = __webpack_require__(1049);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__ = __webpack_require__(1046);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__ = __webpack_require__(1050);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__ = __webpack_require__(1047);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__ = __webpack_require__(1044);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__ = __webpack_require__(1049);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_modal_component__ = __webpack_require__(1044);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__files_selected_files_selected_files_component__ = __webpack_require__(1046);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__ = __webpack_require__(1050);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__ = __webpack_require__(1047);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__ = __webpack_require__(1051);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__ = __webpack_require__(1048);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__ = __webpack_require__(1045);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__ = __webpack_require__(1052);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -95,6 +96,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -127,7 +129,8 @@ var SharedModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__["a" /* AutocompleteComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__["a" /* ActionButtonsComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__["a" /* ClickOutsideDirective */]
+                __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__["a" /* ClickOutsideDirective */],
+                __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__["a" /* CounterInListsComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__["a" /* HelpPanelComponent */],
@@ -136,7 +139,8 @@ var SharedModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__["a" /* PaginationComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__["a" /* AutocompleteComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__["a" /* ActionButtonsComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__["a" /* CounterInListsComponent */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -236,7 +240,7 @@ var PersonsService = (function () {
 
 /***/ }),
 
-/***/ 1043:
+/***/ 1044:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -297,8 +301,8 @@ var ModalComponent = (function () {
     ModalComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-modal',
-            template: __webpack_require__(1062),
-            styles: [__webpack_require__(1055)]
+            template: __webpack_require__(1065),
+            styles: [__webpack_require__(1057)]
         }), 
         __metadata('design:paramtypes', [])
     ], ModalComponent);
@@ -308,7 +312,7 @@ var ModalComponent = (function () {
 
 /***/ }),
 
-/***/ 1044:
+/***/ 1045:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -361,7 +365,7 @@ var ClickOutsideDirective = (function () {
 
 /***/ }),
 
-/***/ 1045:
+/***/ 1046:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -433,8 +437,8 @@ var SelectedFilesComponent = (function () {
     SelectedFilesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-selected-files',
-            template: __webpack_require__(1058),
-            styles: [__webpack_require__(1051)]
+            template: __webpack_require__(1061),
+            styles: [__webpack_require__(1053)]
         }), 
         __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__file_select_service__["a" /* FileSelectService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _d) || Object])
     ], SelectedFilesComponent);
@@ -445,7 +449,7 @@ var SelectedFilesComponent = (function () {
 
 /***/ }),
 
-/***/ 1046:
+/***/ 1047:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -469,6 +473,7 @@ var AutocompleteComponent = (function () {
         this.eSelect = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.eClose = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.showItems = false;
+        this.search = "";
     }
     AutocompleteComponent.prototype.onKeyPress = function (target) {
         var _this = this;
@@ -476,13 +481,24 @@ var AutocompleteComponent = (function () {
             clearTimeout(this.timer);
             this.timer = null;
         }
-        this.timer = setTimeout(function () { return _this.eKeyPress.emit(_this.search); }, this.time);
+        if (this.search.length >= 2) {
+            this.timer = setTimeout(function () { return _this.eKeyPress.emit(_this.search); }, this.time);
+        }
+        if (this.search.length == 0) {
+            this.onHideItems();
+        }
+        else {
+            this.onShowItems();
+        }
     };
-    AutocompleteComponent.prototype.onKeyDown = function (target) {
+    AutocompleteComponent.prototype.onKeyUp = function (target) {
         if (target.key === 'Escape') {
             this.onHideItems();
         }
         else if (target.key == 'Backspace') {
+            this.onKeyPress(target);
+        }
+        else {
             this.onKeyPress(target);
         }
     };
@@ -495,6 +511,11 @@ var AutocompleteComponent = (function () {
     };
     AutocompleteComponent.prototype.onClean = function () {
         this.eClose.emit();
+    };
+    AutocompleteComponent.prototype.onFocusField = function () {
+        if (this.search.length >= 2) {
+            this.onShowItems();
+        }
     };
     AutocompleteComponent.prototype.onShowItems = function () {
         this.showItems = true;
@@ -527,8 +548,8 @@ var AutocompleteComponent = (function () {
     AutocompleteComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-autocomplete',
-            template: __webpack_require__(1059),
-            styles: [__webpack_require__(1052)]
+            template: __webpack_require__(1062),
+            styles: [__webpack_require__(1054)]
         }), 
         __metadata('design:paramtypes', [])
     ], AutocompleteComponent);
@@ -539,7 +560,7 @@ var AutocompleteComponent = (function () {
 
 /***/ }),
 
-/***/ 1047:
+/***/ 1048:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -593,8 +614,8 @@ var SearchFieldComponent = (function () {
     SearchFieldComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-search-field',
-            template: __webpack_require__(1060),
-            styles: [__webpack_require__(1053)]
+            template: __webpack_require__(1063),
+            styles: [__webpack_require__(1055)]
         }), 
         __metadata('design:paramtypes', [])
     ], SearchFieldComponent);
@@ -604,7 +625,7 @@ var SearchFieldComponent = (function () {
 
 /***/ }),
 
-/***/ 1048:
+/***/ 1049:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -657,8 +678,8 @@ var HelpPanelComponent = (function () {
     HelpPanelComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-help-panel',
-            template: __webpack_require__(1061),
-            styles: [__webpack_require__(1054)],
+            template: __webpack_require__(1064),
+            styles: [__webpack_require__(1056)],
             animations: [
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["trigger"])('statePanel', [
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["state"])('inactive', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({
@@ -681,7 +702,7 @@ var HelpPanelComponent = (function () {
 
 /***/ }),
 
-/***/ 1049:
+/***/ 1050:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -762,8 +783,8 @@ var PaginationComponent = (function () {
     PaginationComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-pagination',
-            template: __webpack_require__(1063),
-            styles: [__webpack_require__(1056)],
+            template: __webpack_require__(1066),
+            styles: [__webpack_require__(1058)],
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__pagination_service__["a" /* PaginationService */]) === 'function' && _b) || Object])
     ], PaginationComponent);
@@ -774,7 +795,7 @@ var PaginationComponent = (function () {
 
 /***/ }),
 
-/***/ 1050:
+/***/ 1051:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -835,8 +856,8 @@ var ActionButtonsComponent = (function () {
     ActionButtonsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-action-buttons',
-            template: __webpack_require__(1064),
-            styles: [__webpack_require__(1057)]
+            template: __webpack_require__(1067),
+            styles: [__webpack_require__(1059)]
         }), 
         __metadata('design:paramtypes', [])
     ], ActionButtonsComponent);
@@ -846,45 +867,91 @@ var ActionButtonsComponent = (function () {
 
 /***/ }),
 
-/***/ 1051:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ 1052:
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".autocomplete-wrapper input[type] {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.close-icon {\r\n    position: absolute;\r\n    top: 8px;\r\n    right: 1rem;\r\n    cursor: pointer;\r\n    font-size: 1.6rem;\r\n    -webkit-transition: .3s color;\r\n    transition: .3s color;\r\n}"
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CounterInListsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CounterInListsComponent = (function () {
+    function CounterInListsComponent() {
+        this.items = [];
+    }
+    CounterInListsComponent.prototype.ngOnInit = function () {
+    };
+    CounterInListsComponent.prototype.getCountSelectedItems = function () {
+        var _this = this;
+        var result = 0;
+        this.items.forEach(function (found) {
+            if (found._id === _this.item._id)
+                result++;
+        });
+        return result;
+    };
+    CounterInListsComponent.prototype.isSelect = function () {
+        var _this = this;
+        return !!this.items.find(function (found) {
+            if (found._id === _this.item._id)
+                return true;
+        });
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('selected'), 
+        __metadata('design:type', Array)
+    ], CounterInListsComponent.prototype, "items", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('item'), 
+        __metadata('design:type', Object)
+    ], CounterInListsComponent.prototype, "item", void 0);
+    CounterInListsComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'tm-counter-in-lists',
+            template: __webpack_require__(1068),
+            styles: [__webpack_require__(1060)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], CounterInListsComponent);
+    return CounterInListsComponent;
+}());
+//# sourceMappingURL=D:/projects/angular-med/src/counter-in-lists.component.js.map
 
 /***/ }),
 
 /***/ 1053:
 /***/ (function(module, exports) {
 
-module.exports = ".input-field-search {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}"
+module.exports = ""
 
 /***/ }),
 
 /***/ 1054:
 /***/ (function(module, exports) {
 
-module.exports = ".help-panel {\r\n  position: fixed;\r\n  top: 0px;\r\n  left: 0px;\r\n  width: 300px;\r\n  height: 100%;\r\n  background: #fff;\r\n  border-right: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .title {\r\n  font-size: 1.5em;\r\n  padding: 5px 10px;\r\n  border-bottom: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .anchor {\r\n  position: absolute;\r\n  top: 20%;\r\n  right: -62px;\r\n}\r\n\r\n.help-panel .anchor .badge {\r\n  position: absolute;\r\n  right: -20px;\r\n  top: 4px;\r\n}"
+module.exports = ".autocomplete-wrapper input[type] {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.close-icon {\r\n    position: absolute;\r\n    top: 8px;\r\n    right: 1rem;\r\n    cursor: pointer;\r\n    font-size: 1.6rem;\r\n    -webkit-transition: .3s color;\r\n    transition: .3s color;\r\n}"
 
 /***/ }),
 
 /***/ 1055:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".input-field-search {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}"
 
 /***/ }),
 
 /***/ 1056:
 /***/ (function(module, exports) {
 
-module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
+module.exports = ".help-panel {\r\n  position: fixed;\r\n  top: 0px;\r\n  left: 0px;\r\n  width: 300px;\r\n  height: 100%;\r\n  background: #fff;\r\n  border-right: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .title {\r\n  font-size: 1.5em;\r\n  padding: 5px 10px;\r\n  border-bottom: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .anchor {\r\n  position: absolute;\r\n  top: 20%;\r\n  right: -62px;\r\n}\r\n\r\n.help-panel .anchor .badge {\r\n  position: absolute;\r\n  right: -20px;\r\n  top: 4px;\r\n}"
 
 /***/ }),
 
@@ -898,53 +965,81 @@ module.exports = ""
 /***/ 1058:
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"files.length > 0\">\n  <img class=\"valign selected-img\" *ngFor=\"let file of files\" src=\"/api/v1/uploads/thumbs/{{file.filename}}\" alt=\"\">\n</div>\n<span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">{{buttonTitle}}</span>"
+module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
 
 /***/ }),
 
 /***/ 1059:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"autocomplete-wrapper\" (clickOutside)=\"onClickOutside()\">\n  <div class=\"input-field\">\n    <input [(ngModel)]=\"search\" id=\"searchAutocomplete\" placeholder=\"Найти пациента\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" (focus)=\"onShowItems()\" (click)=\"onShowItems()\" autocomplete=\"off\">\n    <i class=\"material-icons close-icon\" (click)=\"onClean()\">close</i>\n  </div>\n  <ul class=\"autocomplete-content dropdown-content\" [hidden]=\"!showItems\">\n    <ng-content></ng-content>\n  </ul>\n</div>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 1060:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"input-field input-field-search\">\n  <input id=\"search\" type=\"search\" [(ngModel)] = \"search\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" placeholder=\"Найти\">\n  <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n  <i class=\"material-icons\" (click)=\"onClean()\">close</i>\n</div>"
+module.exports = "span.counter {\r\n    padding: 0px 4px;\r\n    margin-right: 5px;\r\n    border: 1px solid #26a69a;\r\n    color: #26a69a;\r\n}"
 
 /***/ }),
 
 /***/ 1061:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"help-panel\" [@statePanel]=\"panel.show\" (keydown)=\"keyDownFunction($event)\">\n  <div *ngIf=\"panel.anchor\" class=\"anchor teal darken-1 white-text\" (click)=\"panel.toggle()\"><span class=\"new badge deep-orange darken-1\" *ngIf=\"panel.anchor.count\">{{panel.anchor.count}}</span><i class=\"medium material-icons\">{{panel.anchor.icon}}</i></div>\n  <div class=\"title teal lighten-1 white-text\">\n    {{title}}\n  </div>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"files.length > 0\">\n  <img class=\"valign selected-img\" *ngFor=\"let file of files\" src=\"/api/v1/uploads/thumbs/{{file.filename}}\" alt=\"\">\n</div>\n<span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">{{buttonTitle}}</span>"
 
 /***/ }),
 
 /***/ 1062:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"params\" [materializeActions]=\"modal\">\n  <div class=\"modal-content\">\n    <ng-content></ng-content>\n  </div>\n  <div class=\"modal-footer\">\n    <button type=\"button\" class=\"waves-effect waves-green btn-flat\" (click)=\"close()\">Отменить</button>\n    <button type=\"button\" class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"success()\">Согласен</button>\n  </div>\n</div>"
+module.exports = "<div class=\"autocomplete-wrapper\" (clickOutside)=\"onClickOutside()\">\n  <div class=\"input-field\">\n    <input [(ngModel)]=\"search\" id=\"searchAutocomplete\" placeholder=\"Найти пациента\" (keyup)=\"onKeyUp($event)\" (focus)=\"onFocusField()\" autocomplete=\"off\">\n    <i class=\"material-icons close-icon\" (click)=\"onClean()\">close</i>\n  </div>\n  <ul class=\"autocomplete-content dropdown-content\" [hidden]=\"!showItems\">\n    <ng-content></ng-content>\n  </ul>\n</div>"
 
 /***/ }),
 
 /***/ 1063:
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"pagination\" *ngIf=\"name\">\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(1)\"><i class=\"material-icons\">first_page</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage - 1)\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li *ngFor=\"let page of pages\" [ngClass]=\"{active: page === currentPage}\" class=\"waves-effect\"><a (click)=\"setPage(page)\">{{page}}</a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage + 1)\"><i class=\"material-icons\">chevron_right</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(totalPages)\"><i class=\"material-icons\">last_page</i></a></li>\n  <li class=\"count\"><span>{{((currentPage - 1) * nPerPage) + 1}} - {{currentPage * nPerPage}} из {{countItems}}</span></li>\n</ul>"
+module.exports = "<div class=\"input-field input-field-search\">\n  <input id=\"search\" type=\"search\" [(ngModel)] = \"search\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" placeholder=\"Найти\">\n  <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n  <i class=\"material-icons\" (click)=\"onClean()\">close</i>\n</div>"
 
 /***/ }),
 
 /***/ 1064:
 /***/ (function(module, exports) {
 
+module.exports = "<div class=\"help-panel\" [@statePanel]=\"panel.show\" (keydown)=\"keyDownFunction($event)\">\n  <div *ngIf=\"panel.anchor\" class=\"anchor teal darken-1 white-text\" (click)=\"panel.toggle()\"><span class=\"new badge deep-orange darken-1\" *ngIf=\"panel.anchor.count\">{{panel.anchor.count}}</span><i class=\"medium material-icons\">{{panel.anchor.icon}}</i></div>\n  <div class=\"title teal lighten-1 white-text\">\n    {{title}}\n  </div>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ 1065:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"params\" [materializeActions]=\"modal\">\n  <div class=\"modal-content\">\n    <ng-content></ng-content>\n  </div>\n  <div class=\"modal-footer\">\n    <button type=\"button\" class=\"waves-effect waves-green btn-flat\" (click)=\"close()\">Отменить</button>\n    <button type=\"button\" class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"success()\">Согласен</button>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ 1066:
+/***/ (function(module, exports) {
+
+module.exports = "<ul class=\"pagination\" *ngIf=\"name\">\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(1)\"><i class=\"material-icons\">first_page</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage - 1)\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li *ngFor=\"let page of pages\" [ngClass]=\"{active: page === currentPage}\" class=\"waves-effect\"><a (click)=\"setPage(page)\">{{page}}</a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage + 1)\"><i class=\"material-icons\">chevron_right</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(totalPages)\"><i class=\"material-icons\">last_page</i></a></li>\n  <li class=\"count\"><span>{{((currentPage - 1) * nPerPage) + 1}} - {{currentPage * nPerPage}} из {{countItems}}</span></li>\n</ul>"
+
+/***/ }),
+
+/***/ 1067:
+/***/ (function(module, exports) {
+
 module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></button>\n<button *ngIf=\"options.delete\" (click)=\"onDelete()\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n<button *ngIf=\"options.check\" (click)=\"onCheck()\" class=\"btn btn-floating\" [ngClass]=\"{'teal lighten-1': checked, 'grey lighten-3': !checked}\"><i class=\"material-icons \" [ngClass]=\"{'white-text': checked, 'grey-text text-darken-4': !checked}\">{{ checked ? 'done' : 'panorama_fish_eye' }}</i></button>"
 
 /***/ }),
 
-/***/ 1101:
+/***/ 1068:
+/***/ (function(module, exports) {
+
+module.exports = "<span class=\"counter\" *ngIf=\"isSelect()\">{{getCountSelectedItems()}}</span>"
+
+/***/ }),
+
+/***/ 1106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1023,7 +1118,7 @@ var PatientsService = (function () {
 
 /***/ }),
 
-/***/ 1108:
+/***/ 1112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1086,14 +1181,14 @@ var Person = (function () {
 
 /***/ }),
 
-/***/ 1147:
+/***/ 1152:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__patients_service__ = __webpack_require__(1101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__patients_service__ = __webpack_require__(1106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__persons_persons_service__ = __webpack_require__(1041);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__ = __webpack_require__(192);
@@ -1102,7 +1197,7 @@ var Person = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_file_select_service__ = __webpack_require__(454);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_pagination_service__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__shared_help_panel_service__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__patient__ = __webpack_require__(1149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__patient__ = __webpack_require__(1154);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientAddComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1236,8 +1331,8 @@ var PatientAddComponent = (function () {
     PatientAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-patient-add',
-            template: __webpack_require__(1234),
-            styles: [__webpack_require__(1200)]
+            template: __webpack_require__(1253),
+            styles: [__webpack_require__(1212)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__patients_service__["a" /* PatientsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__patients_service__["a" /* PatientsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__persons_persons_service__["a" /* PersonsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__persons_persons_service__["a" /* PersonsService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_toast_service__["a" /* ToastService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_8__shared_form_data_service__["a" /* FormDataService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__shared_form_data_service__["a" /* FormDataService */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_9__shared_file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_9__shared_file_select_service__["a" /* FileSelectService */]) === 'function' && _g) || Object, (typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_10__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_10__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _h) || Object, (typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_11__shared_help_panel_service__["a" /* HelpPanelService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_11__shared_help_panel_service__["a" /* HelpPanelService */]) === 'function' && _j) || Object, (typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === 'function' && _k) || Object])
     ], PatientAddComponent);
@@ -1248,7 +1343,7 @@ var PatientAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1148:
+/***/ 1153:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1272,8 +1367,8 @@ var PatientUpdateComponent = (function () {
     PatientUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-patient-update',
-            template: __webpack_require__(1235),
-            styles: [__webpack_require__(1201)]
+            template: __webpack_require__(1254),
+            styles: [__webpack_require__(1213)]
         }), 
         __metadata('design:paramtypes', [])
     ], PatientUpdateComponent);
@@ -1283,11 +1378,11 @@ var PatientUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1149:
+/***/ 1154:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_person__ = __webpack_require__(1112);
 /* unused harmony export IPatient */
 /* unused harmony export Patient */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientForm; });
@@ -1402,13 +1497,13 @@ var PatientForm = (function (_super) {
 
 /***/ }),
 
-/***/ 1150:
+/***/ 1155:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__patients_service__ = __webpack_require__(1101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__patients_service__ = __webpack_require__(1106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__ = __webpack_require__(280);
@@ -1484,8 +1579,8 @@ var PatientsComponent = (function () {
     PatientsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-patients',
-            template: __webpack_require__(1236),
-            styles: [__webpack_require__(1202)]
+            template: __webpack_require__(1255),
+            styles: [__webpack_require__(1214)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__patients_service__["a" /* PatientsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__patients_service__["a" /* PatientsService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__shared_help_panel_service__["a" /* HelpPanelService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_help_panel_service__["a" /* HelpPanelService */]) === 'function' && _f) || Object])
     ], PatientsComponent);
@@ -1496,42 +1591,42 @@ var PatientsComponent = (function () {
 
 /***/ }),
 
-/***/ 1200:
+/***/ 1212:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1201:
+/***/ 1213:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1202:
+/***/ 1214:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1234:
+/***/ 1253:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\">\n  <div class=\"col s12\">\n    <ul class=\"tabs\" materialize=\"tabs\">\n      <li class=\"tab col s3\"><a class=\"active\" href=\"#top-info\">Персональная информация</a></li>\n      <li class=\"tab col s3\"><a href=\"#add-info\">Дополнительные данные</a></li>\n    </ul>\n  </div>\n  <div id=\"top-info\" class=\"col s12\">\n    <form [formGroup]=\"addForm\"  novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input id=\"ambNumberField\" formControlName=\"amb_number\" type=\"number\" placeholder=\"Номер карты\"\n            [ngClass]=\"{'invalid': addForm.controls.amb_number.dirty && !addForm.controls.amb_number.valid, 'valid': addForm.controls.amb_number.valid}\">\n          <label for=\"ambNumberField\" data-error=\"Вы не заполнили поле\">Номер карты</label>\n        </div>\n      </div>\n      <div formGroupName=\"person\">\n        <div class=\"row\">\n          <div class=\"input-field col s12 l4\">\n            <input id=\"lastNameField\" formControlName=\"last_name\" type=\"text\" placeholder=\"Фамилия\" (focusout)=\"searchCoincidence()\">\n            <label for=\"lastNameField\" data-error=\"Вы не заполнили поле\">Фамилия</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"firstNameField\" formControlName=\"first_name\" type=\"text\" placeholder=\"Имя\" (focusout)=\"searchCoincidence()\">\n            <label for=\"firstNameField\" data-error=\"Вы не заполнили поле\">Имя</label>\n          </div>\n          <div class=\"input-field col s12 l4\">\n            <input id=\"secondNameField\" formControlName=\"second_name\" type=\"text\" placeholder=\"Отчество\">\n            <label for=\"secondNameField\">Отчество</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col s2\">\n            Пол:\n          </div>\n          <div class=\"col s10\">\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField2\" value=\"female\" />\n              <label for=\"genderField2\">Женский</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField1\" value=\"male\" />\n              <label for=\"genderField1\">Мужской</label>\n            </p>\n            <p class=\"col s12 l4\">\n              <input formControlName=\"gender\" class=\"with-gap\" type=\"radio\" id=\"genderField3\" value=\"no\" />\n              <label for=\"genderField3\">Не определен</label>\n            </p>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">Дата рождения: {{ patient.person.birthdate | date: \"dd.MM.y\" }}</div>\n          <div class=\"input-field col s12 l6\">\n            <input materialize=\"pickadate\" [materializeParams]=\"[datePickerOptions]\" formControlName=\"birthdate\" type=\"date\" class=\"datepicker\" id=\"birthdateField\" placeholder=\"Новая дата рождения\">\n            <label for=\"birthdateField\">Новая дата рождения</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"input-field col s12 l6\">\n            <input id=\"phoneField\" formControlName=\"phone\" type=\"number\" placeholder=\"Телефон\" (focusout)=\"searchCoincidence()\">\n            <label for=\"phoneField\" data-error=\"Вы не заполнили поле\">Телефон</label>\n          </div>\n          <div class=\"input-field col s12 l6\">\n            <input id=\"emailField\" formControlName=\"email\" type=\"text\" placeholder=\"Email\" (focusout)=\"searchCoincidence()\">\n            <label for=\"emailField\">Email</label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <input type=\"checkbox\" class=\"filled-in\" id=\"activeField\" formControlName=\"active\" />\n          <label for=\"activeField\">Активный</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/patients\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n  <div id=\"add-info\" class=\"col s12\">\n     <form [formGroup]=\"addForm\" novalidate (ngSubmit)=\"onSubmit(addForm.value, addForm.valid)\">\n      <div class=\"row\" *ngIf=\"addForm.value.person\" formGroupName=\"person\">\n        <div class=\"col s12 valign-wrapper\">\n          <img class=\"valign selected-img\" *ngIf=\"addForm.value.person.picture\" src=\"/api/v1/uploads/thumbs/{{addForm.value.person.picture.filename}}\" alt=\"\">\n          <span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">Выбрать картинку</span>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!addForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/patients\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>\n\n<app-help-panel title=\"Найдены совпадения\" (toggle)=\"openHelpPanel($event)\">\n  <div class=\"foundsPatients\">\n    <ul class=\"collection\" *ngIf=\"coincidencePersons\">\n        <li class=\"collection-item dismissable\" *ngFor=\"let item of coincidencePersons\"><div>{{[item.last_name, item.first_name, item.second_name].join(\" \")}}<br> {{item.phone ? item.phone : \"Не указан\"}} <br> {{item.email ? item.email : \"Не указан\"}}<a class=\"secondary-content\" (click)=\"setPerson(item)\"><i class=\"material-icons\">send</i></a></div></li>\n    </ul>\n  </div>\n</app-help-panel>\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalFoundActions\">\n  <div class=\"modal-content\">\n    <h4>Карта для данного пациента уже создана! (№: {{foundItem.amb_number}})</h4>\n    <p *ngIf=\"currentItem\">Вы хотите перейти к редактированию найденной карты?</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <a class=\"modal-action modal-close waves-effect waves-green btn\" routerLink=\"/patients/update/{{foundItem._id}}\">Перейти</a>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ 1235:
+/***/ 1254:
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  patient-update works!\n</p>\n"
 
 /***/ }),
 
-/***/ 1236:
+/***/ 1255:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"responsive-table\">\n  <thead>\n    <tr>\n        <th>№</th>\n        <th>ФИО</th>\n        <th>Телефон</th>\n        <th>Дата создания</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of patients\">\n      <td class=\"text-capitalize\">{{item.amb_number}}</td>\n      <td class=\"text-capitalize\">{{[item.person.last_name, item.person.first_name, item.person.second_name].join(\" \")}}</td>\n      <td>{{item.person.phone}}</td>\n      <td>{{item.createdAt | date:\"dd.MM.y\"}}</td>\n      <td>\n        <a routerLink=\"/patients/update/{{item._id}}\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></a>\n        <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить карту пациента</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить пользователя: {{[currentItem.person.last_name, currentItem.person.first_name, currentItem.person.second_name].join(\" \")}}? <br> Дата создания: {{currentItem.createdAt | date:\"dd.MM.y\"}} </p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>"

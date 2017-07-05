@@ -6,6 +6,7 @@ const rules = {
 		"specialists", "specialists.add", "specialists.update", "specialists.delete",
 		"patients", "patients.add", "patients.update", "patients.delete", 
 		"payments", "payments.add", "payments.create", "payments.reserve", "payments.pay", "payments.update", "payments.delete", 
+		"payments.report.incomemonth",
 		"persons", "persons.add", "persons.update", "persons.delete",
 		"services", "services.add", "services.update", "services.delete", 
 		"goods", "goods.add", "goods.update", "goods.delete", 
@@ -26,7 +27,7 @@ const rules = {
 	"user-spec": [
 		"analyzes",
 		"specialists",
-		"payments", "payments.update", "payments.create",  "payments.add", "payments.onlyself",
+		"payments", "payments.create",  "payments.add", "payments.onlyself",
 		"persons", "persons.add", "persons.update",
 		"services",
 		"goods",

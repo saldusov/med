@@ -83,21 +83,26 @@ let userManager = {
 
 	update: function(id, data) {
 		return new Promise(function(resolve, reject) {
-			let updateData = {};
-			if(data.username) updateData.username = data.username;
-			if(data.password) updateData.password = data.password;
-			if(data.personId) updateData.personId = data.personId;
-			if(data.group) updateData.group = data.group;
-			if(data.active != null) updateData.active = data.active;
-			if(data.resource) updateData.resource = data.resource;
-			console.log(updateData);
-			UserSchema.update({_id: id}, {$set: updateData}, function(errors, updatedObject){
-				if(errors) {
-					reject([errors]);
+			UserSchema.findOne({_id: id}, function(error, user) {
+				if(error) {
+					reject({error});
 				} else {
-					resolve(updatedObject);
+					if(data.username) user.username = data.username;
+					if(data.password) user.password = data.password;
+					if(data.personId) user.personId = data.personId;
+					if(data.group) user.group = data.group;
+					if(data.active != null) user.active = data.active;
+					if(data.resource) user.resource = data.resource;
+
+					user.save(function(errors, updatedObject){
+						if(errors) {
+							reject([errors]);
+						} else {
+							resolve(updatedObject);
+						}
+					});
 				}
-			});		
+			});	
 		});
 	},
 

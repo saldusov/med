@@ -10,8 +10,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_service__ = __webpack_require__(1065);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__specialties_specialties_component__ = __webpack_require__(1169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__specialties_service__ = __webpack_require__(1069);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__specialties_specialties_component__ = __webpack_require__(1181);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__users_widgets_users_widget__ = __webpack_require__(453);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpecialtiesModule", function() { return SpecialtiesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -58,7 +58,7 @@ var SpecialtiesModule = (function () {
 
 /***/ }),
 
-/***/ 1065:
+/***/ 1069:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -130,14 +130,14 @@ var SpecialtiesService = (function () {
 
 /***/ }),
 
-/***/ 1169:
+/***/ 1181:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__specialties_service__ = __webpack_require__(1065);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__specialties_service__ = __webpack_require__(1069);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_pagination_service__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__ = __webpack_require__(282);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpecialtiesComponent; });
@@ -252,8 +252,8 @@ var SpecialtiesComponent = (function () {
     SpecialtiesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-specialties',
-            template: __webpack_require__(1256),
-            styles: [__webpack_require__(1222)]
+            template: __webpack_require__(1282),
+            styles: [__webpack_require__(1241)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__specialties_service__["a" /* SpecialtiesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__specialties_service__["a" /* SpecialtiesService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_toast_service__["a" /* ToastService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _e) || Object])
     ], SpecialtiesComponent);
@@ -264,14 +264,14 @@ var SpecialtiesComponent = (function () {
 
 /***/ }),
 
-/***/ 1222:
+/***/ 1241:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1256:
+/***/ 1282:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"responsive-table\">\n  <thead>\n    <tr>\n        <th data-field=\"name\">Наименование</th>\n        <th>Действия</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of specialties\">\n      <td class=\"text-capitalize\">{{item.name}}</td>\n      <td>\n        <button (click)=\"openModal(item, 'detail')\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></button>\n        <button (click)=\"openModal(item)\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- Delete Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDeleteActions\">\n  <div class=\"modal-content\">\n    <h4>Удалить специальность</h4>\n    <p *ngIf=\"currentItem\">Вы хотите удалить специальность: {{currentItem.name}}?</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal()\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"deleteItem(currentItem)\">Согласен</button>\n  </div>\n</div>\n\n<!-- Detail Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalDetailActions\">\n  <div class=\"modal-content\">\n    <h4>Редактировать специальность</h4>\n    <div class=\"form-container row\" *ngIf=\"currentItem\">\n      <div class=\"input-field col s12\">\n        <input id=\"nameField\" type=\"text\" [(ngModel)]=\"currentItem.name\" placeholder=\"Наименование\">\n        <label for=\"nameField\" data-error=\"Вы не заполнили поле\" [ngClass]=\"{'active': currentItem.name}\">Наименование</label>\n      </div>\n      <div class=\"col s12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" [(ngModel)]=\"currentItem.active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n    </div>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal('detail')\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"updateItem(currentItem)\">Сохранить</button>\n  </div>\n</div>\n\n<!-- Detail Modal Structure -->\n<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"[{dismissible: false}]\" [materializeActions]=\"modalAddActions\">\n  <div class=\"modal-content\">\n    <h4>Добавить специальность</h4>\n    <div class=\"form-container row\" *ngIf=\"currentItem\">\n      <div class=\"input-field col s12\">\n        <input id=\"nameField\" type=\"text\" [(ngModel)]=\"currentItem.name\" placeholder=\"Наименование\">\n        <label for=\"nameField\" data-error=\"Вы не заполнили поле\">Наименование</label>\n      </div>\n      <div class=\"col s12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" [(ngModel)]=\"currentItem.active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n    </div>\n  </div>\n  <div class=\"modal-footer\">\n    <button class=\"waves-effect waves-green btn-flat\" (click)=\"closeModal('add')\">Отменить</button>\n    <button class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"addItem(currentItem)\">Сохранить</button>\n  </div>\n</div>"

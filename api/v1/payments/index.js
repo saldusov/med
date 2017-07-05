@@ -50,6 +50,12 @@ app.post('/pay/:id', auth.checkAccess("payments.pay"), parseDataPay, checkCreato
 		.catch((errors) => res.status(400).json({errors}));
 });
 
+app.put('/collect/:id', auth.checkAccess("payments.create"), parseData, checkCreator, function(req, res, next){
+	updatePayment(req.params.id, req.body)
+		.then((payment) => res.status(200).json(payment))
+		.catch((errors) => res.status(400).json({errors}));
+});
+
 app.put('/:id', auth.checkAccess("payments.update"), parseData, checkCreator, function(req, res, next){
 	updatePayment(req.params.id, req.body)
 		.then((payment) => res.status(200).json(payment))

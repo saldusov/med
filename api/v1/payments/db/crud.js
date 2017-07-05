@@ -72,6 +72,7 @@ let PaymentManager = {
 				   	{
 				   		$group: {
 				   			_id: "$_id",
+				   			serialNumber: { $first: "$serialNumber" },
 							personId: { $first: "$personId"},
 							specialists: { $first: "$specialists"},
 							referral: { $first: "$referral" },
@@ -84,7 +85,8 @@ let PaymentManager = {
 							discount: { $first: "$discount"},
 							status: { $first: "$status"},
 							note: { $first: "$note"},
-							person: { $first: "$person"}
+							person: { $first: "$person"},
+							createdAt: { $first: "$createdAt" }
 				   		}
 				   	},
 				   	{
@@ -116,6 +118,7 @@ let PaymentManager = {
 				   	{
 				   		$group: {
 				   			_id: "$_id",
+				   			serialNumber: { $first: "$serialNumber" },
 							personId: { $first: "$personId"},
 							specialists: { $first: "$specialists"},
 							referral: { $first: "$referral" },
@@ -128,7 +131,8 @@ let PaymentManager = {
 							discount: { $first: "$discount"},
 							status: { $first: "$status"},
 							note: { $first: "$note"},
-							person: { $first: "$person"}
+							person: { $first: "$person"},
+							createdAt: { $first: "$createdAt" }
 				   		}
 				   	},
 				   	{
@@ -160,6 +164,7 @@ let PaymentManager = {
 				   	{
 				   		$group: {
 				   			_id: "$_id",
+				   			serialNumber: { $first: "$serialNumber" },
 							personId: { $first: "$personId"},
 							specialists: { $first: "$specialists"},
 							referral: { $first: "$referral" },
@@ -172,7 +177,8 @@ let PaymentManager = {
 							discount: { $first: "$discount"},
 							status: { $first: "$status"},
 							note: { $first: "$note"},
-							person: { $first: "$person"}
+							person: { $first: "$person"},
+							createdAt: { $first: "$createdAt" }
 				   		}
 				   	}
 				])

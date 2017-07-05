@@ -92,7 +92,11 @@ let toolsManager = {
 
 			if(rules.indexOf('payments.add') >= 0) {
 				result.items.push({route: '/payments/pay/add', name: 'add', title: "Оплата"});
-			}       
+			}
+
+			if(rules.indexOf('payments.report.incomemonth') >= 0) {
+				result.items.push({route: '/payments/report/incomemonth', name: 'incomemonth', title: "Месячный отчет"});
+			}  
 		}
 
 		return result;

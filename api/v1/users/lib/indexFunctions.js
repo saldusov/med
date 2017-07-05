@@ -111,7 +111,6 @@ module.exports =  {
 			        if (error) {
 			          reject({error});
 			        }
-
 			        if (!user || !user.checkPassword(password)) {
 			          reject("Нет такого пользователя или пароль неверен.");
 			        } else {

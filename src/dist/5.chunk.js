@@ -11,12 +11,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__widgets_analyzes_widget__ = __webpack_require__(1098);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__widgets_analyzes_widget__ = __webpack_require__(1103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__users_widgets_users_widget__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__analyzes_analyzes_component__ = __webpack_require__(1143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__analyzes_add_analyzes_add_component__ = __webpack_require__(1141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__analyzes_update_analyzes_update_component__ = __webpack_require__(1142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__analyzes_service__ = __webpack_require__(1088);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__analyzes_analyzes_component__ = __webpack_require__(1148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__analyzes_add_analyzes_add_component__ = __webpack_require__(1146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__analyzes_update_analyzes_update_component__ = __webpack_require__(1147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__analyzes_service__ = __webpack_require__(1093);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnalyzesModule", function() { return AnalyzesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -78,14 +78,15 @@ var AnalyzesModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__ = __webpack_require__(1048);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_modal_component__ = __webpack_require__(1043);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__files_selected_files_selected_files_component__ = __webpack_require__(1045);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__ = __webpack_require__(1049);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__ = __webpack_require__(1046);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__ = __webpack_require__(1050);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__ = __webpack_require__(1047);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__ = __webpack_require__(1044);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__ = __webpack_require__(1049);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_modal_component__ = __webpack_require__(1044);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__files_selected_files_selected_files_component__ = __webpack_require__(1046);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__ = __webpack_require__(1050);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__ = __webpack_require__(1047);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__ = __webpack_require__(1051);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__ = __webpack_require__(1048);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__ = __webpack_require__(1045);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__ = __webpack_require__(1052);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -96,6 +97,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -128,7 +130,8 @@ var SharedModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__["a" /* AutocompleteComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__["a" /* ActionButtonsComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__["a" /* ClickOutsideDirective */]
+                __WEBPACK_IMPORTED_MODULE_11__directives_click_outside_directive__["a" /* ClickOutsideDirective */],
+                __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__["a" /* CounterInListsComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_4__help_panel_help_panel_component__["a" /* HelpPanelComponent */],
@@ -137,7 +140,8 @@ var SharedModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__pagination_pagination_component__["a" /* PaginationComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__forms_autocomplete_autocomplete_component__["a" /* AutocompleteComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__tables_action_buttons_action_buttons_component__["a" /* ActionButtonsComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__forms_search_field_search_field_component__["a" /* SearchFieldComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__theme_components_counter_in_lists_counter_in_lists_component__["a" /* CounterInListsComponent */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -148,7 +152,7 @@ var SharedModule = (function () {
 
 /***/ }),
 
-/***/ 1043:
+/***/ 1044:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -209,8 +213,8 @@ var ModalComponent = (function () {
     ModalComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-modal',
-            template: __webpack_require__(1062),
-            styles: [__webpack_require__(1055)]
+            template: __webpack_require__(1065),
+            styles: [__webpack_require__(1057)]
         }), 
         __metadata('design:paramtypes', [])
     ], ModalComponent);
@@ -220,7 +224,7 @@ var ModalComponent = (function () {
 
 /***/ }),
 
-/***/ 1044:
+/***/ 1045:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -273,7 +277,7 @@ var ClickOutsideDirective = (function () {
 
 /***/ }),
 
-/***/ 1045:
+/***/ 1046:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -345,8 +349,8 @@ var SelectedFilesComponent = (function () {
     SelectedFilesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-selected-files',
-            template: __webpack_require__(1058),
-            styles: [__webpack_require__(1051)]
+            template: __webpack_require__(1061),
+            styles: [__webpack_require__(1053)]
         }), 
         __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__file_select_service__["a" /* FileSelectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__file_select_service__["a" /* FileSelectService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _d) || Object])
     ], SelectedFilesComponent);
@@ -357,7 +361,7 @@ var SelectedFilesComponent = (function () {
 
 /***/ }),
 
-/***/ 1046:
+/***/ 1047:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -381,6 +385,7 @@ var AutocompleteComponent = (function () {
         this.eSelect = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.eClose = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.showItems = false;
+        this.search = "";
     }
     AutocompleteComponent.prototype.onKeyPress = function (target) {
         var _this = this;
@@ -388,13 +393,24 @@ var AutocompleteComponent = (function () {
             clearTimeout(this.timer);
             this.timer = null;
         }
-        this.timer = setTimeout(function () { return _this.eKeyPress.emit(_this.search); }, this.time);
+        if (this.search.length >= 2) {
+            this.timer = setTimeout(function () { return _this.eKeyPress.emit(_this.search); }, this.time);
+        }
+        if (this.search.length == 0) {
+            this.onHideItems();
+        }
+        else {
+            this.onShowItems();
+        }
     };
-    AutocompleteComponent.prototype.onKeyDown = function (target) {
+    AutocompleteComponent.prototype.onKeyUp = function (target) {
         if (target.key === 'Escape') {
             this.onHideItems();
         }
         else if (target.key == 'Backspace') {
+            this.onKeyPress(target);
+        }
+        else {
             this.onKeyPress(target);
         }
     };
@@ -407,6 +423,11 @@ var AutocompleteComponent = (function () {
     };
     AutocompleteComponent.prototype.onClean = function () {
         this.eClose.emit();
+    };
+    AutocompleteComponent.prototype.onFocusField = function () {
+        if (this.search.length >= 2) {
+            this.onShowItems();
+        }
     };
     AutocompleteComponent.prototype.onShowItems = function () {
         this.showItems = true;
@@ -439,8 +460,8 @@ var AutocompleteComponent = (function () {
     AutocompleteComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-autocomplete',
-            template: __webpack_require__(1059),
-            styles: [__webpack_require__(1052)]
+            template: __webpack_require__(1062),
+            styles: [__webpack_require__(1054)]
         }), 
         __metadata('design:paramtypes', [])
     ], AutocompleteComponent);
@@ -451,7 +472,7 @@ var AutocompleteComponent = (function () {
 
 /***/ }),
 
-/***/ 1047:
+/***/ 1048:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -505,8 +526,8 @@ var SearchFieldComponent = (function () {
     SearchFieldComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-search-field',
-            template: __webpack_require__(1060),
-            styles: [__webpack_require__(1053)]
+            template: __webpack_require__(1063),
+            styles: [__webpack_require__(1055)]
         }), 
         __metadata('design:paramtypes', [])
     ], SearchFieldComponent);
@@ -516,7 +537,7 @@ var SearchFieldComponent = (function () {
 
 /***/ }),
 
-/***/ 1048:
+/***/ 1049:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -569,8 +590,8 @@ var HelpPanelComponent = (function () {
     HelpPanelComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-help-panel',
-            template: __webpack_require__(1061),
-            styles: [__webpack_require__(1054)],
+            template: __webpack_require__(1064),
+            styles: [__webpack_require__(1056)],
             animations: [
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["trigger"])('statePanel', [
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["state"])('inactive', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["style"])({
@@ -593,7 +614,7 @@ var HelpPanelComponent = (function () {
 
 /***/ }),
 
-/***/ 1049:
+/***/ 1050:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -674,8 +695,8 @@ var PaginationComponent = (function () {
     PaginationComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-pagination',
-            template: __webpack_require__(1063),
-            styles: [__webpack_require__(1056)],
+            template: __webpack_require__(1066),
+            styles: [__webpack_require__(1058)],
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__pagination_service__["a" /* PaginationService */]) === 'function' && _b) || Object])
     ], PaginationComponent);
@@ -686,7 +707,7 @@ var PaginationComponent = (function () {
 
 /***/ }),
 
-/***/ 1050:
+/***/ 1051:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -747,8 +768,8 @@ var ActionButtonsComponent = (function () {
     ActionButtonsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-action-buttons',
-            template: __webpack_require__(1064),
-            styles: [__webpack_require__(1057)]
+            template: __webpack_require__(1067),
+            styles: [__webpack_require__(1059)]
         }), 
         __metadata('design:paramtypes', [])
     ], ActionButtonsComponent);
@@ -758,45 +779,91 @@ var ActionButtonsComponent = (function () {
 
 /***/ }),
 
-/***/ 1051:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ 1052:
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".autocomplete-wrapper input[type] {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.close-icon {\r\n    position: absolute;\r\n    top: 8px;\r\n    right: 1rem;\r\n    cursor: pointer;\r\n    font-size: 1.6rem;\r\n    -webkit-transition: .3s color;\r\n    transition: .3s color;\r\n}"
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CounterInListsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CounterInListsComponent = (function () {
+    function CounterInListsComponent() {
+        this.items = [];
+    }
+    CounterInListsComponent.prototype.ngOnInit = function () {
+    };
+    CounterInListsComponent.prototype.getCountSelectedItems = function () {
+        var _this = this;
+        var result = 0;
+        this.items.forEach(function (found) {
+            if (found._id === _this.item._id)
+                result++;
+        });
+        return result;
+    };
+    CounterInListsComponent.prototype.isSelect = function () {
+        var _this = this;
+        return !!this.items.find(function (found) {
+            if (found._id === _this.item._id)
+                return true;
+        });
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('selected'), 
+        __metadata('design:type', Array)
+    ], CounterInListsComponent.prototype, "items", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('item'), 
+        __metadata('design:type', Object)
+    ], CounterInListsComponent.prototype, "item", void 0);
+    CounterInListsComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'tm-counter-in-lists',
+            template: __webpack_require__(1068),
+            styles: [__webpack_require__(1060)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], CounterInListsComponent);
+    return CounterInListsComponent;
+}());
+//# sourceMappingURL=D:/projects/angular-med/src/counter-in-lists.component.js.map
 
 /***/ }),
 
 /***/ 1053:
 /***/ (function(module, exports) {
 
-module.exports = ".input-field-search {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}"
+module.exports = ""
 
 /***/ }),
 
 /***/ 1054:
 /***/ (function(module, exports) {
 
-module.exports = ".help-panel {\r\n  position: fixed;\r\n  top: 0px;\r\n  left: 0px;\r\n  width: 300px;\r\n  height: 100%;\r\n  background: #fff;\r\n  border-right: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .title {\r\n  font-size: 1.5em;\r\n  padding: 5px 10px;\r\n  border-bottom: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .anchor {\r\n  position: absolute;\r\n  top: 20%;\r\n  right: -62px;\r\n}\r\n\r\n.help-panel .anchor .badge {\r\n  position: absolute;\r\n  right: -20px;\r\n  top: 4px;\r\n}"
+module.exports = ".autocomplete-wrapper input[type] {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.close-icon {\r\n    position: absolute;\r\n    top: 8px;\r\n    right: 1rem;\r\n    cursor: pointer;\r\n    font-size: 1.6rem;\r\n    -webkit-transition: .3s color;\r\n    transition: .3s color;\r\n}"
 
 /***/ }),
 
 /***/ 1055:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".input-field-search {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}"
 
 /***/ }),
 
 /***/ 1056:
 /***/ (function(module, exports) {
 
-module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
+module.exports = ".help-panel {\r\n  position: fixed;\r\n  top: 0px;\r\n  left: 0px;\r\n  width: 300px;\r\n  height: 100%;\r\n  background: #fff;\r\n  border-right: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .title {\r\n  font-size: 1.5em;\r\n  padding: 5px 10px;\r\n  border-bottom: 2px solid #00897b; \r\n}\r\n\r\n.help-panel .anchor {\r\n  position: absolute;\r\n  top: 20%;\r\n  right: -62px;\r\n}\r\n\r\n.help-panel .anchor .badge {\r\n  position: absolute;\r\n  right: -20px;\r\n  top: 4px;\r\n}"
 
 /***/ }),
 
@@ -810,53 +877,81 @@ module.exports = ""
 /***/ 1058:
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"files.length > 0\">\n  <img class=\"valign selected-img\" *ngFor=\"let file of files\" src=\"/api/v1/uploads/thumbs/{{file.filename}}\" alt=\"\">\n</div>\n<span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">{{buttonTitle}}</span>"
+module.exports = ".pagination .count {\r\n    color: #444;\r\n    font-size: 1rem;\r\n}\r\n\r\n.pagination .count span {\r\n    line-height: 30px;\r\n}\r\n\r\n.pagination li a, .pagination li i {\r\n    font-size: 1.1rem;\r\n}\r\n"
 
 /***/ }),
 
 /***/ 1059:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"autocomplete-wrapper\" (clickOutside)=\"onClickOutside()\">\n  <div class=\"input-field\">\n    <input [(ngModel)]=\"search\" id=\"searchAutocomplete\" placeholder=\"Найти пациента\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" (focus)=\"onShowItems()\" (click)=\"onShowItems()\" autocomplete=\"off\">\n    <i class=\"material-icons close-icon\" (click)=\"onClean()\">close</i>\n  </div>\n  <ul class=\"autocomplete-content dropdown-content\" [hidden]=\"!showItems\">\n    <ng-content></ng-content>\n  </ul>\n</div>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 1060:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"input-field input-field-search\">\n  <input id=\"search\" type=\"search\" [(ngModel)] = \"search\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" placeholder=\"Найти\">\n  <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n  <i class=\"material-icons\" (click)=\"onClean()\">close</i>\n</div>"
+module.exports = "span.counter {\r\n    padding: 0px 4px;\r\n    margin-right: 5px;\r\n    border: 1px solid #26a69a;\r\n    color: #26a69a;\r\n}"
 
 /***/ }),
 
 /***/ 1061:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"help-panel\" [@statePanel]=\"panel.show\" (keydown)=\"keyDownFunction($event)\">\n  <div *ngIf=\"panel.anchor\" class=\"anchor teal darken-1 white-text\" (click)=\"panel.toggle()\"><span class=\"new badge deep-orange darken-1\" *ngIf=\"panel.anchor.count\">{{panel.anchor.count}}</span><i class=\"medium material-icons\">{{panel.anchor.icon}}</i></div>\n  <div class=\"title teal lighten-1 white-text\">\n    {{title}}\n  </div>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"files.length > 0\">\n  <img class=\"valign selected-img\" *ngFor=\"let file of files\" src=\"/api/v1/uploads/thumbs/{{file.filename}}\" alt=\"\">\n</div>\n<span class=\"btn valign waves-effect waves-light\" (click)=\"selectImage()\">{{buttonTitle}}</span>"
 
 /***/ }),
 
 /***/ 1062:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"params\" [materializeActions]=\"modal\">\n  <div class=\"modal-content\">\n    <ng-content></ng-content>\n  </div>\n  <div class=\"modal-footer\">\n    <button type=\"button\" class=\"waves-effect waves-green btn-flat\" (click)=\"close()\">Отменить</button>\n    <button type=\"button\" class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"success()\">Согласен</button>\n  </div>\n</div>"
+module.exports = "<div class=\"autocomplete-wrapper\" (clickOutside)=\"onClickOutside()\">\n  <div class=\"input-field\">\n    <input [(ngModel)]=\"search\" id=\"searchAutocomplete\" placeholder=\"Найти пациента\" (keyup)=\"onKeyUp($event)\" (focus)=\"onFocusField()\" autocomplete=\"off\">\n    <i class=\"material-icons close-icon\" (click)=\"onClean()\">close</i>\n  </div>\n  <ul class=\"autocomplete-content dropdown-content\" [hidden]=\"!showItems\">\n    <ng-content></ng-content>\n  </ul>\n</div>"
 
 /***/ }),
 
 /***/ 1063:
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"pagination\" *ngIf=\"name\">\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(1)\"><i class=\"material-icons\">first_page</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage - 1)\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li *ngFor=\"let page of pages\" [ngClass]=\"{active: page === currentPage}\" class=\"waves-effect\"><a (click)=\"setPage(page)\">{{page}}</a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage + 1)\"><i class=\"material-icons\">chevron_right</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(totalPages)\"><i class=\"material-icons\">last_page</i></a></li>\n  <li class=\"count\"><span>{{((currentPage - 1) * nPerPage) + 1}} - {{currentPage * nPerPage}} из {{countItems}}</span></li>\n</ul>"
+module.exports = "<div class=\"input-field input-field-search\">\n  <input id=\"search\" type=\"search\" [(ngModel)] = \"search\" (keypress)=\"onKeyPress($event)\" (keydown)=\"onKeyDown($event)\" placeholder=\"Найти\">\n  <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n  <i class=\"material-icons\" (click)=\"onClean()\">close</i>\n</div>"
 
 /***/ }),
 
 /***/ 1064:
 /***/ (function(module, exports) {
 
+module.exports = "<div class=\"help-panel\" [@statePanel]=\"panel.show\" (keydown)=\"keyDownFunction($event)\">\n  <div *ngIf=\"panel.anchor\" class=\"anchor teal darken-1 white-text\" (click)=\"panel.toggle()\"><span class=\"new badge deep-orange darken-1\" *ngIf=\"panel.anchor.count\">{{panel.anchor.count}}</span><i class=\"medium material-icons\">{{panel.anchor.icon}}</i></div>\n  <div class=\"title teal lighten-1 white-text\">\n    {{title}}\n  </div>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ 1065:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal bottom-sheet\" materialize=\"modal\" [materializeParams]=\"params\" [materializeActions]=\"modal\">\n  <div class=\"modal-content\">\n    <ng-content></ng-content>\n  </div>\n  <div class=\"modal-footer\">\n    <button type=\"button\" class=\"waves-effect waves-green btn-flat\" (click)=\"close()\">Отменить</button>\n    <button type=\"button\" class=\"modal-action modal-close waves-effect waves-green btn\" (click)=\"success()\">Согласен</button>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ 1066:
+/***/ (function(module, exports) {
+
+module.exports = "<ul class=\"pagination\" *ngIf=\"name\">\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(1)\"><i class=\"material-icons\">first_page</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === 1}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage - 1)\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li *ngFor=\"let page of pages\" [ngClass]=\"{active: page === currentPage}\" class=\"waves-effect\"><a (click)=\"setPage(page)\">{{page}}</a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(currentPage + 1)\"><i class=\"material-icons\">chevron_right</i></a></li>\n  <li [ngClass]=\"{disabled:currentPage === totalPages}\" class=\"waves-effect\"><a (click)=\"setPage(totalPages)\"><i class=\"material-icons\">last_page</i></a></li>\n  <li class=\"count\"><span>{{((currentPage - 1) * nPerPage) + 1}} - {{currentPage * nPerPage}} из {{countItems}}</span></li>\n</ul>"
+
+/***/ }),
+
+/***/ 1067:
+/***/ (function(module, exports) {
+
 module.exports = "<button *ngIf=\"options.edit\" (click)=\"onEdit()\" class=\"btn btn-floating\"><i class=\"material-icons\">edit</i></button>\n<button *ngIf=\"options.delete\" (click)=\"onDelete()\" class=\"btn btn-floating red darken-4\"><i class=\"material-icons\">delete</i></button>\n<button *ngIf=\"options.check\" (click)=\"onCheck()\" class=\"btn btn-floating\" [ngClass]=\"{'teal lighten-1': checked, 'grey lighten-3': !checked}\"><i class=\"material-icons \" [ngClass]=\"{'white-text': checked, 'grey-text text-darken-4': !checked}\">{{ checked ? 'done' : 'panorama_fish_eye' }}</i></button>"
 
 /***/ }),
 
-/***/ 1082:
+/***/ 1068:
+/***/ (function(module, exports) {
+
+module.exports = "<span class=\"counter\" *ngIf=\"isSelect()\">{{getCountSelectedItems()}}</span>"
+
+/***/ }),
+
+/***/ 1077:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -937,7 +1032,7 @@ var Analyzes = (function () {
 
 /***/ }),
 
-/***/ 1088:
+/***/ 1093:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1054,7 +1149,7 @@ var AnalyzesService = (function () {
 
 /***/ }),
 
-/***/ 1092:
+/***/ 1096:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1220,8 +1315,8 @@ var AnalyzesListComponent = (function () {
     AnalyzesListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-analyzes-list',
-            template: __webpack_require__(1119),
-            styles: [__webpack_require__(1113)]
+            template: __webpack_require__(1123),
+            styles: [__webpack_require__(1117)]
         }), 
         __metadata('design:paramtypes', [])
     ], AnalyzesListComponent);
@@ -1231,7 +1326,7 @@ var AnalyzesListComponent = (function () {
 
 /***/ }),
 
-/***/ 1093:
+/***/ 1097:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1298,8 +1393,8 @@ var AnalyzesProductListComponent = (function () {
     AnalyzesProductListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-analyzes-product-list',
-            template: __webpack_require__(1120),
-            styles: [__webpack_require__(1114)]
+            template: __webpack_require__(1124),
+            styles: [__webpack_require__(1118)]
         }), 
         __metadata('design:paramtypes', [])
     ], AnalyzesProductListComponent);
@@ -1309,7 +1404,7 @@ var AnalyzesProductListComponent = (function () {
 
 /***/ }),
 
-/***/ 1098:
+/***/ 1103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1318,8 +1413,8 @@ var AnalyzesProductListComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_materialize_src__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__(1040);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__analyzes_list_analyzes_list_component__ = __webpack_require__(1092);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__analyzes_product_list_analyzes_product_list_component__ = __webpack_require__(1093);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__analyzes_list_analyzes_list_component__ = __webpack_require__(1096);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__analyzes_product_list_analyzes_product_list_component__ = __webpack_require__(1097);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesWidgetModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1359,35 +1454,35 @@ var AnalyzesWidgetModule = (function () {
 
 /***/ }),
 
-/***/ 1113:
+/***/ 1117:
 /***/ (function(module, exports) {
 
 module.exports = ".helix-color {\r\n    color: #186400;\r\n}\r\n\r\n.cmd-color {\r\n    color: #642a00;\r\n}\r\n\r\n.invitro-color {\r\n    color: #001a64;\r\n}\r\n\r\n.col-title {\r\n    width: 500px;\r\n}\r\n\r\n.small-table {\r\n    font-size: 85%;\r\n}\r\n\r\n.small-table td,\r\n.small-table th {\r\n    padding: 4px;\r\n}\r\n\r\n.helix-th {\r\n    min-width: 55px;\r\n}"
 
 /***/ }),
 
-/***/ 1114:
+/***/ 1118:
 /***/ (function(module, exports) {
 
 module.exports = ".helix-color {\r\n    color: #186400;\r\n}\r\n\r\n.cmd-color {\r\n    color: #642a00;\r\n}\r\n\r\n.invitro-color {\r\n    color: #001a64;\r\n}\r\n\r\n.col-title {\r\n    width: 500px;\r\n}\r\n\r\n.small-table {\r\n    font-size: 85%;\r\n}\r\n\r\n.small-table td,\r\n.small-table th {\r\n    padding: 4px;\r\n}\r\n\r\n.helix-td {\r\n    min-width: 55px;\r\n}"
 
 /***/ }),
 
-/***/ 1119:
+/***/ 1123:
 /***/ (function(module, exports) {
 
 module.exports = "<table class=\"table bordered highlight small-table\">\n  <thead>\n    <tr>\n        <th data-field=\"art\" colspan=\"3\" class=\"col-art text-align-center\">Артикул</th>\n        <th data-field=\"title\" rowspan=\"2\" class=\"col-title\">Наименование</th>\n        <th data-field=\"price\" colspan=\"3\" class=\"col-price text-align-center\" *ngIf=\"options.view.priceLabs\">Цена</th>\n        <th rowspan=\"2\" class=\"col-price text-align-center\" *ngIf=\"options.view.priceProd\">Продажа</th>\n        <th rowspan=\"2\" class=\"col-action\" *ngIf=\"options.view.tools\">Действия</th>\n    </tr>\n    <tr>\n        <th class=\"helix-th\">Helix</th>\n        <th>CMD</th>\n        <th>Инвитро</th>\n        <th *ngIf=\"options.view.priceLabs\">Helix</th>\n        <th *ngIf=\"options.view.priceLabs\">CMD</th>\n        <th *ngIf=\"options.view.priceLabs\">Инвитро</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let item of analyzes\">\n      <td class=\"helix-color\">{{item.art.helix ? item.art.helix : \"-\"}}</td>\n      <td class=\"cmd-color\">{{item.art.cmd ? item.art.cmd : \"-\"}}</td>\n      <td class=\"invitro-color\">{{item.art.invitro ? item.art.invitro : \"-\"}}</td>\n      <td>\n        <span class=\"helix-color\">H: {{item.title.helix ? item.title.helix : 'Не указан'}}</span><br/>\n        <span class=\"cmd-color\">C: {{item.title.cmd ? item.title.cmd : 'Не указан'}}</span><br/>\n        <span class=\"invitro-color\">I: {{item.title.invitro ? item.title.invitro : 'Не указан'}}</span>\n      </td>\n      <td class=\"helix-color\" *ngIf=\"options.view.priceLabs\">{{item.priceLabs.helix ? item.priceLabs.helix : 0}} / {{item.priceProd.helix ? item.priceProd.helix : 0}}</td>\n      <td class=\"cmd-color\" *ngIf=\"options.view.priceLabs\">{{item.priceLabs.cmd ? item.priceLabs.cmd : 0}} / {{item.priceProd.cmd ? item.priceProd.cmd : 0}}</td>\n      <td class=\"invitro-color\" *ngIf=\"options.view.priceLabs\">{{item.priceLabs.invitro ? item.priceLabs.invitro : 0}} / {{item.priceProd.invitro ? item.priceProd.invitro : 0}}</td>\n      <td class=\"text-align-center\" *ngIf=\"options.view.price\">{{item.price}}</td>\n      <td *ngIf=\"!mergeMode && options.tools\" class=\"td-actions\"> \n        <button *ngIf=\"options.tools.merge\" (click)=\"mergeStart(item)\" class=\"btn btn-floating\" ><i class=\"material-icons\">assignment_late</i></button>\n        <app-action-buttons \n          (edit)=\"editItem(item)\"\n          (delete)=\"deleteItem(item)\"\n          (check)=\"clickItem(item)\"\n          [options]=\"options.tools\"\n          [checked]=\"isSelect(item)\">\n        </app-action-buttons>\n      </td>\n      <td *ngIf=\"mergeMode && options.tools\" class=\"td-actions\">\n        <div class=\"input-field\">\n          <input #itemId type=\"checkbox\" class=\"filled-in\" id=\"checkField{{item._id}}\" (click)=\"clickItem(item)\"/>\n          <label for=\"checkField{{item._id}}\"></label>\n        </div>\n      </td>\n    </tr>\n  </tbody>\n</table>"
 
 /***/ }),
 
-/***/ 1120:
+/***/ 1124:
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table bordered highlight small-table\">\r\n  <thead>\r\n    <tr>\r\n        <th class=\"text-align-center\" colspan=\"3\">Артикулы</th>\r\n        <th class=\"col-title\">Наименование</th>\r\n        <th class=\"col-price text-align-center\">Цена</th>\r\n        <th class=\"col-action\">*</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr *ngFor=\"let item of analyzes\">\r\n      <td class=\"helix-color helix-td\">{{item.art.helix ? item.art.helix : \"-\"}}</td>\r\n      <td class=\"cmd-color\">{{item.art.cmd ? item.art.cmd : \"-\"}}</td>\r\n      <td class=\"invitro-color\">{{item.art.invitro ? item.art.invitro : \"-\"}}</td>\r\n      <td>{{item.finishTitle}}</td>\r\n      <td class=\"text-align-center\" >{{item.price}}</td>\r\n      <td class=\"td-actions\"> \r\n        <button (click)=\"clickItem(item)\" class=\"btn btn-floating\" ><i class=\"material-icons\">add</i></button>\r\n      </td>\r\n    </tr>\r\n  </tbody>\r\n</table>"
+module.exports = "<table class=\"table bordered highlight small-table\">\r\n  <thead>\r\n    <tr>\r\n        <th class=\"text-align-center\" colspan=\"3\">Артикулы</th>\r\n        <th class=\"col-title\">Наименование</th>\r\n        <th class=\"col-price text-align-center\">Цена</th>\r\n        <th class=\"col-action\">*</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr *ngFor=\"let item of analyzes\">\r\n      <td class=\"helix-color helix-td\">{{item.art.helix ? item.art.helix : \"-\"}}</td>\r\n      <td class=\"cmd-color\">{{item.art.cmd ? item.art.cmd : \"-\"}}</td>\r\n      <td class=\"invitro-color\">{{item.art.invitro ? item.art.invitro : \"-\"}}</td>\r\n      <td><tm-counter-in-lists [selected]=\"selectedItems\" [item]=\"item\"></tm-counter-in-lists>{{item.finishTitle}}</td>\r\n      <td class=\"text-align-center\" >{{item.price}}</td>\r\n      <td class=\"td-actions\"> \r\n        <button (click)=\"clickItem(item)\" class=\"btn btn-floating\" ><i class=\"material-icons\">add</i></button>\r\n      </td>\r\n    </tr>\r\n  </tbody>\r\n</table>"
 
 /***/ }),
 
-/***/ 1141:
+/***/ 1146:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1411,8 +1506,8 @@ var AnalyzesAddComponent = (function () {
     AnalyzesAddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-analyzes-add',
-            template: __webpack_require__(1228),
-            styles: [__webpack_require__(1194)]
+            template: __webpack_require__(1247),
+            styles: [__webpack_require__(1206)]
         }), 
         __metadata('design:paramtypes', [])
     ], AnalyzesAddComponent);
@@ -1422,7 +1517,7 @@ var AnalyzesAddComponent = (function () {
 
 /***/ }),
 
-/***/ 1142:
+/***/ 1147:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1432,8 +1527,8 @@ var AnalyzesAddComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__analyzes_service__ = __webpack_require__(1088);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__analyzes__ = __webpack_require__(1082);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__analyzes_service__ = __webpack_require__(1093);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__analyzes__ = __webpack_require__(1077);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesUpdateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1529,8 +1624,8 @@ var AnalyzesUpdateComponent = (function () {
     AnalyzesUpdateComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-analyzes-update',
-            template: __webpack_require__(1229),
-            styles: [__webpack_require__(1195)]
+            template: __webpack_require__(1248),
+            styles: [__webpack_require__(1207)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_toolbar_service__["a" /* ToolbarService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_toast_service__["a" /* ToastService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__analyzes_service__["a" /* AnalyzesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__analyzes_service__["a" /* AnalyzesService */]) === 'function' && _f) || Object])
     ], AnalyzesUpdateComponent);
@@ -1541,7 +1636,7 @@ var AnalyzesUpdateComponent = (function () {
 
 /***/ }),
 
-/***/ 1143:
+/***/ 1148:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1549,12 +1644,12 @@ var AnalyzesUpdateComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__analyzes__ = __webpack_require__(1082);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__analyzes_service__ = __webpack_require__(1088);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__analyzes__ = __webpack_require__(1077);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__analyzes_service__ = __webpack_require__(1093);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_pagination_service__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_modal_modal_component__ = __webpack_require__(1043);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__widgets_analyzes_list_analyzes_list_component__ = __webpack_require__(1092);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_modal_modal_component__ = __webpack_require__(1044);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__widgets_analyzes_list_analyzes_list_component__ = __webpack_require__(1096);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnalyzesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1676,8 +1771,8 @@ var AnalyzesComponent = (function () {
     AnalyzesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-analyzes',
-            template: __webpack_require__(1230),
-            styles: [__webpack_require__(1196)]
+            template: __webpack_require__(1249),
+            styles: [__webpack_require__(1208)]
         }), 
         __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__analyzes_service__["a" /* AnalyzesService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__analyzes_service__["a" /* AnalyzesService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_tools_service__["a" /* ToolsService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__shared_pagination_service__["a" /* PaginationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_pagination_service__["a" /* PaginationService */]) === 'function' && _f) || Object])
     ], AnalyzesComponent);
@@ -1688,42 +1783,42 @@ var AnalyzesComponent = (function () {
 
 /***/ }),
 
-/***/ 1194:
+/***/ 1206:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1195:
+/***/ 1207:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 1196:
+/***/ 1208:
 /***/ (function(module, exports) {
 
 module.exports = ".analyzes-list {\r\n    width: 1200px;\r\n}"
 
 /***/ }),
 
-/***/ 1228:
+/***/ 1247:
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  analyzes-add works!\n</p>\n"
 
 /***/ }),
 
-/***/ 1229:
+/***/ 1248:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" class=\"form-container\" *ngIf=\"analyz\">\n    <form class=\"col s12\" [formGroup]=\"updateForm\" novalidate (ngSubmit)=\"onSubmit(updateForm.value, updateForm.valid)\">\n      <div class=\"row\" formGroupName=\"art\">\n        <div class=\"col l12\">Артикул</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Артикул Helix\">\n          <label for=\"artHelix\" [ngClass]=\"{active: updateForm.value.art.helix}\">Артикул Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Артикул CMD\">\n          <label for=\"artCMD\" [ngClass]=\"{active: updateForm.value.art.cmd}\">Артикул CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"artInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Артикул Инвитро\">\n          <label for=\"artInvitro\" [ngClass]=\"{active: updateForm.value.art.invitro}\">Артикул Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"title\">\n        <div class=\"col l12\">Заголовок</div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Заголовок Helix\">\n          <label for=\"titleHelix\" [ngClass]=\"{active: updateForm.value.title.helix}\">Заголовок Helix</label>\n        </div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Заголовок CMD\">\n          <label for=\"titleCMD\" [ngClass]=\"{active: updateForm.value.title.cmd}\">Заголовок CMD</label>\n        </div>\n        <div class=\"input-field col l12\">\n          <input id=\"titleInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Заголовок Инвитро\">\n          <label for=\"titleInvitro\" [ngClass]=\"{active: updateForm.value.title.invitro}\">Заголовок Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"priceLabs\">\n        <div class=\"col l12\">Цена</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceHelix\" formControlName=\"helix\" type=\"number\" placeholder=\"Цена Helix\">\n          <label for=\"priceHelix\" [ngClass]=\"{active: updateForm.value.priceLabs.helix}\">Цена Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceCMD\" formControlName=\"cmd\" type=\"number\" placeholder=\"Цена CMD\">\n          <label for=\"priceCMD\" [ngClass]=\"{active: updateForm.value.priceLabs.cmd}\">Цена CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceInvitro\" formControlName=\"invitro\" type=\"number\" placeholder=\"Цена Инвитро\">\n          <label for=\"priceInvitro\" [ngClass]=\"{active: updateForm.value.priceLabs.invitro}\">Цена Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"priceProd\">\n        <div class=\"col l12\">Цена на продажу</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceHelix\" formControlName=\"helix\" type=\"number\" placeholder=\"Цена Helix\">\n          <label for=\"priceHelix\" [ngClass]=\"{active: updateForm.value.priceProd.helix}\">Цена Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceCMD\" formControlName=\"cmd\" type=\"number\" placeholder=\"Цена CMD\">\n          <label for=\"priceCMD\" [ngClass]=\"{active: updateForm.value.priceProd.cmd}\">Цена CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"priceInvitro\" formControlName=\"invitro\" type=\"number\" placeholder=\"Цена Инвитро\">\n          <label for=\"priceInvitro\" [ngClass]=\"{active: updateForm.value.priceProd.invitro}\">Цена Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\" formGroupName=\"time\">\n        <div class=\"col l12\">Время</div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeHelix\" formControlName=\"helix\" type=\"text\" placeholder=\"Время Helix\">\n          <label for=\"timeHelix\" [ngClass]=\"{active: updateForm.value.time.helix}\">Время Helix</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeCMD\" formControlName=\"cmd\" type=\"text\" placeholder=\"Время CMD\">\n          <label for=\"timeCMD\" [ngClass]=\"{active: updateForm.value.time.cmd}\">Время CMD</label>\n        </div>\n        <div class=\"input-field col s12 l4\">\n          <input id=\"timeInvitro\" formControlName=\"invitro\" type=\"text\" placeholder=\"Время Инвитро\">\n          <label for=\"timeInvitro\" [ngClass]=\"{active: updateForm.value.time.invitro}\">Время Инвитро</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"input-field col s12\">\n          <textarea id=\"descrTextarea\" formControlName=\"description\" placeholder=\"Описание\" class=\"materialize-textarea\"></textarea>\n          <label for=\"descrTextarea\" data-error=\"Вы не заполнили поле\" [ngClass]=\"{active: updateForm.value.description}\">Описание</label>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12\">\n          <div class=\"switch\">\n            <label>\n              Не показывать\n              <input type=\"checkbox\" formControlName=\"active\">\n              <span class=\"lever\"></span>\n              Показывать\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col s12 l12 right-align\">\n          <button type=\"submit\" class=\"waves-effect waves-light btn\" [disabled]=\"(!updateForm.valid || submitted) ? true : null\">Сохранить</button>\n          <a class=\"waves-effect waves-green btn-flat\" routerLink=\"/analyzes\">К списку</a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
-/***/ 1230:
+/***/ 1249:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"fix-wrapper analyzes-list\">\n  <div class=\"panel\">\n    <div class=\"panel-content\">\n      <app-analyzes-list #analyzesList [analyzes] = \"analyzes$ | async\" (startmerge)=\"_tools.getToolbar().setMode('done');\" (delete)=\"deleteModal.open()\" (edit)=\"editItem($event)\"></app-analyzes-list>\n    </div>\n    <app-pagination class=\"center-align\" name=\"analyzes-list\" (changePage)=\"changePageAnalyzes($event)\"></app-pagination>\n  </div>\n</div>\n\n<!-- Merge Modal -->\n<app-modal #mergeModal (success)=\"mergeItems(analyzesList.selectedItems)\">\n    <h4>Объединить анализы</h4>\n    <p *ngIf=\"analyzesList.selectedItems.length > 0\">Вы хотите объединить следующие анализы?</p>\n    <app-analyzes-list [analyzes] = \"analyzesList.selectedItems\" [options]=\"{price: false, tools: false}\"></app-analyzes-list>\n</app-modal>\n\n<!-- Delete Modal -->\n<app-modal #deleteModal (success)=\"deleteItem(analyzesList.currentItem)\">\n    <h4>Удалить анализ</h4>\n    <p *ngIf=\"analyzesList.currentItem\">Вы хотите удалить анализ?</p>\n</app-modal>"
