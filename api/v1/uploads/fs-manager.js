@@ -1,7 +1,26 @@
 const fs = require("fs");
 const gm = require("gm");
 
+const ROOT_DIR = "./uploads";
+let FULLSIZE_DIR = ROOT_DIR + "/fullsize/";
+let THUMBS_DIR = ROOT_DIR + "/thumbs/";
+
 fsManager = {
+	checkDir: function(path) {
+		return new Promise((resolve, reject) => {
+			fsManager.count(path)
+				.then( count => resolve(true))
+				.catch( error => {
+					Promise.all([
+						fsManager.createDir(FULLSIZE_DIR),
+						fsManager.createDir(THUMBS_DIR),
+						fsManager.createDir(FULLSIZE_DIR + zeroFill(1, 3) + "/"),
+						fsManager.createDir(THUMBS_DIR + zeroFill(1, 3) + "/")
+					]).then(() => resolve(true));
+				});
+		});
+	},
+
 	getDir: function(path) {
 		let fullsizePath = path + "/fullsize";
 		let thumbsPath = path + "/thumbs";
@@ -31,7 +50,7 @@ fsManager = {
 	createNextDir: function(path) {
 		return fsManager
 			.count(path)
-			.then((number) => fsManager.createDir(path, (number + 1)));
+			.then((number) => fsManager.createDir(path + zeroFill(number + 1, 3) + "/"));
 	},
 
 	count: function(path) {
@@ -44,14 +63,12 @@ fsManager = {
 		});
 	},
 
-	createDir: function(path, number) {
+	createDir: function(path) {
 		return new Promise((resolve, reject) => {
-			let dir_path = path + zeroFill(number, 3) + "/";
-
-			fs.mkdir(dir_path, function(errors, result) {
+			fs.mkdir(path, function(errors, result) {
 				if(errors) reject(errors);
 
-				resolve(dir_path);
+				resolve(path);
 			});
 		});
 	},
@@ -60,9 +77,9 @@ fsManager = {
 		return new Promise((resolve, reject) => {
 
 			gm(path + filename)
-			    .resize(150, 150)
+			    .resize(380, 240)
 			    .gravity("Center")
-			    .extent(150, 150)
+			    .extent(380, 240)
 			    .quality(75)
 			    .noProfile()
 			    .write(thumbs + filename, function (errors) {

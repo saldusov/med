@@ -2070,6 +2070,7 @@ var Analyzes = (function () {
     });
     Analyzes.prototype.setParams = function (object) {
         this._id = object._id || null;
+        this.code = object.code;
         this.serialNumber = object.serialNumber || this.serialNumber;
         if (object.art)
             this.setLabs(this.art, object.art);
@@ -2095,6 +2096,7 @@ var Analyzes = (function () {
     };
     Analyzes.prototype.default = function () {
         this._id = null;
+        this.code = null;
         this.art = {
             helix: null,
             cmd: null,
@@ -2586,6 +2588,7 @@ var Service = (function () {
         this.tags = options.tags || [];
         this._tag_names = options.tag_names;
         this.score = options.score || 0;
+        this.code = options.code;
         this.active = options.active || false;
     };
     Service.prototype.clear = function () {
@@ -2599,6 +2602,7 @@ var Service = (function () {
         this.multiple = false;
         this.tags = [];
         this.score = 0;
+        this.code = null;
         this.active = false;
     };
     Object.defineProperty(Service.prototype, "tagsString", {
@@ -3627,6 +3631,7 @@ var Good = (function () {
     }
     Good.prototype.setParams = function (object) {
         this._id = object._id || null;
+        this.code = object.code;
         this.serialNumber = object.serialNumber || this.serialNumber;
         this.title = object.title || null;
         this.description = object.description || null;
@@ -3636,6 +3641,7 @@ var Good = (function () {
     };
     Good.prototype.clear = function () {
         this._id = null;
+        this.code = null;
         this.title = null;
         this.description = null;
         this.price = 0;
@@ -13394,7 +13400,7 @@ module.exports = "<div class=\"payment-add-wrapper\">\n  <div class=\"payment-ad
 /***/ 1263:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"default-wrapper\" >\n  <div class=\"panel\" *ngIf=\"payment\">\n    <div class=\"panel-title\">Талон на оплату №{{payment.serialNumber}} от {{payment.createdAt | date: \"dd.MM.y\"}}</div>\n    <div class=\"row\" *ngIf=\"checkedSpecialists.length > 0\">\n      <div class=\"col s12\">\n        Специалист: \n          <span *ngFor=\"let spec of checkedSpecialists\" class=\"text-capitalize\">\n            {{spec.person.fullname}}\n          </span>\n      </div>\n    </div>\n    <div class=\"row\" *ngIf=\"!!payment.person._id\">\n      <div class=\"col s12\">\n        <span class=\"text-capitalize\">Клиент: {{payment.person.fullname}}</span>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col s12\">\n        <table>\n          <thead>\n            <tr>\n                <th>Наименование</th>\n                <th>Кол-во</th>\n                <th>Цена</th>\n                <th>Сумма</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr *ngIf=\"!!payment.discount.services.number\" class=\"red-text\">\n              <th colspan=\"4\">Действует скидка на услуги: -{{payment.discount.services.number}}{{payment.discount.services.isPercent ? '%' : 'руб.'}}</th>\n            </tr>\n            <tr *ngFor=\"let service of (checkedServices$ | async)\">\n              <td>{{service.item.title}}</td>\n              <td class=\"center-align\">{{service.count}}</td>\n              <td class=\"center-align\">{{service.item.price}}</td>\n              <td class=\"center-align\">{{service.item.price * service.count}}</td>\n            </tr>\n            <tr *ngIf=\"!!payment.discount.analyzes.number\" class=\"red-text\">\n              <th colspan=\"4\">Действует скидка на анализы: -{{payment.discount.analyzes.number}}{{payment.discount.analyzes.isPercent ? '%' : 'руб.'}}</th>\n            </tr>\n            <tr *ngFor=\"let analyz of (checkedAnalyzes$ | async)\">\n              <td><span class=\"new badge\" data-badge-caption=\"анализ\"></span>{{analyz.item.finishTitle}}</td>\n              <td class=\"center-align\">{{analyz.count}}</td>\n              <td class=\"center-align\">{{analyz.item.price}}</td>\n              <td class=\"center-align\">{{analyz.item.price * analyz.count}}</td>\n            </tr>\n            <tr *ngIf=\"!!payment.discount.goods.number\" class=\"red-text\">\n              <th colspan=\"4\">Действует скидка на товары: -{{payment.discount.goods.number}}{{payment.discount.goods.isPercent ? '%' : 'руб.'}}</th>\n            </tr>\n            <tr *ngFor=\"let good of (checkedGoods$ | async)\">\n              <td>{{good.item.title}}</td>\n              <td class=\"center-align\">{{good.count}}</td>\n              <td class=\"center-align\">{{good.item.price}}</td>\n              <td class=\"center-align\">{{good.item.price * good.count}}</td>\n            </tr>\n            <tr class=\"total\">\n              <td colspan=2></td>\n              <td class=\"center-align\"><b>ИТОГО</b></td>\n              <td class=\"center-align\"><b>{{payment.toPay}}</b></td>\n            </tr>\n          </tbody>\n        </table>\n        <div class=\"right-align\">\n          <button type=\"button\" class=\"btn\" (click)=\"onPrint()\">Распечатать</button>\n          <a class=\"btn\" routerLink=\"/payments\">Вернуться</a>\n        </div>\n      </div>\n    </div>                                                                  \n  </div>\n</div>"
+module.exports = "<div class=\"default-wrapper\" >\n  <div class=\"panel\" *ngIf=\"payment\">\n    <div class=\"panel-title\">Талон на оплату №{{payment.serialNumber}} от {{payment.createdAt | date: \"dd.MM.y\"}}</div>\n    <div class=\"row\" *ngIf=\"checkedSpecialists.length > 0\">\n      <div class=\"col s12\">\n        Специалист: \n          <span *ngFor=\"let spec of checkedSpecialists\" class=\"text-capitalize\">\n            {{spec.person.fullname}}\n          </span>\n      </div>\n    </div>\n    <div class=\"row\" *ngIf=\"!!payment.person._id\">\n      <div class=\"col s12\">\n        <span class=\"text-capitalize\">Клиент: {{payment.person.fullname}}</span>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col s12\">\n        <table>\n          <thead>\n            <tr>\n                <th>Артикул</th>\n                <th>Наименование</th>\n                <th>Кол-во</th>\n                <th>Цена</th>\n                <th>Сумма</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr *ngIf=\"!!payment.discount.services.number\" class=\"red-text\">\n              <th colspan=\"4\">Действует скидка на услуги: -{{payment.discount.services.number}}{{payment.discount.services.isPercent ? '%' : 'руб.'}}</th>\n            </tr>\n            <tr *ngFor=\"let service of (checkedServices$ | async)\">\n              <td>{{service.item.code}}</td>\n              <td>{{service.item.title}}</td>\n              <td class=\"center-align\">{{service.count}}</td>\n              <td class=\"center-align\">{{service.item.price}}</td>\n              <td class=\"center-align\">{{service.item.price * service.count}}</td>\n            </tr>\n            <tr *ngIf=\"!!payment.discount.analyzes.number\" class=\"red-text\">\n              <th colspan=\"4\">Действует скидка на анализы: -{{payment.discount.analyzes.number}}{{payment.discount.analyzes.isPercent ? '%' : 'руб.'}}</th>\n            </tr>\n            <tr *ngFor=\"let analyz of (checkedAnalyzes$ | async)\">\n              <td>{{analyz.item.code}}</td>\n              <td><span class=\"new badge\" data-badge-caption=\"анализ\"></span>{{analyz.item.finishTitle}}</td>\n              <td class=\"center-align\">{{analyz.count}}</td>\n              <td class=\"center-align\">{{analyz.item.price}}</td>\n              <td class=\"center-align\">{{analyz.item.price * analyz.count}}</td>\n            </tr>\n            <tr *ngIf=\"!!payment.discount.goods.number\" class=\"red-text\">\n              <th colspan=\"4\">Действует скидка на товары: -{{payment.discount.goods.number}}{{payment.discount.goods.isPercent ? '%' : 'руб.'}}</th>\n            </tr>\n            <tr *ngFor=\"let good of (checkedGoods$ | async)\">\n              <td>{{good.item.code}}</td>\n              <td>{{good.item.title}}</td>\n              <td class=\"center-align\">{{good.count}}</td>\n              <td class=\"center-align\">{{good.item.price}}</td>\n              <td class=\"center-align\">{{good.item.price * good.count}}</td>\n            </tr>\n            <tr class=\"total\">\n              <td colspan=2></td>\n              <td class=\"center-align\"><b>ИТОГО</b></td>\n              <td class=\"center-align\"><b>{{payment.toPay}}</b></td>\n            </tr>\n          </tbody>\n        </table>\n        <div class=\"right-align\">\n          <button type=\"button\" class=\"btn\" (click)=\"onPrint()\">Распечатать</button>\n          <a class=\"btn\" routerLink=\"/payments\">Вернуться</a>\n        </div>\n      </div>\n    </div>                                                                  \n  </div>\n</div>"
 
 /***/ }),
 

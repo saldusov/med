@@ -6,7 +6,7 @@ let exportModule = {
 	exportAll: () => {
 		return new Promise((resolve, reject) => {
 			return db
-				.getAll()
+				.getAllForExport()
 				.then((foundObjects) => {
 					let modelBuild = mongoXlsx.buildDynamicModel(foundObjects);
 					mongoXlsx.mongoData2Xlsx(foundObjects, modelBuild, function(err, data) {

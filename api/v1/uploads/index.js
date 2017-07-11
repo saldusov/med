@@ -2,6 +2,7 @@ const express = require("express");
 let app = module.exports = express();
 const path = require("path");
 const auth = require(path.resolve("api/auth"))();
+const math = require('../../core/lib/math');
 
 const fs = require("fs");
 const multer = require('multer');
@@ -18,14 +19,15 @@ const fsManager = require('./fs-manager');
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
   	fsManager
-  		.getDir(ROOT_DIR)
+  		.checkDir(FULLSIZE_DIR)
+  		.then(() => fsManager.getDir(ROOT_DIR))
   		.then((result) => {
   			[FULLSIZE_DIR, THUMBS_DIR] = result;
     		cb(null, FULLSIZE_DIR);
   		});
   },
   filename: function (req, file, cb) {
-    cb(null, file.fieldname + Date.now());
+    cb(null, file.fieldname + Date.now() + math.random(1, 999999));
   }
 })
 
@@ -48,7 +50,7 @@ let upload = multer({
 /* GET items list. */
 app.get('/', function(req, res, next) {
 	FileSchema
-		.find({}, "filename signature")
+		.find({}, "filename signature path")
 		.exec(function(err, foundObjects) {
 			res.json(foundObjects);
 		});

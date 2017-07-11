@@ -27,6 +27,8 @@ var analyzesSchema = new Schema({
 		helix: Number,
 		invitro: Number
 	},
+	code: Number,
+	codeOsm: Number,
 	description: [String],
 	active: Boolean
 });

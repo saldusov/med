@@ -53,7 +53,8 @@ function getAggregateGroupParam() {
 			multiple: { $first: "$multiple" },
 			score: { $first: "$score" }, 
 			active: { $first: "$active" }, 
-			tags: { $addToSet: "$tags" }, 
+			tags: { $addToSet: "$tags" },
+			code: { $first: "$code" },
 			tag_names: { $push: "$tag_item.name"}
 		}
 	};

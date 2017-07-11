@@ -15,7 +15,7 @@ let test = require("./test");
 
 app.use("/test", test);
 
-app.get("/export", auth.checkAccess("analyzes.export"), function(req, res, next) {
+app.get("/export", function(req, res, next) {
 	exportModule
 		.exportAll()
 		.then((filepath) => {

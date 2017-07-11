@@ -1,5 +1,6 @@
 const express = require("express");
 let app = module.exports = express();
+const fs = require('fs');
 const path = require("path");
 const auth = require(path.resolve("api/auth"))();
 
@@ -8,6 +9,7 @@ const getServiceById = require("./lib/services").getServiceById;
 const addService = require("./lib/services").addService;
 const updateService = require("./lib/services").updateService;
 const deleteServiceById = require("./lib/services").deleteServiceById;
+const exportManager = require("./lib/export");
 
 let middleware = require("./middleware");
 
@@ -17,6 +19,16 @@ app.get('/', auth.checkAccess("services"), middleware.parseQuery, function(req, 
 	getServices(req.mongoParams)
 		.then((foundItems) => res.json(foundItems))
 		.catch((errors) => res.status(500).json({errors}));
+});
+
+app.get('/export', function(req, res, next) {
+	
+	exportManager.export()
+		.then((path) => {
+			res.json(path);
+			//res.pipe(fs.createWriteStream(path));
+		})
+		.catch((errors) => res.status(404).json({errors}))
 });
 
 /* GET one item. */

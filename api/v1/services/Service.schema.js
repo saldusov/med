@@ -17,6 +17,8 @@ var serviceSchema = new Schema({
 		type: Number,
 		default: 0
 	},
+	code: Number,
+	codeOsm: Number,
 	active: Boolean
 });
 

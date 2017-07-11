@@ -14,6 +14,40 @@ let dbManager = {
 							priceProd: 1,
 							description: 1,
 							active: 1,
+							code: 1,
+							price: {
+								$cond: { 
+									if: {
+										$gte: ["$priceProd.invitro", 0] 
+									}, 
+									then: "$priceProd.invitro",
+									else: { 
+										$max: ["$priceProd.helix", "$priceProd.cmd"] 
+									}	 
+								}
+							}
+						}
+					}
+				])
+				.exec(function (err, items) {
+					if(err) reject(err);
+					else {
+						resolve(items);
+					}
+				});
+		});
+	},
+
+	getAllForExport() {
+		return new Promise((resolve, reject) => {
+			AnalyzesSchema
+				.aggregate([
+					{
+						$project: {
+							_id: 1,
+							art: 1,
+							title: 1,
+							code: 1,
 							price: {
 								$cond: { 
 									if: {
@@ -56,6 +90,7 @@ let dbManager = {
 							priceProd: 1,
 							description: 1,
 							active: 1,
+							code: 1,
 							price: {
 								$cond: { 
 									if: {

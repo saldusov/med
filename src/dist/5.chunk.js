@@ -972,6 +972,7 @@ var Analyzes = (function () {
     });
     Analyzes.prototype.setParams = function (object) {
         this._id = object._id || null;
+        this.code = object.code;
         this.serialNumber = object.serialNumber || this.serialNumber;
         if (object.art)
             this.setLabs(this.art, object.art);
@@ -997,6 +998,7 @@ var Analyzes = (function () {
     };
     Analyzes.prototype.default = function () {
         this._id = null;
+        this.code = null;
         this.art = {
             helix: null,
             cmd: null,

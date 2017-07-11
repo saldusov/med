@@ -10,6 +10,7 @@ var goodsSchema = new Schema({
 		type: Number,
 		default: 0
 	},
+	code: Number,
 	active: Boolean
 });
 

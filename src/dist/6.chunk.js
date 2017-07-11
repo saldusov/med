@@ -1128,6 +1128,7 @@ var Good = (function () {
     }
     Good.prototype.setParams = function (object) {
         this._id = object._id || null;
+        this.code = object.code;
         this.serialNumber = object.serialNumber || this.serialNumber;
         this.title = object.title || null;
         this.description = object.description || null;
@@ -1137,6 +1138,7 @@ var Good = (function () {
     };
     Good.prototype.clear = function () {
         this._id = null;
+        this.code = null;
         this.title = null;
         this.description = null;
         this.price = 0;
