@@ -8,7 +8,11 @@ let FileSchema = new Schema({
 	thumbs: String,
 	size: Number,
 	mimetype: String,
-	signature: String
+	signature: String,
+	meta: {
+		title: String,
+		alt: String
+	}
 });
 
 module.exports = mongoose.model('files', FileSchema);

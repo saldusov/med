@@ -31,7 +31,7 @@ app.get("*", (req, res) => {
 
 app.use(function(err, req, res, next) {
  
-  console.log(err.message);
+  console.log('Error', err.message);
   let [errCode, errMessage] = err.message.split("|");
   code = errCode ? errCode : 500;
   message = errMessage ? errMessage : "Please check your log file!";

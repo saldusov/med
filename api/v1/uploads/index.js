@@ -14,6 +14,7 @@ let THUMBS_DIR = ROOT_DIR + "/thumbs/";
 
 const FileSchema = require('./File.schema');
 const crud = require('./crud');
+const imageManager = require('./lib/images');
 const fsManager = require('./fs-manager');
 
 let storage = multer.diskStorage({
@@ -49,10 +50,12 @@ let upload = multer({
 
 /* GET items list. */
 app.get('/', function(req, res, next) {
-	FileSchema
-		.find({}, "filename signature path")
-		.exec(function(err, foundObjects) {
+	imageManager.getImages(req.query)
+		.then((foundObjects) => {
 			res.json(foundObjects);
+		})
+		.catch((errors) => {
+			res.status(404).json({errors})
 		});
 });
 
@@ -94,6 +97,23 @@ app.get('/thumbs/:filename', function(req, res, next) {
 		});
 });
 
+app.post('/deletemany', auth.checkAccess("uploads"), function(req, res, next) {
+	imageManager
+		.deleteMany(req.body)
+		.then((results) => {
+			if(results) {
+				results.forEach((image) => {
+					fsManager.removeFile(image.path);
+					fsManager.removeFile(image.thumbs);
+				});
+				return { status: "ok" };
+			} else {
+				res.status(404).json(["Файлы не существуют"]);
+			}
+		})
+		.then((result) => res.status(200).json(result))
+		.catch((errors) => res.status(400).json([errors]));
+});
 
 // Post files
 app.post('/', auth.checkAccess("uploads"), function(req, res, next) {
@@ -112,6 +132,13 @@ app.post('/', auth.checkAccess("uploads"), function(req, res, next) {
 				.catch((errors) => res.status(400).json([errors]));
 		}
 	});
+});
+
+app.put('/:id', auth.checkAccess("uploads"), function(req, res, next) {
+	imageManager
+		.updateImage(req.params.id, { meta: req.body.meta })
+		.then((result) => res.json(result))
+		.catch((errors) => res.status(404).json({errors}));
 });
 
 
