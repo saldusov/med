@@ -29,7 +29,6 @@ let personManager = {
 	create: function(data) {
 		return new Promise(function(resolve, reject) {
 			let person = new PersonSchema(data);
-
 			person.save(function(errors, savedObject){
 				if (errors) {
 					reject([errors]);
